@@ -1,12 +1,21 @@
-extends CanvasLayer
+extends Area2D
 
-@onready var label = $Label
+var player_near = false
 
-func show_message(texto):
+func _process(delta):
 
-	label.text = texto
-	label.visible = true
+	if player_near and Input.is_action_just_pressed("interact"):
 
-	await get_tree().create_timer(2).timeout
+		var ui = get_tree().get_first_node_in_group("message_ui")
 
-	label.visible = false
+		ui.show_message("Fiquei acordada até tarde ontem... Pensar tira o meu sono")
+
+func _on_body_entered(body):
+
+	if body.name == "Player":
+		player_near = true
+
+func _on_body_exited(body):
+
+	if body.name == "Player":
+		player_near = false

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bp10rkyroroxk"]
 
-[ext_resource type="Script" uid="uid://c85j6gty0mw13" path="res://interactable.gd" id="1_jcy0q"]
-[ext_resource type="Texture2D" uid="uid://dbmh36ayvrb51" path="res://scenes/actors/xícara.png" id="2_0k2he"]
+[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scripts/ui/message_ui.gd" id="1_jcy0q"]
+[ext_resource type="Texture2D" uid="uid://dbmh36ayvrb51" path="res://assets/art/environment/props/xícara.png" id="2_0k2he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
 size = Vector2(41, 47)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbmh36ayvrb51"
-path="res://.godot/imported/xícara.png-2a72f3eab66976aa6150cdabfa4d3601.ctex"
+path="res://.godot/imported/xícara.png-06f97cb37754f286e7d9d61c09cf30e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://xícara.png"
-dest_files=["res://.godot/imported/xícara.png-2a72f3eab66976aa6150cdabfa4d3601.ctex"]
+source_file="res://assets/art/environment/props/xícara.png"
+dest_files=["res://.godot/imported/xícara.png-06f97cb37754f286e7d9d61c09cf30e0.ctex"]
 
 [params]
 
