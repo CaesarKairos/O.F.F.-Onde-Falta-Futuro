@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://co8nncd5d6w6s"]
+
+[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://message_ui.gd" id="1_lxjew"]
+
+[node name="MessageUI" type="CanvasLayer" unique_id=177896999]
+script = ExtResource("1_lxjew")
+
+[node name="Label" type="Label" parent="." unique_id=230674651]
+visible = false
+offset_left = 345.0
+offset_top = 310.0
+offset_right = 777.0
+offset_bottom = 409.0

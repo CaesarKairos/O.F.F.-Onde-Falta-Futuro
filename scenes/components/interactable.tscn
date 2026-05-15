@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bp10rkyroroxk"]
+
+[ext_resource type="Script" uid="uid://c85j6gty0mw13" path="res://interactable.gd" id="1_jcy0q"]
+[ext_resource type="Texture2D" uid="uid://dbmh36ayvrb51" path="res://scenes/actors/xícara.png" id="2_0k2he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
+size = Vector2(41, 47)
+
+[node name="Interactable" type="Area2D" unique_id=15208082]
+script = ExtResource("1_jcy0q")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=389972176]
+position = Vector2(450, 371)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_0k2he")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838995647]
+position = Vector2(444.5, 377.5)
+shape = SubResource("RectangleShape2D_jcy0q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
