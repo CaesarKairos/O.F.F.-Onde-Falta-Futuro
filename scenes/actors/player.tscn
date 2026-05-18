@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://biyybeacxa0tb"]
 
 [ext_resource type="Script" uid="uid://cebht3hsgfps2" path="res://scripts/actors/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://7ltf3h0l6w7b" path="res://assets/art/characters/cecília/Cecília sprite.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://q4tr5ls5aoq8" path="res://lyanna3.png" id="2_ru62r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
-size = Vector2(194, 315)
+size = Vector2(194, 396)
 
 [node name="Player" type="CharacterBody2D" unique_id=1564198338]
 position = Vector2(29, -302)
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=993268683]
-position = Vector2(132, 504.5)
+position = Vector2(132, 500)
 shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=378824900]
 position = Vector2(129, 506)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("2_i3pqv")
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_ru62r")
