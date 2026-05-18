@@ -6,8 +6,7 @@
 script = ExtResource("1_rowjr")
 
 [node name="Label" type="Label" parent="." unique_id=230674651]
-visible = false
-offset_left = 345.0
-offset_top = 310.0
-offset_right = 777.0
-offset_bottom = 409.0
+offset_left = 310.0
+offset_top = 455.0
+offset_right = 742.00006
+offset_bottom = 554.0
