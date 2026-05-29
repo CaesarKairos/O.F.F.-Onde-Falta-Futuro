@@ -1,17 +1,21 @@
-[gd_scene format=3 uid="uid://bp10rkyroroxk"]
+[gd_scene format=3 uid="uid://dqpmgch5fkdf4"]
 
-[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scripts/ui/message_ui.gd" id="1_jcy0q"]
-[ext_resource type="Texture2D" uid="uid://dt6kyamqpjyq3" path="res://icon.svg" id="3_nm1rj"]
+[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scripts/ui/message_ui.gd" id="1_twnwl"]
+[ext_resource type="Texture2D" uid="uid://dbmh36ayvrb51" path="res://assets/art/environment/props/xícara.png" id="2_2pjs4"]
+[ext_resource type="Texture2D" uid="uid://dt6kyamqpjyq3" path="res://icon.svg" id="3_b28hj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
-size = Vector2(177, 308)
+size = Vector2(41, 47)
 
 [node name="Interactable" type="Area2D" unique_id=15208082]
-script = ExtResource("1_jcy0q")
+position = Vector2(96, -10)
+script = ExtResource("1_twnwl")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=389972176]
 position = Vector2(450, 371)
 scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_2pjs4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838995647]
 position = Vector2(444.5, 377.5)
@@ -21,7 +25,7 @@ shape = SubResource("RectangleShape2D_jcy0q")
 visible = false
 position = Vector2(447, 323)
 scale = Vector2(0.5546875, 0.4609375)
-texture = ExtResource("3_nm1rj")
+texture = ExtResource("3_b28hj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

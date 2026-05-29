@@ -5,8 +5,21 @@
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999]
 script = ExtResource("1_rowjr")
 
-[node name="Label" type="Label" parent="." unique_id=230674651]
-offset_left = 310.0
-offset_top = 455.0
-offset_right = 742.00006
-offset_bottom = 554.0
+[node name="Panel" type="Panel" parent="." unique_id=1718683799]
+offset_left = 231.0
+offset_top = -1.0
+offset_right = 862.0
+offset_bottom = 158.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=230674651]
+layout_mode = 0
+offset_left = 346.0
+offset_right = 777.9995
+offset_bottom = 99.0
+
+[node name="ChoicesLabel" type="Label" parent="Panel" unique_id=2076510913]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 123.0
+offset_right = 512.0
+offset_bottom = 165.0

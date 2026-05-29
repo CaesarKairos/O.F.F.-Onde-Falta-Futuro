@@ -1,25 +1,23 @@
 [gd_scene format=3 uid="uid://clxdym1sc2km5"]
 
-[ext_resource type="Texture2D" uid="uid://bfi4wiocgd7ov" path="res://534fb6d585ddb3676e8e83d63d8323c4.jpg" id="1_7xgas"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/player.tscn" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="3_lfyvx"]
+[ext_resource type="PackedScene" uid="uid://dqpmgch5fkdf4" path="res://scenes/components/xicara.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_w2p53"]
+[ext_resource type="PackedScene" uid="uid://o4bsjyvrcq65" path="res://npc.tscn" id="5_7xgas"]
 
-[node name="World" type="Node2D" unique_id=1198387139]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2054101946]
-position = Vector2(591, 342)
-scale = Vector2(1.435, 1.435)
-texture = ExtResource("1_7xgas")
+[node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_fj7yv")]
 position = Vector2(55, -144)
 
 [node name="MessageUI" parent="." unique_id=177896999 groups=["message_ui"] instance=ExtResource("4_w2p53")]
 
-[node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("3_lfyvx")]
-position = Vector2(651, 11)
-
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_tlwt5")]
 position = Vector2(13, 19)
+
+[node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("4_7xgas")]
+position = Vector2(39, 6)
+
+[node name="npc" parent="." unique_id=956977419 instance=ExtResource("5_7xgas")]
+position = Vector2(386, 34)
