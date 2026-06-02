@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://dqpmgch5fkdf4" path="res://scenes/components/xicara.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_w2p53"]
-[ext_resource type="PackedScene" uid="uid://o4bsjyvrcq65" path="res://npc.tscn" id="5_7xgas"]
+[ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://cecilia.tscn" id="5_7xgas"]
 
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 
@@ -19,5 +19,4 @@ position = Vector2(13, 19)
 [node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("4_7xgas")]
 position = Vector2(39, 6)
 
-[node name="npc" parent="." unique_id=956977419 instance=ExtResource("5_7xgas")]
-position = Vector2(386, 34)
+[node name="Cecilia" parent="." unique_id=1381273172 instance=ExtResource("5_7xgas")]

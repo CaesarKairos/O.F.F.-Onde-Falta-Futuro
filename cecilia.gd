@@ -19,9 +19,9 @@ func start_dialog():
 	var ui = get_tree().get_first_node_in_group("message_ui")
 
 	ui.show_dialog(
-		"Olá",
+		"Olá viajante.",
 		[
-			"Oi",
+			"Quem é você?",
 			"Tchau"
 		],
 		[
@@ -35,10 +35,10 @@ func dialog_who_am_i():
 	var ui = get_tree().get_first_node_in_group("message_ui")
 
 	ui.show_dialog(
-		"Texto",
+		"Meu nome é Cecília.",
 		[
-			"Escolha 1",
-			"Escolha 2"
+			"Prazer em conhecer você.",
+			"Tchau"
 		],
 		[
 			func(): close_dialog(),
