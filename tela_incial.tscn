@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2bqm5lacibrw"]
+
+[ext_resource type="Texture2D" uid="uid://1n65hlh3jll2" path="res://scenes/tela incial.png" id="1_eyowt"]
+
+[node name="TelaIncial" type="Sprite2D" unique_id=580429609]
+position = Vector2(646, 356)
+scale = Vector2(2.68, 2.68)
+texture = ExtResource("1_eyowt")
