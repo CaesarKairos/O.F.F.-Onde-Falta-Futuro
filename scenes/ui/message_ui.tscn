@@ -13,9 +13,10 @@ offset_bottom = 158.0
 
 [node name="Label" type="Label" parent="Panel" unique_id=230674651]
 layout_mode = 0
-offset_left = 346.0
-offset_right = 777.9995
-offset_bottom = 99.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 625.0
+offset_bottom = 162.0
 
 [node name="ChoicesLabel" type="Label" parent="Panel" unique_id=2076510913]
 layout_mode = 0

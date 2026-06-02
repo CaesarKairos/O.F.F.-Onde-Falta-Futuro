@@ -15,9 +15,9 @@ func _process(delta):
 		var ui = get_tree().get_first_node_in_group("message_ui")
 
 		ui.show_dialog(
-			"Olá viajante.",
+			"Olá Lyanna",
 			[
-				"Quem é você?",
+				"Como você está?",
 				"Tchau"
 			]
 		)
