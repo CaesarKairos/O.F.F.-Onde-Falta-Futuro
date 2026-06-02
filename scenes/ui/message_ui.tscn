@@ -5,22 +5,29 @@
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999]
 script = ExtResource("1_rowjr")
 
-[node name="Panel" type="Panel" parent="." unique_id=1718683799]
-offset_left = 231.0
-offset_top = -1.0
-offset_right = 862.0
-offset_bottom = 158.0
+[node name="DialogueBox" type="TextureRect" parent="." unique_id=1469839919]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Panel" unique_id=230674651]
+[node name="DialogueText" type="Label" parent="DialogueBox" unique_id=264019456]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 21.0
-offset_right = 625.0
-offset_bottom = 162.0
-
-[node name="ChoicesLabel" type="Label" parent="Panel" unique_id=2076510913]
-layout_mode = 0
-offset_left = 6.0
+offset_left = 407.0
 offset_top = 1.0
-offset_right = 631.0
-offset_bottom = 162.0
+offset_right = 863.0
+offset_bottom = 127.0
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 83.0
+offset_right = 625.0
+offset_bottom = 115.0
+
+[node name="Choice1" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=1261187853]
+layout_mode = 2
+
+[node name="Choice2" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=966048456]
+layout_mode = 2
+
+[node name="Choice3" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=362293405]
+layout_mode = 2

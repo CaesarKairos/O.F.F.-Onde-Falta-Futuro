@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqpmgch5fkdf4"]
 
-[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scripts/ui/message_ui.gd" id="1_twnwl"]
+[ext_resource type="Script" uid="uid://d02hbengwyofp" path="res://scenes/components/xicara.gd" id="1_twnwl"]
 [ext_resource type="Texture2D" uid="uid://dbmh36ayvrb51" path="res://assets/art/environment/props/xícara.png" id="2_2pjs4"]
 [ext_resource type="Texture2D" uid="uid://dt6kyamqpjyq3" path="res://icon.svg" id="3_b28hj"]
 
@@ -10,7 +10,6 @@ size = Vector2(41, 47)
 [node name="Interactable" type="Area2D" unique_id=15208082]
 position = Vector2(96, -10)
 script = ExtResource("1_twnwl")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=389972176]
 position = Vector2(450, 371)

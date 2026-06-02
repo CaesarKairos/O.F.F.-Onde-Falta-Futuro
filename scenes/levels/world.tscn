@@ -9,7 +9,7 @@
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_fj7yv")]
-position = Vector2(55, -144)
+position = Vector2(-93, -327)
 
 [node name="MessageUI" parent="." unique_id=177896999 groups=["message_ui"] instance=ExtResource("4_w2p53")]
 

@@ -1,43 +1,75 @@
 extends CanvasLayer
 
-@onready var panel = $Panel
-@onready var label = $Panel/Label
-@onready var choices = $Panel/ChoicesLabel
+@onready var dialogue_box = $DialogueBox
+@onready var dialogue_text = $DialogueBox/DialogueText
 
-var current_options = []
+@onready var choice1 = $DialogueBox/ChoicesContainer/Choice1
+@onready var choice2 = $DialogueBox/ChoicesContainer/Choice2
+@onready var choice3 = $DialogueBox/ChoicesContainer/Choice3
+
+var current_callbacks = []
 
 func _ready():
 
-	panel.visible = false
+	dialogue_box.visible = false
 
-# TEXTO SIMPLES
+	choice1.pressed.connect(_on_choice_1)
+	choice2.pressed.connect(_on_choice_2)
+	choice3.pressed.connect(_on_choice_3)
+
 func show_message(texto):
 
-	panel.visible = true
+	dialogue_box.visible = true
 
-	label.text = texto
+	dialogue_text.text = texto
 
-	choices.text = ""
+	choice1.visible = false
+	choice2.visible = false
+	choice3.visible = false
 
 	await get_tree().create_timer(2).timeout
 
-	panel.visible = false
+	dialogue_box.visible = false
 
-# DIÁLOGO COM OPÇÕES
-func show_dialog(texto, options):
+func show_dialog(texto, options, callbacks):
 
-	panel.visible = true
+	dialogue_box.visible = true
 
-	label.text = texto
+	dialogue_text.text = texto
 
-	current_options = options
+	current_callbacks = callbacks
 
-	choices.text = ""
+	var buttons = [choice1, choice2, choice3]
 
-	for i in range(options.size()):
+	for i in range(buttons.size()):
 
-		choices.text += str(i + 1) + " - " + options[i] + "\n"
+		if i < options.size():
+
+			buttons[i].visible = true
+			buttons[i].text = options[i]
+
+		else:
+
+			buttons[i].visible = false
 
 func hide_dialog():
 
-	panel.visible = false
+	dialogue_box.visible = false
+
+func _on_choice_1():
+
+	if current_callbacks.size() > 0:
+
+		current_callbacks[0].call()
+
+func _on_choice_2():
+
+	if current_callbacks.size() > 1:
+
+		current_callbacks[1].call()
+
+func _on_choice_3():
+
+	if current_callbacks.size() > 2:
+
+		current_callbacks[2].call()

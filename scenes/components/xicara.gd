@@ -4,7 +4,7 @@ extends Area2D
 
 var player_near = false
 
-@export var message = "“Mensagem aqui”"
+@export var message = "“Fiquei acordada até tarde ontem... Pensar tira o meu sono”"
 
 func _ready():
 
