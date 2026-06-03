@@ -16,7 +16,7 @@ position = Vector2(-93, -327)
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_tlwt5")]
 position = Vector2(13, 19)
 
-[node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("4_7xgas")]
-position = Vector2(39, 6)
-
 [node name="Cecilia" parent="." unique_id=1381273172 instance=ExtResource("5_7xgas")]
+
+[node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("4_7xgas")]
+position = Vector2(467, 30)
