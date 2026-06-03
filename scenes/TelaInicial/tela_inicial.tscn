@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://lmorlmagjbji"]
+
+[ext_resource type="Texture2D" uid="uid://uxgvyikt6eer" path="res://scenes/TelaInicial/backgroundHud.png" id="1_pu17f"]
+[ext_resource type="Texture2D" uid="uid://bkm7n8khuffni" path="res://scenes/TelaInicial/JOGAR.png" id="2_hc4nk"]
+[ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/TelaInicial/CONTINUAR.png" id="3_1kvgd"]
+[ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/TelaInicial/NOVO JOGO.png" id="4_6ir72"]
+
+[node name="Node2D" type="Node2D" unique_id=1007995342]
+
+[node name="TelaIncialGodot" type="Sprite2D" parent="." unique_id=1923253149]
+position = Vector2(637, 363)
+texture = ExtResource("1_pu17f")
+
+[node name="JOGAR" type="Button" parent="." unique_id=156528464]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Jogar" type="Sprite2D" parent="JOGAR" unique_id=1231143439]
+position = Vector2(644, 466)
+texture = ExtResource("2_hc4nk")
+
+[node name="CONTINUAR" type="Button" parent="." unique_id=1064861217]
+offset_left = 562.0
+offset_top = 515.0
+offset_right = 701.0
+offset_bottom = 554.0
+
+[node name="Continuar" type="Sprite2D" parent="CONTINUAR" unique_id=1530992569]
+position = Vector2(640, 535)
+texture = ExtResource("3_1kvgd")
+
+[node name="Button" type="Button" parent="." unique_id=974063362]
+offset_left = 575.0
+offset_top = 589.0
+offset_right = 694.0
+offset_bottom = 626.0
+
+[node name="NovoJogo" type="Sprite2D" parent="." unique_id=400981330]
+position = Vector2(637, 610)
+texture = ExtResource("4_6ir72")
+
+[node name="Continuar" type="Sprite2D" parent="." unique_id=248245270]
+position = Vector2(638, 539)
+texture = ExtResource("3_1kvgd")
