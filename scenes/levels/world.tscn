@@ -5,13 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://dqpmgch5fkdf4" path="res://scenes/components/xicara.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_w2p53"]
 [ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://cecilia.tscn" id="5_7xgas"]
+[ext_resource type="PackedScene" uid="uid://x6ukml5ron4d" path="res://bruno.tscn" id="6_gy5pc"]
 
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_fj7yv")]
 position = Vector2(-93, -327)
 
-[node name="MessageUI" parent="." unique_id=177896999 groups=["message_ui"] instance=ExtResource("4_w2p53")]
+[node name="MessageUI" parent="." unique_id=177896999 instance=ExtResource("4_w2p53")]
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_tlwt5")]
 position = Vector2(13, 19)
@@ -19,4 +20,9 @@ position = Vector2(13, 19)
 [node name="Cecilia" parent="." unique_id=1381273172 instance=ExtResource("5_7xgas")]
 
 [node name="Interactable" parent="." unique_id=15208082 instance=ExtResource("4_7xgas")]
-position = Vector2(467, 30)
+position = Vector2(544, 31)
+
+[node name="bruno" parent="." unique_id=1070840287 instance=ExtResource("6_gy5pc")]
+position = Vector2(313, 3)
+dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_01.json"
+start_dialogue_id = "dream_001"

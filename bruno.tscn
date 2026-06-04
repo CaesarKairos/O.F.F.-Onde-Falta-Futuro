@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://x6ukml5ron4d"]
+
+[ext_resource type="PackedScene" uid="uid://o4bsjyvrcq65" path="res://npc.tscn" id="1_61dxc"]
+[ext_resource type="Script" uid="uid://bg6renbxudgyu" path="res://bruno.gd" id="2_dgcut"]
+[ext_resource type="Texture2D" uid="uid://dt6kyamqpjyq3" path="res://icon.svg" id="3_1ll3t"]
+
+[node name="bruno" unique_id=15208082 instance=ExtResource("1_61dxc")]
+script = ExtResource("2_dgcut")
+
+[node name="Sprite2D" parent="." index="0" unique_id=389972176]
+position = Vector2(458.5, 366)
+scale = Vector2(1.3828125, 2.40625)
+texture = ExtResource("3_1ll3t")
