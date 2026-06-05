@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7qkym16am6ou"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+[ext_resource type="Texture2D" uid="uid://bac4m8rvqf5da" path="res://scenes/components/lobopelucia.png" id="2_kvun2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(77.75, 82.25)
+
+[node name="lobo" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = " ​“Ganhei num sorteio de quermesse quando era pequena. É o único que sabe todos os meus segredos... e o único que não me julga por falar sozinha.”"
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_kvun2")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(458, 366)
+shape = SubResource("RectangleShape2D_26d85")

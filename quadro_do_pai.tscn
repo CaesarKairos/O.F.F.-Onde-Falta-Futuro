@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://j525my5nyvkf"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_fpp3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djbte"]
+size = Vector2(77.75, 82.25)
+
+[node name="Quadro do pai" unique_id=15208082 instance=ExtResource("1_fpp3b")]
+message = "“A casa ainda parece vazia demais hoje, mesmo depois de anos sem o senhor…”"
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+shape = SubResource("RectangleShape2D_djbte")

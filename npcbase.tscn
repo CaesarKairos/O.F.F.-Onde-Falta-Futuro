@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cl7lavj13dkaq"]
+
+[ext_resource type="Script" uid="uid://dlikmigschqwx" path="res://npcbase.gd" id="1_db5io"]
+[ext_resource type="Texture2D" uid="uid://dton8ooqdr5go" path="res://Placeholder (Excluir)/InteractionIconPlaceholder.png" id="2_8egmh"]
+[ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_163nw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcapy"]
+size = Vector2(194, 312)
+
+[node name="npcbase" type="Area2D" unique_id=822960918]
+script = ExtResource("1_db5io")
+
+[node name="InteractionIcon" type="Sprite2D" parent="." unique_id=142748171]
+position = Vector2(264.5, 390.5)
+scale = Vector2(0.33686063, 0.59619045)
+texture = ExtResource("2_8egmh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1376532287]
+position = Vector2(267.5, 388.5)
+scale = Vector2(0.38911292, 0.5961165)
+texture = ExtResource("3_163nw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1700379799]
+position = Vector2(265, 391)
+shape = SubResource("RectangleShape2D_rcapy")

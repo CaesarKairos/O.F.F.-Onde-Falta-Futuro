@@ -11,6 +11,7 @@ size = Vector2(77.75, 82.25)
 script = ExtResource("1_jcy0q")
 
 [node name="InteractionIcon" type="Sprite2D" parent="." unique_id=1270627854]
+visible = false
 position = Vector2(448.99997, 372.00003)
 scale = Vector2(0.13272293, 0.1504688)
 texture = ExtResource("2_dm3yd")

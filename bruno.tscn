@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://x6ukml5ron4d"]
 
-[ext_resource type="PackedScene" uid="uid://o4bsjyvrcq65" path="res://npc.tscn" id="1_61dxc"]
+[ext_resource type="PackedScene" uid="uid://cl7lavj13dkaq" path="res://npcbase.tscn" id="1_1ll3t"]
 [ext_resource type="Script" uid="uid://bg6renbxudgyu" path="res://bruno.gd" id="2_dgcut"]
 [ext_resource type="Texture2D" uid="uid://c1r4cy8ou8th7" path="res://Placeholder (Excluir)/BrunoPlaceholder.png" id="3_1ll3t"]
 
-[node name="bruno" unique_id=15208082 instance=ExtResource("1_61dxc")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6wwb"]
+size = Vector2(204, 314)
+
+[node name="bruno" unique_id=822960918 instance=ExtResource("1_1ll3t")]
 script = ExtResource("2_dgcut")
 dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_01.json"
 start_dialogue_id = "dream_001"
 
-[node name="Sprite2D" parent="." index="0" unique_id=389972176]
-position = Vector2(457.36646, 367.32227)
-scale = Vector2(0.33006987, 0.58812827)
+[node name="Sprite2D" parent="." index="1" unique_id=1376532287]
 texture = ExtResource("3_1ll3t")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1700379799]
+position = Vector2(270, 390)
+shape = SubResource("RectangleShape2D_x6wwb")
