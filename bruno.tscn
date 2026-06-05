@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://o4bsjyvrcq65" path="res://npc.tscn" id="1_61dxc"]
 [ext_resource type="Script" uid="uid://bg6renbxudgyu" path="res://bruno.gd" id="2_dgcut"]
-[ext_resource type="Texture2D" uid="uid://dt6kyamqpjyq3" path="res://icon.svg" id="3_1ll3t"]
+[ext_resource type="Texture2D" uid="uid://c1r4cy8ou8th7" path="res://Placeholder (Excluir)/BrunoPlaceholder.png" id="3_1ll3t"]
 
 [node name="bruno" unique_id=15208082 instance=ExtResource("1_61dxc")]
 script = ExtResource("2_dgcut")
+dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_01.json"
+start_dialogue_id = "dream_001"
 
 [node name="Sprite2D" parent="." index="0" unique_id=389972176]
-position = Vector2(458.5, 366)
-scale = Vector2(1.3828125, 2.40625)
+position = Vector2(457.36646, 367.32227)
+scale = Vector2(0.33006987, 0.58812827)
 texture = ExtResource("3_1ll3t")
