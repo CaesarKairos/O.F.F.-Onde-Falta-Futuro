@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dv7hgo6h3hu8e"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_ck6vh"]
+[ext_resource type="Texture2D" uid="uid://cnwhn3xg2c8pf" path="res://varios gatinho.png" id="2_afcjl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0xib"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0lbk"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e5ht"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rmnv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0xib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0lbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e5ht")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="gato da sorte" unique_id=15208082 instance=ExtResource("1_ck6vh")]
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=1443406023]
+position = Vector2(468, 362)
+scale = Vector2(0.225, 0.225)
+sprite_frames = SubResource("SpriteFrames_8rmnv")
+frame_progress = 0.48709092
+
+[node name="Sprite2D" parent="." index="2" unique_id=389972176]
+texture = null
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=1838995647]
+disabled = true
