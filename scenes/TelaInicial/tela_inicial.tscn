@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://b8m1ql7qvtj3g"]
+
+[ext_resource type="Script" uid="uid://0kdx0adgtb8m" path="res://tela_inicial.gd" id="1_neopn"]
+[ext_resource type="Texture2D" uid="uid://j443bfps66iw" path="res://scenes/TelaInicial/background.png" id="2_am23o"]
+[ext_resource type="Texture2D" uid="uid://qp3bd81uafgl" path="res://scenes/TelaInicial/O.F.F.png" id="3_jpcta"]
+[ext_resource type="Texture2D" uid="uid://cp53kb8mbxass" path="res://scenes/TelaInicial/BotoesPrincipais/JOGAR.png" id="4_cuxrc"]
+[ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/TelaInicial/BotoesPrincipais/NOVO JOGO.png" id="5_4p4tg"]
+[ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/TelaInicial/BotoesPrincipais/CONTINUAR.png" id="6_k7apl"]
+[ext_resource type="Texture2D" uid="uid://eyv8pkxegse8" path="res://scenes/TelaInicial/BotoesPrincipais/CONFIG (1).png" id="7_x7lce"]
+[ext_resource type="Texture2D" uid="uid://w0ejibugv2fx" path="res://scenes/TelaInicial/CONFIG/MENU (3).png" id="8_ns7l0"]
+[ext_resource type="Texture2D" uid="uid://fisqr8u0dbgq" path="res://scenes/TelaInicial/CONFIG/cam1_inativo.png" id="9_cuxrc"]
+[ext_resource type="Texture2D" uid="uid://ccum82yjro7am" path="res://scenes/TelaInicial/CONFIG/cam1_ativo.png" id="10_4p4tg"]
+[ext_resource type="Texture2D" uid="uid://cnpo6exycojgf" path="res://scenes/TelaInicial/CONFIG/SETUP.png" id="11_k7apl"]
+
+[node name="Tela inicial" type="Node2D" unique_id=1391025369]
+script = ExtResource("1_neopn")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=958188418]
+position = Vector2(639, 361)
+texture = ExtResource("2_am23o")
+
+[node name="O_f_f" type="Sprite2D" parent="." unique_id=1550634082]
+position = Vector2(646, 238)
+texture = ExtResource("3_jpcta")
+
+[node name="btnJogar" type="Button" parent="." unique_id=2001966549]
+offset_left = 585.0
+offset_top = 413.0
+offset_right = 698.0
+offset_bottom = 450.0
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Jogar" type="Sprite2D" parent="btnJogar" unique_id=1528001711]
+position = Vector2(60, 19)
+texture = ExtResource("4_cuxrc")
+
+[node name="btnNovoJogo" type="Button" parent="." unique_id=1030699002]
+offset_left = 565.0
+offset_top = 550.0
+offset_right = 717.0
+offset_bottom = 592.0
+
+[node name="Novo jogo" type="Sprite2D" parent="btnNovoJogo" unique_id=750703745]
+position = Vector2(79, 18)
+texture = ExtResource("5_4p4tg")
+
+[node name="btnContinuar" type="Button" parent="." unique_id=1407306434]
+offset_left = 572.0
+offset_top = 485.0
+offset_right = 715.0
+offset_bottom = 524.0
+
+[node name="Continuar" type="Sprite2D" parent="btnContinuar" unique_id=1736843281]
+position = Vector2(70, 18)
+texture = ExtResource("6_k7apl")
+
+[node name="btnConfig" type="Button" parent="." unique_id=1328505000]
+offset_left = 64.0
+offset_top = 62.0
+offset_right = 220.0
+offset_bottom = 103.0
+
+[node name="Config(1)" type="Sprite2D" parent="btnConfig" unique_id=1455106114]
+position = Vector2(78, 20)
+texture = ExtResource("7_x7lce")
+
+[node name="MenuConfig" type="Control" parent="." unique_id=582470451]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 247.0
+offset_top = 158.0
+offset_right = 1040.0
+offset_bottom = 579.0
+
+[node name="PanelConfig" type="Panel" parent="MenuConfig" unique_id=522185743]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99200004
+anchor_bottom = 1.0
+offset_right = 0.34399414
+offset_bottom = 13.0
+
+[node name="painel" type="Sprite2D" parent="MenuConfig/PanelConfig" unique_id=29393696]
+position = Vector2(391, 216)
+scale = Vector2(0.7750001, 0.7750001)
+texture = ExtResource("8_ns7l0")
+
+[node name="btnCam1" type="TextureButton" parent="MenuConfig/PanelConfig" unique_id=2109701865]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 53.0
+offset_right = 129.0
+offset_bottom = 98.0
+
+[node name="Cam1Inativo" type="Sprite2D" parent="MenuConfig/PanelConfig/btnCam1" unique_id=70230586]
+position = Vector2(32, 23)
+texture = ExtResource("9_cuxrc")
+
+[node name="Cam1Ativo" type="Sprite2D" parent="MenuConfig/PanelConfig/btnCam1" unique_id=2017498239]
+position = Vector2(26, 26)
+texture = ExtResource("10_4p4tg")
+
+[node name="btnCam2" type="TextureButton" parent="MenuConfig/PanelConfig" unique_id=1891850255]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 147.0
+offset_right = 125.0
+offset_bottom = 194.0
+
+[node name="btnCam3" type="TextureButton" parent="MenuConfig/PanelConfig" unique_id=1855263172]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 249.0
+offset_right = 128.0
+offset_bottom = 296.0
+
+[node name="SetupPanel" type="Panel" parent="MenuConfig/PanelConfig" unique_id=1164235286]
+visible = false
+layout_mode = 0
+offset_left = 126.0
+offset_top = 39.0
+offset_right = 786.0
+offset_bottom = 388.0
+
+[node name="Setup" type="Sprite2D" parent="MenuConfig/PanelConfig/SetupPanel" unique_id=1244913857]
+position = Vector2(337, 38)
+scale = Vector2(0.77272725, 0.77272725)
+texture = ExtResource("11_k7apl")
+
+[node name="AcessibilidadePanel" type="Panel" parent="MenuConfig/PanelConfig" unique_id=197273896]
+visible = false
+layout_mode = 0
+offset_left = 129.0
+offset_top = 46.0
+offset_right = 791.0
+offset_bottom = 388.0
+
+[node name="InformacoesPanel" type="Panel" parent="MenuConfig/PanelConfig" unique_id=1487192422]
+visible = false
+layout_mode = 0
+offset_left = 127.0
+offset_top = 43.0
+offset_right = 783.0
+offset_bottom = 393.0
+
+[connection signal="pressed" from="btnJogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="btnConfig" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="MenuConfig/PanelConfig/btnCam1" to="." method="_on_btn_cam_1_pressed"]
+[connection signal="pressed" from="MenuConfig/PanelConfig/btnCam2" to="." method="_on_btn_cam_1_pressed"]
+[connection signal="pressed" from="MenuConfig/PanelConfig/btnCam3" to="." method="_on_btn_cam_1_pressed"]

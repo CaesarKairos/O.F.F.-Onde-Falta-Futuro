@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="O.F.F. (Onde Falta Futuro)"
-run/main_scene="uid://clxdym1sc2km5"
+run/main_scene="uid://b8m1ql7qvtj3g"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

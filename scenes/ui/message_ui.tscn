@@ -11,10 +11,10 @@ offset_bottom = 40.0
 
 [node name="DialogueText" type="Label" parent="DialogueBox" unique_id=264019456]
 layout_mode = 0
-offset_left = 407.0
-offset_top = 1.0
-offset_right = 863.0
-offset_bottom = 127.0
+offset_left = 364.0
+offset_top = 13.0
+offset_right = 820.0
+offset_bottom = 139.0
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
 layout_mode = 0
