@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvgwwdtc1b25f"
-path="res://.godot/imported/Cenário 1 - Quarto (1).png-3613a59796decd619729aedcccb74aa5.ctex"
+path="res://.godot/imported/Cenário 1 - Quarto (1).png-4f808f35d1b26b63804a8fbe9fd96ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cenário 1 - Quarto (1).png"
-dest_files=["res://.godot/imported/Cenário 1 - Quarto (1).png-3613a59796decd619729aedcccb74aa5.ctex"]
+source_file="res://assets/art/environment/Cenário 1 - Quarto (1).png"
+dest_files=["res://.godot/imported/Cenário 1 - Quarto (1).png-4f808f35d1b26b63804a8fbe9fd96ce1.ctex"]
 
 [params]
 
