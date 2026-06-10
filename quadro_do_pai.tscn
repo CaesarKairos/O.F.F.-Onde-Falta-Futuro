@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://j525my5nyvkf"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_fpp3b"]
+[ext_resource type="Texture2D" uid="uid://b0lyjm2qt5303" path="res://assets/art/environment/props/foto q vai na moldura.jpg" id="2_1n67d"]
+[ext_resource type="Texture2D" uid="uid://d14ysi1fxkgc4" path="res://assets/art/environment/props/moldura .png" id="3_7s4th"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djbte"]
+size = Vector2(77.75, 82.25)
+
+[node name="Quadro do pai" unique_id=15208082 instance=ExtResource("1_fpp3b")]
+message = "“A casa ainda parece vazia demais hoje, mesmo depois de anos sem o senhor…”"
+
+[node name="Sprite2D" parent="." index="2" unique_id=389972176]
+texture = ExtResource("2_1n67d")
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=1838995647]
+visible = false
+shape = SubResource("RectangleShape2D_djbte")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="4" unique_id=1966613667]
+position = Vector2(456.00003, 378.00003)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("3_7s4th")

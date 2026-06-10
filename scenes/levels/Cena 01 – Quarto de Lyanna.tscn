@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://clxdym1sc2km5"]
+
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/player.tscn" id="1_4p0wl"]
+[ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_b4xif"]
+[ext_resource type="PackedScene" uid="uid://y5a7w8rkb8qp" path="res://xicara.tscn" id="4_6jiev"]
+[ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="5_jd4ns"]
+[ext_resource type="PackedScene" uid="uid://7qkym16am6ou" path="res://lobo.tscn" id="6_4p0wl"]
+[ext_resource type="PackedScene" uid="uid://x6ukml5ron4d" path="res://bruno.tscn" id="6_eaika"]
+[ext_resource type="PackedScene" uid="uid://j525my5nyvkf" path="res://quadro_do_pai.tscn" id="8_spm07"]
+[ext_resource type="PackedScene" uid="uid://c1mx87v3u5ucv" path="res://quadro_investigativo.tscn" id="9_eaika"]
+[ext_resource type="PackedScene" uid="uid://dv7hgo6h3hu8e" path="res://assets/art/environment/props/gato_da_sorte.tscn" id="9_ywvd5"]
+[ext_resource type="PackedScene" uid="uid://ddt7uwx6jbfwi" path="res://velas_da_KineChan.tscn" id="10_spm07"]
+[ext_resource type="Texture2D" uid="uid://dvgwwdtc1b25f" path="res://assets/art/environment/Cenário 1 - Quarto (1).png" id="11_eaika"]
+[ext_resource type="Texture2D" uid="uid://c2a5itnmbrvuk" path="res://assets/art/environment/Estante.png" id="12_0jlay"]
+[ext_resource type="Texture2D" uid="uid://5s3mba65noag" path="res://assets/art/environment/props/cama.50px.png" id="12_3a18n"]
+[ext_resource type="Texture2D" uid="uid://vwym2qnsehmh" path="res://assets/art/environment/props/mesa.apenas.png" id="13_owl10"]
+[ext_resource type="Texture2D" uid="uid://d2008vj85vcdv" path="res://assets/art/environment/props/cadeira.png" id="15_ofbh8"]
+
+[node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
+
+[node name="Cenário1Quarto(1)" type="Sprite2D" parent="." unique_id=248122033]
+position = Vector2(640, 360)
+scale = Vector2(0.33333334, 0.33333334)
+texture = ExtResource("11_eaika")
+
+[node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_b4xif")]
+position = Vector2(1, 90)
+
+[node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
+position = Vector2(1159, -192)
+
+[node name="quadro investigativo" parent="." unique_id=591792509 instance=ExtResource("9_eaika")]
+position = Vector2(241, -27)
+
+[node name="Xicara" parent="." unique_id=15208082 instance=ExtResource("4_6jiev")]
+position = Vector2(355, 94)
+
+[node name="MessageUI" parent="." unique_id=177896999 instance=ExtResource("5_jd4ns")]
+
+[node name="Estante" type="Sprite2D" parent="." unique_id=444068764]
+position = Vector2(1024, 400)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_0jlay")
+
+[node name="lobo" parent="." unique_id=1214063984 instance=ExtResource("6_4p0wl")]
+position = Vector2(-201, 126)
+
+[node name="Quadro do pai" parent="." unique_id=732375506 instance=ExtResource("8_spm07")]
+position = Vector2(974, 324.00003)
+scale = Vector2(0.33, 0.33)
+
+[node name="gato da sorte" parent="." unique_id=743327537 instance=ExtResource("9_ywvd5")]
+position = Vector2(888, 152.00002)
+scale = Vector2(0.4, 0.4)
+
+[node name="Velas" parent="." unique_id=766835746 instance=ExtResource("10_spm07")]
+position = Vector2(744, 72)
+scale = Vector2(0.6, 0.6)
+
+[node name="Cama_50Px" type="Sprite2D" parent="." unique_id=352618625]
+position = Vector2(312, 512)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_3a18n")
+
+[node name="MesaPc" type="Sprite2D" parent="." unique_id=1410293535]
+position = Vector2(721, 482)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_owl10")
+
+[node name="Cadeira" type="Sprite2D" parent="." unique_id=506452662]
+position = Vector2(664, 472)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_ofbh8")
+
+[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_4p0wl")]
+position = Vector2(413, 492)

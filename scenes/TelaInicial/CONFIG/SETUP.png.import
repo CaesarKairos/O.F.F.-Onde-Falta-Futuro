@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5sk8tytl0srf"
-path="res://.godot/imported/cama.png-2ae87f32fdad9661eba559fd1d02feb1.ctex"
+uid="uid://cnpo6exycojgf"
+path="res://.godot/imported/SETUP.png-1c54f50dac3bc8d4fcf78de1823cd2d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cama.png"
-dest_files=["res://.godot/imported/cama.png-2ae87f32fdad9661eba559fd1d02feb1.ctex"]
+source_file="res://scenes/TelaInicial/CONFIG/SETUP.png"
+dest_files=["res://.godot/imported/SETUP.png-1c54f50dac3bc8d4fcf78de1823cd2d5.ctex"]
 
 [params]
 

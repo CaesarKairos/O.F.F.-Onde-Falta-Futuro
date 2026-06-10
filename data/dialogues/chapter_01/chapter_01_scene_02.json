@@ -1,0 +1,135 @@
+{
+	"scene_id": "chapter_01_scene_02",
+	"scene_name": "Reencontro com Cecília",
+
+	"start_node": "cecilia_001",
+
+	"nodes": {
+
+		"cecilia_001": {
+			"speaker": "cecilia",
+			"text": "Finalmente resolveu aparecer! Achei que tinha esquecido de mim.",
+			"set_flag": "met_cecilia",
+			"next": "cecilia_002"
+		},
+
+		"cecilia_002": {
+			"speaker": "lyanna",
+			"text": "Dramática, como sempre!",
+			"next": "cecilia_003"
+		},
+
+		"cecilia_003": {
+			"speaker": "cecilia",
+			"text": "Tá com essa cara de sono por quê? Ontem foi dia pesado no jornal?",
+			"next": "cecilia_004"
+		},
+
+		"cecilia_004": {
+			"speaker": "lyanna",
+			"text": "Antes fosse... Só demorei pra pegar no sono. Mas e aí, como foi a viagem?",
+			"next": "cecilia_005"
+		},
+
+		"cecilia_005": {
+			"speaker": "cecilia",
+			"text": "Um caos! A entrada pra cidade tava parecendo uma piscina.",
+			"next": "cecilia_006"
+		},
+
+		"cecilia_006": {
+			"speaker": "lyanna",
+			"text": "Acontece toda vez que chove.",
+			"next": "cecilia_007"
+		},
+
+		"cecilia_007": {
+			"speaker": "cecilia",
+			"text": "É... você não tá esquecendo de nada, não?",
+			"next": "choice_birthday"
+		},
+
+		"choice_birthday": {
+			"type": "choice",
+			"speaker": "lyanna",
+			"text": "Como responder?",
+			"choices": [
+				{
+					"text": "Desejar feliz aniversário",
+					"next": "birthday_001",
+					"required_flag": "knows_cecilia_birthday"
+				},
+				{
+					"text": "O quê?",
+					"next": "forgetful_001"
+				}
+			]
+		},
+
+		"birthday_001": {
+			"speaker": "lyanna",
+			"text": "Claro que não, deixa de ser boba. Só tava esperando o momento certo.",
+			"next": "birthday_002"
+		},
+
+		"birthday_002": {
+			"speaker": "lyanna",
+			"text": "Feliz aniversário, de verdade. Fico feliz que você veio pra cá, mesmo com a correria da redação.",
+			"next": "birthday_003"
+		},
+
+		"birthday_003": {
+			"speaker": "cecilia",
+			"text": "Obrigado amiga. Mas vem cá, eu sei que hoje é um dia complicado pra você também, né?",
+			"next": "birthday_004"
+		},
+
+		"birthday_004": {
+			"speaker": "lyanna",
+			"text": "É... você sabe, amiga. Mas não vamos falar disso agora, é seu aniversário!",
+			"next": "birthday_005"
+		},
+
+		"birthday_005": {
+			"speaker": "lyanna",
+			"text": "Vem comigo pra cozinha, minha mãe fez uma torta deliciosa ontem.",
+			"next": "scene_end"
+		},
+
+		"forgetful_001": {
+			"speaker": "lyanna",
+			"text": "O quê? O café? O Bruno disse que eu prometi, mas eu juro que...",
+			"next": "forgetful_002"
+		},
+
+		"forgetful_002": {
+			"speaker": "cecilia",
+			"text": "Lyanna Costa Evaristo... olha a data no seu celular agora!",
+			"next": "forgetful_003"
+		},
+
+		"forgetful_003": {
+			"speaker": "lyanna",
+			"text": "Nossa, Cecília! Feliz aniversário, amiga! Desculpa, minha cabeça tá em outro lugar hoje... você sabe que dia é hoje pra mim também, né?",
+			"next": "forgetful_004"
+		},
+
+		"forgetful_004": {
+			"speaker": "cecilia",
+			"text": "Sim, eu sei. Te desculpo por ter esquecido. Podemos falar sobre isso depois, se você quiser.",
+			"next": "forgetful_005"
+		},
+
+		"forgetful_005": {
+			"speaker": "lyanna",
+			"text": "Vai ser bom desabafar um pouco. Vamos pra cozinha pra eu te fazer um café.",
+			"next": "scene_end"
+		},
+
+		"scene_end": {
+			"type": "end",
+			"set_story_stage": 2,
+			"set_flag": "talked_to_cecilia"
+		}
+	}
+}

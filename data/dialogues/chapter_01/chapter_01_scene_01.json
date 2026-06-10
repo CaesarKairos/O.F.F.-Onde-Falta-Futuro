@@ -1,0 +1,126 @@
+{
+	"scene_id": "chapter_01_scene_01",
+	"scene_name": "Quarto de Lyanna",
+	"start_node": "dream_001",
+
+	"nodes": {
+
+		"dream_001": {
+			"speaker": "jose",
+			"text": "Lyanna… Lyanna?",
+			"next": "dream_002"
+		},
+
+		"dream_002": {
+			"speaker": "bruno",
+			"text": "Lya, acorda!",
+			"next": "dialogue_001"
+		},
+
+		"dialogue_001": {
+			"speaker": "lyanna",
+			"text": "Hm... pai?",
+			"next": "dialogue_002"
+		},
+
+		"dialogue_002": {
+			"speaker": "bruno",
+			"text": "Do que você me chamou? Tá sonhando acordada?",
+			"next": "dialogue_003"
+		},
+
+		"dialogue_003": {
+			"speaker": "lyanna",
+			"text": "Oque você quer? Fala logo que eu quero dormir.",
+			"next": "dialogue_004"
+		},
+
+		"dialogue_004": {
+			"speaker": "bruno",
+			"text": "A Cecília tá lá na sala te esperando.",
+			"next": "choice_001"
+		},
+
+		"choice_001": {
+			"type": "choice",
+			"text": "O que responder?",
+			"choices": [
+				{
+					"text": "Perguntar porque ela está lá",
+					"next": "birthday_path_001"
+				},
+				{
+					"text": "Dizer que já vai",
+					"next": "already_going_001"
+				}
+			]
+		},
+
+		"birthday_path_001": {
+			"speaker": "lyanna",
+			"text": "A Cecília? O que ela tá fazendo aqui tão cedo?",
+			"next": "birthday_path_002"
+		},
+
+		"birthday_path_002": {
+			"speaker": "bruno",
+			"text": "Esqueceu que é o aniversário dela? Ela veio direto do Terminal e tá esperando lá na sala.",
+			"set_flag": "knows_cecilia_birthday",
+			"next": "birthday_path_003"
+		},
+
+		"birthday_path_003": {
+			"speaker": "lyanna",
+			"text": "Nossa, é verdade… eu perdi o sono com...",
+			"next": "birthday_path_004"
+		},
+
+		"birthday_path_004": {
+			"speaker": "bruno",
+			"text": "Com…?",
+			"next": "birthday_path_005"
+		},
+
+		"birthday_path_005": {
+			"speaker": "lyanna",
+			"text": "Hããã… Fala pra ela que já vou ir.",
+			"next": "scene_end"
+		},
+
+		"already_going_001": {
+			"speaker": "lyanna",
+			"text": "Tá, tá... fala pra ela que eu já levantei.",
+			"next": "already_going_002"
+		},
+
+		"already_going_002": {
+			"speaker": "bruno",
+			"text": "Você esqueceu que ela ia vir, né? Você até prometeu um café pra ela.",
+			"next": "already_going_003"
+		},
+
+		"already_going_003": {
+			"speaker": "lyanna",
+			"text": "Não é isso, eu só perdi o sono com...",
+			"next": "already_going_004"
+		},
+
+		"already_going_004": {
+			"speaker": "bruno",
+			"text": "Com…?",
+			"next": "already_going_005"
+		},
+
+		"already_going_005": {
+			"speaker": "lyanna",
+			"text": "Hããã… Não é nada, vai lá avisar pra ela.",
+			"next": "scene_end"
+		},
+
+		"scene_end": {
+			"type": "end",
+			"set_flag": "talked_to_bruno",
+			"set_story_stage": 1
+		}
+	}
+}
