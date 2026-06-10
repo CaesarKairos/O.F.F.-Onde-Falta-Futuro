@@ -3,14 +3,24 @@ extends Area2D
 @onready var icon = $InteractionIcon
 
 var player_near = false
+var already_interacted = false
 
 func _ready():
 
 	icon.visible = false
 
-func _process(delta):
+func _process(_delta):
+
+	var ui = get_tree().get_first_node_in_group("message_ui")
+
+	if ui and ui.is_message_open():
+		return
 
 	if player_near and Input.is_action_just_pressed("interact"):
+
+		if not already_interacted:
+			already_interacted = true
+			icon.visible = false
 
 		start_dialog()
 
@@ -57,7 +67,9 @@ func _on_body_entered(body):
 	if body.name == "Player":
 
 		player_near = true
-		icon.visible = true
+
+		if not already_interacted:
+			icon.visible = true
 
 func _on_body_exited(body):
 

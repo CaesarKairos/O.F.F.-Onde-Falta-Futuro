@@ -9,6 +9,8 @@ extends CanvasLayer
 @onready var choice2 = $DialogueBox/ChoicesContainer/Choice2
 @onready var choice3 = $DialogueBox/ChoicesContainer/Choice3
 
+var waiting_message_close := false
+
 var portraits = {
 	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
 	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png")
@@ -24,6 +26,22 @@ func _ready() -> void:
 	choice1.pressed.connect(_on_choice_1)
 	choice2.pressed.connect(_on_choice_2)
 	choice3.pressed.connect(_on_choice_3)
+
+func _process(_delta) -> void:
+
+	if waiting_message_close:
+
+		if Input.is_action_just_pressed("skip"):
+
+			waiting_message_close = false
+
+			_hide_choices()
+			portrait.visible = false
+			dialogue_box.visible = false
+
+func is_message_open() -> bool:
+
+	return waiting_message_close
 
 func _update_choices_position() -> void:
 
@@ -50,6 +68,8 @@ func set_portrait(character_name: String) -> void:
 
 func show_message(texto: String) -> void:
 
+	waiting_message_close = true
+
 	dialogue_box.visible = true
 	dialogue_text.text = texto
 
@@ -59,11 +79,9 @@ func show_message(texto: String) -> void:
 
 	await _update_choices_position()
 
-	await get_tree().create_timer(4).timeout
-
-	dialogue_box.visible = false
-
 func show_dialogue(texto: String) -> void:
+
+	waiting_message_close = false
 
 	dialogue_box.visible = true
 	dialogue_text.text = texto
@@ -73,6 +91,8 @@ func show_dialogue(texto: String) -> void:
 	await _update_choices_position()
 
 func show_choices(texto: String, options: Array) -> void:
+
+	waiting_message_close = false
 
 	dialogue_box.visible = true
 	dialogue_text.text = texto
@@ -95,6 +115,8 @@ func show_choices(texto: String, options: Array) -> void:
 			buttons[i].visible = false
 
 func hide_dialog() -> void:
+
+	waiting_message_close = false
 
 	_hide_choices()
 
