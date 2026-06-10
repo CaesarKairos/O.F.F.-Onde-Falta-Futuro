@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3oppl00dbo7s" path="res://quadro.sem.png" id="2_anglw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cv0ee"]
-size = Vector2(270, 171)
+size = Vector2(150, 171)
 
 [node name="quadro investigativo" unique_id=15208082 instance=ExtResource("1_cv0ee")]
 message = "“Preciso coletar logo o relato do pessoal que mora perto de onde ele morreu. Aquela empresa tá jogando sujo pra abafar o caso, não posso deixar esse caso ser tratado como 'só mais uma segunda-feira normal’.”"
@@ -13,8 +13,13 @@ message = "“Preciso coletar logo o relato do pessoal que mora perto de onde el
 position = Vector2(455.99997, 224)
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
 scale = Vector2(0.405, 0.405)
 texture = ExtResource("2_anglw")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(388, 360)
 shape = SubResource("RectangleShape2D_cv0ee")
+
+[node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
+visible = false

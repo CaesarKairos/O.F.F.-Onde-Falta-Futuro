@@ -23,11 +23,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
-size = Vector2(77.75, 82.25)
+size = Vector2(64, 82.25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nm1rj"]
 
@@ -39,7 +39,7 @@ position = Vector2(455.99997, 272)
 scale = Vector2(0.13272293, 0.1504688)
 sprite_frames = SubResource("SpriteFrames_axnsh")
 autoplay = "default"
-frame_progress = 0.981709
+frame_progress = 0.80256045
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=389972176]
 position = Vector2(448.00003, 360)

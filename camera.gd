@@ -4,9 +4,6 @@ extends Area2D
 @onready var animated_sprite = get_node_or_null("AnimatedSprite2D")
 
 var player_near = false
-var already_interacted = false
-
-@export var message = "Mensagem aqui"
 
 func _ready():
 
@@ -19,23 +16,23 @@ func _process(delta):
 
 	if player_near and Input.is_action_just_pressed("interact"):
 
-		if not already_interacted:
-			already_interacted = true
-			icon.visible = false
-
 		var ui = get_tree().get_first_node_in_group("message_ui")
 
 		if ui:
-			ui.show_message(message)
+			ui.show_message(
+				"Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?"
+			)
+
+		GameState.add_item("camera")
+
+		queue_free()
 
 func _on_body_entered(body):
 
 	if body.name == "Player":
 
 		player_near = true
-
-		if not already_interacted:
-			icon.visible = true
+		icon.visible = true
 
 func _on_body_exited(body):
 

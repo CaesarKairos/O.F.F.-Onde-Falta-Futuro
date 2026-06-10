@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1ibuarf3cx10" path="res://bruno andando.png" id="4_x6wwb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6wwb"]
-size = Vector2(126, 320)
+size = Vector2(88, 296)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6wwb"]
 atlas = ExtResource("3_1ll3t")
@@ -82,7 +82,7 @@ autoplay = "default"
 frame_progress = 0.24674019
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1700379799]
-position = Vector2(257, 416)
+position = Vector2(252, 428)
 shape = SubResource("RectangleShape2D_x6wwb")
 
 [node name="AnimatedSprite2D" parent="." index="2" unique_id=1696894205]

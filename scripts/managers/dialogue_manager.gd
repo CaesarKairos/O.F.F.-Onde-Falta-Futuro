@@ -143,13 +143,10 @@ func _show_current_node() -> void:
 			)
 
 			if speaker != "":
-				ui.show_dialogue(
-					"%s: %s" % [
-						speaker,
-						text
-					]
-				)
+				ui.set_portrait(speaker)
+				ui.show_dialogue("%s: %s" % [speaker.capitalize(), text])
 			else:
+				ui.set_portrait("")
 				ui.show_dialogue(text)
 
 		"choice":

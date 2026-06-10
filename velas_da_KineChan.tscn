@@ -36,14 +36,19 @@ animations = [{
 position = Vector2(79, 1)
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" parent="." index="1" unique_id=1443406023]
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+visible = false
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+visible = false
+disabled = true
+
+[node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
 position = Vector2(452, 383)
 scale = Vector2(0.175, 0.175)
 sprite_frames = SubResource("SpriteFrames_1hyqr")
+autoplay = "default"
 frame_progress = 0.93459964
-
-[node name="Sprite2D" parent="." index="2" unique_id=389972176]
-visible = false
-
-[node name="CollisionShape2D" parent="." index="3" unique_id=1838995647]
-disabled = true

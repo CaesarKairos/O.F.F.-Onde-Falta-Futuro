@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_n7e8w"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7e8w"]
-size = Vector2(77.75, 82.25)
-
-[node name="livros" unique_id=15208082 instance=ExtResource("1_n7e8w")]
+[node name="Livros" unique_id=15208082 instance=ExtResource("1_n7e8w")]
 message = "“Ler a Conceição Evaristo é como sentir que estou folheando a minha alma. Ainda preciso de terminar o 'Canção para Ninar Menino Grande'.”"
 
-[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
-shape = SubResource("RectangleShape2D_n7e8w")
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
+visible = false
