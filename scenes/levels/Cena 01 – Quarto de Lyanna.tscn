@@ -68,7 +68,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_owl10")
 
 [node name="Cadeira" type="Sprite2D" parent="." unique_id=506452662]
-position = Vector2(673, 547)
+position = Vector2(664, 472)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_ofbh8")
 
