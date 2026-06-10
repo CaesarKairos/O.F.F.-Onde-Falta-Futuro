@@ -67,10 +67,10 @@ position = Vector2(721, 482)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_owl10")
 
-[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_4p0wl")]
-position = Vector2(-141, -152)
-
 [node name="Cadeira" type="Sprite2D" parent="." unique_id=506452662]
 position = Vector2(673, 547)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_ofbh8")
+
+[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_4p0wl")]
+position = Vector2(413, 492)
