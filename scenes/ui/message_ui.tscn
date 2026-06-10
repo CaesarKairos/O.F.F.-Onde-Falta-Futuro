@@ -1,36 +1,47 @@
 [gd_scene format=3 uid="uid://co8nncd5d6w6s"]
 
 [ext_resource type="Script" uid="uid://ci5mx5aooku53" path="res://scenes/ui/message_ui.gd" id="1_rowjr"]
+[ext_resource type="Texture2D" uid="uid://d0a2jxw7m1s1p" path="res://caixa  de dialogo.png" id="2_pfwhv"]
+[ext_resource type="FontFile" uid="uid://cdq43ieudw0if" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="3_u23ax"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rowjr"]
+font = ExtResource("3_u23ax")
+font_size = 25
 
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
 script = ExtResource("1_rowjr")
 
 [node name="DialogueBox" type="TextureRect" parent="." unique_id=1469839919]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 192.0
+offset_top = 24.0
+offset_right = 1088.0
+offset_bottom = 184.0
+texture = ExtResource("2_pfwhv")
 
 [node name="DialogueText" type="Label" parent="DialogueBox" unique_id=264019456]
 layout_mode = 0
-offset_left = 364.0
-offset_top = 13.0
-offset_right = 820.0
-offset_bottom = 139.0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 832.0
+offset_bottom = 150.0
 label_settings = SubResource("LabelSettings_rowjr")
+autowrap_mode = 2
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
 layout_mode = 0
-offset_left = 412.0
-offset_top = 83.0
-offset_right = 625.0
-offset_bottom = 115.0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 832.0
+offset_bottom = 144.0
 
 [node name="Choice1" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=1261187853]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")
 
 [node name="Choice2" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=966048456]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")
 
 [node name="Choice3" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=362293405]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")
