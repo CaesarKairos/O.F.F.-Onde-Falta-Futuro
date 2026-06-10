@@ -9,10 +9,14 @@ size = Vector2(77.75, 82.25)
 [node name="lobo" unique_id=15208082 instance=ExtResource("1_5bekt")]
 message = " ​“Ganhei num sorteio de quermesse quando era pequena. É o único que sabe todos os meus segredos... e o único que não me julga por falar sozinha.”"
 
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(360, 256)
+
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
+position = Vector2(344, 352)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_kvun2")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
-position = Vector2(458, 366)
+position = Vector2(352, 344)
 shape = SubResource("RectangleShape2D_26d85")

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ci5mx5aooku53" path="res://scenes/ui/message_ui.gd" id="1_rowjr"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_rowjr"]
+
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
 script = ExtResource("1_rowjr")
 
@@ -15,6 +17,7 @@ offset_left = 364.0
 offset_top = 13.0
 offset_right = 820.0
 offset_bottom = 139.0
+label_settings = SubResource("LabelSettings_rowjr")
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
 layout_mode = 0

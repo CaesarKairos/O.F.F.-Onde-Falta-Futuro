@@ -1,8 +1,29 @@
 [gd_scene format=3 uid="uid://cl7lavj13dkaq"]
 
 [ext_resource type="Script" uid="uid://dlikmigschqwx" path="res://npcbase.gd" id="1_db5io"]
-[ext_resource type="Texture2D" uid="uid://dton8ooqdr5go" path="res://Placeholder (Excluir)/InteractionIconPlaceholder.png" id="2_8egmh"]
-[ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_163nw"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://Press E.png" id="2_qaxll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db5io"]
+atlas = ExtResource("2_qaxll")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8egmh"]
+atlas = ExtResource("2_qaxll")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_163nw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db5io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8egmh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcapy"]
 size = Vector2(194, 312)
@@ -10,16 +31,13 @@ size = Vector2(194, 312)
 [node name="npcbase" type="Area2D" unique_id=822960918]
 script = ExtResource("1_db5io")
 
-[node name="InteractionIcon" type="Sprite2D" parent="." unique_id=142748171]
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=2010784121]
 position = Vector2(264.5, 390.5)
-scale = Vector2(0.33686063, 0.59619045)
-texture = ExtResource("2_8egmh")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1376532287]
-position = Vector2(267.5, 388.5)
-scale = Vector2(0.38911292, 0.5961165)
-texture = ExtResource("3_163nw")
+scale = Vector2(0.38, 0.38)
+sprite_frames = SubResource("SpriteFrames_163nw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1700379799]
 position = Vector2(265, 391)
 shape = SubResource("RectangleShape2D_rcapy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1696894205]

@@ -1,8 +1,30 @@
 [gd_scene format=3 uid="uid://bp10rkyroroxk"]
 
 [ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scenes/components/interactable.gd" id="1_jcy0q"]
-[ext_resource type="Texture2D" uid="uid://dton8ooqdr5go" path="res://Placeholder (Excluir)/InteractionIconPlaceholder.png" id="2_dm3yd"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://Press E.png" id="2_nm1rj"]
 [ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_nm1rj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b5i0"]
+atlas = ExtResource("2_nm1rj")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhggm"]
+atlas = ExtResource("2_nm1rj")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_axnsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b5i0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhggm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
 size = Vector2(77.75, 82.25)
@@ -10,19 +32,20 @@ size = Vector2(77.75, 82.25)
 [node name="Interactable" type="Area2D" unique_id=15208082]
 script = ExtResource("1_jcy0q")
 
-[node name="InteractionIcon" type="Sprite2D" parent="." unique_id=1270627854]
-visible = false
-position = Vector2(448.99997, 372.00003)
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=832703344]
+position = Vector2(455.99997, 272)
 scale = Vector2(0.13272293, 0.1504688)
-texture = ExtResource("2_dm3yd")
+sprite_frames = SubResource("SpriteFrames_axnsh")
+autoplay = "default"
+frame_progress = 0.981709
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=389972176]
-position = Vector2(450, 371)
+position = Vector2(448.00003, 360)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("3_nm1rj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838995647]
-position = Vector2(448.875, 371.125)
+position = Vector2(448, 360)
 shape = SubResource("RectangleShape2D_jcy0q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
