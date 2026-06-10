@@ -77,6 +77,8 @@ func show_choices(texto: String, options: Array) -> void:
 	dialogue_box.visible = true
 	dialogue_text.text = texto
 
+	portrait.visible = false
+
 	await _update_choices_position()
 
 	var buttons = [choice1, choice2, choice3]
