@@ -1,47 +1,83 @@
 [gd_scene format=3 uid="uid://dv7hgo6h3hu8e"]
 
-[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_ck6vh"]
+[ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scenes/components/interactable.gd" id="1_d0km1"]
 [ext_resource type="Texture2D" uid="uid://cnwhn3xg2c8pf" path="res://varios gatinho.png" id="2_afcjl"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://Press E.png" id="2_fo3c0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s0xib"]
-atlas = ExtResource("2_afcjl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b5i0"]
+atlas = ExtResource("2_fo3c0")
 region = Rect2(0, 0, 1024, 1024)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0lbk"]
-atlas = ExtResource("2_afcjl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhggm"]
+atlas = ExtResource("2_fo3c0")
 region = Rect2(1024, 0, 1024, 1024)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4e5ht"]
-atlas = ExtResource("2_afcjl")
-region = Rect2(2048, 0, 1024, 1024)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8rmnv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_axnsh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s0xib")
+"texture": SubResource("AtlasTexture_6b5i0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n0lbk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4e5ht")
+"texture": SubResource("AtlasTexture_bhggm")
 }],
 "loop": true,
 "name": &"default",
-"speed": 4.0
+"speed": 5.0
 }]
 
-[node name="gato da sorte" unique_id=15208082 instance=ExtResource("1_ck6vh")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_076i1"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(0, 0, 1024, 1024)
 
-[node name="AnimatedSprite2D" parent="." index="1" unique_id=1443406023]
-position = Vector2(468, 362)
-scale = Vector2(0.225, 0.225)
-sprite_frames = SubResource("SpriteFrames_8rmnv")
-frame_progress = 0.48709092
+[sub_resource type="AtlasTexture" id="AtlasTexture_63ci8"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(1024, 0, 1024, 1024)
 
-[node name="Sprite2D" parent="." index="2" unique_id=389972176]
-texture = null
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq36w"]
+atlas = ExtResource("2_afcjl")
+region = Rect2(2048, 0, 1024, 1024)
 
-[node name="CollisionShape2D" parent="." index="3" unique_id=1838995647]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk2gt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_076i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63ci8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq36w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
+size = Vector2(77.75, 82.25)
+
+[node name="gato da sorte" type="Area2D" unique_id=15208082]
+script = ExtResource("1_d0km1")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=832703344]
+position = Vector2(455.99997, 272)
+scale = Vector2(0.13272293, 0.1504688)
+sprite_frames = SubResource("SpriteFrames_axnsh")
+autoplay = "default"
+frame_progress = 0.981709
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=345707943]
+position = Vector2(448.00003, 360)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_mk2gt")
+frame_progress = 0.538634
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838995647]
+position = Vector2(448, 360)
+shape = SubResource("RectangleShape2D_jcy0q")
 disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

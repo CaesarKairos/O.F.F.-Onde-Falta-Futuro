@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bllgsc2go6rqg"
-path="res://.godot/imported/fumaçarrrr.png-3fc4ef4e712d39f74f010ef0acdbad7f.ctex"
+uid="uid://c7bffp2skhp7t"
+path="res://.godot/imported/Cenário 1 - Quarto (02) (2).png-53c1e9bd0ba5ce4c30613517bd3593ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fumaçarrrr.png"
-dest_files=["res://.godot/imported/fumaçarrrr.png-3fc4ef4e712d39f74f010ef0acdbad7f.ctex"]
+source_file="res://scenes/levels/Cenário 1 - Quarto (02) (2).png"
+dest_files=["res://.godot/imported/Cenário 1 - Quarto (02) (2).png-53c1e9bd0ba5ce4c30613517bd3593ca.ctex"]
 
 [params]
 

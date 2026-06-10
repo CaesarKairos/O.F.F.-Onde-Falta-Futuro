@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://jihcpk36vgh0"]
+
+[ext_resource type="Texture2D" uid="uid://dsbn0tmt3v06r" path="res://scenes/levels/Cenário 1 - Quarto (02).jpg" id="1_dqdil"]
+
+[node name="Cenário1Quarto(02)" type="Sprite2D" unique_id=567575509]
+position = Vector2(644, 364)
+texture = ExtResource("1_dqdil")

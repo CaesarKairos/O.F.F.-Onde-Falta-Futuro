@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bac4m8rvqf5da" path="res://scenes/components/lobopelucia.png" id="2_kvun2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
-size = Vector2(77.75, 82.25)
+size = Vector2(77.75, 89.125)
 
 [node name="lobo" unique_id=15208082 instance=ExtResource("1_5bekt")]
 message = " ​“Ganhei num sorteio de quermesse quando era pequena. É o único que sabe todos os meus segredos... e o único que não me julga por falar sozinha.”"
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
-position = Vector2(360, 256)
+position = Vector2(343, 256)
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
-position = Vector2(344, 352)
-scale = Vector2(0.2, 0.2)
+position = Vector2(331.3, 336.8)
+scale = Vector2(0.17519529, 0.17031248)
 texture = ExtResource("2_kvun2")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
-position = Vector2(352, 344)
+position = Vector2(336, 335)
 shape = SubResource("RectangleShape2D_26d85")

@@ -29,6 +29,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcy0q"]
 size = Vector2(77.75, 82.25)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_nm1rj"]
+
 [node name="Interactable" type="Area2D" unique_id=15208082]
 script = ExtResource("1_jcy0q")
 
@@ -47,6 +49,9 @@ texture = ExtResource("3_nm1rj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838995647]
 position = Vector2(448, 360)
 shape = SubResource("RectangleShape2D_jcy0q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2099137764]
+sprite_frames = SubResource("SpriteFrames_nm1rj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
