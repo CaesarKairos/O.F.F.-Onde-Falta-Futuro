@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dghky7o3l0twu"]
 
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/player.tscn" id="1_4p0wl"]
+[ext_resource type="Script" uid="uid://bdgom6m87aasb" path="res://scenes/levels/cena_01_–_quarto_de_lyanna.gd" id="1_ofbh8"]
 [ext_resource type="Texture2D" uid="uid://c7bffp2skhp7t" path="res://scenes/levels/Cenário 1 - Quarto (02) (2).png" id="2_eaika"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_b4xif"]
 [ext_resource type="PackedScene" uid="uid://y5a7w8rkb8qp" path="res://xicara.tscn" id="4_6jiev"]
@@ -14,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c1mx87v3u5ucv" path="res://quadro_investigativo.tscn" id="11_eaika"]
 [ext_resource type="PackedScene" uid="uid://l2d174tf486j" path="res://livros.tscn" id="12_0jlay"]
 [ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/levels/Cena 01 – Quarto de Lyanna.gdshader" id="14_3a18n"]
+[ext_resource type="PackedScene" uid="uid://ckpw1h8pg4jmw" path="res://discos.tscn" id="16_rfcjc"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -32,6 +34,7 @@ gradient = SubResource("Gradient_3a18n")
 fill = 1
 
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
+script = ExtResource("1_ofbh8")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=740594841]
 color = Color(0.81064117, 0.8568788, 0.92090845, 1)
@@ -79,10 +82,12 @@ position = Vector2(1, 123)
 [node name="MessageUI" parent="." unique_id=177896999 instance=ExtResource("5_jd4ns")]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("1_4p0wl")]
+z_index = 10
 position = Vector2(148, 476)
 
 [node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
-position = Vector2(35, 103)
+z_index = 11
+position = Vector2(1102, 509)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1339898441]
 
@@ -98,8 +103,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1055320262]
+z_index = -1
 position = Vector2(624.5, 440)
 scale = Vector2(1.671875, 0.875)
 color = Color(0.32203376, 0.487988, 0.57447505, 1)
 energy = 10.32
 texture = SubResource("GradientTexture2D_owl10")
+
+[node name="DiscStack" parent="." unique_id=877164899 instance=ExtResource("16_rfcjc")]
+position = Vector2(1023, 452)
+scale = Vector2(0.12, 0.12)
+
+[node name="BrunoTarget" type="Marker2D" parent="." unique_id=2063599036]
+position = Vector2(271, 505)

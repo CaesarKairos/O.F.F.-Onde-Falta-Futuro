@@ -77,7 +77,6 @@ theme_override_fonts/font = ExtResource("3_u23ax")
 
 [node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
 modulate = Color(1, 1, 1, 0.87058824)
-position = Vector2(800, 144)
+position = Vector2(800, 128)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_4mql2")
-frame_progress = 0.17757894
