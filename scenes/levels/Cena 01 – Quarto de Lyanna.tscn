@@ -13,8 +13,31 @@
 [ext_resource type="PackedScene" uid="uid://ddt7uwx6jbfwi" path="res://velas_da_KineChan.tscn" id="10_spm07"]
 [ext_resource type="PackedScene" uid="uid://c1mx87v3u5ucv" path="res://quadro_investigativo.tscn" id="11_eaika"]
 [ext_resource type="PackedScene" uid="uid://l2d174tf486j" path="res://livros.tscn" id="12_0jlay"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/levels/Cena 01 – Quarto de Lyanna.gdshader" id="14_3a18n"]
+
+[sub_resource type="Environment" id="Environment_3vf36"]
+adjustment_enabled = true
+adjustment_brightness = 0.95
+adjustment_contrast = 1.15
+adjustment_saturation = 0.9
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_owl10"]
+shader = ExtResource("14_3a18n")
+shader_parameter/strength = 1.0
+
+[sub_resource type="Gradient" id="Gradient_3a18n"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_owl10"]
+gradient = SubResource("Gradient_3a18n")
+fill = 1
 
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=740594841]
+color = Color(0.81064117, 0.8568788, 0.92090845, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=961949827]
+environment = SubResource("Environment_3vf36")
 
 [node name="Cenário1Quarto(02)(2)" type="Sprite2D" parent="." unique_id=686485797]
 position = Vector2(643, 364)
@@ -60,3 +83,23 @@ position = Vector2(148, 476)
 
 [node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
 position = Vector2(35, 103)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1339898441]
+
+[node name="Vinheta" type="ColorRect" parent="CanvasLayer" unique_id=980960256]
+material = SubResource("ShaderMaterial_owl10")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1055320262]
+position = Vector2(624.5, 440)
+scale = Vector2(1.671875, 0.875)
+color = Color(0.32203376, 0.487988, 0.57447505, 1)
+energy = 10.32
+texture = SubResource("GradientTexture2D_owl10")
