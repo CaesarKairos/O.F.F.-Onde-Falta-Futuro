@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://j443bfps66iw" path="res://scenes/TelaInicial/background.png" id="2_am23o"]
 [ext_resource type="Texture2D" uid="uid://qp3bd81uafgl" path="res://scenes/TelaInicial/O.F.F.png" id="3_jpcta"]
 [ext_resource type="Texture2D" uid="uid://cp53kb8mbxass" path="res://scenes/TelaInicial/BotoesPrincipais/JOGAR.png" id="4_cuxrc"]
-[ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/TelaInicial/BotoesPrincipais/NOVO JOGO.png" id="5_4p4tg"]
-[ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/TelaInicial/BotoesPrincipais/CONTINUAR.png" id="6_k7apl"]
+[ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/TelaInicial/NOVO JOGO.png" id="5_4p4tg"]
+[ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/TelaInicial/CONTINUAR.png" id="6_k7apl"]
 [ext_resource type="Texture2D" uid="uid://eyv8pkxegse8" path="res://scenes/TelaInicial/BotoesPrincipais/CONFIG (1).png" id="7_x7lce"]
 [ext_resource type="Texture2D" uid="uid://w0ejibugv2fx" path="res://scenes/TelaInicial/CONFIG/MENU (3).png" id="8_ns7l0"]
 [ext_resource type="Texture2D" uid="uid://fisqr8u0dbgq" path="res://scenes/TelaInicial/CONFIG/cam1_inativo.png" id="9_cuxrc"]
@@ -145,7 +145,7 @@ offset_top = 43.0
 offset_right = 783.0
 offset_bottom = 393.0
 
-[connection signal="pressed" from="btnJogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="btnJogar" to="." method="_on_btn_jogar_pressed"]
 [connection signal="pressed" from="btnConfig" to="." method="_on_config_pressed"]
 [connection signal="pressed" from="MenuConfig/PanelConfig/btnCam1" to="." method="_on_btn_cam_1_pressed"]
 [connection signal="pressed" from="MenuConfig/PanelConfig/btnCam2" to="." method="_on_btn_cam_1_pressed"]

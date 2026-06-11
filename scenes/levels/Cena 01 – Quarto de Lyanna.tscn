@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://ddt7uwx6jbfwi" path="res://velas_da_KineChan.tscn" id="10_spm07"]
 [ext_resource type="PackedScene" uid="uid://c1mx87v3u5ucv" path="res://quadro_investigativo.tscn" id="11_eaika"]
 [ext_resource type="PackedScene" uid="uid://l2d174tf486j" path="res://livros.tscn" id="12_0jlay"]
-[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/levels/Cena 01 – Quarto de Lyanna.gdshader" id="14_3a18n"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="14_3a18n"]
 [ext_resource type="PackedScene" uid="uid://ckpw1h8pg4jmw" path="res://discos.tscn" id="16_rfcjc"]
+[ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="17_rfcjc"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -27,11 +28,9 @@ adjustment_saturation = 0.9
 shader = ExtResource("14_3a18n")
 shader_parameter/strength = 1.0
 
-[sub_resource type="Gradient" id="Gradient_3a18n"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_owl10"]
-gradient = SubResource("Gradient_3a18n")
-fill = 1
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q761j"]
+shader = ExtResource("17_rfcjc")
+shader_parameter/amount = 0.0510000024225
 
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 script = ExtResource("1_ofbh8")
@@ -102,17 +101,14 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1055320262]
-z_index = -1
-position = Vector2(624.5, 440)
-scale = Vector2(1.671875, 0.875)
-color = Color(0.32203376, 0.487988, 0.57447505, 1)
-energy = 10.32
-texture = SubResource("GradientTexture2D_owl10")
-
 [node name="DiscStack" parent="." unique_id=877164899 instance=ExtResource("16_rfcjc")]
 position = Vector2(1023, 452)
 scale = Vector2(0.12, 0.12)
 
 [node name="BrunoTarget" type="Marker2D" parent="." unique_id=2063599036]
 position = Vector2(271, 505)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=480471663]
+material = SubResource("ShaderMaterial_q761j")
+offset_right = 1284.0
+offset_bottom = 729.0

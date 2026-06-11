@@ -4,7 +4,7 @@ extends Node2D
 @onready var target = $BrunoTarget
 @onready var sprite = $bruno/AnimatedSprite2D
 
-var move_speed := 80.0
+var move_speed := 150.0
 var moving := true
 
 func _ready():

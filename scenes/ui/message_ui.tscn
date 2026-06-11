@@ -34,33 +34,33 @@ script = ExtResource("1_rowjr")
 offset_left = 192.0
 offset_top = 24.0
 offset_right = 1088.0
-offset_bottom = 164.0
+offset_bottom = 155.0
 texture = ExtResource("2_pfwhv")
 
 [node name="Portrait" type="TextureRect" parent="DialogueBox" unique_id=824047613]
 layout_mode = 0
-offset_left = -60.0
-offset_top = -12.0
-offset_right = 100.0
-offset_bottom = 148.0
+offset_left = -96.0
+offset_top = -27.0
+offset_right = 116.0
+offset_bottom = 176.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="DialogueText" type="RichTextLabel" parent="DialogueBox" unique_id=824322995]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 18.0
-offset_right = 807.0
-offset_bottom = 144.0
+offset_left = 100.0
+offset_top = 27.0
+offset_right = 804.0
+offset_bottom = 153.0
 theme_override_fonts/normal_font = ExtResource("3_u23ax")
 autowrap_mode = 2
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 72.0
+offset_top = 40.0
 offset_right = 832.0
-offset_bottom = 144.0
+offset_bottom = 112.0
 alignment = 1
 
 [node name="Choice1" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=1261187853]
@@ -77,6 +77,6 @@ theme_override_fonts/font = ExtResource("3_u23ax")
 
 [node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
 modulate = Color(1, 1, 1, 0.87058824)
-position = Vector2(800, 128)
-scale = Vector2(0.2, 0.2)
+position = Vector2(818, 116.00001)
+scale = Vector2(0.15761717, 0.1605469)
 sprite_frames = SubResource("SpriteFrames_4mql2")
