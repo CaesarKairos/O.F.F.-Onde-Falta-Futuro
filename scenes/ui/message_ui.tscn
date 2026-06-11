@@ -3,6 +3,29 @@
 [ext_resource type="Script" uid="uid://ci5mx5aooku53" path="res://scenes/ui/message_ui.gd" id="1_rowjr"]
 [ext_resource type="Texture2D" uid="uid://d0a2jxw7m1s1p" path="res://caixa  de dialogo.png" id="2_pfwhv"]
 [ext_resource type="FontFile" uid="uid://cdq43ieudw0if" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="3_u23ax"]
+[ext_resource type="Texture2D" uid="uid://bvycr2d31bnlm" path="res://SPACE.png" id="4_e22x1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2ous"]
+atlas = ExtResource("4_e22x1")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84hnr"]
+atlas = ExtResource("4_e22x1")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mql2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2ous")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84hnr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
 script = ExtResource("1_rowjr")
@@ -51,3 +74,10 @@ theme_override_fonts/font = ExtResource("3_u23ax")
 [node name="Choice3" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=362293405]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_u23ax")
+
+[node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
+modulate = Color(1, 1, 1, 0.87058824)
+position = Vector2(800, 144)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_4mql2")
+frame_progress = 0.17757894

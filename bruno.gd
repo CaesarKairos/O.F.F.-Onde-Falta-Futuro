@@ -5,6 +5,7 @@ extends Area2D
 @export var dialogue_path := "res://data/dialogues/chapter_01/chapter_01_scene_01.json"
 @export var start_dialogue_id := "dream_001"
 
+var movement_locked
 var player_near = false
 var already_interacted = false
 

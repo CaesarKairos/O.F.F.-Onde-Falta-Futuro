@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1ibuarf3cx10" path="res://bruno andando.png" id="4_x6wwb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6wwb"]
-size = Vector2(88, 296)
+size = Vector2(88, 276)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6wwb"]
 atlas = ExtResource("3_1ll3t")
@@ -76,17 +76,16 @@ dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_01.json"
 start_dialogue_id = "dream_001"
 
 [node name="InteractionIcon" parent="." index="0" unique_id=2010784121]
-position = Vector2(264, 200)
+position = Vector2(8.000001, -175.99998)
 scale = Vector2(0.2, 0.2)
 autoplay = "default"
 frame_progress = 0.24674019
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1700379799]
-position = Vector2(252, 428)
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_x6wwb")
 
 [node name="AnimatedSprite2D" parent="." index="2" unique_id=1696894205]
-position = Vector2(256, 408)
 scale = Vector2(0.42, 0.42)
 sprite_frames = SubResource("SpriteFrames_ov01m")
 animation = &"idle"

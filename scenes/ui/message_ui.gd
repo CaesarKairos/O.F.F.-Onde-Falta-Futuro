@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var dialogue_box = $DialogueBox
 @onready var dialogue_text = $DialogueBox/DialogueText
 @onready var portrait = $DialogueBox/Portrait
+@onready var continue_icon = $DialogueBox/ContinueIcon
 @onready var choices_container = $DialogueBox/ChoicesContainer
 
 @onready var choice1 = $DialogueBox/ChoicesContainer/Choice1
@@ -20,6 +21,10 @@ func _ready() -> void:
 
 	dialogue_box.visible = false
 	portrait.visible = false
+	continue_icon.visible = false
+
+	if continue_icon is AnimatedSprite2D:
+		continue_icon.play()
 
 	_hide_choices()
 
@@ -37,6 +42,7 @@ func _process(_delta) -> void:
 
 			_hide_choices()
 			portrait.visible = false
+			continue_icon.visible = false
 			dialogue_box.visible = false
 
 func is_message_open() -> bool:
@@ -74,6 +80,7 @@ func show_message(texto: String) -> void:
 	dialogue_text.text = texto
 
 	portrait.visible = false
+	continue_icon.visible = true
 
 	_hide_choices()
 
@@ -85,6 +92,8 @@ func show_dialogue(texto: String) -> void:
 
 	dialogue_box.visible = true
 	dialogue_text.text = texto
+
+	continue_icon.visible = true
 
 	_hide_choices()
 
@@ -98,6 +107,7 @@ func show_choices(texto: String, options: Array) -> void:
 	dialogue_text.text = texto
 
 	portrait.visible = false
+	continue_icon.visible = false
 
 	await _update_choices_position()
 
@@ -121,6 +131,7 @@ func hide_dialog() -> void:
 	_hide_choices()
 
 	portrait.visible = false
+	continue_icon.visible = false
 	dialogue_box.visible = false
 
 func _hide_choices() -> void:
