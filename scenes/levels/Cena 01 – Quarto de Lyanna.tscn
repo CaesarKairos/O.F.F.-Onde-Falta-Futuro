@@ -17,6 +17,7 @@
 [ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="14_3a18n"]
 [ext_resource type="PackedScene" uid="uid://ckpw1h8pg4jmw" path="res://discos.tscn" id="16_rfcjc"]
 [ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="17_rfcjc"]
+[ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://parede.tscn" id="18_q761j"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -100,6 +101,7 @@ offset_left = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="DiscStack" parent="." unique_id=877164899 instance=ExtResource("16_rfcjc")]
 position = Vector2(1023, 452)
@@ -112,3 +114,5 @@ position = Vector2(271, 505)
 material = SubResource("ShaderMaterial_q761j")
 offset_right = 1284.0
 offset_bottom = 729.0
+
+[node name="parede" parent="." unique_id=813813429 instance=ExtResource("18_q761j")]
