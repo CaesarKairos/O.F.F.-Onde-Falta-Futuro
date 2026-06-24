@@ -1,0 +1,109 @@
+{
+"scene_id": "chapter_01_scene_03",
+"scene_name": "Ligação",
+"start_node": "kitchen_001",
+
+"nodes": {
+
+	"kitchen_001": {
+		"speaker": "Cecilia",
+		"text": "Esse café me salvou agora. Tá um frio horrível lá fora.",
+		"next": "kitchen_002"
+	},
+
+	"kitchen_002": {
+		"speaker": "Lyanna",
+		"text": "Clima perfeito pra ver aquele filme de vampiros e lobisomens que você adora.",
+		"next": "phone_call_001"
+	},
+
+	"phone_call_001": {
+		"speaker": "Paulo",
+		"text": "Alô, Lyanna? Lyanna? Onde você está?",
+		"next": "phone_call_002"
+	},
+
+	"phone_call_002": {
+		"speaker": "Lyanna",
+		"text": "Oi, Paulo. Eu acabei de...",
+		"next": "phone_call_003"
+	},
+
+	"phone_call_003": {
+		"speaker": "Paulo",
+		"text": "Esquece isso! O córrego transbordou, tá tudo parado e a prefeitura já tá tentando abafar a situação com... Ah, quer saber? Que se dane, não importa! Só chega lá rápido!",
+		"next": "phone_call_004"
+	},
+
+	"phone_call_004": {
+		"speaker": "Lyanna",
+		"text": "Paulo, hoje é um dia complicado, eu ia pedir pra...",
+		"next": "phone_call_005"
+	},
+
+	"phone_call_005": {
+		"speaker": "Paulo",
+		"text": "Evaristo, deixa eu te falar uma coisa... Eu não tô pedindo. Ou você tá lá com a câmera em 15 minutos, ou nem precisa passar aqui amanhã pra bater o ponto. Resolve aí.",
+		"next": "phone_call_006"
+	},
+
+	"phone_call_006": {
+		"speaker": "Lyanna",
+		"text": "...",
+		"next": "choice_001"
+	},
+
+	"choice_001": {
+		"type": "choice",
+		"text": "Como Lyanna reage?",
+		"choices": [
+			{
+				"text": "Reclamar do chefe",
+				"next": "reaction_001",
+				"set_flag": "complained_about_paulo"
+			},
+			{
+				"text": "Aceitar a situação",
+				"next": "reaction_002"
+			}
+		]
+	},
+
+	"reaction_001": {
+		"speaker": "Lyanna",
+		"text": "Esse cara consegue estragar qualquer manhã.",
+		"next": "cecilia_001"
+	},
+
+	"reaction_002": {
+		"speaker": "Lyanna",
+		"text": "Bom... parece que eu não tenho muita escolha.",
+		"next": "cecilia_001"
+	},
+
+	"cecilia_001": {
+		"speaker": "Cecilia",
+		"text": "Tudo bem se você precisar ir, Lyanna. Acho que vou visitar minha família.",
+		"next": "cecilia_002"
+	},
+
+	"cecilia_002": {
+		"speaker": "Lyanna",
+		"text": "Desculpa por isso. Eu realmente queria passar mais tempo com você hoje.",
+		"next": "cecilia_003"
+	},
+
+	"cecilia_003": {
+		"speaker": "Cecilia",
+		"text": "Relaxa. A gente se vê depois. Só tenta não cair em nenhum córrego pelo caminho.",
+		"next": "scene_end"
+	},
+
+	"scene_end": {
+		"type": "end",
+		"set_flag": "received_paulo_call",
+		"set_story_stage": 3
+	}
+}
+
+}
