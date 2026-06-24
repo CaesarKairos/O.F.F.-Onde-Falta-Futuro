@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bp10rkyroroxk"]
 
 [ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scenes/components/interactable.gd" id="1_jcy0q"]
-[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://Press E.png" id="2_nm1rj"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://assets/art/ui/Press E.png" id="2_nm1rj"]
 [ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_nm1rj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6b5i0"]

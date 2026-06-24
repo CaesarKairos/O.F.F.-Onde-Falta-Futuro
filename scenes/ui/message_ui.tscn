@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://co8nncd5d6w6s"]
 
 [ext_resource type="Script" uid="uid://ci5mx5aooku53" path="res://scenes/ui/message_ui.gd" id="1_rowjr"]
-[ext_resource type="Texture2D" uid="uid://d0a2jxw7m1s1p" path="res://caixa  de dialogo.png" id="2_pfwhv"]
+[ext_resource type="Texture2D" uid="uid://d0a2jxw7m1s1p" path="res://assets/art/ui/caixa  de dialogo.png" id="2_pfwhv"]
 [ext_resource type="FontFile" uid="uid://cdq43ieudw0if" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="3_u23ax"]
-[ext_resource type="Texture2D" uid="uid://bvycr2d31bnlm" path="res://SPACE.png" id="4_e22x1"]
+[ext_resource type="Texture2D" uid="uid://bvycr2d31bnlm" path="res://assets/art/ui/SPACE.png" id="4_e22x1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u2ous"]
 atlas = ExtResource("4_e22x1")

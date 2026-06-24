@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dv7hgo6h3hu8e"]
 
 [ext_resource type="Script" uid="uid://dnkcecggl2c3g" path="res://scenes/components/interactable.gd" id="1_d0km1"]
-[ext_resource type="Texture2D" uid="uid://cnwhn3xg2c8pf" path="res://varios gatinho.png" id="2_afcjl"]
-[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://Press E.png" id="2_fo3c0"]
+[ext_resource type="Texture2D" uid="uid://cnwhn3xg2c8pf" path="res://assets/art/environment/props/varios gatinho.png" id="2_afcjl"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://assets/art/ui/Press E.png" id="2_fo3c0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6b5i0"]
 atlas = ExtResource("2_fo3c0")

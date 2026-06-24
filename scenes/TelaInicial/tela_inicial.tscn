@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8m1ql7qvtj3g"]
 
-[ext_resource type="Script" uid="uid://0kdx0adgtb8m" path="res://tela_inicial.gd" id="1_neopn"]
+[ext_resource type="Script" uid="uid://0kdx0adgtb8m" path="res://scenes/TelaInicial/tela_inicial.gd" id="1_neopn"]
 [ext_resource type="Texture2D" uid="uid://j443bfps66iw" path="res://scenes/TelaInicial/background.png" id="2_am23o"]
 [ext_resource type="Texture2D" uid="uid://qp3bd81uafgl" path="res://scenes/TelaInicial/O.F.F.png" id="3_jpcta"]
 [ext_resource type="Texture2D" uid="uid://cp53kb8mbxass" path="res://scenes/TelaInicial/BotoesPrincipais/JOGAR.png" id="4_cuxrc"]

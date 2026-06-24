@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w7ae6613hh0x"
-path="res://.godot/imported/Cecília sprite.png-e85f1200e1f4c20662e20e783852f60d.ctex"
+uid="uid://beb7i6fvx0k3d"
+path="res://.godot/imported/pixel_art_large (1).png-aa2e53108cb4849ed424357472239c3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/characters/cecília/Cecília sprite.png"
-dest_files=["res://.godot/imported/Cecília sprite.png-e85f1200e1f4c20662e20e783852f60d.ctex"]
+source_file="res://assets/art/environment/props/pixel_art_large (1).png"
+dest_files=["res://.godot/imported/pixel_art_large (1).png-aa2e53108cb4849ed424357472239c3b.ctex"]
 
 [params]
 
