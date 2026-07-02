@@ -1,0 +1,174 @@
+{
+	"scene_id": "chapter_01_scene_06",
+	"scene_name": "Uoo Uoo Uoo Rock in Rio",
+	"start_node": "intro_001",
+
+	"nodes": {
+
+		"intro_001": {
+			"speaker": "Joana",
+			"text": "Srta. Evaristo! O Paulo me disse que você era a melhor para cobrir o 'renascimento' desse bairro. Já viu o tamanho desse palco?",
+			"next": "intro_002"
+		},
+
+		"intro_002": {
+			"speaker": "Lyanna",
+			"text": "É... impressionante, de verdade. Mas eu vim da parte de baixo, perto do córrego. O pessoal ainda está bem assustado com o alagamento.",
+			"next": "intro_003"
+		},
+
+		"intro_003": {
+			"speaker": "Joana",
+			"text": "Sobre isso, diga que lamentamos o ocorrido e que a família já foi devidamente compensada. No fim, algumas pessoas se contentam com muito pouco.",
+			"next": "choice_001"
+		},
+
+		"choice_001": {
+			"type": "choice",
+			"text": "Como responder?",
+			"choices": [
+				{
+					"text": "Responder com indignação.",
+					"next": "indignation_001",
+					"set_flag": "confronted_joana"
+				},
+				{
+					"text": "Responder com diplomacia.",
+					"next": "diplomacy_001",
+					"set_flag": "diplomatic_with_joana"
+				}
+			]
+		},
+
+		"indignation_001": {
+			"speaker": "Lyanna",
+			"text": "O senhor Amaral perdeu um filho, Joana. Dinheiro nenhum traz o Carlos de volta. O problema não é a compensação, é o que causou isso.",
+			"next": "indignation_002"
+		},
+
+		"indignation_002": {
+			"speaker": "Joana",
+			"text": "Nós seguimos o Mapa de Zoneamento Legal da prefeitura. Se aquele ponto era perigoso, a prefeitura deveria ter interditado a rua décadas atrás. Estamos em um setor classificado como 'Solo Firme'.",
+			"set_flag": "clue_zoning_map",
+			"next": "bridge_001"
+		},
+
+		"diplomacy_001": {
+			"speaker": "Lyanna",
+			"text": "Entendo que a empresa se prontificou, mas a comunidade sente que as obras mudaram o curso da água. Como foi planejado o escoamento aqui?",
+			"next": "diplomacy_002"
+		},
+
+		"diplomacy_002": {
+			"speaker": "Joana",
+			"text": "Tudo dentro das normas. Tenho aqui o Relatório de Perímetro de Segurança. O escoamento foi desviado para as galerias principais. Se houve inundação, foi apenas um evento geográfico isolado.",
+			"set_flag": "clue_perimeter_report",
+			"next": "bridge_001"
+		},
+
+		"bridge_001": {
+			"speaker": "Joana",
+			"text": "Seu chefe garantiu que você saberia conduzir isso com maturidade. Afinal, acidentes acontecem, a vida segue. Há algo mais que queira perguntar?",
+			"next": "choice_002"
+		},
+
+		"choice_002": {
+			"type": "choice",
+			"text": "O que perguntar?",
+			"choices": [
+				{
+					"text": "Sobre os transtornos e a vítima.",
+					"next": "victim_001"
+				},
+				{
+					"text": "Sobre a impermeabilização do solo.",
+					"next": "soil_001"
+				},
+				{
+					"text": "Sobre a responsabilidade da obra.",
+					"next": "responsibility_001"
+				}
+			]
+		},
+
+		"victim_001": {
+			"speaker": "Lyanna",
+			"text": "Os moradores dizem que o bairro virou um inferno antes mesmo do show. Como o Carlos deveria saber que o trajeto mudou se vocês ignoraram até ordens judiciais?",
+			"next": "victim_002"
+		},
+
+		"victim_002": {
+			"speaker": "Joana",
+			"text": "O Carlos era apenas um entregador apressado. As redes sociais já estão cheias de relatos de motoqueiros imprudentes. O evento não pode ser responsabilizado por escolhas individuais.",
+			"set_flag": "clue_social_media_post",
+			"next": "ending_001"
+		},
+
+		"soil_001": {
+			"speaker": "Lyanna",
+			"text": "Testemunhas viram tratores despejando resíduos onde antes havia vegetação. Vocês não acham que transformaram esse terreno em um tobogã de água?",
+			"next": "soil_002"
+		},
+
+		"soil_002": {
+			"speaker": "Joana",
+			"text": "A prefeitura já explicou: foi uma chuva completamente fora do esperado. Nossas intervenções tiveram licenciamento ambiental. A natureza foi implacável.",
+			"set_flag": "clue_atypical_rain",
+			"next": "ending_001"
+		},
+
+		"responsibility_001": {
+			"speaker": "Lyanna",
+			"text": "Valeu a pena ignorar os avisos e o meio ambiente por apenas três dias de festa?",
+			"next": "responsibility_002"
+		},
+
+		"responsibility_002": {
+			"speaker": "Joana",
+			"text": "O festival trouxe vida para esse bairro. O que aconteceu na rua de baixo é consequência da falta de manutenção da cidade, não da nossa organização.",
+			"next": "ending_001"
+		},
+
+		"ending_001": {
+			"speaker": "Joana",
+			"text": "Bom... vejo que você tem material mais do que suficiente, Srta. Evaristo.",
+			"next": "ending_002"
+		},
+
+		"ending_002": {
+			"speaker": "Lyanna",
+			"text": "A verdade costuma dar boas histórias.",
+			"next": "ending_003"
+		},
+
+		"ending_003": {
+			"speaker": "Joana",
+			"text": "A verdade é uma questão de perspectiva. E a perspectiva da prefeitura é que este festival é o maior ganho cultural desta década para a região.",
+			"next": "ending_004"
+		},
+
+		"ending_004": {
+			"speaker": "Lyanna",
+			"text": "Eu escrevo para quem lê, não para quem assina.",
+			"next": "ending_005"
+		},
+
+		"ending_005": {
+			"speaker": "Joana",
+			"text": "Adoro o idealismo dos jovens. Mas agora, se me der licença, o prefeito está me aguardando.",
+			"next": "ending_006"
+		},
+
+		"ending_006": {
+			"speaker": "Joana",
+			"text": "Vá escrever sua matéria, Lyanna. Espero que sua maturidade jornalística prevaleça sobre esse seu impulso de investigação social. Tenha uma boa tarde.",
+			"next": "scene_end"
+		},
+
+		"scene_end": {
+			"type": "end",
+			"set_flag": "interviewed_joana",
+			"set_story_stage": 6
+		}
+	}
+}

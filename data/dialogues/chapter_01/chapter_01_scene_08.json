@@ -1,0 +1,152 @@
+{
+	"scene_id": "chapter_01_scene_08",
+	"scene_name": "Confronto Final com Paulo",
+	"start_node": "dialogue_001",
+
+	"nodes": {
+
+		"dialogue_001": {
+			"speaker": "Paulo",
+			"text": "Lyanna, eu li seu texto. Três vezes, só pra ter certeza. Que porra é essa? Eu te pedi uma matéria sobre o show e você me entrega um dossiê contra a prefeitura?",
+			"next": "dialogue_002"
+		},
+
+		"dialogue_002": {
+			"speaker": "Lyanna",
+			"text": "Eu escrevi o que aconteceu. O palco foi construído em cima da única área que absorvia a água. O bairro alagou e um homem morreu naquele bueiro.",
+			"next": "dialogue_003"
+		},
+
+		"dialogue_003": {
+			"speaker": "Paulo",
+			"text": "Não, não, não. Escuta. O evento traz patrocinador pra cidade. O prefeito libera metade da verba que mantém esse jornal respirando. Você acha mesmo que eu vou jogar isso na mídia por causa de uma… mísera enchente?",
+			"next": "dialogue_004"
+		},
+
+		"dialogue_004": {
+			"speaker": "Lyanna",
+			"text": "Então você quer que eu minta?",
+			"next": "dialogue_005"
+		},
+
+		"dialogue_005": {
+			"speaker": "Paulo",
+			"text": "Quero que você faça seu trabalho. Reescreve isso. Foca no evento, no impacto cultural, nessas merdas aí. E sobre o motoqueiro... 'fatalidade', 'imprudência', qualquer coisa assim. Dá teu jeito.",
+			"next": "choice_001"
+		},
+
+		"choice_001": {
+			"type": "choice",
+			"text": "Como responder?",
+			"choices": [
+				{
+					"text": "A minha matéria já está escrita. E ela diz a verdade.",
+					"next": "truth_path_001"
+				},
+				{
+					"text": "Você quer que eu enterre o Carlos de novo?",
+					"next": "carlos_path_001"
+				}
+			]
+		},
+
+		"truth_path_001": {
+			"speaker": "Lyanna",
+			"text": "Eu não sou assessora de imprensa da Arena, Paulo. Sou jornalista. A matéria está pronta e os fatos não vão mudar só porque o seu patrocínio está em jogo.",
+			"next": "dialogue_006"
+		},
+
+		"carlos_path_001": {
+			"speaker": "Lyanna",
+			"text": "O Carlos tinha nome, tinha família. Se eu escrever o que você quer, eu viro cúmplice dessa negligência. Eu não vou manchar a memória de um trabalhador para proteger a imagem de político.",
+			"next": "dialogue_006"
+		},
+
+		"dialogue_006": {
+			"speaker": "Paulo",
+			"text": "Lyanna, presta atenção no que eu tô te dizendo. Você sobe esse texto e tá demitida. Simples assim.",
+			"next": "dialogue_007"
+		},
+
+		"dialogue_007": {
+			"speaker": "Lyanna",
+			"text": "Então me demite.",
+			"next": "dialogue_008"
+		},
+
+		"dialogue_008": {
+			"speaker": "Paulo",
+			"text": "Você acha que alguém vai contratar uma repórter que ataca os próprios patrocinadores?",
+			"next": "dialogue_009"
+		},
+
+		"dialogue_009": {
+			"speaker": "Lyanna",
+			"text": "Informação não fica presa em redação mais, Paulo. Se vocês esconderem isso, alguém vai mostrar.",
+			"next": "dialogue_010"
+		},
+
+		"dialogue_010": {
+			"speaker": "Paulo",
+			"text": "Você tá se ouvindo? 'A verdade vai aparecer.' Isso não é filme, Lyanna. Vai postar no seu blogue pessoal pra dez pessoas lerem? Sem essa redação, ninguém nem atende tua ligação, garota.",
+			"next": "dialogue_011"
+		},
+
+		"dialogue_011": {
+			"speaker": "Lyanna",
+			"text": "É o que vamos ver.",
+			"next": "dialogue_012"
+		},
+
+		"dialogue_012": {
+			"speaker": "Paulo",
+			"text": "Ah, e outra coisa: esquece esse rascunho. Eu vou apagar aquilo agora. Amanhã você me entrega uma matéria bonita, elogiando o evento e sem essa obsessão por tragédia.",
+			"next": "choice_002"
+		},
+
+		"choice_002": {
+			"type": "choice",
+			"text": "Como responder?",
+			"choices": [
+				{
+					"text": "Pode apagar o servidor. Eu já fiz o upload pra fora daqui.",
+					"next": "upload_path_001"
+				},
+				{
+					"text": "O servidor é seu, mas a história já saiu do seu controle.",
+					"next": "server_path_001"
+				}
+			]
+		},
+
+		"upload_path_001": {
+			"speaker": "Lyanna",
+			"text": "Você não entendeu, Paulo. Eu não tô mais pedindo autorização. O arquivo já tá em uma nuvem pública. Se você deletar o rascunho, só prova que eu tô certa. O jornal é seu, mas a apuração é minha.",
+			"next": "dialogue_013"
+		},
+
+		"server_path_001": {
+			"speaker": "Lyanna",
+			"text": "Apaga o que você quiser. Eu não preciso do sistema da redação pra contar o que eu vi. Eu tenho as fotos, tenho o depoimento do pai dele e tenho a minha própria voz. Pode ficar com o seu texto 'bonito'.",
+			"next": "dialogue_013"
+		},
+
+		"dialogue_013": {
+			"speaker": "Paulo",
+			"text": "Então pronto! Acabou, Lyanna! Você tá demitida! E pode esquecer essa ideia de trabalhar em outra redação depois disso, porque eu vou fazer questão de queimar o teu nome em cada veículo dessa cidade!",
+			"next": "dialogue_014"
+		},
+
+		"dialogue_014": {
+			"speaker": "Lyanna",
+			"text": "Relaxa. Eu não pretendo voltar. Boa sorte tentando controlar isso também, Paulo.",
+			"next": "scene_end"
+		},
+
+		"scene_end": {
+			"type": "end",
+			"set_flag": "fired_from_newspaper",
+			"set_story_stage": 8
+		}
+	}
+}

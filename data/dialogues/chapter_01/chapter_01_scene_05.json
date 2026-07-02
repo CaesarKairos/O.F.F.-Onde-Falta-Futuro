@@ -1,0 +1,108 @@
+{
+	"scene_id": "chapter_01_scene_05",
+	"scene_name": "Às Margens do Córrego",
+	"start_node": "phone_001",
+
+	"nodes": {
+
+		"phone_001": {
+			"speaker": "Paulo",
+			"text": "Lyanna? Finalmente. Foco aqui, esquece essa chuva, isso não rende nada.",
+			"next": "phone_002"
+		},
+
+		"phone_002": {
+			"speaker": "Lyanna",
+			"text": "Paulo, mas...",
+			"next": "phone_003"
+		},
+
+		"phone_003": {
+			"speaker": "Paulo",
+			"text": "Não, não, não. Presta atenção. Consegui uma exclusiva. O produtor daquele show do ano passado quer repetir a dose. Vai ser o maior festival de música que essa periferia já viu.",
+			"next": "phone_004"
+		},
+
+		"phone_004": {
+			"speaker": "Lyanna",
+			"text": "Mas Paulo... aquele terreno onde estão montando o palco era a única área que absorvia a água aqui. O bairro inteiro está inundado.",
+			"next": "phone_005"
+		},
+
+		"phone_005": {
+			"speaker": "Paulo",
+			"text": "Não importa, cara. Deixa de ser negativa. Quero uma matéria bonita, bem escrita, exaltando o evento.",
+			"next": "choice_001"
+		},
+
+		"choice_001": {
+			"type": "choice",
+			"text": "Como responder?",
+			"choices": [
+				{
+					"text": "Isso não está certo.",
+					"next": "response_001",
+					"set_flag": "stood_against_paulo"
+				},
+				{
+					"text": "Pode ser depois?",
+					"next": "response_002",
+					"set_flag": "asked_for_time"
+				},
+				{
+					"text": "Você quer propaganda, não jornalismo.",
+					"next": "response_003",
+					"set_flag": "confronted_paulo"
+				}
+			]
+		},
+
+		"response_001": {
+			"speaker": "Lyanna",
+			"text": "Paulo, isso não tá certo. A gente vai fingir descaradamente que isso é bom?",
+			"next": "phone_006"
+		},
+
+		"response_002": {
+			"speaker": "Lyanna",
+			"text": "Eu tô no meio de outra pauta. Isso não pode esperar?",
+			"next": "phone_006"
+		},
+
+		"response_003": {
+			"speaker": "Lyanna",
+			"text": "Você quer propaganda, não jornalismo.",
+			"next": "phone_006"
+		},
+
+		"phone_006": {
+			"speaker": "Paulo",
+			"text": "Lyanna, eu não tô abrindo debate. Só faz. E faz direito, porque eu não vou passar pano se vier meia-boca. Não me decepciona.",
+			"next": "phone_007"
+		},
+
+		"phone_007": {
+			"speaker": "Lyanna",
+			"text": "Paulo... não sei se quero fazer isso.",
+			"next": "phone_008"
+		},
+
+		"phone_008": {
+			"speaker": "Lyanna",
+			"text": "Ele nem deve ter ouvido o que eu disse...",
+			"next": "phone_009"
+		},
+
+		"phone_009": {
+			"speaker": "Lyanna",
+			"text": "Pão e circo.",
+			"set_flag": "received_festival_assignment",
+			"next": "scene_end"
+		},
+
+		"scene_end": {
+			"type": "end",
+			"set_story_stage": 5
+		}
+	}
+}
