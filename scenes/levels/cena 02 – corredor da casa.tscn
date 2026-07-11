@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b8j6rsuxes3xb"]
+
+[ext_resource type="Texture2D" uid="uid://d37m8gvopqihy" path="res://assets/art/environment/backgrounds/Cenário  2 - Corredor (Wireframe).png" id="1_xjtns"]
+[ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_xuydn"]
+[ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_07diw"]
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="4_da1t7"]
+[ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_ehkkw"]
+
+[node name="Cena 02– Corredor da casa" type="Node2D" unique_id=660517339]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=835638921]
+position = Vector2(640, 360)
+texture = ExtResource("1_xjtns")
+
+[node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_xuydn")]
+position = Vector2(0, 115)
+
+[node name="parede" parent="." unique_id=813813429 instance=ExtResource("3_07diw")]
+
+[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("4_da1t7")]
+position = Vector2(982, 466)
+
+[node name="Door" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
+position = Vector2(956, 305)
+destination_scene = "uid://dghky7o3l0twu"

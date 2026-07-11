@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ckpw1h8pg4jmw" path="res://scenes/objects/discos.tscn" id="16_rfcjc"]
 [ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="17_rfcjc"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="18_q761j"]
+[ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="19_orptc"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -116,3 +117,7 @@ offset_right = 1284.0
 offset_bottom = 729.0
 
 [node name="parede" parent="." unique_id=813813429 instance=ExtResource("18_q761j")]
+
+[node name="Door" parent="." unique_id=769273478 instance=ExtResource("19_orptc")]
+position = Vector2(1220, 357)
+destination_scene = "uid://b8j6rsuxes3xb"

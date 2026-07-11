@@ -27,7 +27,7 @@ func has_flag(flag_name: String) -> bool:
 # INVENTÁRIO
 # =========================
 
-var inventory: Array[String] = []
+var inventory: Array = []
 
 func add_item(item_name: String) -> void:
 	if item_name not in inventory:
