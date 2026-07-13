@@ -7,7 +7,14 @@ extends Node2D
 var move_speed := 150.0
 var moving := true
 
+
 func _ready():
+
+	# Se o Bruno já foi embora, não executa a cutscene.
+	if GameState.has_flag("talked_to_bruno"):
+		moving = false
+		return
+
 	print("BRUNO:", bruno.global_position)
 	print("TARGET:", target.global_position)
 
@@ -16,13 +23,19 @@ func _ready():
 
 
 func _process(delta):
-	if not moving:
+
+	if !moving:
+		return
+
+	# Caso o Bruno tenha sido destruído.
+	if !is_instance_valid(bruno):
+		moving = false
 		return
 
 	var direction = target.global_position - bruno.global_position
 
-	# chegou no destino
 	if direction.length() < 2:
+
 		moving = false
 		sprite.play("idle")
 		bruno.movement_locked = false
@@ -30,10 +43,8 @@ func _process(delta):
 
 	direction = direction.normalized()
 
-	# movimento reto e estável
 	bruno.global_position += direction * move_speed * delta
 
-	# animação virada corretamente
 	if direction.x > 0:
 		sprite.flip_h = false
 	elif direction.x < 0:

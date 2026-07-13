@@ -7,12 +7,18 @@ var player_near = false
 
 func _ready():
 
+	# Se a câmera já foi coletada, ela não deve aparecer novamente.
+	if GameState.has_item("camera"):
+		queue_free()
+		return
+
 	icon.visible = false
 
 	if animated_sprite:
 		animated_sprite.play()
 
-func _process(delta):
+
+func _process(_delta):
 
 	if player_near and Input.is_action_just_pressed("interact"):
 
@@ -27,12 +33,14 @@ func _process(delta):
 
 		queue_free()
 
+
 func _on_body_entered(body):
 
 	if body.name == "Player":
 
 		player_near = true
 		icon.visible = true
+
 
 func _on_body_exited(body):
 

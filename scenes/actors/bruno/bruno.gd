@@ -11,7 +11,13 @@ var already_interacted = false
 
 func _ready() -> void:
 
+	# Se já conversou com o Bruno, ele não aparece mais.
+	if GameState.has_flag("talked_to_bruno"):
+		queue_free()
+		return
+
 	icon.visible = false
+
 
 func _process(_delta: float) -> void:
 
@@ -37,6 +43,7 @@ func _process(_delta: float) -> void:
 			start_dialogue_id
 		)
 
+
 func _on_body_entered(body) -> void:
 
 	if body.name == "Player":
@@ -45,6 +52,7 @@ func _on_body_entered(body) -> void:
 
 		if not already_interacted:
 			icon.visible = true
+
 
 func _on_body_exited(body) -> void:
 

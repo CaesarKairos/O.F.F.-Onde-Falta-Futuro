@@ -8,6 +8,11 @@
 
 [node name="Cena 02– Corredor da casa" type="Node2D" unique_id=660517339]
 
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=615264315]
+
+[node name="SaindoQuarto" type="Marker2D" parent="SpawnPoints" unique_id=1820473215]
+position = Vector2(982, 466)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=835638921]
 position = Vector2(640, 360)
 texture = ExtResource("1_xjtns")
@@ -23,3 +28,4 @@ position = Vector2(982, 466)
 [node name="Door" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
 position = Vector2(956, 305)
 destination_scene = "uid://dghky7o3l0twu"
+destination_spawn = "LyannaEntrando"

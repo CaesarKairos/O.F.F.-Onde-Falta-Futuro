@@ -37,6 +37,14 @@ shader_parameter/amount = 0.0510000024225
 [node name="Cena 01 – Quarto de Lyanna" type="Node2D" unique_id=1198387139]
 script = ExtResource("1_ofbh8")
 
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=12947438]
+
+[node name="Lyanna inicial" type="Marker2D" parent="SpawnPoints" unique_id=58735433]
+position = Vector2(148, 476)
+
+[node name="LyannaEntrando" type="Marker2D" parent="SpawnPoints" unique_id=981703584]
+position = Vector2(1200, 476)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=740594841]
 color = Color(0.81064117, 0.8568788, 0.92090845, 1)
 
@@ -121,3 +129,4 @@ offset_bottom = 729.0
 [node name="Door" parent="." unique_id=769273478 instance=ExtResource("19_orptc")]
 position = Vector2(1220, 357)
 destination_scene = "uid://b8j6rsuxes3xb"
+destination_spawn = "SaindoQuarto"
