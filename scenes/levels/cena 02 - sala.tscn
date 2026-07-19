@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://0s7ha3g3o3tt"]
+
+[ext_resource type="Texture2D" uid="uid://cj1lhyramy6th" path="res://assets/art/environment/backgrounds/Cenário  3 - Sala (Wireframe).png" id="1_0ct6b"]
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="2_mx2nk"]
+[ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_k20le"]
+[ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="4_mjf1v"]
+[ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_k20le"]
+
+[node name="cena 2 - Sala" type="Node2D" unique_id=826757347]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1078932629]
+
+[node name="Indo Corredor" type="Marker2D" parent="SpawnPoints" unique_id=81887348]
+position = Vector2(650, 446)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342098719]
+position = Vector2(640, 360)
+texture = ExtResource("1_0ct6b")
+
+[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
+position = Vector2(670, 451)
+
+[node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
+position = Vector2(0, 97)
+
+[node name="parede" parent="." unique_id=813813429 instance=ExtResource("4_mjf1v")]
+
+[node name="Door" parent="." unique_id=769273478 instance=ExtResource("5_k20le")]
+position = Vector2(643, 306)
+destination_scene = "uid://b8j6rsuxes3xb"
+destination_spawn = "IndoSala"

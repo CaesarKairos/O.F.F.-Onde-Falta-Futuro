@@ -13,6 +13,9 @@
 [node name="SaindoQuarto" type="Marker2D" parent="SpawnPoints" unique_id=1820473215]
 position = Vector2(982, 466)
 
+[node name="IndoSala" type="Marker2D" parent="SpawnPoints" unique_id=545314939]
+position = Vector2(50, 466)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=835638921]
 position = Vector2(640, 360)
 texture = ExtResource("1_xjtns")
@@ -25,7 +28,12 @@ position = Vector2(0, 115)
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("4_da1t7")]
 position = Vector2(982, 466)
 
-[node name="Door" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
+[node name="Porta quarto Lyanna" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
 position = Vector2(956, 305)
 destination_scene = "uid://dghky7o3l0twu"
 destination_spawn = "LyannaEntrando"
+
+[node name="Porta sala" parent="." unique_id=1575277536 instance=ExtResource("5_ehkkw")]
+position = Vector2(37, 360)
+destination_scene = "uid://0s7ha3g3o3tt"
+destination_spawn = "Indo Corredor"
