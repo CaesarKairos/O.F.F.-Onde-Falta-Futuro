@@ -10,7 +10,10 @@ var current_choices: Array = []
 var dialogue_active := false
 var just_started := false
 
+
 func load_dialogues(path: String) -> bool:
+
+	print("Carregando JSON:", path)
 
 	var file = FileAccess.open(path, FileAccess.READ)
 
@@ -18,9 +21,7 @@ func load_dialogues(path: String) -> bool:
 		push_error("Não foi possível abrir o arquivo: " + path)
 		return false
 
-	var parsed = JSON.parse_string(
-		file.get_as_text()
-	)
+	var parsed = JSON.parse_string(file.get_as_text())
 
 	if typeof(parsed) != TYPE_DICTIONARY:
 		push_error("JSON inválido: " + path)
@@ -28,12 +29,20 @@ func load_dialogues(path: String) -> bool:
 
 	dialogue_data = parsed
 
+	print("JSON carregado com sucesso.")
+
 	return true
 
 
 func start_dialog(dialogue_path: String, start_id: String) -> void:
 
+	print("========================")
+	print("START DIALOG")
+	print("Arquivo:", dialogue_path)
+	print("Start ID:", start_id)
+
 	if not load_dialogues(dialogue_path):
+		print("Falhou ao carregar o JSON.")
 		return
 
 	dialogue_active = true
@@ -83,16 +92,12 @@ func _choice_is_available(choice: Dictionary) -> bool:
 
 	if choice.has("required_flag"):
 
-		if not GameState.has_flag(
-			str(choice["required_flag"])
-		):
+		if not GameState.has_flag(str(choice["required_flag"])):
 			return false
 
 	if choice.has("blocked_flag"):
 
-		if GameState.has_flag(
-			str(choice["blocked_flag"])
-		):
+		if GameState.has_flag(str(choice["blocked_flag"])):
 			return false
 
 	return true
@@ -100,21 +105,23 @@ func _choice_is_available(choice: Dictionary) -> bool:
 
 func _show_current_node() -> void:
 
-	current_node = _get_node(
-		current_node_id
-	)
+	current_node = _get_node(current_node_id)
+
+	print("------------------------")
+	print("Node atual:", current_node_id)
+	print(current_node)
 
 	if current_node.is_empty():
+		print("NODE NÃO ENCONTRADO!")
 		end_dialog()
 		return
 
 	_apply_node_effects(current_node)
 
-	var ui = get_tree().get_first_node_in_group(
-		"message_ui"
-	)
+	var ui = get_tree().get_first_node_in_group("message_ui")
 
 	if ui == null:
+		print("MESSAGE UI NÃO ENCONTRADA")
 		return
 
 	var node_type: String = str(
@@ -123,6 +130,8 @@ func _show_current_node() -> void:
 			"dialogue"
 		)
 	)
+
+	print("Tipo:", node_type)
 
 	match node_type:
 
@@ -142,6 +151,9 @@ func _show_current_node() -> void:
 				)
 			)
 
+			print("Speaker:", speaker)
+			print("Texto:", text)
+
 			if speaker != "":
 				ui.set_portrait(speaker)
 				ui.show_dialogue("%s: %s" % [speaker.capitalize(), text])
@@ -150,6 +162,8 @@ func _show_current_node() -> void:
 				ui.show_dialogue(text)
 
 		"choice":
+
+			print("Mostrando escolhas.")
 
 			var options = current_node.get(
 				"options",
@@ -181,6 +195,7 @@ func _show_current_node() -> void:
 
 		"end":
 
+			print("Fim do diálogo.")
 			end_dialog()
 
 
@@ -192,10 +207,7 @@ func can_continue() -> bool:
 	if just_started:
 		return false
 
-	return current_node.get(
-		"type",
-		"dialogue"
-	) == "dialogue"
+	return current_node.get("type", "dialogue") == "dialogue"
 
 
 func next_dialog() -> void:
@@ -207,17 +219,12 @@ func next_dialog() -> void:
 		end_dialog()
 		return
 
-	if current_node.get(
-		"type",
-		"dialogue"
-	) != "dialogue":
+	if current_node.get("type", "dialogue") != "dialogue":
 		return
 
 	if current_node.has("next"):
 
-		current_node_id = str(
-			current_node["next"]
-		)
+		current_node_id = str(current_node["next"])
 
 		_show_current_node()
 
@@ -237,9 +244,7 @@ func select_choice(choice_index: int) -> void:
 	if choice_index >= current_choices.size():
 		return
 
-	var chosen = current_choices[
-		choice_index
-	]
+	var chosen = current_choices[choice_index]
 
 	if chosen.has("set_flags"):
 
@@ -247,25 +252,17 @@ func select_choice(choice_index: int) -> void:
 			GameState.set_flag(flag_name)
 
 	if chosen.has("set_flag"):
-		GameState.set_flag(
-			chosen["set_flag"]
-		)
+		GameState.set_flag(chosen["set_flag"])
 
 	if chosen.has("set_story_stage"):
-		GameState.story_stage = int(
-			chosen["set_story_stage"]
-		)
+		GameState.story_stage = int(chosen["set_story_stage"])
 
 	if chosen.has("set_scene"):
-		GameState.scene = int(
-			chosen["set_scene"]
-		)
+		GameState.scene = int(chosen["set_scene"])
 
 	if chosen.has("next"):
 
-		current_node_id = str(
-			chosen["next"]
-		)
+		current_node_id = str(chosen["next"])
 
 		_show_current_node()
 
@@ -284,9 +281,7 @@ func end_dialog() -> void:
 
 	current_choices.clear()
 
-	var ui = get_tree().get_first_node_in_group(
-		"message_ui"
-	)
+	var ui = get_tree().get_first_node_in_group("message_ui")
 
 	if ui != null:
 		ui.hide_dialog()

@@ -1,11 +1,70 @@
 [gd_scene format=3 uid="uid://dl3watr004k4y"]
 
-[ext_resource type="PackedScene" path="res://npc.tscn" id="1_r3cek"]
+[ext_resource type="PackedScene" uid="uid://cl7lavj13dkaq" path="res://scenes/components/npcbase.tscn" id="1_r3cek"]
 [ext_resource type="Script" uid="uid://bt23he21bniua" path="res://scenes/actors/cecilia/cecilia.gd" id="2_3mwsp"]
-[ext_resource type="Texture2D" uid="uid://w7ae6613hh0x" path="res://assets/art/characters/cecília/Cecília sprite.png" id="3_l70nn"]
+[ext_resource type="Texture2D" uid="uid://cut5hjv4v4r3u" path="res://cecilia.png" id="3_c3df0"]
+[ext_resource type="Texture2D" uid="uid://dah402m6dy3si" path="res://cecilia andando.png" id="4_17nta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu87y"]
+atlas = ExtResource("3_c3df0")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e54l"]
+atlas = ExtResource("3_c3df0")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ikmg"]
+atlas = ExtResource("4_17nta")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45ie"]
+atlas = ExtResource("4_17nta")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abof7"]
+atlas = ExtResource("4_17nta")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxk2b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu87y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e54l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ikmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abof7")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
 
 [node name="Cecilia" unique_id=15208082 instance=ExtResource("1_r3cek")]
 script = ExtResource("2_3mwsp")
+dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_02.json"
+start_dialogue_id = "cecilia_001"
 
-[node name="Sprite2D" parent="." index="0" unique_id=389972176]
-texture = ExtResource("3_l70nn")
+[node name="InteractionIcon" parent="." index="0" unique_id=2010784121]
+position = Vector2(20, -243)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1700379799]
+position = Vector2(-4, -17.5)
+
+[node name="AnimatedSprite2D" parent="." index="2" unique_id=1696894205]
+scale = Vector2(0.38, 0.38)
+sprite_frames = SubResource("SpriteFrames_jxk2b")
+animation = &"idle"
