@@ -1,39 +1,92 @@
 extends Area2D
 
 @onready var icon = $InteractionIcon
+@onready var sprite = $AnimatedSprite2D
+
+@export var dialogue_path := "res://data/dialogues/chapter_01/chapter_01_scene_02.json"
+@export var start_dialogue_id := "cecilia_001"
 
 var player_near := false
+var already_interacted := false
+
 
 func _ready() -> void:
+
+	print("=== Cecilia Ready ===")
+
+	if GameState.has_flag("talked_to_cecilia"):
+		print("Cecilia removida")
+		queue_free()
+		return
+
 	icon.visible = false
 
-func _process(_delta: float) -> void:
+	if sprite:
+		sprite.play("idle")
 
-	if not player_near:
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
+
+func _process(_delta):
+
+	if sprite and sprite.animation != "idle":
+		sprite.play("idle")
+
+	if player_near:
+		print("Player perto")
+
+	var ui = get_tree().get_first_node_in_group("message_ui")
+
+	if ui and ui.is_message_open():
 		return
 
-	if not Input.is_action_just_pressed("interact"):
+	if !player_near:
 		return
+
+	if !Input.is_action_just_pressed("interact"):
+		return
+
+	print("Tentando conversar")
 
 	if DialogueManager.dialogue_active:
 		return
 
 	if GameState.story_stage != 1:
+		print("Story Stage errado:", GameState.story_stage)
 		return
 
+	if !already_interacted:
+		already_interacted = true
+		icon.visible = false
+
+	print("Iniciando diálogo")
+
 	DialogueManager.start_dialog(
-		"res://data/dialogues/chapter_01/chapter_01_scene_02.json",
-		"cecilia_001"
+		dialogue_path,
+		start_dialogue_id
 	)
+
 
 func _on_body_entered(body):
 
-	if body.name == "Player":
+	print("Entrou:", body.name)
+
+	if body.is_in_group("player"):
+
+		print("PLAYER DETECTADO")
+
 		player_near = true
-		icon.visible = true
+
+		if !already_interacted:
+			icon.visible = true
+
 
 func _on_body_exited(body):
 
-	if body.name == "Player":
+	print("Saiu:", body.name)
+
+	if body.is_in_group("player"):
+
 		player_near = false
 		icon.visible = false
