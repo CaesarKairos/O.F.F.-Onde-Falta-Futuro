@@ -19,6 +19,7 @@
 [ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="17_rfcjc"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="18_q761j"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="19_orptc"]
+[ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="20_en5bv"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -130,3 +131,5 @@ offset_bottom = 729.0
 position = Vector2(1220, 357)
 destination_scene = "uid://b8j6rsuxes3xb"
 destination_spawn = "SaindoQuarto"
+
+[node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("20_en5bv")]
