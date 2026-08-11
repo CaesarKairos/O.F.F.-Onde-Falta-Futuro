@@ -25,6 +25,12 @@ var current_language := LANGUAGE_PT
 
 func _ready() -> void:
 
+	# Carrega o idioma salvo nas configurações persistentes.
+	var saved_language := SettingsManager.get_language()
+
+	if saved_language in [LANGUAGE_PT, LANGUAGE_EN, LANGUAGE_ES]:
+		current_language = saved_language
+
 	TranslationServer.set_locale(current_language)
 
 
@@ -70,6 +76,9 @@ func set_language(language: String) -> void:
 	current_language = language
 
 	TranslationServer.set_locale(current_language)
+
+	# Persiste a preferência do jogador.
+	SettingsManager.set_language(current_language)
 
 	language_changed.emit(current_language)
 
