@@ -17,6 +17,13 @@ func _ready() -> void:
 		return
 
 	icon.visible = false
+	var parent = icon.get_parent()
+	var parent_scale = Vector2.ONE
+	if parent:
+		parent_scale = parent.global_scale
+	if parent_scale == Vector2.ZERO:
+		parent_scale = Vector2.ONE
+	icon.scale = Vector2.ONE * GameConstants.INTERACTION_ICON_SCALE / parent_scale
 
 
 func _process(_delta: float) -> void:
