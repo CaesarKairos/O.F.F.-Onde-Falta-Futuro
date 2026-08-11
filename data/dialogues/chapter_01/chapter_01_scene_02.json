@@ -1,155 +1,154 @@
 {
 	"scene_id": "chapter_01_scene_02",
 	"scene_name": "Reencontro com Cecília",
-
 	"start_node": "cecilia_001",
-
 	"nodes": {
-
 		"cecilia_001": {
 			"speaker": "cecilia",
 			"text": "Finalmente resolveu aparecer! Achei que tinha esquecido de mim.",
 			"eng": "Finally showed up! I thought you forgot about me.",
-			"set_flag": "met_cecilia",
-			"next": "cecilia_002"
+			"es": "¡Por fin apareció! Pensé que me habías olvidado.",
+			"next": "cecilia_002",
+			"set_flag": "met_cecilia"
 		},
-
 		"cecilia_002": {
 			"speaker": "lyanna",
 			"text": "Dramática, como sempre!",
 			"eng": "Dramatic, as always!",
+			"es": "¡Dramática, como siempre!",
 			"next": "cecilia_003"
 		},
-
 		"cecilia_003": {
 			"speaker": "cecilia",
 			"text": "Tá com essa cara de sono por quê? Ontem foi dia pesado no jornal?",
 			"eng": "Why do you look so sleepy? Was yesterday a busy day at the newspaper?",
+			"es": "¿Por qué tienes esa cara de sueño? ¿Ayer fue un día pesado en el periódico?",
 			"next": "cecilia_004"
 		},
-
 		"cecilia_004": {
 			"speaker": "lyanna",
 			"text": "Antes fosse... Só demorei pra pegar no sono. Mas e aí, como foi a viagem?",
 			"eng": "I wish it was... I just took a while to fall asleep. But anyway, how was the trip?",
+			"es": "Ojalá... Solo me tomó un rato dormirme. Pero bueno, ¿cómo fue el viaje?",
 			"next": "cecilia_005"
 		},
-
 		"cecilia_005": {
 			"speaker": "cecilia",
 			"text": "Um caos! A entrada pra cidade tava parecendo uma piscina.",
 			"eng": "A mess! The city entrance looked like a swimming pool.",
+			"es": "¡Un caos! La entrada a la ciudad parecía una piscina.",
 			"next": "cecilia_006"
 		},
-
 		"cecilia_006": {
 			"speaker": "lyanna",
 			"text": "Acontece toda vez que chove.",
 			"eng": "Happens every time it rains.",
+			"es": "Pasa cada vez que llueve.",
 			"next": "cecilia_007"
 		},
-
 		"cecilia_007": {
 			"speaker": "cecilia",
 			"text": "É... você não tá esquecendo de nada, não?",
 			"eng": "Yeah... you're not forgetting anything, are you?",
+			"es": "Sí... no estás olvidando nada, ¿verdad?",
 			"next": "choice_birthday"
 		},
-
 		"choice_birthday": {
-			"type": "choice",
 			"speaker": "lyanna",
 			"text": "Como responder?",
 			"eng": "How do you respond?",
+			"es": "¿Cómo respondes?",
+			"type": "choice",
 			"choices": [
 				{
 					"text": "Desejar feliz aniversário",
 					"eng": "Wish happy birthday",
+					"es": "Desearle feliz cumpleaños",
 					"next": "birthday_001",
 					"required_flag": "knows_cecilia_birthday"
 				},
 				{
 					"text": "O quê?",
 					"eng": "What?",
+					"es": "¿Qué?",
 					"next": "forgetful_001"
 				}
 			]
 		},
-
 		"birthday_001": {
 			"speaker": "lyanna",
 			"text": "Claro que não, deixa de ser boba. Só tava esperando o momento certo.",
 			"eng": "Of course not, stop being silly. I was just waiting for the right moment.",
+			"es": "Claro que no, deja de ser boba. Solo estaba esperando el momento correcto.",
 			"next": "birthday_002"
 		},
-
 		"birthday_002": {
 			"speaker": "lyanna",
 			"text": "Feliz aniversário, de verdade. Fico feliz que você veio pra cá, mesmo com a correria da redação.",
 			"eng": "Happy birthday, really. I'm glad you came here, even with all the rush from the newsroom.",
+			"es": "Feliz cumpleaños, de verdad. Me alegra que hayas venido aquí, incluso con toda la prisa de la redacción.",
 			"next": "birthday_003"
 		},
-
 		"birthday_003": {
 			"speaker": "cecilia",
 			"text": "Obrigado amiga. Mas vem cá, eu sei que hoje é um dia complicado pra você também, né?",
 			"eng": "Thanks, friend. But come here, I know today is a hard day for you too, right?",
+			"es": "Gracias, amiga. Pero ven aquí, sé que hoy también es un día difícil para ti, ¿verdad?",
 			"next": "birthday_004"
 		},
-
 		"birthday_004": {
 			"speaker": "lyanna",
 			"text": "É... você sabe, amiga. Mas não vamos falar disso agora, é seu aniversário!",
 			"eng": "Yeah... you know, friend. But let's not talk about that now, it's your birthday!",
+			"es": "Sí... ya sabes, amiga. Pero no hablemos de eso ahora, ¡es tu cumpleaños!",
 			"next": "birthday_005"
 		},
-
 		"birthday_005": {
 			"speaker": "lyanna",
 			"text": "Vem comigo pra cozinha, minha mãe fez uma torta deliciosa ontem.",
 			"eng": "Come with me to the kitchen, my mom made a delicious pie yesterday.",
+			"es": "Ven conmigo a la cocina, mi mamá hizo una tarta deliciosa ayer.",
 			"next": "scene_end"
 		},
-
 		"forgetful_001": {
 			"speaker": "lyanna",
 			"text": "O quê? O café? O Bruno disse que eu prometi, mas eu juro que...",
 			"eng": "What? The coffee? Bruno said I promised, but I swear I...",
+			"es": "¿Qué? ¿El café? Bruno dijo que prometí, pero juro que...",
 			"next": "forgetful_002"
 		},
-
 		"forgetful_002": {
 			"speaker": "cecilia",
 			"text": "Lyanna Costa Evaristo... olha a data no seu celular agora!",
 			"eng": "Lyanna Costa Evaristo... check the date on your phone now!",
+			"es": "Lyanna Costa Evaristo... mira la fecha en tu celular ahora mismo.",
 			"next": "forgetful_003"
 		},
-
 		"forgetful_003": {
 			"speaker": "lyanna",
 			"text": "Nossa, Cecília! Feliz aniversário, amiga! Desculpa, minha cabeça tá em outro lugar hoje... você sabe que dia é hoje pra mim também, né?",
 			"eng": "Wow, Cecília! Happy birthday, friend! Sorry, my head is somewhere else today... you know what today is for me too, right?",
+			"es": "¡Dios, Cecilia! ¡Feliz cumpleaños, amiga! Perdón, mi cabeza está en otro lado hoy... ya sabes qué día es para mí también, ¿verdad?",
 			"next": "forgetful_004"
 		},
-
 		"forgetful_004": {
 			"speaker": "cecilia",
 			"text": "Sim, eu sei. Te desculpo por ter esquecido. Podemos falar sobre isso depois, se você quiser.",
 			"eng": "Yes, I know. I forgive you for forgetting. We can talk about it later, if you want.",
+			"es": "Sí, lo sé. Te perdono por olvidarlo. Podemos hablar de eso después, si quieres.",
 			"next": "forgetful_005"
 		},
-
 		"forgetful_005": {
 			"speaker": "lyanna",
 			"text": "Vai ser bom desabafar um pouco. Vamos pra cozinha pra eu te fazer um café.",
 			"eng": "It'll be good to let it out a bit. Let's go to the kitchen so I can make you a coffee.",
+			"es": "Será bueno desahogarse un poco. Vamos a la cocina para hacerte un café.",
 			"next": "scene_end"
 		},
-
 		"scene_end": {
 			"type": "end",
-			"set_story_stage": 2,
-			"set_flag": "talked_to_cecilia"
+			"set_flag": "talked_to_cecilia",
+			"set_story_stage": 2
 		}
 	}
 }

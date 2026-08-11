@@ -71,10 +71,16 @@ func _get_node(id: String) -> Dictionary:
 	return nodes.get(id, {})
 
 
-func _localized_text(source: Dictionary, key_pt: String = "text", key_en: String = "eng") -> String:
+func _localized_text(source: Dictionary, key_pt: String = "text", key_en: String = "eng", key_es: String = "es") -> String:
 
 	if GameState.language == "en" and source.has(key_en):
 		return str(source[key_en])
+
+	if GameState.language == "es":
+		if source.has(key_es):
+			return str(source[key_es])
+		if source.has("esp"):
+			return str(source["esp"])
 
 	return str(source.get(key_pt, ""))
 

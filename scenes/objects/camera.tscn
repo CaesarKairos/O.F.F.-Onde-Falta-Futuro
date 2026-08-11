@@ -6,6 +6,9 @@
 
 [node name="camera" unique_id=15208082 instance=ExtResource("1_qqjab")]
 script = ExtResource("2_p6dlx")
+message = "​“Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?”"
+message_en = "“I can’t leave without it; it’s like my third eye. But... where’s the memory card?”"
+message_es = "“No puedo salir sin ella; es como mi tercer ojo. Pero... ¿dónde está la tarjeta de memoria?”"
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
 position = Vector2(464, 360)

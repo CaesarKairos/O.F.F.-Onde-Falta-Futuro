@@ -1,125 +1,124 @@
 {
-"scene_id": "chapter_01_scene_03",
-"scene_name": "Ligação",
-"start_node": "kitchen_001",
-
-"nodes": {
-
-	"kitchen_001": {
-		"speaker": "Cecilia",
-		"text": "Esse café me salvou agora. Tá um frio horrível lá fora.",
-		"eng": "This coffee saved me now. It's terrible cold outside.",
-		"next": "kitchen_002"
-	},
-
-	"kitchen_002": {
-		"speaker": "Lyanna",
-		"text": "Clima perfeito pra ver aquele filme de vampiros e lobisomens que você adora.",
-		"eng": "Perfect weather to watch that vampires and werewolves movie you love.",
-		"next": "phone_call_001"
-	},
-
-	"phone_call_001": {
-		"speaker": "Paulo",
-		"text": "Alô, Lyanna? Lyanna? Onde você está?",
-		"eng": "Hello, Lyanna? Lyanna? Where are you?",
-		"next": "phone_call_002"
-	},
-
-	"phone_call_002": {
-		"speaker": "Lyanna",
-		"text": "Oi, Paulo. Eu acabei de...",
-		"eng": "Hi, Paulo. I just...",
-		"next": "phone_call_003"
-	},
-
-	"phone_call_003": {
-		"speaker": "Paulo",
-		"text": "Esquece isso! O córrego transbordou, tá tudo parado e a prefeitura já tá tentando abafar a situação com... Ah, quer saber? Que se dane, não importa! Só chega lá rápido!",
-		"eng": "Forget it! The creek overflowed, everything's stuck and the city hall is already trying to hush up the situation with... Ah, you know what? Screw it, never mind! Just get there fast!",
-		"next": "phone_call_004"
-	},
-
-	"phone_call_004": {
-		"speaker": "Lyanna",
-		"text": "Paulo, hoje é um dia complicado, eu ia pedir pra...",
-		"eng": "Paulo, today is a hard day, I was gonna ask to...",
-		"next": "phone_call_005"
-	},
-
-	"phone_call_005": {
-		"speaker": "Paulo",
-		"text": "Evaristo, deixa eu te falar uma coisa... Eu não tô pedindo. Ou você tá lá com a câmera em 15 minutos, ou nem precisa passar aqui amanhã pra bater o ponto. Resolve aí.",
-		"eng": "Evaristo, let me tell you something... I'm not asking. Either you're there with the camera in 15 minutes, or you don't even need to come here tomorrow to clock in. Decide.",
-		"next": "phone_call_006"
-	},
-
-	"phone_call_006": {
-		"speaker": "Lyanna",
-		"text": "...",
-		"eng": "...",
-		"next": "choice_001"
-	},
-
-	"choice_001": {
-		"type": "choice",
-		"text": "Como Lyanna reage?",
-		"eng": "How does Lyanna react?",
-		"choices": [
-			{
-				"text": "Reclamar do chefe",
-				"eng": "Complain about the boss",
-				"next": "reaction_001",
-				"set_flag": "complained_about_paulo"
-			},
-			{
-				"text": "Aceitar a situação",
-				"eng": "Accept the situation",
-				"next": "reaction_002"
-			}
-		]
-	},
-
-	"reaction_001": {
-		"speaker": "Lyanna",
-		"text": "Esse cara consegue estragar qualquer manhã.",
-		"eng": "This guy can ruin any morning.",
-		"next": "cecilia_001"
-	},
-
-	"reaction_002": {
-		"speaker": "Lyanna",
-		"text": "Bom... parece que eu não tenho muita escolha.",
-		"eng": "Well... seems like I don't have much choice.",
-		"next": "cecilia_001"
-	},
-
-	"cecilia_001": {
-		"speaker": "Cecilia",
-		"text": "Tudo bem se você precisar ir, Lyanna. Acho que vou visitar minha família.",
-		"eng": "It's okay if you need to go, Lyanna. I think I'll visit my family.",
-		"next": "cecilia_002"
-	},
-
-	"cecilia_002": {
-		"speaker": "Lyanna",
-		"text": "Desculpa por isso. Eu realmente queria passar mais tempo com você hoje.",
-		"eng": "Sorry about this. I really wanted to spend more time with you today.",
-		"next": "cecilia_003"
-	},
-
-	"cecilia_003": {
-		"speaker": "Cecilia",
-		"text": "Relaxa. A gente se vê depois. Só tenta não cair em nenhum córrego pelo caminho.",
-		"eng": "Relax. See you later. Just try not to fall into any creek on the way.",
-		"next": "scene_end"
-	},
-
-	"scene_end": {
-		"type": "end",
-		"set_flag": "received_paulo_call",
-		"set_story_stage": 3
+	"scene_id": "chapter_01_scene_03",
+	"scene_name": "Ligação",
+	"start_node": "kitchen_001",
+	"nodes": {
+		"kitchen_001": {
+			"speaker": "Cecilia",
+			"text": "Esse café me salvou agora. Tá um frio horrível lá fora.",
+			"eng": "This coffee saved me now. It's terrible cold outside.",
+			"es": "Este café me salvó ahora mismo. Hace un frío horrible afuera.",
+			"next": "kitchen_002"
+		},
+		"kitchen_002": {
+			"speaker": "Lyanna",
+			"text": "Clima perfeito pra ver aquele filme de vampiros e lobisomens que você adora.",
+			"eng": "Perfect weather to watch that vampires and werewolves movie you love.",
+			"es": "Clima perfecto para ver esa película de vampiros y hombres lobo que te gusta.",
+			"next": "phone_call_001"
+		},
+		"phone_call_001": {
+			"speaker": "Paulo",
+			"text": "Alô, Lyanna? Lyanna? Onde você está?",
+			"eng": "Hello, Lyanna? Lyanna? Where are you?",
+			"es": "¿Hola, Lyanna? ¿Lyanna? ¿Dónde estás?",
+			"next": "phone_call_002"
+		},
+		"phone_call_002": {
+			"speaker": "Lyanna",
+			"text": "Oi, Paulo. Eu acabei de...",
+			"eng": "Hi, Paulo. I just...",
+			"es": "Hola, Paulo. Acabo de...",
+			"next": "phone_call_003"
+		},
+		"phone_call_003": {
+			"speaker": "Paulo",
+			"text": "Esquece isso! O córrego transbordou, tá tudo parado e a prefeitura já tá tentando abafar a situação com... Ah, quer saber? Que se dane, não importa! Só chega lá rápido!",
+			"eng": "Forget it! The creek overflowed, everything's stuck and the city hall is already trying to hush up the situation with... Ah, you know what? Screw it, never mind! Just get there fast!",
+			"es": "¡Olvídalo! El arroyo se desbordó, todo está detenido y el ayuntamiento ya está intentando callar la situación con... Ah, ¿sabes qué? ¡Que se joda! ¡No importa! ¡Solo llega rápido!",
+			"next": "phone_call_004"
+		},
+		"phone_call_004": {
+			"speaker": "Lyanna",
+			"text": "Paulo, hoje é um dia complicado, eu ia pedir pra...",
+			"eng": "Paulo, today is a hard day, I was gonna ask to...",
+			"es": "Paulo, hoy es un día difícil, iba a pedirte que...",
+			"next": "phone_call_005"
+		},
+		"phone_call_005": {
+			"speaker": "Paulo",
+			"text": "Evaristo, deixa eu te falar uma coisa... Eu não tô pedindo. Ou você tá lá com a câmera em 15 minutos, ou nem precisa passar aqui amanhã pra bater o ponto. Resolve aí.",
+			"eng": "Evaristo, let me tell you something... I'm not asking. Either you're there with the camera in 15 minutes, or you don't even need to come here tomorrow to clock in. Decide.",
+			"es": "Evaristo, déjame decirte algo... no estoy pidiendo. O estás ahí con la cámara en 15 minutos, o ni necesitas pasar por aquí mañana para fichar. Resuélvelo.",
+			"next": "phone_call_006"
+		},
+		"phone_call_006": {
+			"speaker": "Lyanna",
+			"text": "...",
+			"eng": "...",
+			"es": "...",
+			"next": "choice_001"
+		},
+		"choice_001": {
+			"text": "Como Lyanna reage?",
+			"eng": "How does Lyanna react?",
+			"es": "¿Cómo reacciona Lyanna?",
+			"type": "choice",
+			"choices": [
+				{
+					"text": "Reclamar do chefe",
+					"eng": "Complain about the boss",
+					"es": "Quejarse del jefe",
+					"next": "reaction_001",
+					"set_flag": "complained_about_paulo"
+				},
+				{
+					"text": "Aceitar a situação",
+					"eng": "Accept the situation",
+					"es": "Aceptar la situación",
+					"next": "reaction_002"
+				}
+			]
+		},
+		"reaction_001": {
+			"speaker": "Lyanna",
+			"text": "Esse cara consegue estragar qualquer manhã.",
+			"eng": "This guy can ruin any morning.",
+			"es": "Este tipo puede arruinar cualquier mañana.",
+			"next": "cecilia_001"
+		},
+		"reaction_002": {
+			"speaker": "Lyanna",
+			"text": "Bom... parece que eu não tenho muita escolha.",
+			"eng": "Well... seems like I don't have much choice.",
+			"es": "Bueno... parece que no tengo mucha elección.",
+			"next": "cecilia_001"
+		},
+		"cecilia_001": {
+			"speaker": "Cecilia",
+			"text": "Tudo bem se você precisar ir, Lyanna. Acho que vou visitar minha família.",
+			"eng": "It's okay if you need to go, Lyanna. I think I'll visit my family.",
+			"es": "Está bien si necesitas irte, Lyanna. Creo que visitaré a mi familia.",
+			"next": "cecilia_002"
+		},
+		"cecilia_002": {
+			"speaker": "Lyanna",
+			"text": "Desculpa por isso. Eu realmente queria passar mais tempo com você hoje.",
+			"eng": "Sorry about this. I really wanted to spend more time with you today.",
+			"es": "Perdón por esto. Realmente quería pasar más tiempo contigo hoy.",
+			"next": "cecilia_003"
+		},
+		"cecilia_003": {
+			"speaker": "Cecilia",
+			"text": "Relaxa. A gente se vê depois. Só tenta não cair em nenhum córrego pelo caminho.",
+			"eng": "Relax. See you later. Just try not to fall into any creek on the way.",
+			"es": "Tranquila. Nos vemos luego. Solo intenta no caer en ningún arroyo en el camino.",
+			"next": "scene_end"
+		},
+		"scene_end": {
+			"type": "end",
+			"set_flag": "received_paulo_call",
+			"set_story_stage": 3
+		}
 	}
-}
-
 }

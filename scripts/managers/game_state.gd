@@ -34,6 +34,8 @@ var language := "pt"
 func toggle_language() -> void:
 	if language == "pt":
 		language = "en"
+	elif language == "en":
+		language = "es"
 	else:
 		language = "pt"
 

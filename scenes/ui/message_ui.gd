@@ -14,6 +14,7 @@ var waiting_message_close := false
 
 var current_message_pt := ""
 var current_message_en := ""
+var current_message_es := ""
 
 var portraits = {
 	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
@@ -77,10 +78,11 @@ func set_portrait(character_name: String) -> void:
 
 		portrait.visible = false
 
-func show_message(texto: String, texto_en: String = "") -> void:
+func show_message(texto: String, texto_en: String = "", texto_es: String = "") -> void:
 
 	current_message_pt = texto
 	current_message_en = texto_en
+	current_message_es = texto_es
 
 	waiting_message_close = true
 
@@ -99,6 +101,9 @@ func _localized_message() -> String:
 
 	if GameState.language == "en" and current_message_en != "":
 		return current_message_en
+
+	if GameState.language == "es" and current_message_es != "":
+		return current_message_es
 
 	return current_message_pt
 

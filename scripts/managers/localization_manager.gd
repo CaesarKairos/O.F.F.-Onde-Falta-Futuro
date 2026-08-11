@@ -9,6 +9,7 @@ signal language_changed(language: String)
 
 const LANGUAGE_PT := "pt_BR"
 const LANGUAGE_EN := "en"
+const LANGUAGE_ES := "es"
 
 
 # =========================================================
@@ -45,11 +46,10 @@ func _unhandled_input(event: InputEvent) -> void:
 func toggle_language() -> void:
 
 	if current_language == LANGUAGE_PT:
-
 		set_language(LANGUAGE_EN)
-
+	elif current_language == LANGUAGE_EN:
+		set_language(LANGUAGE_ES)
 	else:
-
 		set_language(LANGUAGE_PT)
 
 
@@ -59,7 +59,7 @@ func toggle_language() -> void:
 
 func set_language(language: String) -> void:
 
-	if language != LANGUAGE_PT and language != LANGUAGE_EN:
+	if language != LANGUAGE_PT and language != LANGUAGE_EN and language != LANGUAGE_ES:
 
 		push_warning(
 			"Idioma não suportado: " + language
@@ -81,6 +81,11 @@ func set_language(language: String) -> void:
 func is_english() -> bool:
 
 	return current_language == LANGUAGE_EN
+
+
+func is_spanish() -> bool:
+
+	return current_language == LANGUAGE_ES
 
 
 func is_portuguese() -> bool:

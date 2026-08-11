@@ -63,6 +63,7 @@ animations = [{
 script = ExtResource("1_171rm")
 message = "“Fiquei acordada até tarde ontem... Pensar tira o meu sono”"
 message_en = "“I stayed up late last night... Thinking keeps me from sleeping”"
+message_es = "“Me quedé despierta hasta tarde anoche... Pensar me quita el sueño.”"
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=832703344]
 position = Vector2(404, 276.00003)

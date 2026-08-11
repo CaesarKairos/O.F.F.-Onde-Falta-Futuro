@@ -7,6 +7,7 @@ var player_near = false
 
 @export var message := "Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?"
 @export var message_en := "I can't leave without it; it's like my third eye. But... where's the memory card?"
+@export var message_es := "No puedo salir sin ella; es como si fuera mi tercer ojo. Pero... ¿dónde está la tarjeta de memoria?"
 
 func _ready():
 
@@ -35,7 +36,7 @@ func _process(_delta):
 		var ui = get_tree().get_first_node_in_group("message_ui")
 
 		if ui:
-			ui.show_message(message, message_en)
+			ui.show_message(message, message_en, message_es)
 
 		GameState.add_item("camera")
 
