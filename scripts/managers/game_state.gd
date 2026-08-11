@@ -1,7 +1,5 @@
 extends Node
 
-signal language_changed(language: String)
-
 # =========================
 # PROGRESSO
 # =========================
@@ -24,22 +22,6 @@ func remove_flag(flag_name: String) -> void:
 
 func has_flag(flag_name: String) -> bool:
 	return flags.get(flag_name, false)
-
-# =========================
-# IDIOMA
-# =========================
-
-var language := "pt"
-
-func toggle_language() -> void:
-	if language == "pt":
-		language = "en"
-	elif language == "en":
-		language = "es"
-	else:
-		language = "pt"
-
-	language_changed.emit(language)
 
 # =========================
 # INVENTÁRIO

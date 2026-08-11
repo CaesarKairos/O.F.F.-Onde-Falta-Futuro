@@ -36,7 +36,7 @@ func _ready() -> void:
 	choice2.pressed.connect(_on_choice_2)
 	choice3.pressed.connect(_on_choice_3)
 
-	GameState.language_changed.connect(_on_language_changed)
+	LocalizationManager.language_changed.connect(_on_language_changed)
 
 func _process(_delta) -> void:
 
@@ -99,10 +99,12 @@ func show_message(texto: String, texto_en: String = "", texto_es: String = "") -
 
 func _localized_message() -> String:
 
-	if GameState.language == "en" and current_message_en != "":
+	var language := LocalizationManager.get_language()
+
+	if language == LocalizationManager.LANGUAGE_EN and current_message_en != "":
 		return current_message_en
 
-	if GameState.language == "es" and current_message_es != "":
+	if language == LocalizationManager.LANGUAGE_ES and current_message_es != "":
 		return current_message_es
 
 	return current_message_pt

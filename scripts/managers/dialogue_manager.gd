@@ -11,6 +11,11 @@ var dialogue_active := false
 var just_started := false
 
 
+func _ready() -> void:
+
+	LocalizationManager.language_changed.connect(_on_language_changed)
+
+
 func load_dialogues(path: String) -> bool:
 
 	print("Carregando JSON:", path)
@@ -73,10 +78,12 @@ func _get_node(id: String) -> Dictionary:
 
 func _localized_text(source: Dictionary, key_pt: String = "text", key_en: String = "eng", key_es: String = "es") -> String:
 
-	if GameState.language == "en" and source.has(key_en):
+	var language := LocalizationManager.get_language()
+
+	if language == LocalizationManager.LANGUAGE_EN and source.has(key_en):
 		return str(source[key_en])
 
-	if GameState.language == "es":
+	if language == LocalizationManager.LANGUAGE_ES:
 		if source.has(key_es):
 			return str(source[key_es])
 		if source.has("esp"):
@@ -282,11 +289,7 @@ func end_dialog() -> void:
 		ui.hide_dialog()
 
 
-func _process(_delta: float) -> void:
+func _on_language_changed(_language: String) -> void:
 
-	if Input.is_action_just_pressed("translate"):
-
-		GameState.toggle_language()
-
-		if dialogue_active and not current_node.is_empty():
-			_render_current_node()
+	if dialogue_active and not current_node.is_empty():
+		_render_current_node()
