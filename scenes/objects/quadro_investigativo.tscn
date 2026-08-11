@@ -7,7 +7,8 @@
 size = Vector2(150, 171)
 
 [node name="quadro investigativo" unique_id=15208082 instance=ExtResource("1_cv0ee")]
-message = "“Preciso coletar logo o relato do pessoal que mora perto de onde ele morreu. Aquela empresa tá jogando sujo pra abafar o caso, não posso deixar esse caso ser tratado como 'só mais uma segunda-feira normal’.”"
+message = "“Preciso coletar logo o relato do pessoal que mora perto de onde ele morreu. Aquela empresa tá jogando sujo pra abafar o caso, não posso deixar esse caso ser tratado como 'só mais uma segunda-feira normal'.”"
+message_en = "“I need to get statements soon from people who live near where he died. That company is playing dirty to cover up the case — I can't let it be treated as 'just another normal Monday.'”"
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
 position = Vector2(455.99997, 224)

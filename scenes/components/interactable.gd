@@ -7,6 +7,7 @@ var player_near = false
 var already_interacted = false
 
 @export var message = "Mensagem aqui"
+@export var message_en := ""
 
 func _ready():
 
@@ -26,7 +27,7 @@ func _process(delta):
 		var ui = get_tree().get_first_node_in_group("message_ui")
 
 		if ui:
-			ui.show_message(message)
+			ui.show_message(message, message_en)
 
 func _on_body_entered(body):
 

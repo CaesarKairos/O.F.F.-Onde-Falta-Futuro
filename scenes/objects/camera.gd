@@ -5,6 +5,9 @@ extends Area2D
 
 var player_near = false
 
+@export var message := "Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?"
+@export var message_en := "I can't leave without it; it's like my third eye. But... where's the memory card?"
+
 func _ready():
 
 	# Se a câmera já foi coletada, ela não deve aparecer novamente.
@@ -25,9 +28,7 @@ func _process(_delta):
 		var ui = get_tree().get_first_node_in_group("message_ui")
 
 		if ui:
-			ui.show_message(
-				"Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?"
-			)
+			ui.show_message(message, message_en)
 
 		GameState.add_item("camera")
 

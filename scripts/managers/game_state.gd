@@ -1,5 +1,7 @@
 extends Node
 
+signal language_changed(language: String)
+
 # =========================
 # PROGRESSO
 # =========================
@@ -34,6 +36,8 @@ func toggle_language() -> void:
 		language = "en"
 	else:
 		language = "pt"
+
+	language_changed.emit(language)
 
 # =========================
 # INVENTÁRIO

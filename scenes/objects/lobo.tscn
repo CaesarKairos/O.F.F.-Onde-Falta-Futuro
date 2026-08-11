@@ -8,6 +8,7 @@ size = Vector2(77.75, 89.125)
 
 [node name="lobo" unique_id=15208082 instance=ExtResource("1_5bekt")]
 message = " ​“Ganhei num sorteio de quermesse quando era pequena. É o único que sabe todos os meus segredos... e o único que não me julga por falar sozinha.”"
+message_en = "“I won it at a church raffle when I was little. It's the only one who knows all my secrets... and the only one who doesn't judge me for talking to myself.”"
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
 position = Vector2(343, 256)

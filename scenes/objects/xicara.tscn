@@ -62,6 +62,7 @@ animations = [{
 [node name="Xicara" type="Area2D" unique_id=15208082]
 script = ExtResource("1_171rm")
 message = "“Fiquei acordada até tarde ontem... Pensar tira o meu sono”"
+message_en = "“I stayed up late last night... Thinking keeps me from sleeping”"
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=832703344]
 position = Vector2(404, 276.00003)

@@ -12,6 +12,9 @@ extends CanvasLayer
 
 var waiting_message_close := false
 
+var current_message_pt := ""
+var current_message_en := ""
+
 var portraits = {
 	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
 	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png")
@@ -31,6 +34,8 @@ func _ready() -> void:
 	choice1.pressed.connect(_on_choice_1)
 	choice2.pressed.connect(_on_choice_2)
 	choice3.pressed.connect(_on_choice_3)
+
+	GameState.language_changed.connect(_on_language_changed)
 
 func _process(_delta) -> void:
 
@@ -72,12 +77,15 @@ func set_portrait(character_name: String) -> void:
 
 		portrait.visible = false
 
-func show_message(texto: String) -> void:
+func show_message(texto: String, texto_en: String = "") -> void:
+
+	current_message_pt = texto
+	current_message_en = texto_en
 
 	waiting_message_close = true
 
 	dialogue_box.visible = true
-	dialogue_text.text = texto
+	dialogue_text.text = _localized_message()
 
 	portrait.visible = false
 	continue_icon.visible = true
@@ -85,6 +93,20 @@ func show_message(texto: String) -> void:
 	_hide_choices()
 
 	await _update_choices_position()
+
+
+func _localized_message() -> String:
+
+	if GameState.language == "en" and current_message_en != "":
+		return current_message_en
+
+	return current_message_pt
+
+
+func _on_language_changed(_language: String) -> void:
+
+	if waiting_message_close:
+		dialogue_text.text = _localized_message()
 
 func show_dialogue(texto: String) -> void:
 
