@@ -24,6 +24,18 @@ func has_flag(flag_name: String) -> bool:
 	return flags.get(flag_name, false)
 
 # =========================
+# IDIOMA
+# =========================
+
+var language := "pt"
+
+func toggle_language() -> void:
+	if language == "pt":
+		language = "en"
+	else:
+		language = "pt"
+
+# =========================
 # INVENTÁRIO
 # =========================
 

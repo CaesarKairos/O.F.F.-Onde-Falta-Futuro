@@ -8,49 +8,58 @@
 		"dream_001": {
 			"speaker": "José",
 			"text": "Lyanna… Lyanna?",
+			"eng": "Lyanna... Lyanna?",
 			"next": "dream_002"
 		},
 
 		"dream_002": {
 			"speaker": "Bruno",
 			"text": "Lya, acorda!",
+			"eng": "Lya, wake up!",
 			"next": "dialogue_001"
 		},
 
 		"dialogue_001": {
 			"speaker": "Lyanna",
 			"text": "Hm... pai?",
+			"eng": "Hm... dad?",
 			"next": "dialogue_002"
 		},
 
 		"dialogue_002": {
 			"speaker": "Bruno",
 			"text": "Do que você me chamou? Tá sonhando acordada?",
+			"eng": "What did you just call me? Are you daydreaming?",
 			"next": "dialogue_003"
 		},
 
 		"dialogue_003": {
 			"speaker": "Lyanna",
 			"text": "Oque você quer? Fala logo que eu quero dormir.",
+			"eng": "What do you want? Hurry up, I want to sleep.",
 			"next": "dialogue_004"
 		},
 
 		"dialogue_004": {
 			"speaker": "Bruno",
 			"text": "A Cecília tá lá na sala te esperando.",
+			"eng": "Cecília is waiting for you in the living room.",
 			"next": "choice_001"
 		},
 
 		"choice_001": {
 			"type": "choice",
 			"text": "O que responder?",
+			"eng": "What do you say?",
 			"choices": [
 				{
 					"text": "Perguntar porque ela está lá",
+					"eng": "Ask why she's there",
 					"next": "birthday_path_001"
 				},
 				{
 					"text": "Dizer que já vai",
+					"eng": "Say you're on your way",
 					"next": "already_going_001"
 				}
 			]
@@ -59,12 +68,14 @@
 		"birthday_path_001": {
 			"speaker": "Lyanna",
 			"text": "A Cecília? O que ela tá fazendo aqui tão cedo?",
+			"eng": "Cecília? What is she doing here so early?",
 			"next": "birthday_path_002"
 		},
 
 		"birthday_path_002": {
 			"speaker": "Bruno",
 			"text": "Esqueceu que é o aniversário dela? Ela veio direto do Terminal e tá esperando lá na sala.",
+			"eng": "Forgot it's her birthday? She came straight from the Terminal and is waiting in the living room.",
 			"set_flag": "knows_cecilia_birthday",
 			"next": "birthday_path_003"
 		},
@@ -72,48 +83,56 @@
 		"birthday_path_003": {
 			"speaker": "Lyanna",
 			"text": "Nossa, é verdade… eu perdi o sono com...",
+			"eng": "Wow, it's true... I lost sleep with...",
 			"next": "birthday_path_004"
 		},
 
 		"birthday_path_004": {
 			"speaker": "Bruno",
 			"text": "Com…?",
+			"eng": "With...?",
 			"next": "birthday_path_005"
 		},
 
 		"birthday_path_005": {
 			"speaker": "Lyanna",
 			"text": "Hããã… Fala pra ela que já vou ir.",
+			"eng": "Uhhh... Tell her I'm coming.",
 			"next": "scene_end"
 		},
 
 		"already_going_001": {
 			"speaker": "Lyanna",
 			"text": "Tá, tá... fala pra ela que eu já levantei.",
+			"eng": "Yeah, yeah... tell her I'm up.",
 			"next": "already_going_002"
 		},
 
 		"already_going_002": {
 			"speaker": "Bruno",
 			"text": "Você esqueceu que ela ia vir, né? Você até prometeu um café pra ela.",
+			"eng": "You forgot she was coming, didn't you? You even promised her a coffee.",
 			"next": "already_going_003"
 		},
 
 		"already_going_003": {
 			"speaker": "Lyanna",
 			"text": "Não é isso, eu só perdi o sono com...",
+			"eng": "That's not it, I just lost sleep with...",
 			"next": "already_going_004"
 		},
 
 		"already_going_004": {
 			"speaker": "Bruno",
 			"text": "Com…?",
+			"eng": "With...?",
 			"next": "already_going_005"
 		},
 
 		"already_going_005": {
 			"speaker": "Lyanna",
 			"text": "Hããã… Não é nada, vai lá avisar pra ela.",
+			"eng": "Uhhh... It's nothing, go tell her.",
 			"next": "scene_end"
 		},
 

@@ -71,6 +71,14 @@ func _get_node(id: String) -> Dictionary:
 	return nodes.get(id, {})
 
 
+func _localized_text(source: Dictionary, key_pt: String = "text", key_en: String = "eng") -> String:
+
+	if GameState.language == "en" and source.has(key_en):
+		return str(source[key_en])
+
+	return str(source.get(key_pt, ""))
+
+
 func _apply_node_effects(node: Dictionary) -> void:
 
 	if node.has("set_flags"):
@@ -118,18 +126,18 @@ func _show_current_node() -> void:
 
 	_apply_node_effects(current_node)
 
+	_render_current_node()
+
+
+func _render_current_node() -> void:
+
 	var ui = get_tree().get_first_node_in_group("message_ui")
 
 	if ui == null:
 		print("MESSAGE UI NÃO ENCONTRADA")
 		return
 
-	var node_type: String = str(
-		current_node.get(
-			"type",
-			"dialogue"
-		)
-	)
+	var node_type: String = str(current_node.get("type", "dialogue"))
 
 	print("Tipo:", node_type)
 
@@ -137,19 +145,8 @@ func _show_current_node() -> void:
 
 		"dialogue":
 
-			var speaker := str(
-				current_node.get(
-					"speaker",
-					""
-				)
-			)
-
-			var text := str(
-				current_node.get(
-					"text",
-					""
-				)
-			)
+			var speaker := str(current_node.get("speaker", ""))
+			var text := _localized_text(current_node)
 
 			print("Speaker:", speaker)
 			print("Texto:", text)
@@ -165,33 +162,25 @@ func _show_current_node() -> void:
 
 			print("Mostrando escolhas.")
 
-			var options = current_node.get(
-				"options",
-				[]
-			)
+			var options = current_node.get("options", [])
 
 			if options.is_empty():
-				options = current_node.get(
-					"choices",
-					[]
-				)
+				options = current_node.get("choices", [])
 
 			current_choices.clear()
 
 			for option in options:
-
 				if _choice_is_available(option):
 					current_choices.append(option)
 
-			ui.show_choices(
-				str(
-					current_node.get(
-						"text",
-						""
-					)
-				),
-				current_choices
-			)
+			var display_choices: Array = []
+
+			for choice in current_choices:
+				var display_choice: Dictionary = choice.duplicate()
+				display_choice["text"] = _localized_text(choice)
+				display_choices.append(display_choice)
+
+			ui.show_choices(_localized_text(current_node), display_choices)
 
 		"end":
 
@@ -285,3 +274,13 @@ func end_dialog() -> void:
 
 	if ui != null:
 		ui.hide_dialog()
+
+
+func _process(_delta: float) -> void:
+
+	if Input.is_action_just_pressed("translate"):
+
+		GameState.toggle_language()
+
+		if dialogue_active and not current_node.is_empty():
+			_render_current_node()

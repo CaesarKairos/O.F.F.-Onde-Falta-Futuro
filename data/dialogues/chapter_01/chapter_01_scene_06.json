@@ -8,32 +8,38 @@
 		"intro_001": {
 			"speaker": "Joana",
 			"text": "Srta. Evaristo! O Paulo me disse que você era a melhor para cobrir o 'renascimento' desse bairro. Já viu o tamanho desse palco?",
+			"eng": "Ms. Evaristo! Paulo told me you were the best to cover this neighborhood's 'rebirth'. Have you seen the size of this stage?",
 			"next": "intro_002"
 		},
 
 		"intro_002": {
 			"speaker": "Lyanna",
 			"text": "É... impressionante, de verdade. Mas eu vim da parte de baixo, perto do córrego. O pessoal ainda está bem assustado com o alagamento.",
+			"eng": "It is... impressive, really. But I came from the lower part, near the creek. People are still really scared about the flooding.",
 			"next": "intro_003"
 		},
 
 		"intro_003": {
 			"speaker": "Joana",
 			"text": "Sobre isso, diga que lamentamos o ocorrido e que a família já foi devidamente compensada. No fim, algumas pessoas se contentam com muito pouco.",
+			"eng": "About that, say we regret what happened and that the family has already been properly compensated. In the end, some people are content with very little.",
 			"next": "choice_001"
 		},
 
 		"choice_001": {
 			"type": "choice",
 			"text": "Como responder?",
+			"eng": "How do you respond?",
 			"choices": [
 				{
 					"text": "Responder com indignação.",
+					"eng": "Respond with indignation.",
 					"next": "indignation_001",
 					"set_flag": "confronted_joana"
 				},
 				{
 					"text": "Responder com diplomacia.",
+					"eng": "Respond with diplomacy.",
 					"next": "diplomacy_001",
 					"set_flag": "diplomatic_with_joana"
 				}
@@ -43,12 +49,14 @@
 		"indignation_001": {
 			"speaker": "Lyanna",
 			"text": "O senhor Amaral perdeu um filho, Joana. Dinheiro nenhum traz o Carlos de volta. O problema não é a compensação, é o que causou isso.",
+			"eng": "Mr. Amaral lost a son, Joana. No amount of money brings Carlos back. The problem isn't the compensation, it's what caused this.",
 			"next": "indignation_002"
 		},
 
 		"indignation_002": {
 			"speaker": "Joana",
 			"text": "Nós seguimos o Mapa de Zoneamento Legal da prefeitura. Se aquele ponto era perigoso, a prefeitura deveria ter interditado a rua décadas atrás. Estamos em um setor classificado como 'Solo Firme'.",
+			"eng": "We followed the city's Legal Zoning Map. If that spot was dangerous, the city should have closed the street decades ago. We're in a sector classified as 'Firm Ground'.",
 			"set_flag": "clue_zoning_map",
 			"next": "bridge_001"
 		},
@@ -56,12 +64,14 @@
 		"diplomacy_001": {
 			"speaker": "Lyanna",
 			"text": "Entendo que a empresa se prontificou, mas a comunidade sente que as obras mudaram o curso da água. Como foi planejado o escoamento aqui?",
+			"eng": "I understand the company stepped up, but the community feels the construction changed the water's course. How was the drainage planned here?",
 			"next": "diplomacy_002"
 		},
 
 		"diplomacy_002": {
 			"speaker": "Joana",
 			"text": "Tudo dentro das normas. Tenho aqui o Relatório de Perímetro de Segurança. O escoamento foi desviado para as galerias principais. Se houve inundação, foi apenas um evento geográfico isolado.",
+			"eng": "Everything within regulations. I have the Security Perimeter Report here. The drainage was diverted to the main sewers. If there was flooding, it was just an isolated geographic event.",
 			"set_flag": "clue_perimeter_report",
 			"next": "bridge_001"
 		},
@@ -69,23 +79,28 @@
 		"bridge_001": {
 			"speaker": "Joana",
 			"text": "Seu chefe garantiu que você saberia conduzir isso com maturidade. Afinal, acidentes acontecem, a vida segue. Há algo mais que queira perguntar?",
+			"eng": "Your boss assured me you would know how to handle this with maturity. After all, accidents happen, life goes on. Is there anything else you want to ask?",
 			"next": "choice_002"
 		},
 
 		"choice_002": {
 			"type": "choice",
 			"text": "O que perguntar?",
+			"eng": "What to ask?",
 			"choices": [
 				{
 					"text": "Sobre os transtornos e a vítima.",
+					"eng": "About the disruptions and the victim.",
 					"next": "victim_001"
 				},
 				{
 					"text": "Sobre a impermeabilização do solo.",
+					"eng": "About the soil waterproofing.",
 					"next": "soil_001"
 				},
 				{
 					"text": "Sobre a responsabilidade da obra.",
+					"eng": "About the construction's responsibility.",
 					"next": "responsibility_001"
 				}
 			]
@@ -94,12 +109,14 @@
 		"victim_001": {
 			"speaker": "Lyanna",
 			"text": "Os moradores dizem que o bairro virou um inferno antes mesmo do show. Como o Carlos deveria saber que o trajeto mudou se vocês ignoraram até ordens judiciais?",
+			"eng": "Residents say the neighborhood turned into hell even before the show. How was Carlos supposed to know the route changed if you ignored even court orders?",
 			"next": "victim_002"
 		},
 
 		"victim_002": {
 			"speaker": "Joana",
 			"text": "O Carlos era apenas um entregador apressado. As redes sociais já estão cheias de relatos de motoqueiros imprudentes. O evento não pode ser responsabilizado por escolhas individuais.",
+			"eng": "Carlos was just a rushed deliveryman. Social media is already full of reports about reckless motorcyclists. The event can't be held responsible for individual choices.",
 			"set_flag": "clue_social_media_post",
 			"next": "ending_001"
 		},
@@ -107,12 +124,14 @@
 		"soil_001": {
 			"speaker": "Lyanna",
 			"text": "Testemunhas viram tratores despejando resíduos onde antes havia vegetação. Vocês não acham que transformaram esse terreno em um tobogã de água?",
+			"eng": "Witnesses saw tractors dumping waste where there used to be vegetation. Don't you think you turned this land into a water slide?",
 			"next": "soil_002"
 		},
 
 		"soil_002": {
 			"speaker": "Joana",
 			"text": "A prefeitura já explicou: foi uma chuva completamente fora do esperado. Nossas intervenções tiveram licenciamento ambiental. A natureza foi implacável.",
+			"eng": "The city already explained: it was completely unexpected rain. Our interventions had environmental licensing. Nature was relentless.",
 			"set_flag": "clue_atypical_rain",
 			"next": "ending_001"
 		},
@@ -120,48 +139,56 @@
 		"responsibility_001": {
 			"speaker": "Lyanna",
 			"text": "Valeu a pena ignorar os avisos e o meio ambiente por apenas três dias de festa?",
+			"eng": "Was it worth ignoring the warnings and the environment for just three days of partying?",
 			"next": "responsibility_002"
 		},
 
 		"responsibility_002": {
 			"speaker": "Joana",
 			"text": "O festival trouxe vida para esse bairro. O que aconteceu na rua de baixo é consequência da falta de manutenção da cidade, não da nossa organização.",
+			"eng": "The festival brought life to this neighborhood. What happened on the street below is a consequence of the city's lack of maintenance, not our organization.",
 			"next": "ending_001"
 		},
 
 		"ending_001": {
 			"speaker": "Joana",
 			"text": "Bom... vejo que você tem material mais do que suficiente, Srta. Evaristo.",
+			"eng": "Well... I see you have more than enough material, Ms. Evaristo.",
 			"next": "ending_002"
 		},
 
 		"ending_002": {
 			"speaker": "Lyanna",
 			"text": "A verdade costuma dar boas histórias.",
+			"eng": "The truth usually makes good stories.",
 			"next": "ending_003"
 		},
 
 		"ending_003": {
 			"speaker": "Joana",
 			"text": "A verdade é uma questão de perspectiva. E a perspectiva da prefeitura é que este festival é o maior ganho cultural desta década para a região.",
+			"eng": "Truth is a matter of perspective. And the city's perspective is that this festival is the biggest cultural gain this region has seen this decade.",
 			"next": "ending_004"
 		},
 
 		"ending_004": {
 			"speaker": "Lyanna",
 			"text": "Eu escrevo para quem lê, não para quem assina.",
+			"eng": "I write for those who read, not for those who sign.",
 			"next": "ending_005"
 		},
 
 		"ending_005": {
 			"speaker": "Joana",
 			"text": "Adoro o idealismo dos jovens. Mas agora, se me der licença, o prefeito está me aguardando.",
+			"eng": "I love young idealism. But now, if you'll excuse me, the mayor is waiting for me.",
 			"next": "ending_006"
 		},
 
 		"ending_006": {
 			"speaker": "Joana",
 			"text": "Vá escrever sua matéria, Lyanna. Espero que sua maturidade jornalística prevaleça sobre esse seu impulso de investigação social. Tenha uma boa tarde.",
+			"eng": "Go write your article, Lyanna. I hope your journalistic maturity prevails over this social investigation impulse of yours. Have a good afternoon.",
 			"next": "scene_end"
 		},
 

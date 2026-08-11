@@ -34,7 +34,7 @@ O desenvolvimento técnico do ecossistema do jogo baseia-se em:
 * **JSON (JavaScript Object Notation):** Estrutura de arquivos utilizada para a organização de dados externos, como árvores de escolhas, diálogos, pistas coletadas e gerência de estados da narrativa investigativa.
 
 ---
-
+ 
 ## 🚀 Status Atual
 
 O projeto encontra-se **Em desenvolvimento**. O foco atual da equipe está na consolidação do roteiro do Capítulo 01, refino dos sistemas de interface (*GUI*), implementação das mecânicas básicas de diálogo em árvore e desenho conceitual dos cenários urbanos.
