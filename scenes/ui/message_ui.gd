@@ -21,11 +21,18 @@ var portraits = {
 	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png")
 }
 
+
 func _ready() -> void:
 
 	dialogue_box.visible = false
 	portrait.visible = false
 	continue_icon.visible = false
+
+	# Os retratos são ilustrações não-pixel-art.
+	# Use filtragem linear com mipmaps somente nesse elemento,
+	# mantendo o restante do jogo com o filtro apropriado para pixel art.
+	if portrait is CanvasItem:
+		portrait.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 
 	if continue_icon is AnimatedSprite2D:
 		continue_icon.play()
@@ -37,6 +44,7 @@ func _ready() -> void:
 	choice3.pressed.connect(_on_choice_3)
 
 	LocalizationManager.language_changed.connect(_on_language_changed)
+
 
 func _process(_delta) -> void:
 
@@ -51,9 +59,11 @@ func _process(_delta) -> void:
 			continue_icon.visible = false
 			dialogue_box.visible = false
 
+
 func is_message_open() -> bool:
 
 	return waiting_message_close
+
 
 func _update_choices_position() -> void:
 
@@ -64,6 +74,7 @@ func _update_choices_position() -> void:
 		dialogue_text.get_content_height() +
 		20
 	)
+
 
 func set_portrait(character_name: String) -> void:
 
@@ -78,7 +89,12 @@ func set_portrait(character_name: String) -> void:
 
 		portrait.visible = false
 
-func show_message(texto: String, texto_en: String = "", texto_es: String = "") -> void:
+
+func show_message(
+	texto: String,
+	texto_en: String = "",
+	texto_es: String = ""
+) -> void:
 
 	current_message_pt = texto
 	current_message_en = texto_en
@@ -115,6 +131,7 @@ func _on_language_changed(_language: String) -> void:
 	if waiting_message_close:
 		dialogue_text.text = _localized_message()
 
+
 func show_dialogue(texto: String) -> void:
 
 	waiting_message_close = false
@@ -127,6 +144,7 @@ func show_dialogue(texto: String) -> void:
 	_hide_choices()
 
 	await _update_choices_position()
+
 
 func show_choices(texto: String, options: Array) -> void:
 
@@ -153,6 +171,7 @@ func show_choices(texto: String, options: Array) -> void:
 
 			buttons[i].visible = false
 
+
 func hide_dialog() -> void:
 
 	waiting_message_close = false
@@ -163,19 +182,23 @@ func hide_dialog() -> void:
 	continue_icon.visible = false
 	dialogue_box.visible = false
 
+
 func _hide_choices() -> void:
 
 	choice1.visible = false
 	choice2.visible = false
 	choice3.visible = false
 
+
 func _on_choice_1() -> void:
 
 	DialogueManager.select_choice(0)
 
+
 func _on_choice_2() -> void:
 
 	DialogueManager.select_choice(1)
+
 
 func _on_choice_3() -> void:
 
