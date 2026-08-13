@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_07diw"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="4_da1t7"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_ehkkw"]
+[ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="6_xuydn"]
 
 [node name="Cena 02– Corredor da casa" type="Node2D" unique_id=660517339]
 
@@ -39,3 +40,5 @@ destination_spawn = "LyannaEntrando"
 position = Vector2(37, 360)
 destination_scene = "uid://0s7ha3g3o3tt"
 destination_spawn = "Indo Corredor"
+
+[node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("6_xuydn")]
