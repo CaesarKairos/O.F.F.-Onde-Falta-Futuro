@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="4_mjf1v"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_k20le"]
 [ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://scenes/actors/cecilia/cecilia.tscn" id="6_mjf1v"]
+[ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="8_cc8ic"]
 
 [node name="cena 2 - Sala" type="Node2D" unique_id=826757347]
 
@@ -22,10 +23,10 @@ position = Vector2(640, 360)
 texture = ExtResource("1_0ct6b")
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
-position = Vector2(670, 451)
+position = Vector2(671, 477)
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
-position = Vector2(0, 97)
+position = Vector2(0, 123)
 
 [node name="parede" parent="." unique_id=813813429 instance=ExtResource("4_mjf1v")]
 
@@ -35,4 +36,6 @@ destination_scene = "uid://b8j6rsuxes3xb"
 destination_spawn = "IndoSala"
 
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
-position = Vector2(848, 503)
+position = Vector2(850, 528)
+
+[node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("8_cc8ic")]
