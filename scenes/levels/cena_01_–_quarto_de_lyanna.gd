@@ -18,6 +18,15 @@ func _ready():
 	print("BRUNO:", bruno.global_position)
 	print("TARGET:", target.global_position)
 
+	# Se a cutscene de caminhada já rodou antes (mas o Bruno ainda não foi
+	# embora), ele aparece já parado no BrunoTarget, sem repetir a animação.
+	if GameState.has_flag("bruno_chegou"):
+		moving = false
+		bruno.global_position = target.global_position
+		bruno.movement_locked = false
+		sprite.play("idle")
+		return
+
 	bruno.movement_locked = true
 	sprite.play("walking")
 
@@ -39,6 +48,11 @@ func _process(delta):
 		moving = false
 		sprite.play("idle")
 		bruno.movement_locked = false
+
+		# Registra que a cutscene de caminhada do Bruno já foi exibida,
+		# para que ela não se repita em reentradas na cena.
+		GameState.set_flag("bruno_chegou")
+
 		return
 
 	direction = direction.normalized()

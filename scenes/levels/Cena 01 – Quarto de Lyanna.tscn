@@ -131,5 +131,9 @@ offset_bottom = 729.0
 position = Vector2(1220, 357)
 destination_scene = "uid://b8j6rsuxes3xb"
 destination_spawn = "SaindoQuarto"
+required_flag = "talked_to_bruno"
+locked_message_pt = "Talvez eu devesse falar com o Bruno antes de sair do quarto."
+locked_message_en = "Maybe I should talk to Bruno before leaving the room."
+locked_message_es = "Quizás debería hablar con Bruno antes de salir de la habitación."
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("20_en5bv")]
