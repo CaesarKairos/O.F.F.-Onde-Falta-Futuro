@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b83kpbkeqfegc"]
+
+[ext_resource type="Texture2D" uid="uid://bf141mubjngvn" path="res://assets/art/environment/backgrounds/Cenário  5 - Quarto da bagunça.png" id="1_bg5"]
+[ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_grnd"]
+[ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_pare"]
+[ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_msgui"]
+[ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_invui"]
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
+[ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
+[ext_resource type="PackedScene" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
+
+[node name="Cena 05 – Quarto da Bagunça" type="Node2D" unique_id=1975899657]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=176574195]
+
+[node name="Entrando" type="Marker2D" parent="SpawnPoints" unique_id=903977318]
+position = Vector2(1059.33, 476)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=723559115]
+position = Vector2(640, 360)
+texture = ExtResource("1_bg5")
+
+[node name="Ground" parent="." unique_id=1031428971 instance=ExtResource("2_grnd")]
+position = Vector2(1, 123)
+
+[node name="parede" parent="." unique_id=724063228 instance=ExtResource("3_pare")]
+
+[node name="MessageUI" parent="." unique_id=1884976778 instance=ExtResource("4_msgui")]
+
+[node name="InventoryUI" parent="." unique_id=363640339 instance=ExtResource("5_invui")]
+
+[node name="Player" parent="." unique_id=1782616721 instance=ExtResource("6_play")]
+z_index = 10
+position = Vector2(250, 476)
+
+[node name="Door" parent="." unique_id=15226145 instance=ExtResource("7_door")]
+position = Vector2(1045, 295)
+destination_scene = "res://scenes/levels/cena 02 – corredor da casa.tscn"
+destination_spawn = "SaindoBagunca"
+
+[node name="CartaoMemoria" parent="." unique_id=692716208 instance=ExtResource("8_cart")]
+position = Vector2(373, 95)

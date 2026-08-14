@@ -13,6 +13,13 @@ func goto_scene(scene_path: String, spawn_name: String = "") -> void:
 
 func _change_scene(scene_path: String) -> void:
 
+	# REGRA IMPORTANTE: ao trocar de cena por uma porta, o Player é SEMPRE
+	# reposicionado na posição do Marker2D dentro de SpawnPoints cujo nome
+	# bate com destination_spawn. A posição salva no nó Player da cena só é
+	# usada quando a cena é aberta isolada no editor (F6). Para ajustar onde
+	# a jogadora aparece, edite o Marker2D — e copie o valor para o nó Player
+	# apenas para manter o teste isolado (F6) visualmente consistente.
+
 	if next_spawn == "":
 		get_tree().change_scene_to_file(scene_path)
 		return
@@ -57,6 +64,10 @@ func _change_scene(scene_path: String) -> void:
 
 	get_tree().root.add_child(new_scene)
 	get_tree().current_scene = new_scene
+
+	# Rede de segurança: garante que nenhum diálogo fique "preso" ao trocar
+	# de cena (ex.: se um diálogo anterior não chamou end_dialog()).
+	DialogueManager.dialogue_active = false
 
 	# Posiciona o player antes do primeiro frame renderizado.
 	player.global_position = spawn.global_position

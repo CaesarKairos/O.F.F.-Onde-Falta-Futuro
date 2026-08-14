@@ -18,12 +18,15 @@
 [node name="Indo Corredor" type="Marker2D" parent="SpawnPoints" unique_id=81887348]
 position = Vector2(650, 446)
 
+[node name="Indo Cozinha" type="Marker2D" parent="SpawnPoints" unique_id=1309100860]
+position = Vector2(33, 470)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=342098719]
 position = Vector2(640, 360)
 texture = ExtResource("1_0ct6b")
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
-position = Vector2(671, 477)
+position = Vector2(650, 446)
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
 position = Vector2(0, 123)
@@ -35,7 +38,26 @@ position = Vector2(643, 306)
 destination_scene = "uid://b8j6rsuxes3xb"
 destination_spawn = "IndoSala"
 
+[node name="Porta cozinha" parent="." unique_id=1479630229 instance=ExtResource("5_k20le")]
+position = Vector2(33, 360)
+destination_scene = "res://scenes/levels/cena 03 - cozinha.tscn"
+destination_spawn = "Indo Sala"
+
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
 position = Vector2(850, 528)
+required_story_stage = 1
+show_after_flag = ""
+hide_after_flag = "talked_to_cecilia"
+hide_during_dialogue = false
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("8_cc8ic")]
+
+[node name="Porta saida" parent="." unique_id=14321240 instance=ExtResource("5_k20le")]
+position = Vector2(1207, 353)
+destination_scene = "res://scenes/levels/cena_04_rua_placeholder.tscn"
+destination_spawn = "EntrandoNaRua"
+required_item = "cartao_memoria"
+required_item_2 = "camera"
+locked_message_pt = "Preciso da minha câmera para poder sair de casa."
+locked_message_en = "I need my camera to be able to leave the house."
+locked_message_es = "Necesito mi cámara para poder salir de casa."

@@ -156,6 +156,12 @@ func _render_current_node() -> void:
 
 	match node_type:
 
+		"delay":
+			# Pausa narrativa: fecha o MessageUI, espera alguns segundos,
+			# mostra uma mensagem (ex.: telefone tocando) e continua para o next.
+			_delay_and_continue(ui)
+			return
+
 		"dialogue":
 
 			var speaker := str(current_node.get("speaker", ""))
@@ -199,6 +205,35 @@ func _render_current_node() -> void:
 
 			print("Fim do diálogo.")
 			end_dialog()
+
+
+func _delay_and_continue(ui) -> void:
+
+	# Fecha o MessageUI da conversa anterior.
+	ui.hide_dialog()
+
+	var seconds: float = float(current_node.get("seconds", 2.0))
+
+	await get_tree().create_timer(seconds).timeout
+
+	# Mostra a mensagem de transição, se houver.
+	if current_node.has("message") or current_node.has("text"):
+		ui.show_message(
+			str(current_node.get("message", current_node.get("text", ""))),
+			str(current_node.get("message_en", current_node.get("eng", ""))),
+			str(current_node.get("message_es", current_node.get("es", "")))
+		)
+
+		# Aguarda o jogador fechar a mensagem.
+		while ui.is_message_open():
+			await get_tree().process_frame
+
+	# Continua para o próximo nó.
+	if current_node.has("next"):
+		current_node_id = str(current_node["next"])
+		_show_current_node()
+	else:
+		end_dialog()
 
 
 func can_continue() -> bool:

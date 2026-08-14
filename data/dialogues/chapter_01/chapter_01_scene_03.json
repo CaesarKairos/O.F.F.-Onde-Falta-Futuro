@@ -1,6 +1,6 @@
 {
 	"scene_id": "chapter_01_scene_03",
-	"scene_name": "Ligação",
+	"scene_name": "Café e a ligação",
 	"start_node": "kitchen_001",
 	"nodes": {
 		"kitchen_001": {
@@ -15,6 +15,14 @@
 			"text": "Clima perfeito pra ver aquele filme de vampiros e lobisomens que você adora.",
 			"eng": "Perfect weather to watch that vampires and werewolves movie you love.",
 			"es": "Clima perfecto para ver esa película de vampiros y hombres lobo que te gusta.",
+			"next": "phone_ring_delay"
+		},
+		"phone_ring_delay": {
+			"type": "delay",
+			"seconds": 2.0,
+			"message": "O telefone de Lyanna toca, é seu chefe.",
+			"message_en": "Lyanna's phone rings, it's her boss.",
+			"message_es": "El teléfono de Lyanna suena, es su jefe.",
 			"next": "phone_call_001"
 		},
 		"phone_call_001": {
@@ -85,14 +93,19 @@
 			"text": "Esse cara consegue estragar qualquer manhã.",
 			"eng": "This guy can ruin any morning.",
 			"es": "Este tipo puede arruinar cualquier mañana.",
-			"next": "cecilia_001"
+			"next": "phone_end"
 		},
 		"reaction_002": {
 			"speaker": "Lyanna",
 			"text": "Bom... parece que eu não tenho muita escolha.",
 			"eng": "Well... seems like I don't have much choice.",
 			"es": "Bueno... parece que no tengo mucha elección.",
-			"next": "cecilia_001"
+			"next": "phone_end"
+		},
+		"phone_end": {
+			"type": "end",
+			"set_flag": "received_paulo_call",
+			"set_story_stage": 3
 		},
 		"cecilia_001": {
 			"speaker": "Cecilia",
@@ -113,12 +126,11 @@
 			"text": "Relaxa. A gente se vê depois. Só tenta não cair em nenhum córrego pelo caminho.",
 			"eng": "Relax. See you later. Just try not to fall into any creek on the way.",
 			"es": "Tranquila. Nos vemos luego. Solo intenta no caer en ningún arroyo en el camino.",
-			"next": "scene_end"
+			"next": "cecilia_end"
 		},
-		"scene_end": {
+		"cecilia_end": {
 			"type": "end",
-			"set_flag": "received_paulo_call",
-			"set_story_stage": 3
+			"set_flag": "talked_to_cecilia_kitchen"
 		}
 	}
 }

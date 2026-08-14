@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_qqjab"]
+[ext_resource type="Script" path="res://scenes/objects/cartao_memoria.gd" id="2_p6dlx"]
+[ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_eeger"]
+
+[node name="CartaoMemoria" unique_id=15208082 instance=ExtResource("1_qqjab")]
+script = ExtResource("2_p6dlx")
+message = "Um cartão de memória reserva, jogado entre as coisas antigas. Agora sim eu posso sair pra rua."
+message_en = "A spare memory card, tossed among the old stuff. Now I can finally head out to the street."
+message_es = "Una tarjeta de memoria de repuesto, tirada entre las cosas viejas. Ahora sí puedo salir a la calle."
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+position = Vector2(464, 360)
+texture = ExtResource("3_eeger")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(464, 360)
+
+[node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
+visible = false

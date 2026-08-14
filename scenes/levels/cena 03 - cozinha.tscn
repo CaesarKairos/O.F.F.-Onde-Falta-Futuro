@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_iott4"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_iott4"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_xndgd"]
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
+[ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
+[ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://scenes/actors/cecilia/cecilia.tscn" id="8_ceci"]
+[ext_resource type="PackedScene" path="res://scenes/objects/porta_chaves.tscn" id="9_chav"]
 
 [node name="cena 03 - cozinha" type="Node2D" unique_id=816225611]
 
@@ -25,3 +29,27 @@ position = Vector2(1, 123)
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1842697308]
 
 [node name="Indo Sala" type="Marker2D" parent="SpawnPoints" unique_id=1230821602]
+position = Vector2(1150, 470)
+
+[node name="Player" parent="." unique_id=698274810 instance=ExtResource("6_play")]
+z_index = 10
+position = Vector2(1150, 470)
+
+[node name="Door" parent="." unique_id=877128956 instance=ExtResource("7_door")]
+position = Vector2(1220, 300)
+destination_scene = "res://scenes/levels/cena 02 - sala.tscn"
+destination_spawn = "Indo Cozinha"
+
+[node name="Cecilia" parent="." unique_id=1324869991 instance=ExtResource("8_ceci")]
+z_index = 11
+position = Vector2(500, 520)
+dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_03.json"
+start_dialogue_id = "kitchen_001"
+second_dialogue_id = "cecilia_001"
+required_story_stage = 2
+show_after_flag = "talked_to_cecilia"
+hide_after_flag = ""
+hide_during_dialogue = false
+
+[node name="PortaChaves" parent="." unique_id=1282552993 instance=ExtResource("9_chav")]
+position = Vector2(424, -4)
