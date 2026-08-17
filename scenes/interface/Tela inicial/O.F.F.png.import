@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyv8pkxegse8"
-path="res://.godot/imported/CONFIG (1).png-8f216645431a460e453ed7261142a67d.ctex"
+uid="uid://qp3bd81uafgl"
+path="res://.godot/imported/O.F.F.png-641d2e019ebd42654a88d07a6a79d87d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/TelaInicial/BotoesPrincipais/CONFIG (1).png"
-dest_files=["res://.godot/imported/CONFIG (1).png-8f216645431a460e453ed7261142a67d.ctex"]
+source_file="res://scenes/interface/Tela inicial/O.F.F.png"
+dest_files=["res://.godot/imported/O.F.F.png-641d2e019ebd42654a88d07a6a79d87d.ctex"]
 
 [params]
 

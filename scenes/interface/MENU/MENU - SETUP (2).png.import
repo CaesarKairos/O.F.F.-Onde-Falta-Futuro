@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ldvssoouxe3"
-path="res://.godot/imported/CONTINUAR.png-8d8ce782719a702b6e12e4c9a2b0c052.ctex"
+uid="uid://cvjwtvsqda0s1"
+path="res://.godot/imported/MENU - SETUP (2).png-8092eec5059339cee24576dbd1c3e855.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/TelaInicial/CONTINUAR.png"
-dest_files=["res://.godot/imported/CONTINUAR.png-8d8ce782719a702b6e12e4c9a2b0c052.ctex"]
+source_file="res://scenes/interface/MENU/MENU - SETUP (2).png"
+dest_files=["res://.godot/imported/MENU - SETUP (2).png-8092eec5059339cee24576dbd1c3e855.ctex"]
 
 [params]
 

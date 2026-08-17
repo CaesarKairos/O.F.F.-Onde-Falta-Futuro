@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp53kb8mbxass"
-path="res://.godot/imported/JOGAR.png-4a38cda6b3205c9fbda11d5960353bf3.ctex"
+uid="uid://uxgvyikt6eer"
+path="res://.godot/imported/backgroundHud.png-071dc4b14f5a31284d571a19f6f4c472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/TelaInicial/BotoesPrincipais/JOGAR.png"
-dest_files=["res://.godot/imported/JOGAR.png-4a38cda6b3205c9fbda11d5960353bf3.ctex"]
+source_file="res://scenes/interface/Tela inicial/backgroundHud.png"
+dest_files=["res://.godot/imported/backgroundHud.png-071dc4b14f5a31284d571a19f6f4c472.ctex"]
 
 [params]
 

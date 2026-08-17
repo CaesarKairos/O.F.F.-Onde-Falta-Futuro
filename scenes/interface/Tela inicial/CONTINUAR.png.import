@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dipvwvps3x3od"
-path="res://.godot/imported/NOVO JOGO.png-4c3a76f6289baab1b553facad64bc710.ctex"
+uid="uid://b0ldvssoouxe3"
+path="res://.godot/imported/CONTINUAR.png-9121b0e5d1ee5fcdf498622864409f88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/TelaInicial/NOVO JOGO.png"
-dest_files=["res://.godot/imported/NOVO JOGO.png-4c3a76f6289baab1b553facad64bc710.ctex"]
+source_file="res://scenes/interface/Tela inicial/CONTINUAR.png"
+dest_files=["res://.godot/imported/CONTINUAR.png-9121b0e5d1ee5fcdf498622864409f88.ctex"]
 
 [params]
 

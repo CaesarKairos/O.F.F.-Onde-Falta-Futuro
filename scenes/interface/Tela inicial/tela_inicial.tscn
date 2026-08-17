@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b8m1ql7qvtj3g"]
+
+[ext_resource type="Script" uid="uid://0kdx0adgtb8m" path="res://scenes/interface/Tela inicial/tela_inicial.gd" id="1_neopn"]
+[ext_resource type="Texture2D" uid="uid://j443bfps66iw" path="res://scenes/interface/Tela inicial/background.png" id="2_am23o"]
+[ext_resource type="Texture2D" uid="uid://qp3bd81uafgl" path="res://scenes/interface/Tela inicial/O.F.F.png" id="3_jpcta"]
+[ext_resource type="Texture2D" uid="uid://cp53kb8mbxass" path="res://scenes/interface/Tela inicial/JOGAR.png" id="4_cuxrc"]
+[ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/interface/Tela inicial/NOVO JOGO.png" id="5_4p4tg"]
+[ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/interface/Tela inicial/CONTINUAR.png" id="6_k7apl"]
+[ext_resource type="Texture2D" uid="uid://eyv8pkxegse8" path="res://scenes/interface/Tela inicial/CONFIG (1).png" id="7_x7lce"]
+
+[node name="Tela inicial" type="Node2D" unique_id=1391025369]
+script = ExtResource("1_neopn")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=958188418]
+position = Vector2(639, 361)
+texture = ExtResource("2_am23o")
+
+[node name="O_f_f" type="Sprite2D" parent="." unique_id=1550634082]
+position = Vector2(646, 238)
+texture = ExtResource("3_jpcta")
+
+[node name="btnJogar" type="Button" parent="." unique_id=2001966549]
+offset_left = 585.0
+offset_top = 413.0
+offset_right = 698.0
+offset_bottom = 450.0
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Jogar" type="Sprite2D" parent="btnJogar" unique_id=1528001711]
+position = Vector2(60, 19)
+texture = ExtResource("4_cuxrc")
+
+[node name="btnNovoJogo" type="Button" parent="." unique_id=1030699002]
+offset_left = 565.0
+offset_top = 550.0
+offset_right = 717.0
+offset_bottom = 592.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Novo jogo" type="Sprite2D" parent="btnNovoJogo" unique_id=750703745]
+position = Vector2(79, 18)
+texture = ExtResource("5_4p4tg")
+
+[node name="btnContinuar" type="Button" parent="." unique_id=1407306434]
+offset_left = 572.0
+offset_top = 485.0
+offset_right = 715.0
+offset_bottom = 524.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Continuar" type="Sprite2D" parent="btnContinuar" unique_id=1736843281]
+position = Vector2(70, 18)
+texture = ExtResource("6_k7apl")
+
+[node name="btnConfig" type="Button" parent="." unique_id=1328505000]
+offset_left = 64.0
+offset_top = 62.0
+offset_right = 220.0
+offset_bottom = 103.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Config(1)" type="Sprite2D" parent="btnConfig" unique_id=1455106114]
+position = Vector2(78, 20)
+texture = ExtResource("7_x7lce")
+
+[connection signal="pressed" from="btnJogar" to="." method="_on_btn_jogar_pressed"]
+[connection signal="pressed" from="btnConfig" to="." method="_on_config_pressed"]

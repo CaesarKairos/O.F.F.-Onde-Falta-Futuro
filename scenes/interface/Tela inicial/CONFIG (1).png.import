@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccum82yjro7am"
-path="res://.godot/imported/cam1_ativo.png-5b5c39b1b4450d37997c4cb7acf0f43b.ctex"
+uid="uid://eyv8pkxegse8"
+path="res://.godot/imported/CONFIG (1).png-46a194ca473b128de238849fac1bef7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/TelaInicial/CONFIG/cam1_ativo.png"
-dest_files=["res://.godot/imported/cam1_ativo.png-5b5c39b1b4450d37997c4cb7acf0f43b.ctex"]
+source_file="res://scenes/interface/Tela inicial/CONFIG (1).png"
+dest_files=["res://.godot/imported/CONFIG (1).png-46a194ca473b128de238849fac1bef7a.ctex"]
 
 [params]
 
