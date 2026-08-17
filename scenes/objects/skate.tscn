@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(64, 82.25)
+
+[node name="Skate" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = "O skate do Bruno. Ele vive dizendo que esse é o jeito mais rápido de fugir dos problemas."
+message_en = "Bruno's skateboard. He always says it's the fastest way to run away from problems."
+message_es = "La patineta de Bruno. Siempre dice que es la forma más rápida de huir de los problemas."
+
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(343, 256)
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(336, 335)
+shape = SubResource("RectangleShape2D_26d85")

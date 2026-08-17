@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b4ejdj3qeypss"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(133, 82.25)
+
+[node name="PortaQuartoBruno" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = "Não quero invadir a privacidade do Bru."
+message_en = "I don't want to invade Bru's privacy."
+message_es = "No quiero invadir la privacidad de Bru."
+
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(314, 150)
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(301.5, 335)
+shape = SubResource("RectangleShape2D_26d85")

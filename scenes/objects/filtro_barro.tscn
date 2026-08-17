@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(64, 82.25)
+
+[node name="FiltroBarro" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = "Água fresquinha."
+message_en = "Fresh water."
+message_es = "Agua fresquita."
+
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(343, 256)
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(336, 335)
+shape = SubResource("RectangleShape2D_26d85")

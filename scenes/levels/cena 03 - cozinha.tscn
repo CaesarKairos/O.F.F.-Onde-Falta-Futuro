@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
 [ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://scenes/actors/cecilia/cecilia.tscn" id="8_ceci"]
 [ext_resource type="PackedScene" path="res://scenes/objects/porta_chaves.tscn" id="9_chav"]
+[ext_resource type="PackedScene" path="res://scenes/objects/garrafa_termica.tscn" id="10_garrafa"]
+[ext_resource type="PackedScene" path="res://scenes/objects/filtro_barro.tscn" id="11_filtro"]
 
 [node name="cena 03 - cozinha" type="Node2D" unique_id=816225611]
 
@@ -50,6 +52,19 @@ required_story_stage = 2
 show_after_flag = "talked_to_cecilia"
 hide_after_flag = ""
 hide_during_dialogue = false
+followup_dialogue_path = ""
+followup_dialogue_id = ""
+followup_delay = 2.0
+followup_message_pt = ""
+followup_message_en = ""
+followup_message_es = ""
+followup_trigger_flag = ""
 
 [node name="PortaChaves" parent="." unique_id=1282552993 instance=ExtResource("9_chav")]
 position = Vector2(424, -4)
+
+[node name="GarrafaTermica" parent="." unique_id=1487993333 instance=ExtResource("10_garrafa")]
+position = Vector2(1069, -95)
+
+[node name="FiltroBarro" parent="." unique_id=11492349 instance=ExtResource("11_filtro")]
+position = Vector2(1068, 31)

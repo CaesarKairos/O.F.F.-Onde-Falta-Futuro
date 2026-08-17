@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_ehkkw"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="6_xuydn"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="7_msgui"]
+[ext_resource type="PackedScene" uid="uid://b4ejdj3qeypss" path="res://scenes/objects/porta_quarto_bruno.tscn" id="8_bruno"]
+[ext_resource type="PackedScene" uid="uid://cjm6qxgx1au7i" path="res://scenes/objects/porta_quarto_mae.tscn" id="9_mae"]
 
 [node name="Cena 02– Corredor da casa" type="Node2D" unique_id=660517339]
 
@@ -18,7 +20,7 @@ position = Vector2(982, 466)
 [node name="IndoSala" type="Marker2D" parent="SpawnPoints" unique_id=545314939]
 position = Vector2(50, 466)
 
-[node name="SaindoBagunca" type="Marker2D" parent="SpawnPoints"]
+[node name="SaindoBagunca" type="Marker2D" parent="SpawnPoints" unique_id=1544465281]
 position = Vector2(1120, 466)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=835638921]
@@ -32,7 +34,7 @@ position = Vector2(0, 115)
 [node name="parede" parent="Ground" unique_id=813813429 instance=ExtResource("3_07diw")]
 position = Vector2(0, -115)
 
-[node name="MessageUI" parent="." instance=ExtResource("7_msgui")]
+[node name="MessageUI" parent="." unique_id=888922455 instance=ExtResource("7_msgui")]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("4_da1t7")]
 position = Vector2(982, 466)
@@ -47,7 +49,13 @@ position = Vector2(37, 360)
 destination_scene = "uid://0s7ha3g3o3tt"
 destination_spawn = "Indo Corredor"
 
-[node name="Porta quarto da bagunça" parent="." instance=ExtResource("5_ehkkw")]
+[node name="PortaQuartoBruno" parent="." unique_id=614141830 instance=ExtResource("8_bruno")]
+position = Vector2(16, 130)
+
+[node name="PortaQuartoMae" parent="." unique_id=791400034 instance=ExtResource("9_mae")]
+position = Vector2(364, 240)
+
+[node name="Porta quarto da bagunça" parent="." unique_id=2137826985 instance=ExtResource("5_ehkkw")]
 position = Vector2(1220, 305)
 destination_scene = "res://scenes/levels/cena_05_quarto_da_bagunca.tscn"
 destination_spawn = "Entrando"

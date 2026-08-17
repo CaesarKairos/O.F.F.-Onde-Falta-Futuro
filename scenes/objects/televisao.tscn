@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cy5cjsdhgt0e"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(210, 125.125)
+
+[node name="Televisao" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = "Está ligado no jornal... A barra diz: 'Chuva atípica castiga a cidade e bueiros não dão conta'. Todo ano é a mesma história. O bueiro tá entupido de lixo e falta de estrutura, mas é mais fácil culpar os céus do que admitir o descaso."
+message_en = "It's on the news... The ticker says: 'Unusual rain hits the city and drains can't keep up'. Every year it's the same story. The drain is clogged with trash and lack of infrastructure, but it's easier to blame the skies than admit the neglect."
+message_es = "Está en las noticias... El letrero dice: 'Lluvia atípica azota la ciudad y los desagües no dan abasto'. Cada año es la misma historia. El desagüe está obstruido con basura y falta de infraestructura, pero es más fácil culpar al cielo que admitir el abandono."
+
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(274, 226)
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(263, 313.5625)
+shape = SubResource("RectangleShape2D_26d85")

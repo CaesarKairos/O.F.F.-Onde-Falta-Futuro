@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_k20le"]
 [ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://scenes/actors/cecilia/cecilia.tscn" id="6_mjf1v"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="8_cc8ic"]
+[ext_resource type="PackedScene" uid="uid://cy5cjsdhgt0e" path="res://scenes/objects/televisao.tscn" id="9_tv"]
+[ext_resource type="PackedScene" path="res://scenes/objects/skate.tscn" id="10_skate"]
 
 [node name="cena 2 - Sala" type="Node2D" unique_id=826757347]
 
@@ -45,12 +47,26 @@ destination_spawn = "Indo Sala"
 
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
 position = Vector2(850, 528)
+second_dialogue_id = ""
 required_story_stage = 1
 show_after_flag = ""
 hide_after_flag = "talked_to_cecilia"
 hide_during_dialogue = false
+followup_dialogue_path = ""
+followup_dialogue_id = ""
+followup_delay = 2.0
+followup_message_pt = ""
+followup_message_en = ""
+followup_message_es = ""
+followup_trigger_flag = ""
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("8_cc8ic")]
+
+[node name="Televisao" parent="." unique_id=1596483080 instance=ExtResource("9_tv")]
+position = Vector2(7, 174)
+
+[node name="Skate" parent="." unique_id=1233242963 instance=ExtResource("10_skate")]
+position = Vector2(1173, -91)
 
 [node name="Porta saida" parent="." unique_id=14321240 instance=ExtResource("5_k20le")]
 position = Vector2(1207, 353)

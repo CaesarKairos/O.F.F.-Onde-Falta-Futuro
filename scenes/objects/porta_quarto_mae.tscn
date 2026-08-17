@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cjm6qxgx1au7i"]
+
+[ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
+size = Vector2(142, 82.25)
+
+[node name="PortaQuartoMae" unique_id=15208082 instance=ExtResource("1_5bekt")]
+message = "Eles não estão em casa."
+message_en = "They're not home."
+message_es = "No están en casa."
+
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(309, 139)
+
+[node name="Sprite2D" parent="." index="1" unique_id=389972176]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
+position = Vector2(297, 335)
+shape = SubResource("RectangleShape2D_26d85")
