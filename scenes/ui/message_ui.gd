@@ -285,8 +285,8 @@ func set_portrait(character_name: String) -> void:
 
 	else:
 
+		portrait.texture = null
 		portrait.visible = false
-
 
 # ============================================================
 # SHOW MESSAGE
@@ -358,7 +358,6 @@ func show_dialogue(texto: String) -> void:
 
 	dialogue_text.text = texto
 
-	portrait.visible = false
 	continue_icon.visible = true
 
 	_hide_choices()
