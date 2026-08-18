@@ -1,7 +1,326 @@
 [gd_scene format=3 uid="uid://bnbhxig1opwou"]
 
+[ext_resource type="Texture2D" uid="uid://brjig1iyd1576" path="res://scenes/interface/MENU/MENU - SETUP.png" id="1_34csu"]
+[ext_resource type="FontFile" uid="uid://c7yd3eyfui2up" path="res://scenes/interface/fontes/RobotoMono-Medium.ttf" id="2_a5l5k"]
+[ext_resource type="FontFile" uid="uid://b2kjbk7sn2rjb" path="res://scenes/interface/fontes/RobotoMono-Regular.ttf" id="2_uyuuo"]
+[ext_resource type="Texture2D" uid="uid://doi5ib8l5utjj" path="res://scenes/interface/MENU/CAM1 ATIVA.png" id="4_sobgy"]
+[ext_resource type="Texture2D" uid="uid://mfq5e0ugnaix" path="res://scenes/interface/MENU/CAM 2.png" id="5_t1431"]
+[ext_resource type="Texture2D" uid="uid://ph8lto1panb3" path="res://scenes/interface/MENU/CAM 3.png" id="6_m2wfc"]
+[ext_resource type="Texture2D" uid="uid://ciqvuemrucjgd" path="res://scenes/interface/MENU/MENU - ACESSIBILIDADE.png" id="7_j7tcd"]
+[ext_resource type="Texture2D" uid="uid://mr1vvsedmmct" path="res://scenes/interface/MENU/CAM1.png" id="8_11se6"]
+[ext_resource type="Texture2D" uid="uid://es03j2citume" path="res://scenes/interface/MENU/CAM2 ATIVA.png" id="9_ivvfj"]
+[ext_resource type="Texture2D" uid="uid://cb3maco4tb84d" path="res://scenes/interface/MENU/MENU - INFORMAÇÃO.png" id="10_vr7tq"]
+[ext_resource type="Texture2D" uid="uid://b76nsmum85h82" path="res://scenes/interface/MENU/CAM3 ATIVA.png" id="11_ndw2y"]
+
 [node name="menu_config" type="Node2D" unique_id=1245771572]
 
-[node name="base" type="TextureRect" parent="." unique_id=345337637]
-offset_right = 1280.0
-offset_bottom = 720.0
+[node name="SETUP" type="Control" parent="." unique_id=698430844]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 222.0
+offset_top = 96.0
+offset_right = 1058.0
+offset_bottom = 590.0
+
+[node name="pag1" type="Control" parent="SETUP" unique_id=622220819]
+visible = false
+anchors_preset = 0
+offset_right = 836.0
+offset_bottom = 494.0
+
+[node name="base_setup" type="TextureRect" parent="SETUP/pag1" unique_id=345337637]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 274.0
+offset_right = 418.0
+offset_bottom = 274.0
+
+[node name="MenuSetup" type="Sprite2D" parent="SETUP/pag1/base_setup" unique_id=952659602]
+position = Vector2(0, -27)
+scale = Vector2(0.999, 1.027)
+texture = ExtResource("1_34csu")
+
+[node name="setup_text" type="Label" parent="SETUP/pag1" unique_id=1392440340]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 89.0
+offset_right = 296.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("2_uyuuo")
+theme_override_font_sizes/font_size = 22
+text = "SETUP"
+
+[node name="idioma_text" type="Label" parent="SETUP/pag1" unique_id=1006245996]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 152.0
+offset_right = 250.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "IDIOMA"
+
+[node name="musica_text" type="Label" parent="SETUP/pag1" unique_id=1268104207]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 215.0
+offset_right = 250.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "MÚSICA"
+
+[node name="ef_text" type="Label" parent="SETUP/pag1" unique_id=867971279]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 274.0
+offset_right = 340.0
+offset_bottom = 299.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "EFEITOS SONOROS"
+
+[node name="CAM1 ATIVA" type="TextureButton" parent="SETUP/pag1" unique_id=575375316]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 76.0
+offset_right = 141.0
+offset_bottom = 137.0
+
+[node name="Cam1Ativa" type="Sprite2D" parent="SETUP/pag1/CAM1 ATIVA" unique_id=316007759]
+position = Vector2(47, 32)
+scale = Vector2(1.2058823, 1.2058823)
+texture = ExtResource("4_sobgy")
+
+[node name="CAM2" type="TextureButton" parent="SETUP/pag1" unique_id=1501252733]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 148.0
+offset_right = 141.0
+offset_bottom = 207.0
+
+[node name="Cam2" type="Sprite2D" parent="SETUP/pag1/CAM2" unique_id=1711851430]
+position = Vector2(43, 29)
+scale = Vector2(1.2826087, 1.2826087)
+texture = ExtResource("5_t1431")
+
+[node name="CAM3" type="TextureButton" parent="SETUP/pag1" unique_id=1617684044]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 219.0
+offset_right = 142.0
+offset_bottom = 278.0
+
+[node name="Cam3" type="Sprite2D" parent="SETUP/pag1/CAM3" unique_id=1870917491]
+position = Vector2(40.99997, 29)
+scale = Vector2(1.2826087, 1.2826087)
+texture = ExtResource("6_m2wfc")
+
+[node name="pag2" type="Control" parent="SETUP" unique_id=460816008]
+anchors_preset = 0
+offset_right = 836.0
+offset_bottom = 494.0
+
+[node name="base_acess" type="TextureRect" parent="SETUP/pag2" unique_id=809845279]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 274.0
+offset_right = 418.0
+offset_bottom = 274.0
+
+[node name="MenuAcessibilidade" type="Sprite2D" parent="SETUP/pag2/base_acess" unique_id=1021686922]
+position = Vector2(0, -27.25)
+scale = Vector2(1, 1.0280665)
+texture = ExtResource("7_j7tcd")
+
+[node name="acessibilidade_text" type="Label" parent="SETUP/pag2" unique_id=496611473]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 89.0
+offset_right = 296.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("2_uyuuo")
+theme_override_font_sizes/font_size = 22
+text = "ACESSIBILIDADE"
+
+[node name="filtro_text" type="Label" parent="SETUP/pag2" unique_id=1370091677]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 152.0
+offset_right = 250.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "FILTRO PARA DALTONISMO"
+
+[node name="fontsize_text" type="Label" parent="SETUP/pag2" unique_id=1984221245]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 215.0
+offset_right = 250.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "TAMANHO DA FONTE"
+
+[node name="fonte_text" type="Label" parent="SETUP/pag2" unique_id=100291898]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 274.0
+offset_right = 340.0
+offset_bottom = 299.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "FONTE"
+
+[node name="CAM1" type="TextureButton" parent="SETUP/pag2" unique_id=1786436164]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 76.0
+offset_right = 141.0
+offset_bottom = 137.0
+
+[node name="Cam1" type="Sprite2D" parent="SETUP/pag2/CAM1" unique_id=490484351]
+position = Vector2(47.99999, 31)
+scale = Vector2(1.2608696, 1.2608696)
+texture = ExtResource("8_11se6")
+
+[node name="CAM2 ATIVA" type="TextureButton" parent="SETUP/pag2" unique_id=454681925]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 148.0
+offset_right = 141.0
+offset_bottom = 207.0
+
+[node name="Cam2Ativa" type="Sprite2D" parent="SETUP/pag2/CAM2 ATIVA" unique_id=118709379]
+position = Vector2(41.999992, 28.999985)
+scale = Vector2(1.1715689, 1.1715689)
+texture = ExtResource("9_ivvfj")
+
+[node name="CAM3" type="TextureButton" parent="SETUP/pag2" unique_id=1486654988]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 219.0
+offset_right = 142.0
+offset_bottom = 278.0
+
+[node name="Cam3" type="Sprite2D" parent="SETUP/pag2/CAM3" unique_id=377287802]
+position = Vector2(40.99997, 29)
+scale = Vector2(1.2826087, 1.2826087)
+texture = ExtResource("6_m2wfc")
+
+[node name="pag3" type="Control" parent="SETUP" unique_id=816710112]
+visible = false
+anchors_preset = 0
+offset_right = 836.0
+offset_bottom = 494.0
+
+[node name="base_acess2" type="TextureRect" parent="SETUP/pag3" unique_id=574755205]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 274.0
+offset_right = 418.0
+offset_bottom = 274.0
+
+[node name="MenuInformação" type="Sprite2D" parent="SETUP/pag3/base_acess2" unique_id=135654948]
+position = Vector2(0, -27.25)
+scale = Vector2(1, 1.0280665)
+texture = ExtResource("10_vr7tq")
+
+[node name="info_text" type="Label" parent="SETUP/pag3" unique_id=1606932388]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 89.0
+offset_right = 415.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("2_uyuuo")
+theme_override_font_sizes/font_size = 22
+text = "INFORMAÇÕES"
+
+[node name="projeto_text" type="Label" parent="SETUP/pag3" unique_id=1325625058]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 152.0
+offset_right = 250.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "SOBRE O PROJETO"
+
+[node name="comojogar_text" type="Label" parent="SETUP/pag3" unique_id=755653685]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 215.0
+offset_right = 250.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "COMO JOGAR"
+
+[node name="versao_text" type="Label" parent="SETUP/pag3" unique_id=1499109263]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 278.0
+offset_right = 250.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "VERSÃO"
+
+[node name="1000_text" type="Label" parent="SETUP/pag3/versao_text" unique_id=495699332]
+layout_mode = 0
+offset_left = 546.0
+offset_right = 609.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
+theme_override_fonts/font = ExtResource("2_a5l5k")
+theme_override_font_sizes/font_size = 18
+text = "1.0.0"
+
+[node name="CAM1" type="TextureButton" parent="SETUP/pag3" unique_id=685074870]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 76.0
+offset_right = 141.0
+offset_bottom = 137.0
+
+[node name="Cam1" type="Sprite2D" parent="SETUP/pag3/CAM1" unique_id=1954168874]
+position = Vector2(46.999996, 33)
+scale = Vector2(1.2826089, 1.2826089)
+texture = ExtResource("8_11se6")
+
+[node name="CAM2" type="TextureButton" parent="SETUP/pag3" unique_id=1273718339]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 148.0
+offset_right = 141.0
+offset_bottom = 207.0
+
+[node name="Cam2" type="Sprite2D" parent="SETUP/pag3/CAM2" unique_id=1609338214]
+position = Vector2(43, 29)
+scale = Vector2(1.2826087, 1.2826087)
+texture = ExtResource("5_t1431")
+
+[node name="CAM3 AYIVA" type="TextureButton" parent="SETUP/pag3" unique_id=1837536442]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 219.0
+offset_right = 142.0
+offset_bottom = 278.0
+
+[node name="Cam3Ativa" type="Sprite2D" parent="SETUP/pag3/CAM3 AYIVA" unique_id=845185923]
+position = Vector2(41, 29)
+scale = Vector2(1.1666665, 1.1666667)
+texture = ExtResource("11_ndw2y")
