@@ -121,6 +121,7 @@ scale = Vector2(1.2826087, 1.2826087)
 texture = ExtResource("6_m2wfc")
 
 [node name="pag2" type="Control" parent="SETUP" unique_id=460816008]
+visible = false
 anchors_preset = 0
 offset_right = 836.0
 offset_bottom = 494.0
@@ -218,7 +219,6 @@ scale = Vector2(1.2826087, 1.2826087)
 texture = ExtResource("6_m2wfc")
 
 [node name="pag3" type="Control" parent="SETUP" unique_id=816710112]
-visible = false
 anchors_preset = 0
 offset_right = 836.0
 offset_bottom = 494.0

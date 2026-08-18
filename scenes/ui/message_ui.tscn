@@ -28,59 +28,113 @@ animations = [{
 }]
 
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
+
 script = ExtResource("1_rowjr")
 
-[node name="DialogueBox" type="TextureRect" parent="." unique_id=1469839919]
+
+[node name="DialogueBox" type="NinePatchRect" parent="." unique_id=1469839919]
+
 offset_left = 192.0
 offset_top = 24.0
 offset_right = 1088.0
 offset_bottom = 155.0
+
 texture = ExtResource("2_pfwhv")
 
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+mouse_filter = 2
+
+
 [node name="Portrait" type="TextureRect" parent="DialogueBox" unique_id=824047613]
+
 layout_mode = 0
+
 offset_left = -96.0
 offset_top = -27.0
 offset_right = 116.0
 offset_bottom = 176.0
+
 mouse_filter = 2
+
 expand_mode = 1
 stretch_mode = 5
 
+
 [node name="DialogueText" type="RichTextLabel" parent="DialogueBox" unique_id=824322995]
+
 layout_mode = 0
+
 offset_left = 100.0
 offset_top = 17.0
 offset_right = 832.0
-offset_bottom = 68.0
+offset_bottom = 100.0
+
 mouse_filter = 2
+
 theme_override_fonts/normal_font = ExtResource("3_u23ax")
+
 autowrap_mode = 2
+fit_content = false
+scroll_active = false
+
 
 [node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
+
 visible = false
+
 modulate = Color(1, 1, 1, 0.87058824)
-position = Vector2(818, 116)
+
+position = Vector2(818, 99)
+
 scale = Vector2(0.15761717, 0.1605469)
+
 sprite_frames = SubResource("SpriteFrames_4mql2")
 
+animation = &"default"
+
+
 [node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
+
 z_index = 10
+
 layout_mode = 0
+
 offset_left = 64.0
 offset_top = 63.0
 offset_right = 832.0
 offset_bottom = 112.0
+
 alignment = 1
 
+theme_override_constants/separation = 6
+
+
 [node name="Choice1" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=1261187853]
+
+custom_minimum_size = Vector2(0, 28)
+
 layout_mode = 2
+
 theme_override_fonts/font = ExtResource("3_u23ax")
+
 
 [node name="Choice2" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=966048456]
+
+custom_minimum_size = Vector2(0, 28)
+
 layout_mode = 2
+
 theme_override_fonts/font = ExtResource("3_u23ax")
 
+
 [node name="Choice3" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=362293405]
+
+custom_minimum_size = Vector2(0, 28)
+
 layout_mode = 2
+
 theme_override_fonts/font = ExtResource("3_u23ax")

@@ -1,5 +1,10 @@
 extends CanvasLayer
 
+
+# ============================================================
+# NÓS
+# ============================================================
+
 @onready var dialogue_box = $DialogueBox
 @onready var dialogue_text = $DialogueBox/DialogueText
 @onready var portrait = $DialogueBox/Portrait
@@ -10,11 +15,42 @@ extends CanvasLayer
 @onready var choice2 = $DialogueBox/ChoicesContainer/Choice2
 @onready var choice3 = $DialogueBox/ChoicesContainer/Choice3
 
+
+# ============================================================
+# CONFIGURAÇÃO DA CAIXA
+# ============================================================
+
+# Altura mínima original da DialogueBox.
+const DIALOGUE_MIN_HEIGHT: float = 131.0
+
+# Altura máxima que a caixa pode atingir.
+const DIALOGUE_MAX_HEIGHT: float = 320.0
+
+# Espaçamento interno do texto.
+const TEXT_TOP_MARGIN: float = 17.0
+const TEXT_BOTTOM_MARGIN: float = 20.0
+
+# Espaçamento entre texto e escolhas.
+const CHOICES_MARGIN: float = 20.0
+
+# Espaçamento depois das escolhas.
+const CHOICES_BOTTOM_MARGIN: float = 20.0
+
+
+# ============================================================
+# ESTADO
+# ============================================================
+
 var waiting_message_close := false
 
 var current_message_pt := ""
 var current_message_en := ""
 var current_message_es := ""
+
+
+# ============================================================
+# RETRATOS
+# ============================================================
 
 var portraits = {
 	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
@@ -23,29 +59,38 @@ var portraits = {
 }
 
 
+# ============================================================
+# READY
+# ============================================================
+
 func _ready() -> void:
 
 	dialogue_box.visible = false
 	portrait.visible = false
 	continue_icon.visible = false
 
-	# Os retratos são ilustrações não-pixel-art.
-	# Use filtragem linear com mipmaps somente nesse elemento,
-	# mantendo o restante do jogo com o filtro apropriado para pixel art.
+	# Os retratos não são pixel art.
 	if portrait is CanvasItem:
 		portrait.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 
+	# Inicia a animação do SPACE.
 	if continue_icon is AnimatedSprite2D:
 		continue_icon.play()
 
 	_hide_choices()
 
+	# Conecta os botões.
 	choice1.pressed.connect(_on_choice_1)
 	choice2.pressed.connect(_on_choice_2)
 	choice3.pressed.connect(_on_choice_3)
 
+	# Recalcula a caixa quando o idioma mudar.
 	LocalizationManager.language_changed.connect(_on_language_changed)
 
+
+# ============================================================
+# PROCESS
+# ============================================================
 
 func _process(_delta) -> void:
 
@@ -56,26 +101,178 @@ func _process(_delta) -> void:
 			waiting_message_close = false
 
 			_hide_choices()
+
 			portrait.visible = false
 			continue_icon.visible = false
 			dialogue_box.visible = false
 
+
+# ============================================================
+# VERIFICA SE A MENSAGEM ESTÁ ABERTA
+# ============================================================
 
 func is_message_open() -> bool:
 
 	return waiting_message_close
 
 
-func _update_choices_position() -> void:
+# ============================================================
+# REDIMENSIONAR DIALOGUE BOX
+# ============================================================
 
+func _resize_dialogue_box() -> void:
+
+	# Espera o Godot atualizar o RichTextLabel
+	# depois de alterar o texto.
 	await get_tree().process_frame
 
-	choices_container.position.y = (
-		dialogue_text.position.y +
-		dialogue_text.get_content_height() +
-		20
+
+	# --------------------------------------------------------
+	# ALTURA DO TEXTO
+	# --------------------------------------------------------
+
+	var text_height: float = dialogue_text.get_content_height()
+
+	# Evita que a altura seja zero.
+	text_height = max(text_height, 24.0)
+
+
+	# --------------------------------------------------------
+	# ALTURA BASE DA CAIXA
+	# --------------------------------------------------------
+
+	var required_height: float = (
+		TEXT_TOP_MARGIN +
+		text_height +
+		TEXT_BOTTOM_MARGIN
 	)
 
+
+	# --------------------------------------------------------
+	# SE EXISTIREM ESCOLHAS
+	# --------------------------------------------------------
+
+	if _has_visible_choices():
+
+		var choices_height: float = _get_choices_height()
+
+		required_height += CHOICES_MARGIN
+		required_height += choices_height
+		required_height += CHOICES_BOTTOM_MARGIN
+
+
+	# --------------------------------------------------------
+	# LIMITA A ALTURA
+	# --------------------------------------------------------
+
+	required_height = clamp(
+		required_height,
+		DIALOGUE_MIN_HEIGHT,
+		DIALOGUE_MAX_HEIGHT
+	)
+
+
+	# --------------------------------------------------------
+	# REDIMENSIONA A DIALOGUE BOX
+	# --------------------------------------------------------
+
+	dialogue_box.size.y = required_height
+
+
+	# --------------------------------------------------------
+	# REDIMENSIONA O TEXTO
+	# --------------------------------------------------------
+
+	dialogue_text.position = Vector2(
+		100.0,
+		TEXT_TOP_MARGIN
+	)
+
+	dialogue_text.size = Vector2(
+		dialogue_box.size.x - 164.0,
+		text_height
+	)
+
+
+	# --------------------------------------------------------
+	# POSICIONA AS ESCOLHAS
+	# --------------------------------------------------------
+
+	if _has_visible_choices():
+
+		choices_container.position = Vector2(
+			64.0,
+			TEXT_TOP_MARGIN +
+			text_height +
+			CHOICES_MARGIN
+		)
+
+		choices_container.size.y = _get_choices_height()
+
+
+	# --------------------------------------------------------
+	# POSICIONA O SPACE
+	# --------------------------------------------------------
+
+	continue_icon.position = Vector2(
+		dialogue_box.size.x - 78.0,
+		dialogue_box.size.y - 32.0
+	)
+
+
+# ============================================================
+# VERIFICA SE EXISTEM ESCOLHAS VISÍVEIS
+# ============================================================
+
+func _has_visible_choices() -> bool:
+
+	return (
+		choice1.visible or
+		choice2.visible or
+		choice3.visible
+	)
+
+
+# ============================================================
+# CALCULA ALTURA DAS ESCOLHAS
+# ============================================================
+
+func _get_choices_height() -> float:
+
+	var total_height: float = 0.0
+
+	var buttons = [
+		choice1,
+		choice2,
+		choice3
+	]
+
+	for button in buttons:
+
+		if button.visible:
+
+			total_height += button.get_combined_minimum_size().y
+
+	# Adiciona o espaçamento entre os botões.
+	var visible_buttons: int = 0
+
+	for button in buttons:
+
+		if button.visible:
+			visible_buttons += 1
+
+	if visible_buttons > 1:
+
+		total_height += (
+			visible_buttons - 1
+		) * 6.0
+
+	return total_height
+
+
+# ============================================================
+# RETRATO
+# ============================================================
 
 func set_portrait(character_name: String) -> void:
 
@@ -91,6 +288,10 @@ func set_portrait(character_name: String) -> void:
 		portrait.visible = false
 
 
+# ============================================================
+# SHOW MESSAGE
+# ============================================================
+
 func show_message(
 	texto: String,
 	texto_en: String = "",
@@ -104,6 +305,7 @@ func show_message(
 	waiting_message_close = true
 
 	dialogue_box.visible = true
+
 	dialogue_text.text = _localized_message()
 
 	portrait.visible = false
@@ -111,8 +313,12 @@ func show_message(
 
 	_hide_choices()
 
-	await _update_choices_position()
+	await _resize_dialogue_box()
 
+
+# ============================================================
+# LOCALIZAÇÃO
+# ============================================================
 
 func _localized_message() -> String:
 
@@ -127,39 +333,64 @@ func _localized_message() -> String:
 	return current_message_pt
 
 
+# ============================================================
+# MUDANÇA DE IDIOMA
+# ============================================================
+
 func _on_language_changed(_language: String) -> void:
 
 	if waiting_message_close:
+
 		dialogue_text.text = _localized_message()
 
+		await _resize_dialogue_box()
+
+
+# ============================================================
+# SHOW DIALOGUE
+# ============================================================
 
 func show_dialogue(texto: String) -> void:
 
 	waiting_message_close = false
 
 	dialogue_box.visible = true
+
 	dialogue_text.text = texto
 
+	portrait.visible = false
 	continue_icon.visible = true
 
 	_hide_choices()
 
-	await _update_choices_position()
+	await _resize_dialogue_box()
 
+
+# ============================================================
+# SHOW CHOICES
+# ============================================================
 
 func show_choices(texto: String, options: Array) -> void:
 
 	waiting_message_close = false
 
 	dialogue_box.visible = true
+
 	dialogue_text.text = texto
 
 	portrait.visible = false
 	continue_icon.visible = false
 
-	await _update_choices_position()
+	var buttons = [
+		choice1,
+		choice2,
+		choice3
+	]
 
-	var buttons = [choice1, choice2, choice3]
+
+	# --------------------------------------------------------
+	# CONFIGURA OS BOTÕES
+	# --------------------------------------------------------
 
 	for i in range(buttons.size()):
 
@@ -173,6 +404,17 @@ func show_choices(texto: String, options: Array) -> void:
 			buttons[i].visible = false
 
 
+	# --------------------------------------------------------
+	# REDIMENSIONA DEPOIS DE MOSTRAR OS BOTÕES
+	# --------------------------------------------------------
+
+	await _resize_dialogue_box()
+
+
+# ============================================================
+# ESCONDER DIÁLOGO
+# ============================================================
+
 func hide_dialog() -> void:
 
 	waiting_message_close = false
@@ -184,6 +426,10 @@ func hide_dialog() -> void:
 	dialogue_box.visible = false
 
 
+# ============================================================
+# ESCONDER ESCOLHAS
+# ============================================================
+
 func _hide_choices() -> void:
 
 	choice1.visible = false
@@ -191,15 +437,27 @@ func _hide_choices() -> void:
 	choice3.visible = false
 
 
+# ============================================================
+# ESCOLHA 1
+# ============================================================
+
 func _on_choice_1() -> void:
 
 	DialogueManager.select_choice(0)
 
 
+# ============================================================
+# ESCOLHA 2
+# ============================================================
+
 func _on_choice_2() -> void:
 
 	DialogueManager.select_choice(1)
 
+
+# ============================================================
+# ESCOLHA 3
+# ============================================================
 
 func _on_choice_3() -> void:
 
