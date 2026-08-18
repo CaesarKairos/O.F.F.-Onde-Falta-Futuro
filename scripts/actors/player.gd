@@ -5,6 +5,10 @@ const JUMP_VELOCITY = -400.0
 
 @onready var sprite = $AnimatedSprite2D
 
+# Trava de movimento específica de cena/cutscene (ex.: Quarto de Lyanna,
+# até o jogador falar com o Bruno). Só é setada pelo script da cena.
+var movement_locked := false
+
 func _ready() -> void:
 
 	sprite.play("idle")
@@ -19,8 +23,8 @@ func _physics_process(delta: float) -> void:
 
 	var ui = get_tree().get_first_node_in_group("message_ui")
 
-	# Travar movimento durante diálogos ou mensagens
-	if (ui and ui.is_message_open()) or DialogueManager.dialogue_active:
+	# Travar movimento durante diálogos, mensagens ou trava de cena/cutscene
+	if movement_locked or (ui and ui.is_message_open()) or DialogueManager.dialogue_active:
 
 		velocity.x = 0
 

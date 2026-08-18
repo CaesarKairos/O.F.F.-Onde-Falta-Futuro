@@ -10,14 +10,13 @@ extends Area2D
 # (após o primeiro diálogo terminar) inicia este nó do mesmo JSON.
 @export var second_dialogue_id := ""
 
-# Progressão configurável por instância (valores padrão reproduzem o comportamento da Sala).
+# Progressão configurável por instância.
 @export var required_story_stage := 1
-@export var show_after_flag := ""       # vazio = sempre visível (comportamento atual)
+@export var show_after_flag := ""       # vazio = sempre visível
 @export var hide_after_flag := "talked_to_cecilia"
 
-# Se true, o _process() remove a Cecília assim que hide_after_flag for setada
-# (usado na Cozinha, para ela sumir ao fim do diálogo). Se false, ela permanece
-# na cena até o jogador sair (usado na Sala — o _ready() cuida de não reaparecer).
+# Se true, o _process() remove a Cecília assim que hide_after_flag for setada.
+# Se false, ela permanece na cena até o jogador sair.
 @export var hide_during_dialogue := true
 
 # Follow-up automático: após o diálogo terminar, aguarda followup_delay segundos,
@@ -38,78 +37,63 @@ var _followup_started := false
 
 
 func _ready() -> void:
-
+	# Se a flag que faz a Cecília desaparecer já estiver definida,
+	# remove esta instância da cena.
 	if hide_after_flag != "" and GameState.has_flag(hide_after_flag):
 		queue_free()
 		return
 
+	# Se esta instância só deve aparecer depois de uma determinada flag
+	# e ela ainda não foi definida, remove a instância.
 	if show_after_flag != "" and not GameState.has_flag(show_after_flag):
 		queue_free()
 		return
 
+	# Configura o ícone de interação.
 	icon.visible = false
+
 	var parent = icon.get_parent()
 	var parent_scale = Vector2.ONE
+
 	if parent:
 		parent_scale = parent.global_scale
+
 	if parent_scale == Vector2.ZERO:
 		parent_scale = Vector2.ONE
+
 	icon.scale = Vector2.ONE * GameConstants.INTERACTION_ICON_SCALE / parent_scale
 
+	# Inicia a animação da Cecília.
 	if sprite:
 		sprite.play("idle")
 
+	# Conecta os sinais da Area2D.
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
 
-func _process(_delta):
-
-	# Se a flag de "sumir" foi setada durante o diálogo (ex.: received_paulo_call),
-	# remove a Cecília imediatamente — sem precisar recarregar a cena.
-	# Na Sala (hide_during_dialogue = false), ela permanece até o jogador sair.
-	if hide_during_dialogue and hide_after_flag != "" and GameState.has_flag(hide_after_flag):
-		queue_free()
+func _process(_delta: float) -> void:
+	# Trava a interação com a Cecília depois que o fluxo principal
+	# já foi concluído.
+	if GameState.has_flag("talked_to_cecilia_sala") \
+	or GameState.has_flag("kitchen_cecilia_done"):
+		icon.visible = false
 		return
 
-	if sprite and sprite.animation != "idle":
-		sprite.play("idle")
-
-	# Detecta o fim de uma interação para liberar a segunda (se houver).
-	if DialogueManager.dialogue_active:
-		_was_dialogue_active = true
-	else:
-		if _was_dialogue_active:
-			_was_dialogue_active = false
-
-			# Se a segunda interação ainda não ocorreu, reaparece o ícone
-			# para que o jogador possa conversar novamente (fala da família).
-			if already_interacted and not second_dialogue_played and second_dialogue_id != "" and player_near:
-				icon.visible = true
-
-	_check_followup()
-
-	var ui = get_tree().get_first_node_in_group("message_ui")
-
-	if ui and ui.is_message_open():
+	# O jogador precisa estar dentro da área.
+	if not player_near:
 		return
 
-	if !player_near:
+	# Só interage quando o jogador aperta o botão configurado.
+	if not Input.is_action_just_pressed("interact"):
 		return
 
-	if !Input.is_action_just_pressed("interact"):
-		return
-
+	# Não permite iniciar outro diálogo enquanto um diálogo já estiver ativo.
 	if DialogueManager.dialogue_active:
 		return
 
-	# A primeira interação exige o story_stage correto; a segunda (fala da
-	# família, por exemplo) fica livre após o primeiro diálogo ter ocorrido.
-	if !already_interacted and GameState.story_stage != required_story_stage:
-		return
-
-	# Primeira interação: inicia o diálogo principal (ex.: kitchen_001).
-	if !already_interacted:
+	# Primeira interação.
+	if not already_interacted:
 		already_interacted = true
 		icon.visible = false
 
@@ -117,9 +101,12 @@ func _process(_delta):
 			dialogue_path,
 			start_dialogue_id
 		)
+
 		return
 
-	# Segunda interação: usa o nó alternativo (ex.: fala da família) uma única vez.
+	# Segunda interação.
+	# Só acontece se um ID de segundo diálogo foi configurado
+	# e ele ainda não tiver sido executado.
 	if second_dialogue_id != "" and not second_dialogue_played:
 		second_dialogue_played = true
 		icon.visible = false
@@ -128,62 +115,43 @@ func _process(_delta):
 			dialogue_path,
 			second_dialogue_id
 		)
+
 		return
 
-	# Interações seguintes: repete o diálogo principal.
+	# Verifica se o fluxo principal já foi concluído.
+	# Essas flags são persistentes no GameState, então continuam válidas
+	# mesmo se o jogador sair e voltar para a cena.
+	var all_done := (
+		GameState.has_flag("talks_with_cecilia_kitchen")
+		or GameState.has_flag("dialogue_with_cecilia")
+	)
+
+	if all_done:
+		icon.visible = false
+		return
+
+	# Interações seguintes:
+	# se o fluxo ainda não estiver concluído, repete o diálogo principal.
+	icon.visible = false
+
 	DialogueManager.start_dialog(
 		dialogue_path,
 		start_dialogue_id
 	)
 
 
-func _check_followup() -> void:
-
-	if followup_dialogue_path == "" or _followup_started:
-		return
-
-	if DialogueManager.dialogue_active:
-		_was_dialogue_active = true
-		return
-
-	if _was_dialogue_active:
-		_was_dialogue_active = false
-
-		if followup_trigger_flag == "" or GameState.has_flag(followup_trigger_flag):
-			_followup_started = true
-			_run_followup()
-
-
-func _run_followup() -> void:
-
-	# Pequena pausa entre o fim da conversa e a mensagem do telefone.
-	await get_tree().create_timer(followup_delay).timeout
-
-	var ui = get_tree().get_first_node_in_group("message_ui")
-
-	if ui and followup_message_pt != "":
-		ui.show_message(followup_message_pt, followup_message_en, followup_message_es)
-
-		# Aguarda o jogador fechar a mensagem antes de iniciar a ligação.
-		while ui.is_message_open():
-			await get_tree().process_frame
-
-	DialogueManager.start_dialog(followup_dialogue_path, followup_dialogue_id)
-
-
-func _on_body_entered(body):
-
+func _on_body_entered(body: Node2D) -> void:
+	# Verifica se quem entrou na área é o jogador.
 	if body.is_in_group("player"):
-
 		player_near = true
 
-		if !already_interacted:
+		# Só mostra o ícone se não houver um diálogo acontecendo.
+		if not DialogueManager.dialogue_active:
 			icon.visible = true
 
 
-func _on_body_exited(body):
-
+func _on_body_exited(body: Node2D) -> void:
+	# Verifica se quem saiu da área é o jogador.
 	if body.is_in_group("player"):
-
 		player_near = false
 		icon.visible = false

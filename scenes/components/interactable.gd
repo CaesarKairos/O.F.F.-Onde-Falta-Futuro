@@ -10,6 +10,10 @@ var already_interacted = false
 @export var message_en := ""
 @export var message_es := ""
 
+# Trava opcional: se preenchida, o item só pode ser interagido quando essa
+# flag estiver setada no GameState. Vazio = comportamento original (sempre ativo).
+@export var required_flag := ""
+
 func _ready():
 
 	icon.visible = false
@@ -25,6 +29,12 @@ func _ready():
 		animated_sprite.play()
 
 func _process(delta):
+
+	# Se uma flag é exigida e ainda não foi setada, o item fica travado:
+	# não interage e o ícone permanece escondido.
+	if required_flag != "" and not GameState.has_flag(required_flag):
+		icon.visible = false
+		return
 
 	if player_near and Input.is_action_just_pressed("interact"):
 
@@ -43,7 +53,8 @@ func _on_body_entered(body):
 
 		player_near = true
 
-		if not already_interacted:
+		# Só mostra o ícone se não houver trava de flag pendente.
+		if not already_interacted and (required_flag == "" or GameState.has_flag(required_flag)):
 			icon.visible = true
 
 func _on_body_exited(body):

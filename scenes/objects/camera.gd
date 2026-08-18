@@ -9,6 +9,10 @@ var player_near = false
 @export var message_en := "I can't leave without it; it's like my third eye. But... where's the memory card?"
 @export var message_es := "No puedo salir sin ella; es como si fuera mi tercer ojo. Pero... ¿dónde está la tarjeta de memoria?"
 
+# Trava opcional: se preenchida, o item só pode ser interagido quando essa
+# flag estiver setada no GameState. Vazio = comportamento original (sempre ativo).
+@export var required_flag := ""
+
 func _ready():
 
 	# Se a câmera já foi coletada, ela não deve aparecer novamente.
@@ -31,6 +35,12 @@ func _ready():
 
 func _process(_delta):
 
+	# Se uma flag é exigida e ainda não foi setada, o item fica travado:
+	# não interage e o ícone permanece escondido.
+	if required_flag != "" and not GameState.has_flag(required_flag):
+		icon.visible = false
+		return
+
 	if player_near and Input.is_action_just_pressed("interact"):
 
 		var ui = get_tree().get_first_node_in_group("message_ui")
@@ -48,7 +58,10 @@ func _on_body_entered(body):
 	if body.name == "Player":
 
 		player_near = true
-		icon.visible = true
+
+		# Só mostra o ícone se não houver trava de flag pendente.
+		if required_flag == "" or GameState.has_flag(required_flag):
+			icon.visible = true
 
 
 func _on_body_exited(body):

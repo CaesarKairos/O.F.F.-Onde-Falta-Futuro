@@ -38,6 +38,11 @@ func _process(_delta: float) -> void:
 		if DialogueManager.dialogue_active:
 			return
 
+		# Não permite interagir enquanto o Bruno ainda está caminhando
+		# até o target (cutscene de chegada em andamento).
+		if movement_locked:
+			return
+
 		if GameState.story_stage != 0:
 			return
 

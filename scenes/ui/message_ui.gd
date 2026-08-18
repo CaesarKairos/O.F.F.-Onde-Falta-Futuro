@@ -18,7 +18,8 @@ var current_message_es := ""
 
 var portraits = {
 	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
-	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png")
+	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png"),
+	"cecilia": preload("res://assets/art/characters/portraits/ana paula renault icon.png")
 }
 
 
