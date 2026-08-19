@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfq5e0ugnaix"
-path="res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"
+uid="uid://b73h20h7g3dkf"
+path="res://.godot/imported/PAUSE (4).png-b634377c9985b3639c2e19a731026e10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/Menu/CAM 2.png"
-dest_files=["res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"]
+source_file="res://scenes/interface/Pause/PAUSE (4).png"
+dest_files=["res://.godot/imported/PAUSE (4).png-b634377c9985b3639c2e19a731026e10.ctex"]
 
 [params]
 
