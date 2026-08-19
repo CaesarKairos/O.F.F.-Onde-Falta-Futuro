@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bnbhxig1opwou"]
 
 [ext_resource type="Texture2D" uid="uid://brjig1iyd1576" path="res://scenes/interface/MENU/MENU - SETUP.png" id="1_34csu"]
+[ext_resource type="Script" uid="uid://f5indy6fmxbd" path="res://scenes/interface/MENU/menu_config.gd" id="1_t1431"]
 [ext_resource type="FontFile" uid="uid://c7yd3eyfui2up" path="res://scenes/interface/fontes/RobotoMono-Medium.ttf" id="2_a5l5k"]
 [ext_resource type="FontFile" uid="uid://b2kjbk7sn2rjb" path="res://scenes/interface/fontes/RobotoMono-Regular.ttf" id="2_uyuuo"]
 [ext_resource type="Texture2D" uid="uid://doi5ib8l5utjj" path="res://scenes/interface/MENU/CAM1 ATIVA.png" id="4_sobgy"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b76nsmum85h82" path="res://scenes/interface/MENU/CAM3 ATIVA.png" id="11_ndw2y"]
 
 [node name="menu_config" type="Node2D" unique_id=1245771572]
+script = ExtResource("1_t1431")
 
 [node name="SETUP" type="Control" parent="." unique_id=698430844]
 layout_mode = 3
