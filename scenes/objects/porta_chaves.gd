@@ -4,6 +4,7 @@ extends Area2D
 @onready var animated_sprite = get_node_or_null("AnimatedSprite2D")
 
 var player_near := false
+var collected := false
 
 @export var message := "A chave do quartinho de bagunça. Sabia que estava aqui. Preciso dar uma geral lá depois para achar meu cartão de memória reserva."
 @export var message_en := "The key to the junk room. I knew it was here. I need to tidy up in there later to find my spare memory card."
@@ -11,12 +12,7 @@ var player_near := false
 
 
 func _ready() -> void:
-
-	# Se a chave já foi obtida anteriormente,
-	# o porta-chaves não precisa mais existir na cena.
-	if GameState.has_item("chave_bagunca"):
-		queue_free()
-		return
+	collected = GameState.has_item("chave_bagunca")
 
 	icon.visible = false
 
@@ -41,6 +37,8 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if collected:
+		return
 
 	if not player_near:
 		return
@@ -68,26 +66,19 @@ func _process(_delta: float) -> void:
 	# --------------------------------------------------------
 
 	GameState.add_item("chave_bagunca")
-
-
-	# --------------------------------------------------------
-	# REMOVE O PORTA-CHAVES DA CENA
-	# --------------------------------------------------------
-
-	queue_free()
+	collected = true
+	icon.visible = false
+	# O porta-chaves NÃO é removido da cena — ele permanece como objeto fixo.
 
 
 func _on_body_entered(body: Node) -> void:
-
 	if body.name == "Player":
-
 		player_near = true
-		icon.visible = true
+		if not collected:
+			icon.visible = true
 
 
 func _on_body_exited(body: Node) -> void:
-
 	if body.name == "Player":
-
 		player_near = false
 		icon.visible = false

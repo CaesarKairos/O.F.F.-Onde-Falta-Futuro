@@ -6,61 +6,98 @@
 script = ExtResource("1_7nagc")
 
 [node name="InventoryPanel" type="Panel" parent="." unique_id=1113028281]
-offset_left = 328.0
+offset_left = 428.0
 offset_top = 576.0
-offset_right = 968.0
+offset_right = 852.0
 offset_bottom = 640.0
 metadata/_edit_group_ = true
 
 [node name="SlotsContainer" type="HBoxContainer" parent="InventoryPanel" unique_id=619295409]
 layout_mode = 0
-offset_right = 640.0
+offset_right = 424.0
 offset_bottom = 64.0
+theme_override_constants/separation = 8
 
 [node name="Slot1" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=1561983740]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot1" unique_id=913551209]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot2" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=2141687669]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot2" unique_id=349458021]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot3" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=1068716220]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot3" unique_id=907339005]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot4" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=899934952]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot4" unique_id=158363241]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot5" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=868250602]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot5" unique_id=551187357]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Slot6" type="Panel" parent="InventoryPanel/SlotsContainer" unique_id=325378801]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="InventoryPanel/SlotsContainer/Slot6" unique_id=2046804204]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

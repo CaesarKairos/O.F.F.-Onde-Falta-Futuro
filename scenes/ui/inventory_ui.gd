@@ -49,6 +49,8 @@ func _ready() -> void:
 
 	inventory_panel.visible = false
 
+	configure_slot_icons()
+
 	update_inventory()
 
 
@@ -82,7 +84,27 @@ func toggle_inventory() -> void:
 # ATUALIZAR INVENTÁRIO
 # =========================================================
 
+func configure_slot_icons() -> void:
+
+	for slot in slots_container.get_children():
+
+		var icon := slot.get_node_or_null("TextureRect") as TextureRect
+
+		if icon == null:
+			continue
+
+		# Faz o ícone preencher o slot inteiro
+		icon.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		icon.size_flags_vertical = Control.SIZE_EXPAND_FILL
+
+		# Centraliza a textura dentro do ícone mantendo a proporção
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+
+
 func update_inventory() -> void:
+
+	configure_slot_icons()
 
 	var slots = slots_container.get_children()
 
