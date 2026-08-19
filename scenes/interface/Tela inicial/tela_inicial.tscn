@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dipvwvps3x3od" path="res://scenes/interface/Tela inicial/NOVO JOGO.png" id="5_4p4tg"]
 [ext_resource type="Texture2D" uid="uid://b0ldvssoouxe3" path="res://scenes/interface/Tela inicial/CONTINUAR.png" id="6_k7apl"]
 [ext_resource type="Texture2D" uid="uid://eyv8pkxegse8" path="res://scenes/interface/Tela inicial/CONFIG (1).png" id="7_x7lce"]
-[ext_resource type="PackedScene" uid="uid://dywdy4nquxipp" path="res://scenes/ui/timer.tscn" id="8_y1sk3"]
 
 [node name="Tela inicial" type="Node2D" unique_id=1391025369]
 script = ExtResource("1_neopn")
@@ -64,8 +63,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Config(1)" type="Sprite2D" parent="btnConfig" unique_id=1455106114]
 position = Vector2(78, 20)
 texture = ExtResource("7_x7lce")
-
-[node name="TimerUI" parent="." unique_id=451323353 instance=ExtResource("8_y1sk3")]
 
 [connection signal="pressed" from="btnJogar" to="." method="_on_btn_jogar_pressed"]
 [connection signal="pressed" from="btnConfig" to="." method="_on_config_pressed"]

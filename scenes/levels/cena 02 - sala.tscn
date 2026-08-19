@@ -27,9 +27,6 @@ position = Vector2(33, 470)
 position = Vector2(640, 360)
 texture = ExtResource("1_0ct6b")
 
-[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
-position = Vector2(650, 446)
-
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
 position = Vector2(0, 123)
 
@@ -77,3 +74,6 @@ required_item_2 = "camera"
 locked_message_pt = "Preciso da minha câmera para poder sair de casa."
 locked_message_en = "I need my camera to be able to leave the house."
 locked_message_es = "Necesito mi cámara para poder salir de casa."
+
+[node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
+position = Vector2(651, 477)

@@ -5,7 +5,7 @@ extends CanvasLayer
 # CONFIGURAÇÃO
 # =========================================================
 
-const MAX_SLOTS := 6
+const MAX_SLOTS: int = 6
 
 
 # =========================================================
@@ -25,8 +25,11 @@ var item_icons := {
 	"camera":
 		preload("res://assets/art/environment/props/camera3.png"),
 
-	"memory_card":
-		preload("res://assets/art/environment/props/camera3.png")
+	"cartao_memoria":
+		preload("res://assets/art/environment/props/cartao de memory.png"),
+
+	"chave_bagunca":
+		preload("res://assets/art/environment/props/chave.png")
 
 }
 
@@ -35,7 +38,7 @@ var item_icons := {
 # ESTADO
 # =========================================================
 
-var inventory_open := false
+var inventory_open: bool = false
 
 
 # =========================================================
@@ -46,7 +49,7 @@ func _ready() -> void:
 
 	inventory_panel.visible = false
 
-	_create_slots()
+	update_inventory()
 
 
 # =========================================================
@@ -83,78 +86,68 @@ func update_inventory() -> void:
 
 	var slots = slots_container.get_children()
 
-	for i in range(slots.size()):
 
-		var slot = slots[i]
+	# ---------------------------------------------------------
+	# LIMPA TODOS OS SLOTS
+	# ---------------------------------------------------------
 
-		var icon: TextureRect = slot.get_node("Icon")
+	for slot in slots:
 
-		icon.texture = null
+		var icon := slot.get_node_or_null("TextureRect") as TextureRect
+
+		if icon:
+
+			icon.texture = null
+			icon.visible = false
 
 
-	# Coloca os itens existentes nos slots
+	# ---------------------------------------------------------
+	# COLOCA OS ITENS NOS SLOTS
+	# ---------------------------------------------------------
 
-	for i in range(
-		min(GameState.inventory.size(), slots.size())
-	):
+	var item_count: int = mini(
+		GameState.inventory.size(),
+		slots.size()
+	)
+
+
+	for i in range(item_count):
 
 		var item_name: String = GameState.inventory[i]
 
 		var slot = slots[i]
 
-		var icon: TextureRect = slot.get_node("Icon")
+		var icon := slot.get_node_or_null("TextureRect") as TextureRect
+
+
+		# -----------------------------------------------------
+		# SEGURANÇA
+		# -----------------------------------------------------
+
+		if icon == null:
+
+			print(
+				"Inventário: Slot sem Icon: ",
+				slot.name
+			)
+
+			continue
+
+
+		# -----------------------------------------------------
+		# PROCURA O ÍCONE
+		# -----------------------------------------------------
 
 		if item_icons.has(item_name):
 
 			icon.texture = item_icons[item_name]
-
 			icon.visible = true
 
 		else:
 
 			print(
-				"Inventário: ícone não encontrado para:",
+				"Inventário: ícone não encontrado para: ",
 				item_name
 			)
 
 			icon.visible = false
-
-
-# =========================================================
-# CRIAR SLOTS
-# =========================================================
-
-func _create_slots() -> void:
-
-	for child in slots_container.get_children():
-
-		child.queue_free()
-
-
-	for i in range(MAX_SLOTS):
-
-		var slot := Panel.new()
-
-		slot.name = "Slot%d" % (i + 1)
-
-		slot.custom_minimum_size = Vector2(64, 64)
-
-		var icon := TextureRect.new()
-
-		icon.name = "Icon"
-
-		icon.set_anchors_and_offsets_preset(
-			Control.PRESET_FULL_RECT
-		)
-
-		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-
-		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-
-		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-		icon.visible = false
-
-		slot.add_child(icon)
-
-		slots_container.add_child(slot)

@@ -1,8 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dwryj7m14bx1c"]
 
 [ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_qqjab"]
-[ext_resource type="Script" path="res://scenes/objects/porta_chaves.gd" id="2_p6dlx"]
-[ext_resource type="Texture2D" uid="uid://bfxkad0uw4ngj" path="res://Placeholder (Excluir)/SpritePlaceholder.png" id="3_eeger"]
+[ext_resource type="Script" uid="uid://cf7ekq4rav4cp" path="res://scenes/objects/porta_chaves.gd" id="2_p6dlx"]
+[ext_resource type="Texture2D" uid="uid://cf8ohwduvjvlu" path="res://assets/art/environment/props/Porta Chave.png" id="3_05kti"]
 
 [node name="PortaChaves" unique_id=15208082 instance=ExtResource("1_qqjab")]
 script = ExtResource("2_p6dlx")
@@ -10,9 +10,13 @@ message = "A chave do quartinho de bagunça. Sabia que estava aqui. Preciso dar 
 message_en = "The key to the junk room. I knew it was here. I need to tidy up in there later to find my spare memory card."
 message_es = "La llave del cuartito del desorden. Sabía que estaba aquí. Necesito ordenar un poco allí después para encontrar mi tarjeta de memoria de repuesto."
 
+[node name="InteractionIcon" parent="." index="0" unique_id=832703344]
+position = Vector2(466, 264)
+
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
 position = Vector2(464, 360)
-texture = ExtResource("3_eeger")
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_05kti")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
 position = Vector2(464, 360)
