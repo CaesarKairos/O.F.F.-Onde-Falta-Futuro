@@ -24,6 +24,7 @@ SaveManager="*uid://o6525bnt22w4"
 InventoryUi="*uid://bcdymrhjt1eix"
 SettingsManager="*res://scripts/managers/settings_manager.gd"
 LocalizationManager="*uid://dbbwru3jyoil0"
+TimerManager="*uid://cl8kjnp3fixum"
 
 [display]
 
