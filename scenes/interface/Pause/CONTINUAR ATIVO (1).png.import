@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b76nsmum85h82"
-path="res://.godot/imported/CAM3 ATIVA.png-d52da68f08246b31d4aa0dab6be44f65.ctex"
+uid="uid://dprih10t4h34h"
+path="res://.godot/imported/CONTINUAR ATIVO (1).png-77985c59a73bcd55e5853b93f3a82172.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/MENU/CAM3 ATIVA.png"
-dest_files=["res://.godot/imported/CAM3 ATIVA.png-d52da68f08246b31d4aa0dab6be44f65.ctex"]
+source_file="res://scenes/interface/Pause/CONTINUAR ATIVO (1).png"
+dest_files=["res://.godot/imported/CONTINUAR ATIVO (1).png-77985c59a73bcd55e5853b93f3a82172.ctex"]
 
 [params]
 

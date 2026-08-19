@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmjuftcyo6nj3"
-path="res://.godot/imported/Design sem nome (16).png-0f79a87b308715d1c936c90a91e625c8.ctex"
+uid="uid://b4dxhgmaid7dc"
+path="res://.godot/imported/EXIT ATIVO (1).png-440b6891db2a4cca8c3102aa8d1cc8c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/Pause/Design sem nome (16).png"
-dest_files=["res://.godot/imported/Design sem nome (16).png-0f79a87b308715d1c936c90a91e625c8.ctex"]
+source_file="res://scenes/interface/Pause/EXIT ATIVO (1).png"
+dest_files=["res://.godot/imported/EXIT ATIVO (1).png-440b6891db2a4cca8c3102aa8d1cc8c4.ctex"]
 
 [params]
 
