@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="8_cc8ic"]
 [ext_resource type="PackedScene" uid="uid://cy5cjsdhgt0e" path="res://scenes/objects/televisao.tscn" id="9_tv"]
 [ext_resource type="PackedScene" path="res://scenes/objects/skate.tscn" id="10_skate"]
+[ext_resource type="PackedScene" uid="uid://chocsdmvpipls" path="res://pause.tscn" id="11_2scvg"]
 
 [node name="cena 2 - Sala" type="Node2D" unique_id=826757347]
 
@@ -77,3 +78,5 @@ required_item_2 = "camera"
 locked_message_pt = "Preciso da minha câmera para poder sair de casa."
 locked_message_en = "I need my camera to be able to leave the house."
 locked_message_es = "Necesito mi cámara para poder salir de casa."
+
+[node name="pause" parent="." unique_id=1491077779 instance=ExtResource("11_2scvg")]

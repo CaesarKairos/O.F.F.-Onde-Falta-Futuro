@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://chocsdmvpipls"]
+
+[ext_resource type="Texture2D" uid="uid://b73h20h7g3dkf" path="res://scenes/interface/Pause/PAUSE (4).png" id="1_aq7p1"]
+[ext_resource type="Shader" uid="uid://bl8aer65hxguo" path="res://pause.gdshader" id="2_6eyaj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq7p1"]
+bg_color = Color(0, 0, 0, 0.8745098)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8u653"]
+shader = ExtResource("2_6eyaj")
+shader_parameter/frame_color = Color(0, 0, 0, 1)
+shader_parameter/border_thickness = 0.0410000019475
+shader_parameter/inner_corner_radius = 0.08400000399
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwtow"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+
+[node name="pause" type="Node2D" unique_id=1491077779]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1510298905]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1168208357]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1287.4052
+offset_bottom = 718.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aq7p1")
+
+[node name="Hud pause" type="TextureRect" parent="CanvasLayer" unique_id=2136233527]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 1287.0
+offset_bottom = 713.0
+
+[node name="Pause(4)" type="Sprite2D" parent="CanvasLayer/Hud pause" unique_id=1691196296]
+position = Vector2(633.7375, 377.5)
+scale = Vector2(1.0386523, 1.0402777)
+texture = ExtResource("1_aq7p1")
+
+[node name="Moldura" type="Panel" parent="CanvasLayer" unique_id=1956013291]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_8u653")
+offset_left = -6.0
+offset_top = -1.0
+offset_right = 1286.0
+offset_bottom = 723.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bwtow")

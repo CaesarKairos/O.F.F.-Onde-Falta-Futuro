@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfq5e0ugnaix"
-path="res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"
+uid="uid://bmjuftcyo6nj3"
+path="res://.godot/imported/Design sem nome (16).png-0f79a87b308715d1c936c90a91e625c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/Menu/CAM 2.png"
-dest_files=["res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"]
+source_file="res://scenes/interface/Pause/Design sem nome (16).png"
+dest_files=["res://.godot/imported/Design sem nome (16).png-0f79a87b308715d1c936c90a91e625c8.ctex"]
 
 [params]
 
