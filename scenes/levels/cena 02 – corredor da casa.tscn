@@ -1,14 +1,24 @@
 [gd_scene format=3 uid="uid://b8j6rsuxes3xb"]
 
-[ext_resource type="Texture2D" uid="uid://d37m8gvopqihy" path="res://assets/art/environment/backgrounds/Cenário  2 - Corredor (Wireframe).png" id="1_xjtns"]
+[ext_resource type="Texture2D" uid="uid://c4ijj00md3sl6" path="res://assets/art/environment/backgrounds/Cenário  2 - Corredor (1).png" id="1_hcpcc"]
+[ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="2_h114p"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_xuydn"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_07diw"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="3_rfimg"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="4_da1t7"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_ehkkw"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="6_xuydn"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="7_msgui"]
 [ext_resource type="PackedScene" uid="uid://b4ejdj3qeypss" path="res://scenes/objects/porta_quarto_bruno.tscn" id="8_bruno"]
 [ext_resource type="PackedScene" uid="uid://cjm6qxgx1au7i" path="res://scenes/objects/porta_quarto_mae.tscn" id="9_mae"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3smnc"]
+shader = ExtResource("2_h114p")
+shader_parameter/amount = 0.0510000024225
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p0je6"]
+shader = ExtResource("3_rfimg")
+shader_parameter/strength = 1.0
 
 [node name="Cena 02– Corredor da casa" type="Node2D" unique_id=660517339]
 
@@ -23,9 +33,28 @@ position = Vector2(50, 466)
 [node name="SaindoBagunca" type="Marker2D" parent="SpawnPoints" unique_id=1544465281]
 position = Vector2(1120, 466)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=835638921]
-position = Vector2(640, 360)
-texture = ExtResource("1_xjtns")
+[node name="Cenário2Corredor(1)" type="Sprite2D" parent="." unique_id=737547993]
+position = Vector2(638, 365)
+texture = ExtResource("1_hcpcc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2115579230]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=312763693]
+material = SubResource("ShaderMaterial_3smnc")
+offset_right = 1284.0
+offset_bottom = 729.0
+
+[node name="Vinheta" type="ColorRect" parent="CanvasLayer" unique_id=1921825327]
+material = SubResource("ShaderMaterial_p0je6")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_xuydn")]
 visible = false
@@ -37,10 +66,10 @@ position = Vector2(0, -115)
 [node name="MessageUI" parent="." unique_id=888922455 instance=ExtResource("7_msgui")]
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("4_da1t7")]
-position = Vector2(982, 466)
+position = Vector2(983, 492)
 
 [node name="Porta quarto Lyanna" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
-position = Vector2(956, 305)
+position = Vector2(963, 313)
 destination_scene = "uid://dghky7o3l0twu"
 destination_spawn = "LyannaEntrando"
 

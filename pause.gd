@@ -22,7 +22,8 @@ func _ready() -> void:
 	# Garante que o menu de pause continue processando enquanto o jogo está pausado
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-	canvas_layer.visible = false
+	
+	
 
 	_setup_botoes()
 
@@ -131,4 +132,3 @@ func _criar_botao(centro: Vector2, callback: Callable) -> void:
 	botao.position = Vector2(centro.x - 120.0, centro.y - 24.0)
 	botao.mouse_filter = Control.MOUSE_FILTER_STOP
 	botao.pressed.connect(callback)
-	canvas_layer.add_child(botao)

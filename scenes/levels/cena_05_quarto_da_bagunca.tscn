@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://b83kpbkeqfegc"]
 
-[ext_resource type="Texture2D" uid="uid://bf141mubjngvn" path="res://assets/art/environment/backgrounds/Cenário  5 - Quarto da bagunça.png" id="1_bg5"]
+[ext_resource type="Texture2D" uid="uid://dh8vv8vlsoioi" path="res://assets/art/environment/backgrounds/Cenário  5 - Quarto da bagunça.png" id="1_bg5"]
+[ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="2_7mbnm"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_grnd"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="3_fvbvk"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_pare"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_msgui"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_invui"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
 [ext_resource type="PackedScene" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unfju"]
+shader = ExtResource("2_7mbnm")
+shader_parameter/amount = 0.0510000024225
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ablyc"]
+shader = ExtResource("3_fvbvk")
+shader_parameter/strength = 1.0
 
 [node name="Cena 05 – Quarto da Bagunça" type="Node2D" unique_id=1975899657]
 
@@ -16,9 +26,28 @@
 [node name="Entrando" type="Marker2D" parent="SpawnPoints" unique_id=903977318]
 position = Vector2(1059.33, 476)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=723559115]
+[node name="QuartoBagunça" type="Sprite2D" parent="." unique_id=723559115]
 position = Vector2(640, 360)
 texture = ExtResource("1_bg5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1633121300]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1354945175]
+material = SubResource("ShaderMaterial_unfju")
+offset_right = 1284.0
+offset_bottom = 729.0
+
+[node name="Vinheta" type="ColorRect" parent="CanvasLayer" unique_id=2032589909]
+material = SubResource("ShaderMaterial_ablyc")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Ground" parent="." unique_id=1031428971 instance=ExtResource("2_grnd")]
 position = Vector2(1, 123)

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b4dxhgmaid7dc" path="res://scenes/interface/Pause/EXIT ATIVO (1).png" id="6_u063c"]
 [ext_resource type="Texture2D" uid="uid://bajis5tlichs3" path="res://scenes/interface/Pause/SAVE.png" id="8_o8bi2"]
 [ext_resource type="Texture2D" uid="uid://d3l8a83usiy4x" path="res://scenes/interface/Pause/EXIT.png" id="10_ur7s8"]
-[ext_resource type="Script" path="res://pause.gd" id="11_pause"]
+[ext_resource type="Script" uid="uid://chwow388htmwo" path="res://pause.gd" id="11_pause"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq7p1"]
 bg_color = Color(0, 0, 0, 0.8745098)
@@ -27,8 +27,8 @@ bg_color = Color(0, 0, 0, 1)
 border_color = Color(0, 0, 0, 1)
 
 [node name="pause" type="Node2D" unique_id=1491077779]
-script = ExtResource("11_pause")
 process_mode = 3
+script = ExtResource("11_pause")
 
 [node name="Control" type="Control" parent="." unique_id=732082286]
 layout_mode = 3
@@ -36,15 +36,13 @@ anchors_preset = 0
 offset_right = 1289.0
 offset_bottom = 729.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1510298905]
-
-[node name="PauseHud" type="Control" parent="Control/CanvasLayer" unique_id=732082287]
-layout_mode = 3
+[node name="PauseHud" type="Control" parent="Control" unique_id=732082287]
 anchors_preset = 0
 offset_right = 1289.0
 offset_bottom = 729.0
 
-[node name="Panel" type="Panel" parent="Control/CanvasLayer/PauseHud" unique_id=1168208357]
+[node name="Panel" type="Panel" parent="Control/PauseHud" unique_id=1168208357]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 1287.4052
@@ -52,20 +50,10 @@ offset_bottom = 718.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_aq7p1")
 
-[node name="Hud pause" type="TextureRect" parent="Control/CanvasLayer/PauseHud" unique_id=2136233527]
-offset_left = 8.0
-offset_top = 5.0
-offset_right = 1287.0
-offset_bottom = 713.0
-
-[node name="Pause(4)" type="Sprite2D" parent="Control/CanvasLayer/PauseHud/Hud pause" unique_id=1691196296]
-position = Vector2(633.7375, 377.5)
-scale = Vector2(1.0386523, 1.0402777)
-texture = ExtResource("1_aq7p1")
-
-[node name="Moldura" type="Panel" parent="Control/CanvasLayer/PauseHud" unique_id=1956013291]
+[node name="Moldura" type="Panel" parent="Control/PauseHud" unique_id=1956013291]
 modulate = Color(0, 0, 0, 1)
 material = SubResource("ShaderMaterial_8u653")
+layout_mode = 0
 offset_left = -6.0
 offset_top = -3.0
 offset_right = 1286.0
@@ -73,15 +61,27 @@ offset_bottom = 721.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bwtow")
 
-[node name="Camera" type="Sprite2D" parent="Control/CanvasLayer/PauseHud" unique_id=399698206]
+[node name="Hud pause" type="TextureRect" parent="Control/PauseHud" unique_id=2136233527]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 1287.0
+offset_bottom = 713.0
+
+[node name="Pause(4)" type="Sprite2D" parent="Control/PauseHud/Hud pause" unique_id=1691196296]
+position = Vector2(633.7375, 377.5)
+scale = Vector2(1.0386523, 1.0402777)
+texture = ExtResource("1_aq7p1")
+
+[node name="Camera" type="Sprite2D" parent="Control/PauseHud" unique_id=399698206]
 position = Vector2(158, 334)
 texture = ExtResource("3_w2ufp")
 
-[node name="ContinuarAtivo(1)" type="Sprite2D" parent="Control/CanvasLayer/PauseHud/Camera" unique_id=2127427282]
+[node name="ContinuarAtivo(1)" type="Sprite2D" parent="Control/PauseHud/Camera" unique_id=2127427282]
 position = Vector2(116, 2)
 texture = ExtResource("3_05lnj")
 
-[node name="Label" type="Label" parent="Control/CanvasLayer/PauseHud/Camera" unique_id=2041205174]
+[node name="Label" type="Label" parent="Control/PauseHud/Camera" unique_id=2041205174]
 offset_left = 32.0
 offset_top = -11.0
 offset_right = 212.0
@@ -90,16 +90,16 @@ theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONTINUAR"
 
-[node name="Config(2)" type="Sprite2D" parent="Control/CanvasLayer/PauseHud" unique_id=1385137095]
+[node name="Config(2)" type="Sprite2D" parent="Control/PauseHud" unique_id=1385137095]
 position = Vector2(155, 403)
 texture = ExtResource("6_a1xvq")
 
-[node name="ConfigAtivo2" type="Sprite2D" parent="Control/CanvasLayer/PauseHud/Config(2)" unique_id=1322404052]
+[node name="ConfigAtivo2" type="Sprite2D" parent="Control/PauseHud/Config(2)" unique_id=1322404052]
 visible = false
 position = Vector2(119, -1)
 texture = ExtResource("1_6eyaj")
 
-[node name="Label2" type="Label" parent="Control/CanvasLayer/PauseHud/Config(2)" unique_id=1003088883]
+[node name="Label2" type="Label" parent="Control/PauseHud/Config(2)" unique_id=1003088883]
 offset_left = 35.0
 offset_top = -14.0
 offset_right = 215.0
@@ -108,16 +108,16 @@ theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONFIGURAÇÕES"
 
-[node name="Save" type="Sprite2D" parent="Control/CanvasLayer/PauseHud" unique_id=1278528439]
+[node name="Save" type="Sprite2D" parent="Control/PauseHud" unique_id=1278528439]
 position = Vector2(156, 467)
 texture = ExtResource("8_o8bi2")
 
-[node name="SalvrAtivo" type="Sprite2D" parent="Control/CanvasLayer/PauseHud/Save" unique_id=317821583]
+[node name="SalvrAtivo" type="Sprite2D" parent="Control/PauseHud/Save" unique_id=317821583]
 visible = false
 position = Vector2(132, 0)
 texture = ExtResource("5_jg8ls")
 
-[node name="Label3" type="Label" parent="Control/CanvasLayer/PauseHud/Save" unique_id=1796359855]
+[node name="Label3" type="Label" parent="Control/PauseHud/Save" unique_id=1796359855]
 offset_left = 33.0
 offset_top = -15.0
 offset_right = 213.0
@@ -126,16 +126,16 @@ theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "SALVAR"
 
-[node name="Exit" type="Sprite2D" parent="Control/CanvasLayer/PauseHud" unique_id=407424166]
+[node name="Exit" type="Sprite2D" parent="Control/PauseHud" unique_id=407424166]
 position = Vector2(152, 534)
 texture = ExtResource("10_ur7s8")
 
-[node name="ExitAtivo(1)" type="Sprite2D" parent="Control/CanvasLayer/PauseHud/Exit" unique_id=1180969141]
+[node name="ExitAtivo(1)" type="Sprite2D" parent="Control/PauseHud/Exit" unique_id=1180969141]
 visible = false
 position = Vector2(122, 0)
 texture = ExtResource("6_u063c")
 
-[node name="Label4" type="Label" parent="Control/CanvasLayer/PauseHud/Exit" unique_id=1078315882]
+[node name="Label4" type="Label" parent="Control/PauseHud/Exit" unique_id=1078315882]
 offset_left = 36.0
 offset_top = -16.0
 offset_right = 257.0

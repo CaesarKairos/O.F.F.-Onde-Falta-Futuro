@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ph8lto1panb3"
-path="res://.godot/imported/CAM 3.png-9262641e2adc1413bb172698fa905d97.ctex"
+path="res://.godot/imported/CAM 3.png-da4d7764407e94ccd7bdbcd3d6dee385.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/MENU/CAM 3.png"
-dest_files=["res://.godot/imported/CAM 3.png-9262641e2adc1413bb172698fa905d97.ctex"]
+source_file="res://scenes/interface/Menu/CAM 3.png"
+dest_files=["res://.godot/imported/CAM 3.png-da4d7764407e94ccd7bdbcd3d6dee385.ctex"]
 
 [params]
 

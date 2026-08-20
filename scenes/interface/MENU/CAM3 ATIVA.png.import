@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b76nsmum85h82"
-path="res://.godot/imported/CAM3 ATIVA.png-d52da68f08246b31d4aa0dab6be44f65.ctex"
+path="res://.godot/imported/CAM3 ATIVA.png-64f00a00cb8c5863c51f495a878bb576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/MENU/CAM3 ATIVA.png"
-dest_files=["res://.godot/imported/CAM3 ATIVA.png-d52da68f08246b31d4aa0dab6be44f65.ctex"]
+source_file="res://scenes/interface/Menu/CAM3 ATIVA.png"
+dest_files=["res://.godot/imported/CAM3 ATIVA.png-64f00a00cb8c5863c51f495a878bb576.ctex"]
 
 [params]
 

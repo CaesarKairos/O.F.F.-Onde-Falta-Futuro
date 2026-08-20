@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b0ve0ey0pdxoq" path="res://assets/art/environment/backgrounds/Cenário  4 - Cozinha.png" id="1_84w6f"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_d4uk0"]
+[ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="2_n0q35"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="3_4qcon"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_iott4"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_iott4"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_xndgd"]
@@ -12,12 +14,38 @@
 [ext_resource type="PackedScene" path="res://scenes/objects/garrafa_termica.tscn" id="10_garrafa"]
 [ext_resource type="PackedScene" path="res://scenes/objects/filtro_barro.tscn" id="11_filtro"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkq6a"]
+shader = ExtResource("2_n0q35")
+shader_parameter/amount = 0.0510000024225
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ywsyy"]
+shader = ExtResource("3_4qcon")
+shader_parameter/strength = 1.0
+
 [node name="cena 03 - cozinha" type="Node2D" unique_id=816225611]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1177145997]
-position = Vector2(640, 360)
+[node name="Cenário4Cozinha" type="Sprite2D" parent="." unique_id=1711734731]
+position = Vector2(641, 362)
 texture = ExtResource("1_84w6f")
-metadata/_edit_group_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1575263455]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=863618665]
+material = SubResource("ShaderMaterial_jkq6a")
+offset_right = 1284.0
+offset_bottom = 729.0
+
+[node name="Vinheta" type="ColorRect" parent="CanvasLayer" unique_id=1276116136]
+material = SubResource("ShaderMaterial_ywsyy")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_d4uk0")]
 position = Vector2(1, 123)
@@ -61,7 +89,8 @@ followup_message_es = ""
 followup_trigger_flag = ""
 
 [node name="PortaChaves" parent="." unique_id=1282552993 instance=ExtResource("9_chav")]
-position = Vector2(425, 17)
+modulate = Color(1, 1, 1, 0.9254902)
+position = Vector2(425, 18)
 
 [node name="GarrafaTermica" parent="." unique_id=1487993333 instance=ExtResource("10_garrafa")]
 position = Vector2(1069, -95)

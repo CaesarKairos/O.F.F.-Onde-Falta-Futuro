@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfq5e0ugnaix"
-path="res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"
+uid="uid://duov3qmw1njdc"
+path="res://.godot/imported/Cenário  3 - Sala (1).png-54e0cbce738e728716c86d968a40705e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/interface/Menu/CAM 2.png"
-dest_files=["res://.godot/imported/CAM 2.png-9b5af74573e9cf279ec0becd9b2c7e17.ctex"]
+source_file="res://assets/art/environment/backgrounds/Cenário  3 - Sala (1).png"
+dest_files=["res://.godot/imported/Cenário  3 - Sala (1).png-54e0cbce738e728716c86d968a40705e.ctex"]
 
 [params]
 

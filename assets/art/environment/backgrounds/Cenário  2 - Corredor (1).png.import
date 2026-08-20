@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d37m8gvopqihy"
-path="res://.godot/imported/Cenário  2 - Corredor (Wireframe).png-242e285d70cac7fcbdc00563eb003094.ctex"
+uid="uid://c4ijj00md3sl6"
+path="res://.godot/imported/Cenário  2 - Corredor (1).png-bda42572f554f66a23e42ee1816b8a4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/environment/backgrounds/Cenário  2 - Corredor (Wireframe).png"
-dest_files=["res://.godot/imported/Cenário  2 - Corredor (Wireframe).png-242e285d70cac7fcbdc00563eb003094.ctex"]
+source_file="res://assets/art/environment/backgrounds/Cenário  2 - Corredor (1).png"
+dest_files=["res://.godot/imported/Cenário  2 - Corredor (1).png-bda42572f554f66a23e42ee1816b8a4d.ctex"]
 
 [params]
 

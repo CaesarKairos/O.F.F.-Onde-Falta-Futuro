@@ -1,20 +1,53 @@
 [gd_scene format=3 uid="uid://0s7ha3g3o3tt"]
 
-[ext_resource type="Texture2D" uid="uid://cj1lhyramy6th" path="res://assets/art/environment/backgrounds/Cenário  3 - Sala (Wireframe).png" id="1_0ct6b"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="1_fmme6"]
+[ext_resource type="Texture2D" uid="uid://x1ovtsumpg4w" path="res://assets/art/environment/backgrounds/Cenário  3 - Sala (2).png" id="2_irhqx"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="2_mx2nk"]
+[ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="3_72e1f"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_k20le"]
+[ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="4_3pwwm"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="4_mjf1v"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="5_k20le"]
 [ext_resource type="PackedScene" uid="uid://dl3watr004k4y" path="res://scenes/actors/cecilia/cecilia.tscn" id="6_mjf1v"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="8_cc8ic"]
 [ext_resource type="PackedScene" uid="uid://cy5cjsdhgt0e" path="res://scenes/objects/televisao.tscn" id="9_tv"]
 [ext_resource type="PackedScene" path="res://scenes/objects/skate.tscn" id="10_skate"]
-[ext_resource type="PackedScene" uid="uid://chocsdmvpipls" path="res://pause.tscn" id="11_2scvg"]
+[ext_resource type="PackedScene" uid="uid://eeoowf38oewg" path="res://pause.tscn" id="11_2scvg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_irhqx"]
+shader = ExtResource("3_72e1f")
+shader_parameter/amount = 0.0510000024225
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_72e1f"]
+shader = ExtResource("4_3pwwm")
+shader_parameter/strength = 1.0
 
 [node name="cena 2 - Sala" type="Node2D" unique_id=826757347]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2052859525]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1404542285]
+material = SubResource("ShaderMaterial_irhqx")
+offset_right = 1284.0
+offset_bottom = 729.0
+
+[node name="Vinheta" type="ColorRect" parent="CanvasLayer" unique_id=319968864]
+material = SubResource("ShaderMaterial_72e1f")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="MessageUI" parent="." unique_id=177896999 instance=ExtResource("1_fmme6")]
+
+[node name="Cenário3Sala(2)" type="Sprite2D" parent="." unique_id=685257340]
+position = Vector2(642, 363)
+texture = ExtResource("2_irhqx")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1078932629]
 
@@ -23,10 +56,6 @@ position = Vector2(650, 446)
 
 [node name="Indo Cozinha" type="Marker2D" parent="SpawnPoints" unique_id=1309100860]
 position = Vector2(33, 470)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342098719]
-position = Vector2(640, 360)
-texture = ExtResource("1_0ct6b")
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
 position = Vector2(650, 446)
@@ -80,3 +109,5 @@ locked_message_en = "I need my camera to be able to leave the house."
 locked_message_es = "Necesito mi cámara para poder salir de casa."
 
 [node name="pause" parent="." unique_id=1491077779 instance=ExtResource("11_2scvg")]
+visible = false
+position = Vector2(14, 45)

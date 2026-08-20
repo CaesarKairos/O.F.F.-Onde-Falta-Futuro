@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddwcn8f4flyqu"]
 
-[ext_resource type="Script" path="res://scenes/interface/tela_de_carregamento.gd" id="0_script"]
+[ext_resource type="Script" uid="uid://cr7o4alx87msq" path="res://scenes/interface/tela_de_carregamento.gd" id="0_script"]
 [ext_resource type="Texture2D" uid="uid://57dld051qrh2" path="res://scenes/interface/Tela inicial/LOADING SCREEN.png" id="1_xcji7"]
 [ext_resource type="Texture2D" uid="uid://uhlswwkbmwyc" path="res://assets/art/SimpleKeys/SimpleKeys/Classic/Dark/Spritesheets/ARROWLEFT.png" id="2_284aa"]
 [ext_resource type="Texture2D" uid="uid://lkb0qjxg5gx3" path="res://assets/art/SimpleKeys/SimpleKeys/Classic/Dark/Spritesheets/ARROWRIGHT.png" id="3_mp7qj"]
@@ -420,7 +420,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 3.0
+"speed": 8.0
 }]
 
 [node name="LoadingScren" type="Node2D" unique_id=1505978147]
@@ -564,3 +564,4 @@ position = Vector2(624.00006, 587)
 scale = Vector2(0.54078037, 0.5336882)
 sprite_frames = SubResource("SpriteFrames_hgc0v")
 autoplay = "default"
+frame_progress = 0.5233054

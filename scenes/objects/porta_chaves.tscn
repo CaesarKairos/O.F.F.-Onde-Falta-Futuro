@@ -11,15 +11,15 @@ message_en = "The key to the junk room. I knew it was here. I need to tidy up in
 message_es = "La llave del cuartito del desorden. Sabía que estaba aquí. Necesito ordenar un poco allí después para encontrar mi tarjeta de memoria de repuesto."
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
-position = Vector2(466, 264)
+position = Vector2(493, 279)
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
-position = Vector2(464, 360)
+position = Vector2(484.99997, 360)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("3_05kti")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1838995647]
-position = Vector2(464, 360)
+position = Vector2(490, 360)
 
 [node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
 visible = false

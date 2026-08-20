@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="1_4p0wl"]
 [ext_resource type="Script" uid="uid://bdgom6m87aasb" path="res://scenes/levels/cena_01_–_quarto_de_lyanna.gd" id="1_ofbh8"]
-[ext_resource type="Texture2D" uid="uid://c7bffp2skhp7t" path="res://scenes/levels/Cenário 1 - Quarto (02) (2).png" id="2_eaika"]
+[ext_resource type="Texture2D" uid="uid://umgoihsoxiin" path="res://assets/art/environment/backgrounds/Cenário 1 - Quarto (02) (3).png" id="2_7ninf"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_b4xif"]
 [ext_resource type="PackedScene" uid="uid://y5a7w8rkb8qp" path="res://scenes/objects/xicara.tscn" id="4_6jiev"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="5_jd4ns"]
@@ -53,9 +53,9 @@ color = Color(0.81064117, 0.8568788, 0.92090845, 1)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=961949827]
 environment = SubResource("Environment_3vf36")
 
-[node name="Cenário1Quarto(02)(2)" type="Sprite2D" parent="." unique_id=686485797]
-position = Vector2(643, 364)
-texture = ExtResource("2_eaika")
+[node name="Cenário1Quarto(02)(3)" type="Sprite2D" parent="." unique_id=900326719]
+position = Vector2(644, 362)
+texture = ExtResource("2_7ninf")
 
 [node name="Interagiveis" type="Node2D" parent="." unique_id=1509178232]
 
@@ -106,7 +106,7 @@ position = Vector2(226.8, 476)
 
 [node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
 z_index = 11
-position = Vector2(1207.015, 509)
+position = Vector2(1207.015, 501)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1339898441]
 

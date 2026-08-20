@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7bffp2skhp7t"
-path="res://.godot/imported/Cenário 1 - Quarto (02) (2).png-53c1e9bd0ba5ce4c30613517bd3593ca.ctex"
+uid="uid://x1ovtsumpg4w"
+path="res://.godot/imported/Cenário  3 - Sala (2).png-c5b0b6bfceb463375ecd2c16c5ce45dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/Cenário 1 - Quarto (02) (2).png"
-dest_files=["res://.godot/imported/Cenário 1 - Quarto (02) (2).png-53c1e9bd0ba5ce4c30613517bd3593ca.ctex"]
+source_file="res://assets/art/environment/backgrounds/Cenário  3 - Sala (2).png"
+dest_files=["res://.godot/imported/Cenário  3 - Sala (2).png-c5b0b6bfceb463375ecd2c16c5ce45dc.ctex"]
 
 [params]
 
