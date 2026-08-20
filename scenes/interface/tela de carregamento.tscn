@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddwcn8f4flyqu"]
 
+[ext_resource type="Script" path="res://scenes/interface/tela_de_carregamento.gd" id="0_script"]
 [ext_resource type="Texture2D" uid="uid://57dld051qrh2" path="res://scenes/interface/Tela inicial/LOADING SCREEN.png" id="1_xcji7"]
 [ext_resource type="Texture2D" uid="uid://uhlswwkbmwyc" path="res://assets/art/SimpleKeys/SimpleKeys/Classic/Dark/Spritesheets/ARROWLEFT.png" id="2_284aa"]
 [ext_resource type="Texture2D" uid="uid://lkb0qjxg5gx3" path="res://assets/art/SimpleKeys/SimpleKeys/Classic/Dark/Spritesheets/ARROWRIGHT.png" id="3_mp7qj"]
@@ -76,7 +77,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_inw1m"]
@@ -98,7 +99,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4jisb"]
@@ -419,10 +420,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 3.0
 }]
 
 [node name="LoadingScren" type="Node2D" unique_id=1505978147]
+script = ExtResource("0_script")
 
 [node name="Control" type="Control" parent="." unique_id=70797741]
 layout_mode = 3
@@ -444,63 +446,54 @@ position = Vector2(528, 227)
 scale = Vector2(2.086, 2.23)
 sprite_frames = SubResource("SpriteFrames_60jgt")
 autoplay = "default"
-frame_progress = 0.08244022
 
 [node name="setinha_esquerda" type="AnimatedSprite2D" parent="Control/background/setinha_direita" unique_id=1903052852]
 position = Vector2(-21.572388, 0)
 scale = Vector2(1.0005755, 1.0002106)
 sprite_frames = SubResource("SpriteFrames_xcji7")
 autoplay = "default"
-frame_progress = 0.8170689
 
 [node name="A" type="AnimatedSprite2D" parent="Control/background" unique_id=1981839252]
 position = Vector2(596, 227)
 scale = Vector2(2.0872006, 2.2304697)
 sprite_frames = SubResource("SpriteFrames_xbf10")
 autoplay = "default"
-frame_progress = 0.0891094
 
 [node name="D" type="AnimatedSprite2D" parent="Control/background" unique_id=393489757]
 position = Vector2(641, 227)
 scale = Vector2(2.0872006, 2.2304697)
 sprite_frames = SubResource("SpriteFrames_7rtqe")
 autoplay = "default"
-frame_progress = 0.47329608
 
 [node name="E" type="AnimatedSprite2D" parent="Control/background" unique_id=1491299926]
 position = Vector2(501, 335)
 scale = Vector2(2.087, 2.23)
 sprite_frames = SubResource("SpriteFrames_h62fd")
 autoplay = "default"
-frame_progress = 0.778774
 
 [node name="I" type="AnimatedSprite2D" parent="Control/background" unique_id=501534847]
 position = Vector2(501, 384)
 scale = Vector2(2.087, 2.23)
 sprite_frames = SubResource("SpriteFrames_slc7j")
 autoplay = "default"
-frame_progress = 0.6718698
 
 [node name="T" type="AnimatedSprite2D" parent="Control/background" unique_id=2078202964]
 position = Vector2(501, 432)
 scale = Vector2(2.087, 2.23)
 sprite_frames = SubResource("SpriteFrames_1f3dn")
 autoplay = "default"
-frame_progress = 0.62971294
 
 [node name="ESC2" type="AnimatedSprite2D" parent="Control/background" unique_id=248912329]
 position = Vector2(501, 475)
 scale = Vector2(2.087, 2.23)
 sprite_frames = SubResource("SpriteFrames_3r1nk")
 autoplay = "default"
-frame_progress = 0.9088179
 
 [node name="space" type="AnimatedSprite2D" parent="Control/background" unique_id=2090876371]
 position = Vector2(510.00003, 286)
 scale = Vector2(1.3848249, 1.8025008)
 sprite_frames = SubResource("SpriteFrames_0hm6x")
 autoplay = "default"
-frame_progress = 0.745566
 
 [node name="Label" type="Label" parent="Control" unique_id=1426861706]
 layout_mode = 0
@@ -571,4 +564,3 @@ position = Vector2(624.00006, 587)
 scale = Vector2(0.54078037, 0.5336882)
 sprite_frames = SubResource("SpriteFrames_hgc0v")
 autoplay = "default"
-frame_progress = 0.9509825
