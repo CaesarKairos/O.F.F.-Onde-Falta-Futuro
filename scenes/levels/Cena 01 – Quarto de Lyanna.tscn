@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dv7hgo6h3hu8e" path="res://assets/art/environment/props/gato_da_sorte.tscn" id="9_ywvd5"]
 [ext_resource type="PackedScene" uid="uid://j525my5nyvkf" path="res://scenes/quadro_do_pai.tscn" id="10_eaika"]
 [ext_resource type="PackedScene" uid="uid://ddt7uwx6jbfwi" path="res://scenes/objects/velas_da_KineChan.tscn" id="10_spm07"]
+[ext_resource type="Texture2D" uid="uid://b6gl2hahypxo7" path="res://assets/art/environment/props/cortina quarto.png" id="11_7ninf"]
 [ext_resource type="PackedScene" uid="uid://c1mx87v3u5ucv" path="res://scenes/objects/quadro_investigativo.tscn" id="11_eaika"]
 [ext_resource type="PackedScene" uid="uid://l2d174tf486j" path="res://scenes/objects/livros.tscn" id="12_0jlay"]
 [ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="14_3a18n"]
@@ -27,6 +28,28 @@ adjustment_enabled = true
 adjustment_brightness = 0.95
 adjustment_contrast = 1.15
 adjustment_saturation = 0.9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1w6i"]
+atlas = ExtResource("11_7ninf")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqm18"]
+atlas = ExtResource("11_7ninf")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ltw6g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1w6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqm18")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_owl10"]
 shader = ExtResource("14_3a18n")
@@ -62,6 +85,12 @@ texture = ExtResource("2_7ninf")
 [node name="Xicara" parent="Interagiveis" unique_id=15208082 instance=ExtResource("4_6jiev")]
 position = Vector2(347, 142)
 required_flag = "talked_to_bruno"
+
+[node name="Cortina" type="AnimatedSprite2D" parent="Interagiveis" unique_id=1104253573]
+position = Vector2(280.5, 350.23)
+scale = Vector2(0.422, 0.422)
+sprite_frames = SubResource("SpriteFrames_ltw6g")
+autoplay = "default"
 
 [node name="lobo" parent="Interagiveis" unique_id=1214063984 instance=ExtResource("6_4p0wl")]
 position = Vector2(73, 191)

@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var interaction_icon: AnimatedSprite2D = $InteractionIcon
+
 @export_file("*.tscn")
 var destination_scene := ""
 
@@ -10,25 +12,23 @@ var destination_spawn := ""
 @export var required_flag: String = ""
 
 # Trava opcional por item: se preenchida, a porta só funciona quando o item
-# estiver no inventário. Se required_flag também estiver preenchida, as duas
-# condições valem em conjunto (AND).
+# estiver no inventário.
 @export var required_item: String = ""
 
-# Segundo item opcional: se preenchido, também precisa estar no inventário
-# (AND com required_item). Usado para a porta de saída (câmera + cartão).
+# Segundo item opcional.
 @export var required_item_2: String = ""
 
 # Se preenchida, quando essa flag estiver setada a porta fica aberta
 # permanentemente (ignora as travas de flag/item).
 @export var open_flag: String = ""
 
-# Se preenchida, o item é removido do inventário ao usar a porta (ex.: chave).
+# Se preenchida, o item é removido do inventário ao usar a porta.
 @export var consume_item: String = ""
 
 # Se preenchida, essa flag é setada quando a porta é usada com sucesso.
 @export var set_flag_on_use: String = ""
 
-# Mensagens de feedback (PT/EN/ES) exibidas quando a porta está travada.
+# Mensagens de feedback quando a porta está travada.
 @export var locked_message_pt := ""
 @export var locked_message_en := ""
 @export var locked_message_es := ""
@@ -37,6 +37,8 @@ var player_inside := false
 
 
 func _ready() -> void:
+	# O ícone começa escondido.
+	interaction_icon.visible = false
 
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
@@ -44,7 +46,7 @@ func _ready() -> void:
 
 func _process(_delta):
 
-	if !player_inside:
+	if not player_inside:
 		return
 
 	if Input.is_action_just_pressed("interact"):
@@ -52,62 +54,37 @@ func _process(_delta):
 		if destination_scene == "":
 			return
 
-		# Porta aberta permanentemente: se open_flag estiver setada, ignora travas.
+		# Porta aberta permanentemente.
 		var is_open := open_flag != "" and GameState.has_flag(open_flag)
 
-		# Se a porta exige uma flag e ela ainda não foi setada, bloqueia a transição.
+		# Verifica required_flag.
 		if not is_open and required_flag != "" and not GameState.has_flag(required_flag):
 
-			if locked_message_pt != "" or locked_message_en != "" or locked_message_es != "":
-
-				var ui = get_tree().get_first_node_in_group("message_ui")
-
-				if ui:
-					ui.show_message(
-						locked_message_pt,
-						locked_message_en,
-						locked_message_es
-					)
-
+			_show_locked_message()
 			return
 
-		# Se a porta exige um item (ou dois) e ele ainda não está no inventário, bloqueia.
+		# Verifica required_item.
 		if not is_open and required_item != "" and not GameState.has_item(required_item):
 
-			if locked_message_pt != "" or locked_message_en != "" or locked_message_es != "":
-
-				var ui = get_tree().get_first_node_in_group("message_ui")
-
-				if ui:
-					ui.show_message(
-						locked_message_pt,
-						locked_message_en,
-						locked_message_es
-					)
-
+			_show_locked_message()
 			return
 
+		# Verifica required_item_2.
 		if not is_open and required_item_2 != "" and not GameState.has_item(required_item_2):
 
-			if locked_message_pt != "" or locked_message_en != "" or locked_message_es != "":
-
-				var ui = get_tree().get_first_node_in_group("message_ui")
-
-				if ui:
-					ui.show_message(
-						locked_message_pt,
-						locked_message_en,
-						locked_message_es
-					)
-
+			_show_locked_message()
 			return
 
-		# Consome o item (ex.: chave) e marca a porta como aberta permanentemente.
+		# Consome o item.
 		if consume_item != "" and GameState.has_item(consume_item):
 			GameState.remove_item(consume_item)
 
+		# Marca a porta como aberta.
 		if set_flag_on_use != "":
 			GameState.set_flag(set_flag_on_use)
+
+		# Esconde o ícone antes de trocar de cena.
+		interaction_icon.visible = false
 
 		SceneManager.goto_scene(
 			destination_scene,
@@ -120,8 +97,29 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_inside = true
 
+		# Mostra o ícone quando o Player entra na área.
+		interaction_icon.visible = true
+
 
 func _on_body_exited(body):
 
 	if body.is_in_group("player"):
 		player_inside = false
+
+		# Esconde o ícone quando o Player sai da área.
+		interaction_icon.visible = false
+
+
+func _show_locked_message() -> void:
+
+	if locked_message_pt == "" and locked_message_en == "" and locked_message_es == "":
+		return
+
+	var ui = get_tree().get_first_node_in_group("message_ui")
+
+	if ui:
+		ui.show_message(
+			locked_message_pt,
+			locked_message_en,
+			locked_message_es
+		)

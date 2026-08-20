@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="2_n0q35"]
 [ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="3_4qcon"]
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="3_iott4"]
+[ext_resource type="Texture2D" uid="uid://cl7dasi7jg38t" path="res://assets/art/environment/props/cortina cozinha.png" id="4_4qcon"]
 [ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="4_iott4"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_xndgd"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
@@ -21,6 +22,28 @@ shader_parameter/amount = 0.0510000024225
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ywsyy"]
 shader = ExtResource("3_4qcon")
 shader_parameter/strength = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkq6a"]
+atlas = ExtResource("4_4qcon")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywsyy"]
+atlas = ExtResource("4_4qcon")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ajs2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkq6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywsyy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="cena 03 - cozinha" type="Node2D" unique_id=816225611]
 
@@ -47,6 +70,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Cortina" type="AnimatedSprite2D" parent="." unique_id=600916720]
+position = Vector2(438.00003, 372)
+scale = Vector2(0.32721096, 0.32721096)
+sprite_frames = SubResource("SpriteFrames_1ajs2")
+autoplay = "default"
+frame_progress = 0.6218115
+
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_d4uk0")]
 position = Vector2(1, 123)
 
@@ -72,7 +102,7 @@ destination_spawn = "Indo Cozinha"
 
 [node name="Cecilia" parent="." unique_id=1324869991 instance=ExtResource("8_ceci")]
 z_index = 11
-position = Vector2(500, 520)
+position = Vector2(631, 525)
 dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_03.json"
 start_dialogue_id = "kitchen_001"
 second_dialogue_id = "cecilia_001"
@@ -80,13 +110,6 @@ required_story_stage = 2
 show_after_flag = "talked_to_cecilia"
 hide_after_flag = ""
 hide_during_dialogue = false
-followup_dialogue_path = ""
-followup_dialogue_id = ""
-followup_delay = 2.0
-followup_message_pt = ""
-followup_message_en = ""
-followup_message_es = ""
-followup_trigger_flag = ""
 
 [node name="PortaChaves" parent="." unique_id=1282552993 instance=ExtResource("9_chav")]
 modulate = Color(1, 1, 1, 0.9254902)
@@ -96,4 +119,5 @@ position = Vector2(425, 18)
 position = Vector2(1069, -95)
 
 [node name="FiltroBarro" parent="." unique_id=11492349 instance=ExtResource("11_filtro")]
-position = Vector2(1068, 31)
+z_index = 1
+position = Vector2(115, 105)

@@ -69,23 +69,20 @@ position = Vector2(0, -115)
 position = Vector2(983, 492)
 
 [node name="Porta quarto Lyanna" parent="." unique_id=769273478 instance=ExtResource("5_ehkkw")]
-position = Vector2(963, 313)
+position = Vector2(997, 304)
 destination_scene = "uid://dghky7o3l0twu"
 destination_spawn = "LyannaEntrando"
 
 [node name="Porta sala" parent="." unique_id=1575277536 instance=ExtResource("5_ehkkw")]
-position = Vector2(37, 360)
+position = Vector2(26, 300)
 destination_scene = "uid://0s7ha3g3o3tt"
 destination_spawn = "Indo Corredor"
 
 [node name="PortaQuartoBruno" parent="." unique_id=614141830 instance=ExtResource("8_bruno")]
-position = Vector2(16, 130)
-
-[node name="PortaQuartoMae" parent="." unique_id=791400034 instance=ExtResource("9_mae")]
-position = Vector2(364, 240)
+position = Vector2(-16, 118)
 
 [node name="Porta quarto da bagunça" parent="." unique_id=2137826985 instance=ExtResource("5_ehkkw")]
-position = Vector2(1220, 305)
+position = Vector2(1213, 335)
 destination_scene = "res://scenes/levels/cena_05_quarto_da_bagunca.tscn"
 destination_spawn = "Entrando"
 required_item = "chave_bagunca"
@@ -97,3 +94,6 @@ locked_message_en = "There might be a memory card in there, but I don't have the
 locked_message_es = "Quizás haya una tarjeta de memoria ahí, pero no tengo la llave."
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("6_xuydn")]
+
+[node name="PortaQuartoMae2" parent="." unique_id=15208082 instance=ExtResource("9_mae")]
+position = Vector2(49, 341)

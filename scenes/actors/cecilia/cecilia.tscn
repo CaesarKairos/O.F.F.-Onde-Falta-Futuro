@@ -57,12 +57,24 @@ animations = [{
 script = ExtResource("2_3mwsp")
 dialogue_path = "res://data/dialogues/chapter_01/chapter_01_scene_02.json"
 start_dialogue_id = "cecilia_001"
+second_dialogue_id = ""
+required_story_stage = 1
+show_after_flag = ""
+hide_after_flag = "talked_to_cecilia"
+hide_during_dialogue = true
+followup_dialogue_path = ""
+followup_dialogue_id = ""
+followup_delay = 2.0
+followup_message_pt = ""
+followup_message_en = ""
+followup_message_es = ""
+followup_trigger_flag = ""
 
 [node name="InteractionIcon" parent="." index="0" unique_id=2010784121]
 position = Vector2(20, -243)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1700379799]
-position = Vector2(-4, -17.5)
+position = Vector2(-2.5, -17.5)
 
 [node name="AnimatedSprite2D" parent="." index="2" unique_id=1696894205]
 scale = Vector2(0.38, 0.38)

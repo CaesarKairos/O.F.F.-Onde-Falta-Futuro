@@ -1,9 +1,32 @@
 [gd_scene format=3 uid="uid://blkpsykgd1pfa"]
 
 [ext_resource type="Script" uid="uid://dm4xaognqm85j" path="res://scripts/managers/passage.gd" id="1_id2fp"]
+[ext_resource type="Texture2D" uid="uid://dy28vxkxi17at" path="res://assets/art/ui/Press E.png" id="2_wdsje"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdsje"]
 size = Vector2(47, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b5i0"]
+atlas = ExtResource("2_wdsje")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhggm"]
+atlas = ExtResource("2_wdsje")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sw5t0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b5i0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhggm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Door" type="Area2D" unique_id=769273478]
 script = ExtResource("1_id2fp")
@@ -11,3 +34,9 @@ script = ExtResource("1_id2fp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1609691145]
 position = Vector2(13.5, 150)
 shape = SubResource("RectangleShape2D_wdsje")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=788050746]
+position = Vector2(18.999998, -43.000004)
+scale = Vector2(0.13272293, 0.1504688)
+sprite_frames = SubResource("SpriteFrames_sw5t0")
+autoplay = "default"

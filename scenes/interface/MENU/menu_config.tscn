@@ -1,20 +1,19 @@
 [gd_scene format=3 uid="uid://bnbhxig1opwou"]
 
-[ext_resource type="Texture2D" uid="uid://brjig1iyd1576" path="res://scenes/interface/Menu/MENU - SETUP.png" id="1_34csu"]
-[ext_resource type="Script" uid="uid://f5indy6fmxbd" path="res://scenes/interface/Menu/menu_config.gd" id="1_t1431"]
+[ext_resource type="Texture2D" uid="uid://brjig1iyd1576" path="res://scenes/interface/MENU/MENU - SETUP.png" id="1_34csu"]
+[ext_resource type="Script" uid="uid://f5indy6fmxbd" path="res://scenes/interface/MENU/menu_config.gd" id="1_t1431"]
 [ext_resource type="FontFile" uid="uid://c7yd3eyfui2up" path="res://scenes/interface/fontes/RobotoMono-Medium.ttf" id="2_a5l5k"]
 [ext_resource type="FontFile" uid="uid://b2kjbk7sn2rjb" path="res://scenes/interface/fontes/RobotoMono-Regular.ttf" id="2_uyuuo"]
-[ext_resource type="Texture2D" uid="uid://doi5ib8l5utjj" path="res://scenes/interface/Menu/CAM1 ATIVA.png" id="4_sobgy"]
-[ext_resource type="Texture2D" uid="uid://mfq5e0ugnaix" path="res://scenes/interface/Menu/CAM 2.png" id="5_t1431"]
-[ext_resource type="Texture2D" uid="uid://ph8lto1panb3" path="res://scenes/interface/Menu/CAM 3.png" id="6_m2wfc"]
-[ext_resource type="Texture2D" uid="uid://ciqvuemrucjgd" path="res://scenes/interface/Menu/MENU - ACESSIBILIDADE.png" id="7_j7tcd"]
-[ext_resource type="Texture2D" uid="uid://mr1vvsedmmct" path="res://scenes/interface/Menu/CAM1.png" id="8_11se6"]
-[ext_resource type="Texture2D" uid="uid://es03j2citume" path="res://scenes/interface/Menu/CAM2 ATIVA.png" id="9_ivvfj"]
-[ext_resource type="Texture2D" uid="uid://cb3maco4tb84d" path="res://scenes/interface/Menu/MENU - INFORMAÇÃO.png" id="10_vr7tq"]
-[ext_resource type="Texture2D" uid="uid://b76nsmum85h82" path="res://scenes/interface/Menu/CAM3 ATIVA.png" id="11_ndw2y"]
+[ext_resource type="Texture2D" uid="uid://doi5ib8l5utjj" path="res://scenes/interface/MENU/CAM1 ATIVA.png" id="4_sobgy"]
+[ext_resource type="Texture2D" uid="uid://mfq5e0ugnaix" path="res://scenes/interface/MENU/CAM 2.png" id="5_t1431"]
+[ext_resource type="Texture2D" uid="uid://ph8lto1panb3" path="res://scenes/interface/MENU/CAM 3.png" id="6_m2wfc"]
+[ext_resource type="Texture2D" uid="uid://ciqvuemrucjgd" path="res://scenes/interface/MENU/MENU - ACESSIBILIDADE.png" id="7_j7tcd"]
+[ext_resource type="Texture2D" uid="uid://mr1vvsedmmct" path="res://scenes/interface/MENU/CAM1.png" id="8_11se6"]
+[ext_resource type="Texture2D" uid="uid://es03j2citume" path="res://scenes/interface/MENU/CAM2 ATIVA.png" id="9_ivvfj"]
+[ext_resource type="Texture2D" uid="uid://cb3maco4tb84d" path="res://scenes/interface/MENU/MENU - INFORMAÇÃO.png" id="10_vr7tq"]
+[ext_resource type="Texture2D" uid="uid://b76nsmum85h82" path="res://scenes/interface/MENU/CAM3 ATIVA.png" id="11_ndw2y"]
 
 [node name="menu_config" type="Node2D" unique_id=1245771572]
-visible = false
 script = ExtResource("1_t1431")
 
 [node name="SETUP" type="Control" parent="." unique_id=698430844]
