@@ -34,6 +34,7 @@ script = ExtResource("11_pause")
 visible = false
 unique_name_in_owner = true
 process_mode = 3
+layer = 10
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=732082287]
 layout_mode = 3
@@ -105,6 +106,7 @@ offset_bottom = 17.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONTINUAR"
+auto_translate_mode = 1
 
 [node name="Config(2)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1385137095]
 position = Vector2(155, 403)
@@ -123,6 +125,7 @@ offset_bottom = 14.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONFIGURAÇÕES"
+auto_translate_mode = 1
 
 [node name="Save" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1278528439]
 position = Vector2(156, 467)
@@ -141,6 +144,7 @@ offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "SALVAR"
+auto_translate_mode = 1
 
 [node name="Exit" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=407424166]
 position = Vector2(152, 534)
@@ -159,3 +163,4 @@ offset_bottom = 12.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "VOLTAR AO ÍNICIO"
+auto_translate_mode = 1

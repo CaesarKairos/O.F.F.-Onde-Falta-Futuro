@@ -28,6 +28,7 @@ animations = [{
 }]
 
 [node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
+layer = 5
 script = ExtResource("1_rowjr")
 
 [node name="DialogueBox" type="NinePatchRect" parent="." unique_id=1469839919]

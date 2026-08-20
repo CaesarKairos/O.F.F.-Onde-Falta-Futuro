@@ -503,6 +503,7 @@ offset_right = 573.0
 offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "ou"
+auto_translate_mode = 1
 
 [node name="Label2" type="Label" parent="Control" unique_id=1045819284]
 layout_mode = 0
@@ -512,6 +513,7 @@ offset_right = 743.0
 offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Mover-se"
+auto_translate_mode = 1
 
 [node name="Label3" type="Label" parent="Control" unique_id=1027489961]
 layout_mode = 0
@@ -521,6 +523,7 @@ offset_right = 652.0
 offset_bottom = 293.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Continuar"
+auto_translate_mode = 1
 
 [node name="Label4" type="Label" parent="Control" unique_id=1974170433]
 layout_mode = 0
@@ -530,6 +533,7 @@ offset_right = 615.0
 offset_bottom = 344.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Interagir"
+auto_translate_mode = 1
 
 [node name="Label5" type="Label" parent="Control" unique_id=1772726099]
 layout_mode = 0
@@ -539,6 +543,7 @@ offset_right = 624.0
 offset_bottom = 391.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Inventário"
+auto_translate_mode = 1
 
 [node name="Label6" type="Label" parent="Control" unique_id=208195723]
 layout_mode = 0
@@ -548,6 +553,7 @@ offset_right = 624.0
 offset_bottom = 441.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Traduzir diálogos"
+auto_translate_mode = 1
 
 [node name="Label7" type="Label" parent="Control" unique_id=4433397]
 layout_mode = 0
@@ -557,6 +563,7 @@ offset_right = 690.0
 offset_bottom = 484.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Pausar"
+auto_translate_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=362133568]
 modulate = Color(1, 1, 1, 0.9372549)

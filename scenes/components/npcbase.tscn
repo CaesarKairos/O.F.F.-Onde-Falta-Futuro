@@ -26,7 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcapy"]
-size = Vector2(194, 312)
+size = Vector2(125, 312)
 
 [node name="npcbase" type="Area2D" unique_id=822960918]
 script = ExtResource("1_db5io")

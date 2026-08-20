@@ -1,34 +1,53 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://scenes/levels/cena_04_rua_placeholder.gd" id="1_rua"]
-[ext_resource type="Texture2D" uid="uid://ci7ncg7fxr5ib" path="res://assets/art/environment/backgrounds/Fundo teste.png" id="2_fundo"]
-[ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="3_grnd"]
-[ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="4_pare"]
-[ext_resource type="PackedScene" uid="uid://co8nncd5d6w6s" path="res://scenes/ui/message_ui.tscn" id="5_msgui"]
-[ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="6_invui"]
-[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="7_play"]
+[ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="1_player"]
 
 [node name="Cena 04 – Rua (Placeholder)" type="Node2D"]
 script = ExtResource("1_rua")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FundoEscuro" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -15.0
+offset_right = 35.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "texto"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(640, 476)
+
 [node name="SpawnPoints" type="Node2D" parent="."]
 
 [node name="EntrandoNaRua" type="Marker2D" parent="SpawnPoints"]
-position = Vector2(640, 476)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(640, 360)
-texture = ExtResource("2_fundo")
-
-[node name="Ground" parent="." instance=ExtResource("3_grnd")]
-position = Vector2(1, 123)
-
-[node name="parede" parent="." instance=ExtResource("4_pare")]
-
-[node name="MessageUI" parent="." instance=ExtResource("5_msgui")]
-
-[node name="InventoryUI" parent="." instance=ExtResource("6_invui")]
-
-[node name="Player" parent="." instance=ExtResource("7_play")]
-z_index = 10
 position = Vector2(640, 476)

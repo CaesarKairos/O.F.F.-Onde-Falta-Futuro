@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="5_invui"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
-[ext_resource type="PackedScene" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
+[ext_resource type="PackedScene" uid="uid://b6xugt7db10o5" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_unfju"]
 shader = ExtResource("2_7mbnm")
@@ -68,4 +68,4 @@ destination_scene = "res://scenes/levels/cena 02 – corredor da casa.tscn"
 destination_spawn = "SaindoBagunca"
 
 [node name="CartaoMemoria" parent="." unique_id=692716208 instance=ExtResource("8_cart")]
-position = Vector2(373, 95)
+position = Vector2(116, 82)

@@ -25,6 +25,8 @@ var current_language := LANGUAGE_PT
 
 func _ready() -> void:
 
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 	# Carrega o idioma salvo nas configurações persistentes.
 	var saved_language := SettingsManager.get_language()
 

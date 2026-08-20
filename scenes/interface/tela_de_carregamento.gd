@@ -1,11 +1,11 @@
 extends Node2D
-
+ 
 
 func _ready() -> void:
 
 	_sincronizar_animacoes() 
 
-	var tempo_espera := randf_range(14.0, 17.0)
+	var tempo_espera := randf_range(5.0, 9.0)
 
 	print("Tela de carregamento: aguardando ", tempo_espera, " segundos...")
 

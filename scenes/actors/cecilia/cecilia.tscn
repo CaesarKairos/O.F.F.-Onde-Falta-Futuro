@@ -71,7 +71,7 @@ followup_message_es = ""
 followup_trigger_flag = ""
 
 [node name="InteractionIcon" parent="." index="0" unique_id=2010784121]
-position = Vector2(20, -243)
+position = Vector2(5, -222)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1700379799]
 position = Vector2(-2.5, -17.5)

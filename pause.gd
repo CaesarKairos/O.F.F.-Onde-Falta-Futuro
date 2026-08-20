@@ -77,6 +77,7 @@ func _on_config_pressed() -> void:
 	if config_menu == null:
 
 		config_menu = MENU_CONFIG_SCENE.instantiate()
+		config_menu.visible = false
 		canvas_layer.add_child(config_menu)
 
 	config_menu.visible = not config_menu.visible

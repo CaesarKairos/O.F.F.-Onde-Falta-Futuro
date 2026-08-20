@@ -116,7 +116,7 @@ modulate = Color(1, 1, 1, 0.9254902)
 position = Vector2(425, 18)
 
 [node name="GarrafaTermica" parent="." unique_id=1487993333 instance=ExtResource("10_garrafa")]
-position = Vector2(1069, -95)
+position = Vector2(782, 57)
 
 [node name="FiltroBarro" parent="." unique_id=11492349 instance=ExtResource("11_filtro")]
 z_index = 1

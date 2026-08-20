@@ -52,6 +52,7 @@ theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("2_uyuuo")
 theme_override_font_sizes/font_size = 22
 text = "SETUP"
+auto_translate_mode = 1
 
 [node name="idioma_text" type="Label" parent="SETUP/pag1" unique_id=1006245996]
 layout_mode = 0
@@ -63,6 +64,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "IDIOMA"
+auto_translate_mode = 1
 
 [node name="musica_text" type="Label" parent="SETUP/pag1" unique_id=1268104207]
 layout_mode = 0
@@ -74,6 +76,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "MÚSICA"
+auto_translate_mode = 1
 
 [node name="ef_text" type="Label" parent="SETUP/pag1" unique_id=867971279]
 layout_mode = 0
@@ -85,6 +88,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "EFEITOS SONOROS"
+auto_translate_mode = 1
 
 [node name="CAM1 ATIVA" type="TextureButton" parent="SETUP/pag1" unique_id=575375316]
 layout_mode = 0
@@ -151,6 +155,7 @@ theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("2_uyuuo")
 theme_override_font_sizes/font_size = 22
 text = "INFORMAÇÕES"
+auto_translate_mode = 1
 
 [node name="projeto_text" type="Label" parent="SETUP/pag3" unique_id=1325625058]
 layout_mode = 0
@@ -162,6 +167,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "SOBRE O PROJETO"
+auto_translate_mode = 1
 
 [node name="comojogar_text" type="Label" parent="SETUP/pag3" unique_id=755653685]
 layout_mode = 0
@@ -173,6 +179,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "COMO JOGAR"
+auto_translate_mode = 1
 
 [node name="versao_text" type="Label" parent="SETUP/pag3" unique_id=1499109263]
 layout_mode = 0
@@ -184,6 +191,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "VERSÃO"
+auto_translate_mode = 1
 
 [node name="1000_text" type="Label" parent="SETUP/pag3/versao_text" unique_id=495699332]
 layout_mode = 0
@@ -258,6 +266,7 @@ theme_override_colors/font_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("2_uyuuo")
 theme_override_font_sizes/font_size = 22
 text = "ACESSIBILIDADE"
+auto_translate_mode = 1
 
 [node name="filtro_text" type="Label" parent="SETUP/pag2" unique_id=1370091677]
 layout_mode = 0
@@ -269,6 +278,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "FILTRO PARA DALTONISMO"
+auto_translate_mode = 1
 
 [node name="fontsize_text" type="Label" parent="SETUP/pag2" unique_id=1984221245]
 layout_mode = 0
@@ -280,6 +290,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "TAMANHO DA FONTE"
+auto_translate_mode = 1
 
 [node name="fonte_text" type="Label" parent="SETUP/pag2" unique_id=100291898]
 layout_mode = 0
@@ -291,6 +302,7 @@ theme_override_colors/font_color = Color(0.54509807, 0.54509807, 0.54509807, 1)
 theme_override_fonts/font = ExtResource("2_a5l5k")
 theme_override_font_sizes/font_size = 18
 text = "FONTE"
+auto_translate_mode = 1
 
 [node name="CAM1" type="TextureButton" parent="SETUP/pag2" unique_id=1786436164]
 layout_mode = 0

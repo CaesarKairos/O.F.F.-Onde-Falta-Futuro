@@ -102,7 +102,7 @@ scale = Vector2(0.6, 0.6)
 required_flag = "talked_to_bruno"
 
 [node name="camera" parent="Interagiveis" unique_id=1508760085 instance=ExtResource("9_3vf36")]
-position = Vector2(947.00006, 239.00002)
+position = Vector2(347, 333)
 scale = Vector2(0.375, 0.375)
 required_flag = "talked_to_bruno"
 
@@ -112,7 +112,7 @@ scale = Vector2(0.855, 0.855)
 required_flag = "talked_to_bruno"
 
 [node name="quadro investigativo" parent="Interagiveis" unique_id=582567623 instance=ExtResource("11_eaika")]
-position = Vector2(189, -14)
+position = Vector2(243.38, -14)
 required_flag = "talked_to_bruno"
 
 [node name="gato da sorte" parent="Interagiveis" unique_id=743327537 instance=ExtResource("9_ywvd5")]
