@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cho6ewfmktsbj" path="res://scenes/interface/Pause/CONFIG ATIVO.png" id="1_6eyaj"]
 [ext_resource type="Texture2D" uid="uid://b73h20h7g3dkf" path="res://scenes/interface/Pause/PAUSE (4).png" id="1_aq7p1"]
-[ext_resource type="Shader" path="res://pause.gdshader" id="2_6eyaj"]
+[ext_resource type="Shader" uid="uid://bl8aer65hxguo" path="res://pause.gdshader" id="2_6eyaj"]
 [ext_resource type="Texture2D" uid="uid://dprih10t4h34h" path="res://scenes/interface/Pause/CONTINUAR ATIVO (1).png" id="3_05lnj"]
 [ext_resource type="Texture2D" uid="uid://rm48qcan63vt" path="res://scenes/interface/Pause/CAMERA.png" id="3_w2ufp"]
 [ext_resource type="FontFile" uid="uid://c7yd3eyfui2up" path="res://scenes/interface/fontes/RobotoMono-Medium.ttf" id="5_21xor"]

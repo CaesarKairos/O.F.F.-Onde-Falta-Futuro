@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready() -> void:
 
-	_sincronizar_animacoes()
+	_sincronizar_animacoes() 
 
 	var tempo_espera := randf_range(14.0, 17.0)
 
