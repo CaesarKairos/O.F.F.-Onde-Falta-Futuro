@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b76nsmum85h82" path="res://scenes/interface/Menu/CAM3 ATIVA.png" id="11_ndw2y"]
 
 [node name="menu_config" type="Node2D" unique_id=1245771572]
+visible = false
 script = ExtResource("1_t1431")
 
 [node name="SETUP" type="Control" parent="." unique_id=698430844]

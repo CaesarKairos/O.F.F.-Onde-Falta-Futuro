@@ -1,12 +1,12 @@
 extends Node2D
 
-const MENU_CONFIG_SCENE := preload("res://scenes/interface/Menu/menu_config.tscn")
+const MENU_CONFIG_SCENE := preload("res://scenes/interface/MENU/menu_config.tscn")
 
 const TELA_INICIAL_SCENE := "res://scenes/interface/Tela inicial/tela_inicial.tscn"
 
 
-@onready var canvas_layer: CanvasLayer = $Control/CanvasLayer
-@onready var pause_hud: Control = $Control/CanvasLayer/PauseHud
+@onready var canvas_layer: CanvasLayer = %CanvasLayer
+@onready var pause_hud: Control = %PauseHud
 
 
 var pause_open: bool = false
@@ -22,8 +22,9 @@ func _ready() -> void:
 	# Garante que o menu de pause continue processando enquanto o jogo está pausado
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-	
-	
+	# Sincroniza o estado inicial: menu de pause começa oculto e o jogo rodando
+	canvas_layer.visible = pause_open
+	get_tree().paused = pause_open
 
 	_setup_botoes()
 
@@ -132,3 +133,4 @@ func _criar_botao(centro: Vector2, callback: Callable) -> void:
 	botao.position = Vector2(centro.x - 120.0, centro.y - 24.0)
 	botao.mouse_filter = Control.MOUSE_FILTER_STOP
 	botao.pressed.connect(callback)
+	pause_hud.add_child(botao)
