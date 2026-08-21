@@ -132,7 +132,7 @@ position = Vector2(1, 123)
 z_index = 10
 position = Vector2(226.8, 476)
 
-[node name="brunoq" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
+[node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
 z_index = 11
 position = Vector2(1207, 520)
 
