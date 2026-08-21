@@ -25,6 +25,7 @@ InventoryUi="*uid://bcdymrhjt1eix"
 Pause="*uid://eeoowf38oewg"
 SettingsManager="*res://scripts/managers/settings_manager.gd"
 LocalizationManager="*uid://dbbwru3jyoil0"
+TransitionManager="*uid://duwwp8ceov073"
 
 [display]
 

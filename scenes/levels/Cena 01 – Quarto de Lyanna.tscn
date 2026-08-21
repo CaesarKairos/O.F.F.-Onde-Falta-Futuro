@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://c3vjqo1wjetva" path="res://scenes/objects/environment/parede.tscn" id="18_q761j"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="19_orptc"]
 [ext_resource type="PackedScene" uid="uid://bcdymrhjt1eix" path="res://scenes/ui/inventory_ui.tscn" id="20_en5bv"]
-[ext_resource type="AudioStream" uid="uid://cbycd5qk08lqg" path="res://assets/sounds/faaah.mp3" id="21_audio"]
 
 [sub_resource type="Environment" id="Environment_3vf36"]
 adjustment_enabled = true
@@ -133,9 +132,9 @@ position = Vector2(1, 123)
 z_index = 10
 position = Vector2(226.8, 476)
 
-[node name="bruno" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
+[node name="brunoq" parent="." unique_id=822960918 instance=ExtResource("6_eaika")]
 z_index = 11
-position = Vector2(1207.015, 501)
+position = Vector2(1207, 520)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1339898441]
 
@@ -159,7 +158,6 @@ scale = Vector2(0.12, 0.12)
 position = Vector2(258.545, 505)
 
 [node name="BrunoSound" type="AudioStreamPlayer" parent="." unique_id=2063599037]
-stream = ExtResource("21_audio")
 volume_db = -10.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=480471663]

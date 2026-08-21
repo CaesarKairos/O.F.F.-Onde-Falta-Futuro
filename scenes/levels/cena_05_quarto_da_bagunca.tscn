@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="6_play"]
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
 [ext_resource type="PackedScene" uid="uid://b6xugt7db10o5" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
+[ext_resource type="Texture2D" uid="uid://buuipktavrxng" path="res://assets/art/environment/props/Group 9 (1).png" id="11_fvbvk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_unfju"]
 shader = ExtResource("2_7mbnm")
@@ -58,9 +59,13 @@ position = Vector2(1, 123)
 
 [node name="InventoryUI" parent="." unique_id=363640339 instance=ExtResource("5_invui")]
 
+[node name="Group9(1)" type="Sprite2D" parent="." unique_id=323475660]
+position = Vector2(125, 604)
+texture = ExtResource("11_fvbvk")
+
 [node name="Player" parent="." unique_id=1782616721 instance=ExtResource("6_play")]
 z_index = 10
-position = Vector2(250, 476)
+position = Vector2(308, 505)
 
 [node name="Door" parent="." unique_id=15226145 instance=ExtResource("7_door")]
 position = Vector2(1045, 295)

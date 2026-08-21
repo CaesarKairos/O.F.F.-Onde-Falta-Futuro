@@ -13,7 +13,7 @@ var start_position: Vector2
 
 
 func _ready():
-
+	
 	# Guarda a posição inicial real do Bruno (porta), para a cutscene de ida embora.
 	start_position = bruno.global_position
 
@@ -119,3 +119,5 @@ func _play_sound():
 
 	if sound_player and sound_player.stream:
 		sound_player.play()
+		
+	

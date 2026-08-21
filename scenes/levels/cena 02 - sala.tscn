@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" path="res://scenes/objects/skate.tscn" id="10_skate"]
 [ext_resource type="PackedScene" uid="uid://eeoowf38oewg" path="res://pause.tscn" id="11_2scvg"]
 [ext_resource type="Texture2D" uid="uid://bf55a8i63w6ch" path="res://assets/art/environment/props/aquario.png" id="11_72e1f"]
+[ext_resource type="Texture2D" uid="uid://c5i2llqchiyao" path="res://assets/art/environment/backgrounds/Sofá 1.png" id="15_ohmhr"]
+[ext_resource type="Texture2D" uid="uid://dw46s2b4hiqhs" path="res://assets/art/environment/backgrounds/poltrona 2.png" id="16_o46lp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_irhqx"]
 shader = ExtResource("3_72e1f")
@@ -299,9 +301,17 @@ locked_message_en = "I need my camera to be able to leave the house."
 locked_message_es = "Necesito mi cámara para poder salir de casa."
 
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
-position = Vector2(806, 528.69)
+position = Vector2(792, 550)
 hide_during_dialogue = false
 
 [node name="pause" parent="." unique_id=1491077779 instance=ExtResource("11_2scvg")]
 visible = false
 position = Vector2(14, 45)
+
+[node name="Sofá1" type="Sprite2D" parent="." unique_id=1489708917]
+position = Vector2(270, 640)
+texture = ExtResource("15_ohmhr")
+
+[node name="Poltrona2" type="Sprite2D" parent="." unique_id=420624786]
+position = Vector2(544, 620)
+texture = ExtResource("16_o46lp")

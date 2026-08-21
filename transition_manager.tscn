@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://duwwp8ceov073"]
+
+[sub_resource type="GDScript" id="GDScript_cdp7k"]
+script/source = "extends CanvasLayer
+
+@onready var color_rect: ColorRect = $ColorRect
+
+func change_scene(target_scene_path: String, duration: float = 0.5) -> void:
+	color_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+	
+	# Fade Out (Escurece a tela)
+	var tween_out = create_tween()
+	tween_out.tween_property(color_rect, \"color:a\", 1.0, duration)
+	await tween_out.finished
+	
+	# Troca a cena no escuro
+	get_tree().change_scene_to_file(target_scene_path)
+	
+	# Fade In (Clareia a tela)
+	var tween_in = create_tween()
+	tween_in.tween_property(color_rect, \"color:a\", 0.0, duration)
+	await tween_in.finished
+	
+	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+"
+
+[node name="TransitionManager" type="Node2D" unique_id=2069899131]
+
+[node name="TransitionManager" type="CanvasLayer" parent="." unique_id=1099284923]
+script = SubResource("GDScript_cdp7k")
+
+[node name="ColorRect" type="ColorRect" parent="TransitionManager" unique_id=238021567]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0)

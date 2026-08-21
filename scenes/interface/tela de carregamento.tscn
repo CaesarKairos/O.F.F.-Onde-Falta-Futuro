@@ -496,6 +496,7 @@ sprite_frames = SubResource("SpriteFrames_0hm6x")
 autoplay = "default"
 
 [node name="Label" type="Label" parent="Control" unique_id=1426861706]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 553.0
 offset_top = 218.0
@@ -503,9 +504,9 @@ offset_right = 573.0
 offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "ou"
-auto_translate_mode = 1
 
 [node name="Label2" type="Label" parent="Control" unique_id=1045819284]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 668.0
 offset_top = 218.0
@@ -513,9 +514,9 @@ offset_right = 743.0
 offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Mover-se"
-auto_translate_mode = 1
 
 [node name="Label3" type="Label" parent="Control" unique_id=1027489961]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 567.0
 offset_top = 277.0
@@ -523,9 +524,9 @@ offset_right = 652.0
 offset_bottom = 293.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Continuar"
-auto_translate_mode = 1
 
 [node name="Label4" type="Label" parent="Control" unique_id=1974170433]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 530.0
 offset_top = 328.0
@@ -533,9 +534,9 @@ offset_right = 615.0
 offset_bottom = 344.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Interagir"
-auto_translate_mode = 1
 
 [node name="Label5" type="Label" parent="Control" unique_id=1772726099]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 530.0
 offset_top = 375.0
@@ -543,9 +544,9 @@ offset_right = 624.0
 offset_bottom = 391.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Inventário"
-auto_translate_mode = 1
 
 [node name="Label6" type="Label" parent="Control" unique_id=208195723]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 530.0
 offset_top = 425.0
@@ -553,9 +554,9 @@ offset_right = 624.0
 offset_bottom = 441.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Traduzir diálogos"
-auto_translate_mode = 1
 
 [node name="Label7" type="Label" parent="Control" unique_id=4433397]
+auto_translate_mode = 1
 layout_mode = 0
 offset_left = 530.0
 offset_top = 468.0
@@ -563,7 +564,6 @@ offset_right = 690.0
 offset_bottom = 484.0
 theme_override_fonts/font = ExtResource("11_yoawc")
 text = "Pausar"
-auto_translate_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=362133568]
 modulate = Color(1, 1, 1, 0.9372549)
@@ -572,3 +572,9 @@ scale = Vector2(0.54078037, 0.5336882)
 sprite_frames = SubResource("SpriteFrames_hgc0v")
 autoplay = "default"
 frame_progress = 0.5233054
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=594465649]
+offset_right = 1280.0
+offset_bottom = 718.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
