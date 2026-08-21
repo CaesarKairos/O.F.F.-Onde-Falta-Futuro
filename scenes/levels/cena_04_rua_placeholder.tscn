@@ -1,15 +1,16 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cdpdppg5xvtrf"]
 
-[ext_resource type="Script" path="res://scenes/levels/cena_04_rua_placeholder.gd" id="1_rua"]
 [ext_resource type="PackedScene" uid="uid://biyybeacxa0tb" path="res://scenes/actors/lyanna/player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://475e8u67cgmx" path="res://scenes/levels/cena_04_rua_placeholder.gd" id="1_rua"]
+[ext_resource type="FontFile" uid="uid://cdq43ieudw0if" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="2_fvh3a"]
 
-[node name="Cena 04 – Rua (Placeholder)" type="Node2D"]
+[node name="Cena 04 – Rua (Placeholder)" type="Node2D" unique_id=733508471]
 script = ExtResource("1_rua")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1279267779]
 layer = 5
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1222364298]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,37 +18,140 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="FundoEscuro" type="ColorRect" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="FundoEscuro" type="ColorRect" parent="CanvasLayer/Control" unique_id=798309262]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1902059574]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -15.0
-offset_right = 35.0
-offset_bottom = 15.0
+offset_left = -90.0
+offset_top = -277.0
+offset_right = 89.0
+offset_bottom = -247.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "texto"
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 22
+text = "FIM DA DEMO!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Player" parent="." instance=ExtResource("1_player")]
-position = Vector2(640, 476)
+[node name="Label3" type="Label" parent="CanvasLayer/Control" unique_id=343853345]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -36.0
+offset_right = 111.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 18
+text = "Instagram: @philo_code
 
-[node name="SpawnPoints" type="Node2D" parent="."]
+LinkedIn: Philocode"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="EntrandoNaRua" type="Marker2D" parent="SpawnPoints"]
+[node name="Label4" type="Label" parent="CanvasLayer/Control" unique_id=279394769]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = 54.0
+offset_right = 502.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 18
+text = "Agradecemos muito por jogar. Sua participação é fundamental para tornar este projeto realidade!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control" unique_id=2030562518]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = 181.0
+offset_right = 502.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 18
+text = "\"A educação exige os maiores cuidados, porque influi sobre toda a vida\" - Sêneca"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control" unique_id=198242871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = 304.0
+offset_right = 502.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 16
+text = "© Todos os direitos reservados à Philocode."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control" unique_id=1781404046]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -721.0
+offset_top = -181.0
+offset_right = 728.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fvh3a")
+theme_override_font_sizes/font_size = 18
+text = "Poxa, você chegou ao final da primeira parte do nosso jogo :(
+
+Mas pode ficar tranquilo: nossa equipe já está trabalhando no desenvolvimento do restante dessa história.
+
+Acompanhe o processo de criação e troque uma ideia com a gente nas redes:
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" parent="." unique_id=1196548148 instance=ExtResource("1_player")]
+visible = false
+position = Vector2(640, 511)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1423569425]
+
+[node name="EntrandoNaRua" type="Marker2D" parent="SpawnPoints" unique_id=278667159]
 position = Vector2(640, 476)

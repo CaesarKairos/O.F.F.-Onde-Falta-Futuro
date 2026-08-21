@@ -260,8 +260,15 @@ position = Vector2(33, 470)
 [node name="Televisao" parent="." unique_id=1596483080 instance=ExtResource("9_tv")]
 position = Vector2(7, 128)
 
+[node name="Aquario" type="AnimatedSprite2D" parent="." unique_id=847061253]
+position = Vector2(840, 467.00003)
+scale = Vector2(0.13574222, 0.13574222)
+sprite_frames = SubResource("SpriteFrames_yrhwa")
+autoplay = "default"
+frame_progress = 0.44248304
+
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
-position = Vector2(650, 486.495)
+position = Vector2(664, 497)
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
 position = Vector2(0, 123)
@@ -269,6 +276,7 @@ position = Vector2(0, 123)
 [node name="parede" parent="." unique_id=813813429 instance=ExtResource("4_mjf1v")]
 
 [node name="Door" parent="." unique_id=769273478 instance=ExtResource("5_k20le")]
+visible = false
 position = Vector2(643, 306)
 destination_scene = "uid://b8j6rsuxes3xb"
 destination_spawn = "IndoSala"
@@ -279,13 +287,6 @@ destination_scene = "res://scenes/levels/cena 03 - cozinha.tscn"
 destination_spawn = "Indo Sala"
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("8_cc8ic")]
-
-[node name="Aquario" type="AnimatedSprite2D" parent="." unique_id=847061253]
-position = Vector2(840, 467.00003)
-scale = Vector2(0.13574222, 0.13574222)
-sprite_frames = SubResource("SpriteFrames_yrhwa")
-autoplay = "default"
-frame_progress = 0.44248304
 
 [node name="Skate" parent="." unique_id=1233242963 instance=ExtResource("10_skate")]
 position = Vector2(1173, -91)
@@ -301,11 +302,10 @@ locked_message_en = "I need my camera to be able to leave the house."
 locked_message_es = "Necesito mi cámara para poder salir de casa."
 
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
-position = Vector2(792, 550)
+position = Vector2(790, 550)
 hide_during_dialogue = false
 
 [node name="pause" parent="." unique_id=1491077779 instance=ExtResource("11_2scvg")]
-visible = false
 position = Vector2(14, 45)
 
 [node name="Sofá1" type="Sprite2D" parent="." unique_id=1489708917]

@@ -2,6 +2,7 @@ extends Node2D
  
 @onready var fade_rect: ColorRect = $ColorRect
 
+
 func _ready() -> void:
 
 # 1. FADE IN: A tela de carregamento surge do preto

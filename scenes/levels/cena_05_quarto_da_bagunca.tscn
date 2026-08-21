@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b83kpbkeqfegc"]
 
 [ext_resource type="Texture2D" uid="uid://dh8vv8vlsoioi" path="res://assets/art/environment/backgrounds/Cenário  5 - Quarto da bagunça.png" id="1_bg5"]
+[ext_resource type="Script" uid="uid://whik0hfwk1c1" path="res://scenes/levels/cena_05_quarto_da_bagunca.gd" id="1_unfju"]
 [ext_resource type="Shader" uid="uid://d1j3ns8mc8g66" path="res://scenes/Shaders/granulação.gdshader" id="2_7mbnm"]
 [ext_resource type="PackedScene" uid="uid://bvipaiyrwp280" path="res://scenes/objects/environment/Ground.tscn" id="2_grnd"]
 [ext_resource type="Shader" uid="uid://dniwj1ur2mham" path="res://scenes/Shaders/vinheta.gdshader" id="3_fvbvk"]
@@ -11,6 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://blkpsykgd1pfa" path="res://scenes/levels/door.tscn" id="7_door"]
 [ext_resource type="PackedScene" uid="uid://b6xugt7db10o5" path="res://scenes/objects/cartao_memoria.tscn" id="8_cart"]
 [ext_resource type="Texture2D" uid="uid://buuipktavrxng" path="res://assets/art/environment/props/Group 9 (1).png" id="11_fvbvk"]
+[ext_resource type="Shader" uid="uid://hntiaaqsxhke" path="res://scenes/levels/cena_05_quarto_da_bagunca.gdshader" id="13_ablyc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_th5k6"]
+shader = ExtResource("13_ablyc")
+shader_parameter/cor_luz = Color(1, 0.945, 0.78, 0.5686275)
+shader_parameter/largura_topo = 0.0
+shader_parameter/largura_base = 1.0
+shader_parameter/suavizacao = 0.06400000304
+shader_parameter/intensidade_piscada = 0.50800002413
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_unfju"]
 shader = ExtResource("2_7mbnm")
@@ -21,6 +31,7 @@ shader = ExtResource("3_fvbvk")
 shader_parameter/strength = 1.0
 
 [node name="Cena 05 – Quarto da Bagunça" type="Node2D" unique_id=1975899657]
+script = ExtResource("1_unfju")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=176574195]
 
@@ -31,9 +42,16 @@ position = Vector2(1059.33, 476)
 position = Vector2(640, 360)
 texture = ExtResource("1_bg5")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=882773350]
+material = SubResource("ShaderMaterial_th5k6")
+offset_left = 55.0
+offset_top = 155.0
+offset_right = 1225.0
+offset_bottom = 723.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1633121300]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1354945175]
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1354945175]
 material = SubResource("ShaderMaterial_unfju")
 offset_right = 1284.0
 offset_bottom = 729.0
@@ -58,6 +76,10 @@ position = Vector2(1, 123)
 [node name="MessageUI" parent="." unique_id=1884976778 instance=ExtResource("4_msgui")]
 
 [node name="InventoryUI" parent="." unique_id=363640339 instance=ExtResource("5_invui")]
+
+[node name="Timer" type="Timer" parent="." unique_id=711965713]
+one_shot = true
+autostart = true
 
 [node name="Group9(1)" type="Sprite2D" parent="." unique_id=323475660]
 position = Vector2(125, 604)
