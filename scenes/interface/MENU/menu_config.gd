@@ -2,10 +2,23 @@ extends Node2D
 
 var pagina_atual := 1
 var camera_atual := 1
+var _ui_language_last: String = ""
 
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	_ui_language_last = LocalizationManager.get_language_suffix()
+	LocalizationManager.apply_ui_visibility(self)
 	mostrar_pagina(pagina_atual)
+
+
+func _process(_delta: float) -> void:
+
+	var lang := LocalizationManager.get_language_suffix()
+
+	if lang != _ui_language_last:
+		_ui_language_last = lang
+		LocalizationManager.apply_ui_visibility(self)
 
 
 func mostrar_pagina(pagina: int):

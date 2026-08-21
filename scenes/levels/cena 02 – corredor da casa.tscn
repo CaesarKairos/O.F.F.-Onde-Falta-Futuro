@@ -25,7 +25,7 @@ shader_parameter/strength = 1.0
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=615264315]
 
 [node name="SaindoQuarto" type="Marker2D" parent="SpawnPoints" unique_id=1820473215]
-position = Vector2(982, 466)
+position = Vector2(982, 490.305)
 
 [node name="IndoSala" type="Marker2D" parent="SpawnPoints" unique_id=545314939]
 position = Vector2(50, 466)
@@ -57,7 +57,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("2_xuydn")]
-visible = false
 position = Vector2(0, 115)
 
 [node name="parede" parent="Ground" unique_id=813813429 instance=ExtResource("3_07diw")]

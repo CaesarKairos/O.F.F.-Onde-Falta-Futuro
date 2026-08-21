@@ -252,7 +252,7 @@ texture = ExtResource("2_irhqx")
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1078932629]
 
 [node name="Indo Corredor" type="Marker2D" parent="SpawnPoints" unique_id=81887348]
-position = Vector2(650, 474.215)
+position = Vector2(650, 485.115)
 
 [node name="Indo Cozinha" type="Marker2D" parent="SpawnPoints" unique_id=1309100860]
 position = Vector2(33, 470)
@@ -261,7 +261,7 @@ position = Vector2(33, 470)
 position = Vector2(7, 128)
 
 [node name="Player" parent="." unique_id=1564198338 instance=ExtResource("2_mx2nk")]
-position = Vector2(650, 474.385)
+position = Vector2(650, 486.495)
 
 [node name="Ground" parent="." unique_id=760614715 instance=ExtResource("3_k20le")]
 position = Vector2(0, 123)

@@ -11,6 +11,7 @@ const TELA_INICIAL_SCENE := "res://scenes/interface/Tela inicial/tela_inicial.ts
 
 var pause_open: bool = false
 var config_menu: Node = null
+var _ui_language_last: String = ""
 
 
 # =========================================================
@@ -28,12 +29,20 @@ func _ready() -> void:
 
 	_setup_botoes()
 
+	_ui_language_last = LocalizationManager.get_language_suffix()
+	LocalizationManager.apply_ui_visibility(pause_hud)
+
 
 # =========================================================
 # INPUT
 # =========================================================
 
 func _process(_delta: float) -> void:
+
+	var lang := LocalizationManager.get_language_suffix()
+	if lang != _ui_language_last:
+		_ui_language_last = lang
+		LocalizationManager.apply_ui_visibility(pause_hud)
 
 	if Input.is_action_just_pressed("ui_cancel"):
 

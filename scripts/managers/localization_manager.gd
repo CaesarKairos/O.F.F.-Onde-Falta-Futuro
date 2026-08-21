@@ -120,3 +120,42 @@ func translate(text: String) -> String:
 		return ""
 
 	return tr(text)
+
+
+# =========================================================
+# SUFIXO DE IDIOMA (PARA LABELS _pt / _en / _es)
+# =========================================================
+
+func get_language_suffix() -> String:
+
+	match current_language:
+		LANGUAGE_EN:
+			return "en"
+		LANGUAGE_ES:
+			return "es"
+		_:
+			return "pt"
+
+
+# =========================================================
+# VISIBILIDADE DE UI POR IDIOMA (LABELS _pt / _en / _es)
+# =========================================================
+# Não usa tr() nem auto_translate_mode. Percorre a árvore a partir de "root"
+# e, para qualquer nó cujo nome termine em "_pt", "_en" ou "_es", deixa
+# visível só o que corresponde ao idioma atual.
+
+func apply_ui_visibility(root: Node) -> void:
+
+	var suffix := get_language_suffix()
+	_apply_ui_visibility_recursive(root, suffix)
+
+
+func _apply_ui_visibility_recursive(node: Node, suffix: String) -> void:
+
+	for child in node.get_children():
+
+		if child.name.ends_with("_pt") or child.name.ends_with("_en") or child.name.ends_with("_es"):
+
+			child.visible = child.name.ends_with("_" + suffix)
+
+		_apply_ui_visibility_recursive(child, suffix)

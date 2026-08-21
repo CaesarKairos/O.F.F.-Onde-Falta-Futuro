@@ -98,7 +98,7 @@ texture = ExtResource("3_w2ufp")
 position = Vector2(116, 2)
 texture = ExtResource("3_05lnj")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/PauseHud/Camera" unique_id=2041205174]
+[node name="Label_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Camera" unique_id=2041205174]
 offset_left = 32.0
 offset_top = -11.0
 offset_right = 212.0
@@ -106,7 +106,29 @@ offset_bottom = 17.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONTINUAR"
-auto_translate_mode = 1
+auto_translate_mode = 2
+
+[node name="Label_en" type="Label" parent="CanvasLayer/Control/PauseHud/Camera"]
+visible = false
+offset_left = 32.0
+offset_top = -11.0
+offset_right = 212.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUE"
+auto_translate_mode = 2
+
+[node name="Label_es" type="Label" parent="CanvasLayer/Control/PauseHud/Camera"]
+visible = false
+offset_left = 32.0
+offset_top = -11.0
+offset_right = 212.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUAR"
+auto_translate_mode = 2
 
 [node name="Config(2)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1385137095]
 position = Vector2(155, 403)
@@ -117,7 +139,7 @@ visible = false
 position = Vector2(119, -1)
 texture = ExtResource("1_6eyaj")
 
-[node name="Label2" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)" unique_id=1003088883]
+[node name="Label2_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)" unique_id=1003088883]
 offset_left = 35.0
 offset_top = -14.0
 offset_right = 215.0
@@ -125,7 +147,29 @@ offset_bottom = 14.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "CONFIGURAÇÕES"
-auto_translate_mode = 1
+auto_translate_mode = 2
+
+[node name="Label2_en" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)"]
+visible = false
+offset_left = 35.0
+offset_top = -14.0
+offset_right = 215.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "SETTINGS"
+auto_translate_mode = 2
+
+[node name="Label2_es" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)"]
+visible = false
+offset_left = 35.0
+offset_top = -14.0
+offset_right = 215.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "AJUSTES"
+auto_translate_mode = 2
 
 [node name="Save" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1278528439]
 position = Vector2(156, 467)
@@ -136,7 +180,7 @@ visible = false
 position = Vector2(132, 0)
 texture = ExtResource("5_jg8ls")
 
-[node name="Label3" type="Label" parent="CanvasLayer/Control/PauseHud/Save" unique_id=1796359855]
+[node name="Label3_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Save" unique_id=1796359855]
 offset_left = 33.0
 offset_top = -15.0
 offset_right = 213.0
@@ -144,7 +188,29 @@ offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "SALVAR"
-auto_translate_mode = 1
+auto_translate_mode = 2
+
+[node name="Label3_en" type="Label" parent="CanvasLayer/Control/PauseHud/Save"]
+visible = false
+offset_left = 33.0
+offset_top = -15.0
+offset_right = 213.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "SAVE"
+auto_translate_mode = 2
+
+[node name="Label3_es" type="Label" parent="CanvasLayer/Control/PauseHud/Save"]
+visible = false
+offset_left = 33.0
+offset_top = -15.0
+offset_right = 213.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "GUARDAR"
+auto_translate_mode = 2
 
 [node name="Exit" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=407424166]
 position = Vector2(152, 534)
@@ -155,7 +221,7 @@ visible = false
 position = Vector2(122, 0)
 texture = ExtResource("6_u063c")
 
-[node name="Label4" type="Label" parent="CanvasLayer/Control/PauseHud/Exit" unique_id=1078315882]
+[node name="Label4_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Exit" unique_id=1078315882]
 offset_left = 36.0
 offset_top = -16.0
 offset_right = 257.0
@@ -163,4 +229,26 @@ offset_bottom = 12.0
 theme_override_fonts/font = ExtResource("5_21xor")
 theme_override_font_sizes/font_size = 23
 text = "VOLTAR AO ÍNICIO"
-auto_translate_mode = 1
+auto_translate_mode = 2
+
+[node name="Label4_en" type="Label" parent="CanvasLayer/Control/PauseHud/Exit"]
+visible = false
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "BACK TO START"
+auto_translate_mode = 2
+
+[node name="Label4_es" type="Label" parent="CanvasLayer/Control/PauseHud/Exit"]
+visible = false
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "VOLVER AL INICIO"
+auto_translate_mode = 2
