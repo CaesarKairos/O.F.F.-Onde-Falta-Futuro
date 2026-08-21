@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_qqjab"]
 [ext_resource type="Script" uid="uid://cf7ekq4rav4cp" path="res://scenes/objects/porta_chaves.gd" id="2_p6dlx"]
 [ext_resource type="Texture2D" uid="uid://cf8ohwduvjvlu" path="res://assets/art/environment/props/Porta Chave.png" id="3_05kti"]
+[ext_resource type="Texture2D" uid="uid://ciml8jl6tqv0y" path="res://assets/art/environment/props/Porta Chave - sem a chaveeeee.png" id="4_gdbo3"]
 
 [node name="PortaChaves" unique_id=15208082 instance=ExtResource("1_qqjab")]
 script = ExtResource("2_p6dlx")
@@ -23,3 +24,8 @@ position = Vector2(490, 360)
 
 [node name="AnimatedSprite2D" parent="." index="3" unique_id=2099137764]
 visible = false
+
+[node name="Semchave" type="Sprite2D" parent="." index="4" unique_id=1707278740]
+position = Vector2(484.99997, 359)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("4_gdbo3")

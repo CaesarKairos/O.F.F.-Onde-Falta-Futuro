@@ -96,3 +96,6 @@ locked_message_es = "Quizás haya una tarjeta de memoria ahí, pero no tengo la 
 
 [node name="PortaQuartoMae2" parent="." unique_id=15208082 instance=ExtResource("9_mae")]
 position = Vector2(49, 341)
+message = "Eles não estão em casa."
+message_en = "They are not at home."
+message_es = "No están en casa."

@@ -1,7 +1,8 @@
 extends Area2D
 
 @onready var icon = $InteractionIcon
-@onready var animated_sprite = get_node_or_null("AnimatedSprite2D")
+@onready var sprite_com_chave = $Sprite2D
+@onready var sprite_sem_chave = $Semchave
 
 var player_near := false
 var collected := false
@@ -12,11 +13,29 @@ var collected := false
 
 
 func _ready() -> void:
+	# Verifica se a chave já foi coletada.
 	collected = GameState.has_item("chave_bagunca")
+
+	# --------------------------------------------------------
+	# CONFIGURA O VISUAL INICIAL
+	# --------------------------------------------------------
+
+	if collected:
+		# Chave já foi pega anteriormente.
+		sprite_com_chave.visible = false
+		sprite_sem_chave.visible = true
+	else:
+		# Chave ainda está no porta-chaves.
+		sprite_com_chave.visible = true
+		sprite_sem_chave.visible = false
+
+
+	# --------------------------------------------------------
+	# CONFIGURA ÍCONE DE INTERAÇÃO
+	# --------------------------------------------------------
 
 	icon.visible = false
 
-	# Mantém o tamanho do ícone de interação correto.
 	var parent = icon.get_parent()
 	var parent_scale := Vector2.ONE
 
@@ -31,9 +50,6 @@ func _ready() -> void:
 		GameConstants.INTERACTION_ICON_SCALE /
 		parent_scale
 	)
-
-	if animated_sprite:
-		animated_sprite.play()
 
 
 func _process(_delta: float) -> void:
@@ -66,14 +82,27 @@ func _process(_delta: float) -> void:
 	# --------------------------------------------------------
 
 	GameState.add_item("chave_bagunca")
+
 	collected = true
+
+
+	# --------------------------------------------------------
+	# TROCA O SPRITE
+	# --------------------------------------------------------
+
+	sprite_com_chave.visible = false
+	sprite_sem_chave.visible = true
+
+	# Esconde o ícone de interação.
 	icon.visible = false
-	# O porta-chaves NÃO é removido da cena — ele permanece como objeto fixo.
+
+	# O porta-chaves permanece na cena.
 
 
 func _on_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		player_near = true
+
 		if not collected:
 			icon.visible = true
 
