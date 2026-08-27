@@ -73,10 +73,16 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	# Trava a interação com a Cecília depois que o fluxo principal
-	# já foi concluído.
-	if GameState.has_flag("talked_to_cecilia_sala") \
-	or GameState.has_flag("kitchen_cecilia_done"):
+	# Trava a interação com a Cecília depois que o fluxo desta instância já foi
+	# concluído: ou quando a flag de "esconder" (hide_after_flag, usada pela
+	# instância da sala via "talked_to_cecilia") estiver setada, ou quando o
+	# fluxo da cozinha ("talked_to_cecilia_kitchen") terminar.
+	var cecilia_flow_done := (
+		(hide_after_flag != "" and GameState.has_flag(hide_after_flag))
+		or GameState.has_flag("talked_to_cecilia_kitchen")
+	)
+
+	if cecilia_flow_done:
 		icon.visible = false
 		return
 
@@ -117,27 +123,6 @@ func _process(_delta: float) -> void:
 		)
 
 		return
-
-	# Verifica se o fluxo principal já foi concluído.
-	# Essas flags são persistentes no GameState, então continuam válidas
-	# mesmo se o jogador sair e voltar para a cena.
-	var all_done := (
-		GameState.has_flag("talks_with_cecilia_kitchen")
-		or GameState.has_flag("dialogue_with_cecilia")
-	)
-
-	if all_done:
-		icon.visible = false
-		return
-
-	# Interações seguintes:
-	# se o fluxo ainda não estiver concluído, repete o diálogo principal.
-	icon.visible = false
-
-	DialogueManager.start_dialog(
-		dialogue_path,
-		start_dialogue_id
-	)
 
 
 func _on_body_entered(body: Node2D) -> void:

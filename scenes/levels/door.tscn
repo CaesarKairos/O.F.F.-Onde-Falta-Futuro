@@ -37,6 +37,6 @@ shape = SubResource("RectangleShape2D_wdsje")
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=788050746]
 position = Vector2(18.999998, -43.000004)
-scale = Vector2(0.13272293, 0.1504688)
+scale = Vector2(0.09375, 0.09375)
 sprite_frames = SubResource("SpriteFrames_sw5t0")
 autoplay = "default"

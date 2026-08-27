@@ -297,9 +297,12 @@ destination_scene = "res://scenes/levels/cena_04_rua_placeholder.tscn"
 destination_spawn = "EntrandoNaRua"
 required_item = "cartao_memoria"
 required_item_2 = "camera"
-locked_message_pt = "Preciso da minha câmera para poder sair de casa."
-locked_message_en = "I need my camera to be able to leave the house."
-locked_message_es = "Necesito mi cámara para poder salir de casa."
+locked_message_item1_pt = "Já peguei a câmera, mas ainda preciso achar o cartão de memória antes de sair."
+locked_message_item1_en = "I already got the camera, but I still need to find the memory card before leaving."
+locked_message_item1_es = "Ya tengo la cámara, pero todavía necesito encontrar la tarjeta de memoria antes de salir."
+locked_message_item2_pt = "Preciso da minha câmera para poder sair de casa."
+locked_message_item2_en = "I need my camera to be able to leave the house."
+locked_message_item2_es = "Necesito mi cámara para poder salir de casa."
 
 [node name="Cecilia" parent="." unique_id=15208082 instance=ExtResource("6_mjf1v")]
 position = Vector2(790, 550)

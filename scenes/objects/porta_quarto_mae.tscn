@@ -14,7 +14,7 @@ opacity_player_near = 0.5
 fade_duration = 0.2
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
-position = Vector2(584, 26)
+position = Vector2(584, 26.000025)
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
 position = Vector2(593.6, 214.40002)
