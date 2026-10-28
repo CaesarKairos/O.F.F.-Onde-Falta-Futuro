@@ -41,19 +41,6 @@ O projeto encontra-se **Em desenvolvimento**. O foco atual da equipe está na co
 
 ---
 
-## 👥 Autores (Equipe Técnica)
-
-Trabalho desenvolvido na *Escola Estadual Profª Maria Aparecida Félix Porto* (Guarulhos, 2026):
-
-* Agatha Porfirio da Silva
-* Cesar Augusto Batista dos Santos
-* Flávia Ferreira Castro
-* Kauã Oliveira Tolentino
-* Nathan Nunes Silva
-* Nicolly Alves França Porto
-
----
-
 ## 🔒 Licença e Direitos Autorais
 
 Este é um projeto de caráter **acadêmico e proprietário**. Todos os direitos sobre a história, roteiro, diálogos, artes conceituais em pixel art e código de desenvolvimento são reservados aos autores listados acima. 
