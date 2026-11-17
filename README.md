@@ -1,5 +1,7 @@
 # O.F.F. (Onde Falta Futuro)
 
+Consulte [a arquitetura do projeto](docs/project_structure.md) antes de adicionar ou mover cenas, scripts e recursos.
+
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em_Desenvolvimento-orange?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Engine-Godot-blue?style=flat-square&logo=godot-engine&logoColor=white" alt="Godot">

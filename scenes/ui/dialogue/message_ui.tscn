@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://co8nncd5d6w6s"]
+
+[ext_resource type="Script" uid="uid://ci5mx5aooku53" path="res://scenes/ui/dialogue/message_ui.gd" id="1_rowjr"]
+[ext_resource type="Texture2D" uid="uid://d0a2jxw7m1s1p" path="res://assets/art/ui/caixa  de dialogo.png" id="2_pfwhv"]
+[ext_resource type="FontFile" uid="uid://cdq43ieudw0if" path="res://assets/fonts/vcr_osd_mono.ttf" id="3_u23ax"]
+[ext_resource type="Texture2D" uid="uid://bvycr2d31bnlm" path="res://assets/art/ui/SPACE.png" id="4_e22x1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2ous"]
+atlas = ExtResource("4_e22x1")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84hnr"]
+atlas = ExtResource("4_e22x1")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mql2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2ous")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84hnr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="MessageUI" type="CanvasLayer" unique_id=177896999 groups=["message_ui"]]
+layer = 5
+script = ExtResource("1_rowjr")
+
+[node name="DialogueBox" type="NinePatchRect" parent="." unique_id=1469839919]
+offset_left = 192.0
+offset_top = 24.0
+offset_right = 1088.0
+offset_bottom = 155.0
+texture = ExtResource("2_pfwhv")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox" unique_id=824047613]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -27.0
+offset_right = 116.0
+offset_bottom = 176.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox" unique_id=824322995]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 39.0
+offset_right = 812.0
+offset_bottom = 122.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_u23ax")
+scroll_active = false
+autowrap_mode = 2
+
+[node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
+visible = false
+modulate = Color(1, 1, 1, 0.87058824)
+position = Vector2(818, 99)
+scale = Vector2(0.15761717, 0.1605469)
+sprite_frames = SubResource("SpriteFrames_4mql2")
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueBox" unique_id=595098062]
+z_index = 10
+layout_mode = 0
+offset_left = 64.0
+offset_top = 63.0
+offset_right = 832.0
+offset_bottom = 112.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Choice1" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=1261187853]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")
+
+[node name="Choice2" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=966048456]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")
+
+[node name="Choice3" type="Button" parent="DialogueBox/ChoicesContainer" unique_id=362293405]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_u23ax")

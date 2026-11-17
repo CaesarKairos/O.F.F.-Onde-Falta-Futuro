@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://eeoowf38oewg"]
+
+[ext_resource type="Texture2D" uid="uid://cho6ewfmktsbj" path="res://assets/art/ui/pause/CONFIG ATIVO.png" id="1_6eyaj"]
+[ext_resource type="Texture2D" uid="uid://b73h20h7g3dkf" path="res://assets/art/ui/pause/PAUSE (4).png" id="1_aq7p1"]
+[ext_resource type="Shader" uid="uid://bl8aer65hxguo" path="res://shaders/pause.gdshader" id="2_6eyaj"]
+[ext_resource type="Texture2D" uid="uid://dprih10t4h34h" path="res://assets/art/ui/pause/CONTINUAR ATIVO (1).png" id="3_05lnj"]
+[ext_resource type="Texture2D" uid="uid://rm48qcan63vt" path="res://assets/art/ui/pause/CAMERA.png" id="3_w2ufp"]
+[ext_resource type="FontFile" uid="uid://c7yd3eyfui2up" path="res://assets/fonts/roboto_mono_medium.ttf" id="5_21xor"]
+[ext_resource type="Texture2D" uid="uid://fbk66ccsxv2l" path="res://assets/art/ui/pause/SALVR ATIVO.png" id="5_jg8ls"]
+[ext_resource type="Texture2D" uid="uid://c6jae5pqqixe7" path="res://assets/art/ui/pause/CONFIG (2).png" id="6_a1xvq"]
+[ext_resource type="Texture2D" uid="uid://b4dxhgmaid7dc" path="res://assets/art/ui/pause/EXIT ATIVO (1).png" id="6_u063c"]
+[ext_resource type="Texture2D" uid="uid://bajis5tlichs3" path="res://assets/art/ui/pause/SAVE.png" id="8_o8bi2"]
+[ext_resource type="Texture2D" uid="uid://d3l8a83usiy4x" path="res://assets/art/ui/pause/EXIT.png" id="10_ur7s8"]
+[ext_resource type="Script" uid="uid://chwow388htmwo" path="res://scenes/ui/pause/pause.gd" id="11_pause"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq7p1"]
+bg_color = Color(0, 0, 0, 0.8745098)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8u653"]
+shader = ExtResource("2_6eyaj")
+shader_parameter/frame_color = Color(0, 0, 0, 1)
+shader_parameter/border_thickness = 0.0410000019475
+shader_parameter/inner_corner_radius = 0.08400000399
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwtow"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+
+[node name="pause" type="Node2D" unique_id=1491077779]
+process_mode = 3
+script = ExtResource("11_pause")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=732082286]
+visible = false
+unique_name_in_owner = true
+process_mode = 3
+layer = 10
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=732082287]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1289.0
+offset_bottom = 729.0
+
+[node name="PauseHud" type="Control" parent="CanvasLayer/Control" unique_id=732082288]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 1289.0
+offset_bottom = 729.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/PauseHud" unique_id=732082289]
+layout_mode = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/PauseHud" unique_id=1168208357]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1287.4052
+offset_bottom = 718.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aq7p1")
+
+[node name="Moldura" type="Panel" parent="CanvasLayer/Control/PauseHud" unique_id=1956013291]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_8u653")
+layout_mode = 0
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 1286.0
+offset_bottom = 721.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bwtow")
+
+[node name="Hud pause" type="TextureRect" parent="CanvasLayer/Control/PauseHud" unique_id=2136233527]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 1287.0
+offset_bottom = 713.0
+
+[node name="Pause(4)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud/Hud pause" unique_id=1691196296]
+position = Vector2(633.7375, 377.5)
+scale = Vector2(1.0386523, 1.0402777)
+texture = ExtResource("1_aq7p1")
+
+[node name="Camera" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=399698206]
+position = Vector2(158, 334)
+texture = ExtResource("3_w2ufp")
+
+[node name="ContinuarAtivo(1)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud/Camera" unique_id=2127427282]
+position = Vector2(116, 2)
+texture = ExtResource("3_05lnj")
+
+[node name="Label_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Camera" unique_id=2041205174]
+offset_left = 32.0
+offset_top = -11.0
+offset_right = 212.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUAR"
+auto_translate_mode = 2
+
+[node name="Label_en" type="Label" parent="CanvasLayer/Control/PauseHud/Camera"]
+visible = false
+offset_left = 32.0
+offset_top = -11.0
+offset_right = 212.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUE"
+auto_translate_mode = 2
+
+[node name="Label_es" type="Label" parent="CanvasLayer/Control/PauseHud/Camera"]
+visible = false
+offset_left = 32.0
+offset_top = -11.0
+offset_right = 212.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONTINUAR"
+auto_translate_mode = 2
+
+[node name="Config(2)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1385137095]
+position = Vector2(155, 403)
+texture = ExtResource("6_a1xvq")
+
+[node name="ConfigAtivo2" type="Sprite2D" parent="CanvasLayer/Control/PauseHud/Config(2)" unique_id=1322404052]
+visible = false
+position = Vector2(119, -1)
+texture = ExtResource("1_6eyaj")
+
+[node name="Label2_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)" unique_id=1003088883]
+offset_left = 35.0
+offset_top = -14.0
+offset_right = 215.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "CONFIGURAÇÕES"
+auto_translate_mode = 2
+
+[node name="Label2_en" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)"]
+visible = false
+offset_left = 35.0
+offset_top = -14.0
+offset_right = 215.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "SETTINGS"
+auto_translate_mode = 2
+
+[node name="Label2_es" type="Label" parent="CanvasLayer/Control/PauseHud/Config(2)"]
+visible = false
+offset_left = 35.0
+offset_top = -14.0
+offset_right = 215.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "AJUSTES"
+auto_translate_mode = 2
+
+[node name="Save" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=1278528439]
+position = Vector2(156, 467)
+texture = ExtResource("8_o8bi2")
+
+[node name="SalvrAtivo" type="Sprite2D" parent="CanvasLayer/Control/PauseHud/Save" unique_id=317821583]
+visible = false
+position = Vector2(132, 0)
+texture = ExtResource("5_jg8ls")
+
+[node name="Label3_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Save" unique_id=1796359855]
+offset_left = 33.0
+offset_top = -15.0
+offset_right = 213.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "SALVAR"
+auto_translate_mode = 2
+
+[node name="Label3_en" type="Label" parent="CanvasLayer/Control/PauseHud/Save"]
+visible = false
+offset_left = 33.0
+offset_top = -15.0
+offset_right = 213.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "SAVE"
+auto_translate_mode = 2
+
+[node name="Label3_es" type="Label" parent="CanvasLayer/Control/PauseHud/Save"]
+visible = false
+offset_left = 33.0
+offset_top = -15.0
+offset_right = 213.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "GUARDAR"
+auto_translate_mode = 2
+
+[node name="Exit" type="Sprite2D" parent="CanvasLayer/Control/PauseHud" unique_id=407424166]
+position = Vector2(152, 534)
+texture = ExtResource("10_ur7s8")
+
+[node name="ExitAtivo(1)" type="Sprite2D" parent="CanvasLayer/Control/PauseHud/Exit" unique_id=1180969141]
+visible = false
+position = Vector2(122, 0)
+texture = ExtResource("6_u063c")
+
+[node name="Label4_pt" type="Label" parent="CanvasLayer/Control/PauseHud/Exit" unique_id=1078315882]
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "VOLTAR AO ÍNICIO"
+auto_translate_mode = 2
+
+[node name="Label4_en" type="Label" parent="CanvasLayer/Control/PauseHud/Exit"]
+visible = false
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "BACK TO START"
+auto_translate_mode = 2
+
+[node name="Label4_es" type="Label" parent="CanvasLayer/Control/PauseHud/Exit"]
+visible = false
+offset_left = 36.0
+offset_top = -16.0
+offset_right = 257.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("5_21xor")
+theme_override_font_sizes/font_size = 23
+text = "VOLVER AL INICIO"
+auto_translate_mode = 2

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7qkym16am6ou"]
 
 [ext_resource type="PackedScene" uid="uid://bp10rkyroroxk" path="res://scenes/components/interactable.tscn" id="1_5bekt"]
-[ext_resource type="Texture2D" uid="uid://bac4m8rvqf5da" path="res://scenes/components/lobopelucia.png" id="2_kvun2"]
+[ext_resource type="Texture2D" uid="uid://bac4m8rvqf5da" path="res://assets/art/environment/props/lobo_pelucia.png" id="2_kvun2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_26d85"]
 size = Vector2(77.75, 89.125)

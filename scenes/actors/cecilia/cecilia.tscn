@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cl7lavj13dkaq" path="res://scenes/components/npcbase.tscn" id="1_r3cek"]
 [ext_resource type="Script" uid="uid://bt23he21bniua" path="res://scenes/actors/cecilia/cecilia.gd" id="2_3mwsp"]
-[ext_resource type="Texture2D" uid="uid://cut5hjv4v4r3u" path="res://cecilia.png" id="3_c3df0"]
-[ext_resource type="Texture2D" uid="uid://dah402m6dy3si" path="res://cecilia andando.png" id="4_17nta"]
+[ext_resource type="Texture2D" uid="uid://cut5hjv4v4r3u" path="res://assets/art/characters/cecilia/cecilia.png" id="3_c3df0"]
+[ext_resource type="Texture2D" uid="uid://dah402m6dy3si" path="res://assets/art/characters/cecilia/cecilia_andando.png" id="4_17nta"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fu87y"]
 atlas = ExtResource("3_c3df0")

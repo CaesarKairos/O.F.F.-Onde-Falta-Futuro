@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="O.F.F. (Onde Falta Futuro)"
-run/main_scene="uid://b8m1ql7qvtj3g"
+run/main_scene="res://scenes/ui/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,11 +21,12 @@ DialogueManager="*uid://ba85mbhnowmib"
 GameState="*uid://u61nytn0sx1y"
 SceneManager="*uid://v84uyo46pk2m"
 SaveManager="*uid://o6525bnt22w4"
-InventoryUi="*uid://bcdymrhjt1eix"
-Pause="*uid://eeoowf38oewg"
+InventoryUi="*res://scenes/ui/inventory/inventory_ui.tscn"
+Pause="*res://scenes/ui/pause/pause.tscn"
 SettingsManager="*res://scripts/managers/settings_manager.gd"
 LocalizationManager="*uid://dbbwru3jyoil0"
-TransitionManager="*uid://duwwp8ceov073"
+TransitionManager="*res://scenes/ui/transitions/transition_manager.tscn"
+TimerManager="*res://scripts/managers/timer_manager.gd"
 
 [display]
 
@@ -91,7 +92,7 @@ translate={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://data/translations/translations.csv")
+locale/translations=PackedStringArray("res://data/translations/translations.pt_BR.translation", "res://data/translations/translations.en.translation", "res://data/translations/translations.es.translation")
 
 [physics]
 

@@ -78,7 +78,7 @@ func _get_node(id: String) -> Dictionary:
 
 func _localized_text(source: Dictionary, key_pt: String = "text", key_en: String = "eng", key_es: String = "es") -> String:
 
-	var language := LocalizationManager.get_language()
+	var language: String = LocalizationManager.get_language()
 
 	if language == LocalizationManager.LANGUAGE_EN and source.has(key_en):
 		return str(source[key_en])
