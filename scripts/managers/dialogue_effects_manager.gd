@@ -231,7 +231,7 @@ func _open_bbcode(effect: String, index: int, characters: Array[Dictionary]) -> 
 		"whisper":
 			var whisper_color := Color(1.0, 1.0, 1.0, WHISPER_OPACITY).to_html()
 			return "[color=#%s][font_size=%d]" % [whisper_color, WHISPER_FONT_SIZE]
-		"wave": return "[dialogue_wave]"
+		"wave": return "[dialogue_wave start=%d]" % index
 		"impact": return "[dialogue_impact start=%d]" % index
 		"pop": return "[dialogue_pop start=%d]" % index
 	return ""

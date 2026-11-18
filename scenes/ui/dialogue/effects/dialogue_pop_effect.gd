@@ -21,9 +21,10 @@ func trigger(start_index: int, end_index: int) -> void:
 
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 	var active_range: Dictionary = {}
+	var character_index := int(char_fx.env.get("start", 0)) + char_fx.relative_index
 	for index in range(triggered_ranges.size() - 1, -1, -1):
 		var candidate := triggered_ranges[index]
-		if char_fx.absolute_index >= candidate["start"] and char_fx.absolute_index < candidate["end"]:
+		if character_index >= candidate["start"] and character_index < candidate["end"]:
 			active_range = candidate
 			break
 	if active_range.is_empty():

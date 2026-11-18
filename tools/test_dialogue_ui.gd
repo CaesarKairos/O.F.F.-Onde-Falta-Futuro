@@ -4,6 +4,7 @@ var failures: Array[String] = []
 
 
 func _ready() -> void:
+	_test_custom_effect_api()
 	var message_ui = preload("res://scenes/ui/dialogue/message_ui.tscn").instantiate()
 	add_child(message_ui)
 	await get_tree().process_frame
@@ -28,6 +29,17 @@ func _ready() -> void:
 	for failure in failures:
 		push_error(failure)
 	get_tree().quit(1 if failures else 0)
+
+
+func _test_custom_effect_api() -> void:
+	var char_fx := CharFXTransform.new()
+	char_fx.env = {"start": 3}
+	char_fx.relative_index = 2
+	char_fx.elapsed_time = 0.1
+	assert_true(DialogueWaveEffect.new()._process_custom_fx(char_fx), "wave uses supported CharFX API")
+	var pop_effect := DialoguePopEffect.new()
+	pop_effect.trigger(5, 6)
+	assert_true(pop_effect._process_custom_fx(char_fx), "pop uses supported CharFX API")
 
 
 func assert_true(value: bool, label: String) -> void:
