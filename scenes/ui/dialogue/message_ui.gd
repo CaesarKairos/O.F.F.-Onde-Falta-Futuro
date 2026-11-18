@@ -47,6 +47,14 @@ var current_message_pt := ""
 var current_message_en := ""
 var current_message_es := ""
 
+var current_playback: Dictionary = {}
+var playback_generation := 0
+var revealing := false
+
+var wave_effect := DialogueWaveEffect.new()
+var impact_effect := DialogueImpactEffect.new()
+var pop_effect := DialoguePopEffect.new()
+
 
 # ============================================================
 # RETRATOS
@@ -87,6 +95,11 @@ func _ready() -> void:
 	# Recalcula a caixa quando o idioma mudar.
 	LocalizationManager.language_changed.connect(_on_language_changed)
 
+	dialogue_text.bbcode_enabled = true
+	dialogue_text.install_effect(wave_effect)
+	dialogue_text.install_effect(impact_effect)
+	dialogue_text.install_effect(pop_effect)
+
 
 # ============================================================
 # PROCESS
@@ -97,6 +110,9 @@ func _process(_delta) -> void:
 	if waiting_message_close:
 
 		if Input.is_action_just_pressed("skip"):
+			if revealing:
+				reveal_all()
+				return
 
 			waiting_message_close = false
 
@@ -114,6 +130,21 @@ func _process(_delta) -> void:
 func is_message_open() -> bool:
 
 	return waiting_message_close
+
+
+func is_revealing() -> bool:
+	return revealing
+
+
+func reveal_all() -> void:
+	if not revealing:
+		return
+	playback_generation += 1
+	revealing = false
+	dialogue_text.visible_characters = -1
+	impact_effect.reset()
+	pop_effect.reset()
+	continue_icon.visible = true
 
 
 # ============================================================
@@ -306,10 +337,10 @@ func show_message(
 
 	dialogue_box.visible = true
 
-	dialogue_text.text = _localized_message()
+	_start_text_playback(_localized_message())
 
 	portrait.visible = false
-	continue_icon.visible = true
+	continue_icon.visible = false
 
 	_hide_choices()
 
@@ -341,7 +372,7 @@ func _on_language_changed(_language: String) -> void:
 
 	if waiting_message_close:
 
-		dialogue_text.text = _localized_message()
+		_start_text_playback(_localized_message())
 
 		await _resize_dialogue_box()
 
@@ -356,9 +387,9 @@ func show_dialogue(texto: String) -> void:
 
 	dialogue_box.visible = true
 
-	dialogue_text.text = texto
+	_start_text_playback(texto)
 
-	continue_icon.visible = true
+	continue_icon.visible = false
 
 	_hide_choices()
 
@@ -371,11 +402,14 @@ func show_dialogue(texto: String) -> void:
 
 func show_choices(texto: String, options: Array) -> void:
 
+	_cancel_playback()
 	waiting_message_close = false
 
 	dialogue_box.visible = true
 
-	dialogue_text.text = texto
+	var parsed := DialogueEffectsManager.parse(texto)
+	dialogue_text.text = parsed["bbcode"]
+	dialogue_text.visible_characters = -1
 
 	portrait.visible = false
 	continue_icon.visible = false
@@ -396,7 +430,7 @@ func show_choices(texto: String, options: Array) -> void:
 		if i < options.size():
 
 			buttons[i].visible = true
-			buttons[i].text = options[i]["text"]
+			buttons[i].text = DialogueEffectsManager.strip_markup(str(options[i]["text"]))
 
 		else:
 
@@ -416,6 +450,7 @@ func show_choices(texto: String, options: Array) -> void:
 
 func hide_dialog() -> void:
 
+	_cancel_playback()
 	waiting_message_close = false
 
 	_hide_choices()
@@ -423,6 +458,84 @@ func hide_dialog() -> void:
 	portrait.visible = false
 	continue_icon.visible = false
 	dialogue_box.visible = false
+
+
+func _start_text_playback(source: String) -> void:
+	_cancel_playback()
+	current_playback = DialogueEffectsManager.parse(source)
+	dialogue_text.text = current_playback["bbcode"]
+	dialogue_text.visible_characters = 0
+	revealing = true
+	continue_icon.visible = false
+	var generation := playback_generation
+	_play_text(generation)
+
+
+func _cancel_playback() -> void:
+	playback_generation += 1
+	revealing = false
+	current_playback = {}
+	impact_effect.reset()
+	pop_effect.reset()
+
+
+func _play_text(generation: int) -> void:
+	var characters: Array = current_playback.get("characters", [])
+	var pauses: Dictionary = current_playback.get("pauses", {})
+	var index := 0
+	while index < characters.size() and generation == playback_generation:
+		if pauses.has(index):
+			await get_tree().create_timer(float(pauses[index]) / 1000.0).timeout
+			if generation != playback_generation:
+				return
+
+		var impact_range := _range_starting_at(current_playback.get("impact_ranges", []), index)
+		if not impact_range.is_empty():
+			index = int(impact_range["end"])
+			dialogue_text.visible_characters = index
+			impact_effect.trigger(int(impact_range["start"]))
+			await get_tree().create_timer(DialogueEffectsManager.IMPACT_DURATION_SECONDS).timeout
+			continue
+
+		var pop_range := _range_containing(current_playback.get("pop_ranges", []), index)
+		if not pop_range.is_empty():
+			while index < int(pop_range["end"]) and str(characters[index]["character"]).strip_edges() == "":
+				index += 1
+			var word_start := index
+			while index < int(pop_range["end"]) and str(characters[index]["character"]).strip_edges() != "":
+				index += 1
+			dialogue_text.visible_characters = index
+			pop_effect.trigger(word_start, index)
+			if word_start < index:
+				await get_tree().create_timer(DialogueEffectsManager.POP_INTERVAL_SECONDS).timeout
+			continue
+
+		index += 1
+		dialogue_text.visible_characters = index
+		var speed := DialogueEffectsManager.character_speed(characters[index - 1])
+		var wait_time := 1.0 / speed
+		var next_character := "" if index >= characters.size() else str(characters[index]["character"])
+		wait_time += DialogueEffectsManager.punctuation_pause_seconds(str(characters[index - 1]["character"]), next_character)
+		await get_tree().create_timer(wait_time).timeout
+
+	if generation == playback_generation:
+		revealing = false
+		dialogue_text.visible_characters = -1
+		continue_icon.visible = true
+
+
+func _range_starting_at(ranges: Array, index: int) -> Dictionary:
+	for effect_range in ranges:
+		if int(effect_range["start"]) == index:
+			return effect_range
+	return {}
+
+
+func _range_containing(ranges: Array, index: int) -> Dictionary:
+	for effect_range in ranges:
+		if index >= int(effect_range["start"]) and index < int(effect_range["end"]):
+			return effect_range
+	return {}
 
 
 # ============================================================

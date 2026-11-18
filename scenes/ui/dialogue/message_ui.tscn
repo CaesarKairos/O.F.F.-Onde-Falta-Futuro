@@ -62,6 +62,7 @@ mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_u23ax")
 scroll_active = false
 autowrap_mode = 2
+bbcode_enabled = true
 
 [node name="ContinueIcon" type="AnimatedSprite2D" parent="DialogueBox" unique_id=1842849174]
 visible = false

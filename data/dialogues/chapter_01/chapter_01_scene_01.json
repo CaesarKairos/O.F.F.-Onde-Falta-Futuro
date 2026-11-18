@@ -5,44 +5,44 @@
 	"nodes": {
 		"dream_001": {
 			"speaker": "José",
-			"text": "Lyanna… Lyanna?",
-			"eng": "Lyanna... Lyanna?",
-			"es": "Lyanna... ¿Lyanna?",
+			"text": "[slow]Lyanna…[/slow][pause=500] Lyanna?",
+			"eng": "[slow]Lyanna...[/slow][pause=500] Lyanna?",
+			"es": "[slow]Lyanna...[/slow][pause=500] ¿Lyanna?",
 			"next": "dream_002"
 		},
 		"dream_002": {
 			"speaker": "Bruno",
-			"text": "Lya, acorda!",
-			"eng": "Lya, wake up!",
-			"es": "¡Lya, despierta!",
+			"text": "Lya, [impact]*acorda!*[/impact]",
+			"eng": "Lya, [impact]*wake up!*[/impact]",
+			"es": "¡Lya, [impact]*despierta!*[/impact]",
 			"next": "dialogue_001"
 		},
 		"dialogue_001": {
 			"speaker": "Lyanna",
-			"text": "Hm... pai?",
-			"eng": "Hm... dad?",
-			"es": "Hm... ¿papá?",
+			"text": "[slow]Hm...[/slow][pause=300] *pai?*",
+			"eng": "[slow]Hm...[/slow][pause=300] *dad?*",
+			"es": "[slow]Hm...[/slow][pause=300] *¿papá?*",
 			"next": "dialogue_002"
 		},
 		"dialogue_002": {
 			"speaker": "Bruno",
-			"text": "Do que você me chamou? Tá sonhando acordada?",
-			"eng": "What did you just call me? Are you daydreaming?",
-			"es": "¿Cómo me llamaste? ¿Estás soñando despierta?",
+			"text": "Do que você me chamou? Tá ~sonhando acordada~?",
+			"eng": "What did you just call me? Are you ~daydreaming~?",
+			"es": "¿Cómo me llamaste? ¿Estás ~soñando despierta~?",
 			"next": "dialogue_003"
 		},
 		"dialogue_003": {
 			"speaker": "Lyanna",
-			"text": "Oque você quer? Fala logo que eu quero dormir.",
-			"eng": "What do you want? Hurry up, I want to sleep.",
-			"es": "¿Qué quieres? Habla de una vez que quiero dormir.",
+			"text": "Oque você quer? [fast]Fala logo que eu quero dormir.[/fast]",
+			"eng": "What do you want? [fast]Hurry up, I want to sleep.[/fast]",
+			"es": "¿Qué quieres? [fast]Habla de una vez que quiero dormir.[/fast]",
 			"next": "dialogue_004"
 		},
 		"dialogue_004": {
 			"speaker": "Bruno",
-			"text": "A Cecília tá lá na sala te esperando.",
-			"eng": "Cecília is waiting for you in the living room.",
-			"es": "Cecilia te espera en la sala.",
+			"text": "A *Cecília* tá lá na sala te esperando.",
+			"eng": "*Cecília* is waiting for you in the living room.",
+			"es": "*Cecilia* te espera en la sala.",
 			"next": "choice_001"
 		},
 		"choice_001": {
@@ -67,73 +67,73 @@
 		},
 		"birthday_path_001": {
 			"speaker": "Lyanna",
-			"text": "A Cecília? O que ela tá fazendo aqui tão cedo?",
-			"eng": "Cecília? What is she doing here so early?",
-			"es": "¿Cecilia? ¿Qué hace aquí tan temprano?",
+			"text": "A *Cecília*? O que ela tá fazendo aqui tão cedo?",
+			"eng": "*Cecília*? What is she doing here so early?",
+			"es": "¿*Cecilia*? ¿Qué hace aquí tan temprano?",
 			"next": "birthday_path_002"
 		},
 		"birthday_path_002": {
 			"speaker": "Bruno",
-			"text": "Esqueceu que é o aniversário dela? Ela veio direto do Terminal e tá esperando lá na sala.",
-			"eng": "Forgot it's her birthday? She came straight from the Terminal and is waiting in the living room.",
-			"es": "¿Te olvidaste de que es su cumpleaños? Vino directo del Terminal y está esperando en la sala.",
+			"text": "Esqueceu que é o *aniversário* dela? Ela veio direto do *Terminal* e tá esperando lá na sala.",
+			"eng": "Forgot it's her *birthday*? She came straight from the *Terminal* and is waiting in the living room.",
+			"es": "¿Te olvidaste de que es su *cumpleaños*? Vino directo del *Terminal* y está esperando en la sala.",
 			"next": "birthday_path_003",
 			"set_flag": "knows_cecilia_birthday"
 		},
 		"birthday_path_003": {
 			"speaker": "Lyanna",
-			"text": "Nossa, é verdade… eu perdi o sono com...",
-			"eng": "Wow, it's true... I lost sleep with...",
-			"es": "Vaya, es verdad... perdí el sueño con...",
+			"text": "[slow]Nossa, é verdade…[/slow][pause=350] eu perdi o sono com...",
+			"eng": "[slow]Wow, it's true...[/slow][pause=350] I lost sleep with...",
+			"es": "[slow]Vaya, es verdad...[/slow][pause=350] perdí el sueño con...",
 			"next": "birthday_path_004"
 		},
 		"birthday_path_004": {
 			"speaker": "Bruno",
-			"text": "Com…?",
-			"eng": "With...?",
-			"es": "¿Con...?",
+			"text": "[pop]Com…?[/pop]",
+			"eng": "[pop]With...?[/pop]",
+			"es": "[pop]¿Con...?[/pop]",
 			"next": "birthday_path_005"
 		},
 		"birthday_path_005": {
 			"speaker": "Lyanna",
-			"text": "Hããã… Fala pra ela que já vou ir.",
-			"eng": "Uhhh... Tell her I'm coming.",
-			"es": "Eh... dile que ya voy.",
+			"text": "[slow]Hããã…[/slow][pause=350] [fast]Fala pra ela que já vou ir.[/fast]",
+			"eng": "[slow]Uhhh...[/slow][pause=350] [fast]Tell her I'm coming.[/fast]",
+			"es": "[slow]Eh...[/slow][pause=350] [fast]dile que ya voy.[/fast]",
 			"next": "scene_end"
 		},
 		"already_going_001": {
 			"speaker": "Lyanna",
-			"text": "Tá, tá... fala pra ela que eu já levantei.",
-			"eng": "Yeah, yeah... tell her I'm up.",
-			"es": "Está bien, está bien... dile que ya me levanté.",
+			"text": "[pop]Tá, tá...[/pop] fala pra ela que eu já levantei.",
+			"eng": "[pop]Yeah, yeah...[/pop] tell her I'm up.",
+			"es": "[pop]Está bien, está bien...[/pop] dile que ya me levanté.",
 			"next": "already_going_002"
 		},
 		"already_going_002": {
 			"speaker": "Bruno",
-			"text": "Você esqueceu que ela ia vir, né? Você até prometeu um café pra ela.",
-			"eng": "You forgot she was coming, didn't you? You even promised her a coffee.",
-			"es": "¿Te olvidaste de que iba a venir? Incluso le prometiste un café.",
+			"text": "Você esqueceu que ela ia vir, ~né~? Você até prometeu um *café* pra ela.",
+			"eng": "You forgot she was coming, ~didn't you~? You even promised her a *coffee*.",
+			"es": "¿Te olvidaste de que iba a venir? Incluso le prometiste un *café*.",
 			"next": "already_going_003"
 		},
 		"already_going_003": {
 			"speaker": "Lyanna",
-			"text": "Não é isso, eu só perdi o sono com...",
-			"eng": "That's not it, I just lost sleep with...",
-			"es": "No es eso, solo perdí el sueño con...",
+			"text": "Não é isso, [slow]eu só perdi o sono com...[/slow]",
+			"eng": "That's not it, [slow]I just lost sleep with...[/slow]",
+			"es": "No es eso, [slow]solo perdí el sueño con...[/slow]",
 			"next": "already_going_004"
 		},
 		"already_going_004": {
 			"speaker": "Bruno",
-			"text": "Com…?",
-			"eng": "With...?",
-			"es": "¿Con...?",
+			"text": "[pop]Com…?[/pop]",
+			"eng": "[pop]With...?[/pop]",
+			"es": "[pop]¿Con...?[/pop]",
 			"next": "already_going_005"
 		},
 		"already_going_005": {
 			"speaker": "Lyanna",
-			"text": "Hããã… Não é nada, vai lá avisar pra ela.",
-			"eng": "Uhhh... It's nothing, go tell her.",
-			"es": "Eh... no es nada, ve a avisarle.",
+			"text": "[slow]Hããã…[/slow][pause=350] [whisper]Não é nada,[/whisper] vai lá avisar pra ela.",
+			"eng": "[slow]Uhhh...[/slow][pause=350] [whisper]It's nothing,[/whisper] go tell her.",
+			"es": "[slow]Eh...[/slow][pause=350] [whisper]no es nada,[/whisper] ve a avisarle.",
 			"next": "scene_end"
 		},
 		"scene_end": {

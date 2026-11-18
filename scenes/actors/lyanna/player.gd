@@ -17,8 +17,14 @@ func _physics_process(delta: float) -> void:
 
 	# Avançar diálogo com ESPAÇO (ação skip)
 	if Input.is_action_just_pressed("skip"):
+		var message_ui = get_tree().get_first_node_in_group("message_ui")
 
-		if DialogueManager.can_continue():
+		if message_ui and message_ui.is_message_open():
+			# Mensagens de interação tratam a mesma entrada na própria UI.
+			pass
+		elif message_ui and message_ui.is_revealing():
+			message_ui.reveal_all()
+		elif DialogueManager.can_continue():
 			DialogueManager.next_dialog()
 
 	var ui = get_tree().get_first_node_in_group("message_ui")
