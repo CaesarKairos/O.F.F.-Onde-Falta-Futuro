@@ -5,17 +5,17 @@
 	"nodes": {
 		"cecilia_001": {
 			"speaker": "cecilia",
-			"text": "Finalmente resolveu aparecer! Achei que tinha esquecido de mim.",
-			"eng": "Finally showed up! I thought you forgot about me.",
-			"es": "¡Por fin apareció! Pensé que me habías olvidado.",
+			"text": "[pop]Finalmente resolveu aparecer![/pop] Achei que tinha esquecido de mim.",
+			"eng": "[pop]Finally showed up![/pop] I thought you forgot about me.",
+			"es": "[pop]¡Por fin apareció![/pop] Pensé que me habías olvidado.",
 			"next": "cecilia_002",
 			"set_flag": "met_cecilia"
 		},
 		"cecilia_002": {
 			"speaker": "lyanna",
-			"text": "Dramática, como sempre!",
-			"eng": "Dramatic, as always!",
-			"es": "¡Dramática, como siempre!",
+			"text": "~Dramática, como sempre!~",
+			"eng": "~Dramatic, as always!~",
+			"es": "~¡Dramática, como siempre!~",
 			"next": "cecilia_003"
 		},
 		"cecilia_003": {
@@ -27,16 +27,16 @@
 		},
 		"cecilia_004": {
 			"speaker": "lyanna",
-			"text": "Antes fosse... Só demorei pra pegar no sono. Mas e aí, como foi a viagem?",
-			"eng": "I wish it was... I just took a while to fall asleep. But anyway, how was the trip?",
-			"es": "Ojalá... Solo me tomó un rato dormirme. Pero bueno, ¿cómo fue el viaje?",
+			"text": "[slow]Antes fosse...[/slow][pause=350] Só demorei pra pegar no sono. Mas e aí, como foi a viagem?",
+			"eng": "[slow]I wish it was...[/slow][pause=350] I just took a while to fall asleep. But anyway, how was the trip?",
+			"es": "[slow]Ojalá...[/slow][pause=350] Solo me tomó un rato dormirme. Pero bueno, ¿cómo fue el viaje?",
 			"next": "cecilia_005"
 		},
 		"cecilia_005": {
 			"speaker": "cecilia",
-			"text": "Um caos! A entrada pra cidade tava parecendo uma piscina.",
-			"eng": "A mess! The city entrance looked like a swimming pool.",
-			"es": "¡Un caos! La entrada a la ciudad parecía una piscina.",
+			"text": "[impact]*Um caos!*[/impact] A entrada pra cidade tava parecendo uma piscina.",
+			"eng": "[impact]*A mess!*[/impact] The city entrance looked like a swimming pool.",
+			"es": "[impact]*¡Un caos!*[/impact] La entrada a la ciudad parecía una piscina.",
 			"next": "cecilia_006"
 		},
 		"cecilia_006": {
@@ -48,9 +48,9 @@
 		},
 		"cecilia_007": {
 			"speaker": "cecilia",
-			"text": "É... você não tá esquecendo de nada, não?",
-			"eng": "Yeah... you're not forgetting anything, are you?",
-			"es": "Sí... no estás olvidando nada, ¿verdad?",
+			"text": "[slow]É...[/slow][pause=350] você não tá ~esquecendo de nada~, não?",
+			"eng": "[slow]Yeah...[/slow][pause=350] you're not ~forgetting anything~, are you?",
+			"es": "[slow]Sí...[/slow][pause=350] no estás ~olvidando nada~, ¿verdad?",
 			"next": "choice_birthday"
 		},
 		"choice_birthday": {
@@ -77,30 +77,30 @@
 		},
 		"birthday_001": {
 			"speaker": "lyanna",
-			"text": "Claro que não, deixa de ser boba. Só tava esperando o momento certo.",
-			"eng": "Of course not, stop being silly. I was just waiting for the right moment.",
-			"es": "Claro que no, deja de ser boba. Solo estaba esperando el momento correcto.",
+			"text": "Claro que não, deixa de ser boba. Só tava esperando o ~momento certo~.",
+			"eng": "Of course not, stop being silly. I was just waiting for the ~right moment~.",
+			"es": "Claro que no, deja de ser boba. Solo estaba esperando el ~momento correcto~.",
 			"next": "birthday_002"
 		},
 		"birthday_002": {
 			"speaker": "lyanna",
-			"text": "Feliz aniversário, de verdade. Fico feliz que você veio pra cá, mesmo com a correria da redação.",
-			"eng": "Happy birthday, really. I'm glad you came here, even with all the rush from the newsroom.",
-			"es": "Feliz cumpleaños, de verdad. Me alegra que hayas venido aquí, incluso con toda la prisa de la redacción.",
+			"text": "*Feliz aniversário*, de verdade. Fico feliz que você veio pra cá, mesmo com a correria da redação.",
+			"eng": "*Happy birthday*, really. I'm glad you came here, even with all the rush from the newsroom.",
+			"es": "*Feliz cumpleaños*, de verdad. Me alegra que hayas venido aquí, incluso con toda la prisa de la redacción.",
 			"next": "birthday_003"
 		},
 		"birthday_003": {
 			"speaker": "cecilia",
-			"text": "Obrigado amiga. Mas vem cá, eu sei que hoje é um dia complicado pra você também, né?",
-			"eng": "Thanks, friend. But come here, I know today is a hard day for you too, right?",
-			"es": "Gracias, amiga. Pero ven aquí, sé que hoy también es un día difícil para ti, ¿verdad?",
+			"text": "Obrigado amiga. Mas vem cá,[pause=250] [slow]eu sei que hoje é um dia complicado pra você também, né?[/slow]",
+			"eng": "Thanks, friend. But come here,[pause=250] [slow]I know today is a hard day for you too, right?[/slow]",
+			"es": "Gracias, amiga. Pero ven aquí,[pause=250] [slow]sé que hoy también es un día difícil para ti, ¿verdad?[/slow]",
 			"next": "birthday_004"
 		},
 		"birthday_004": {
 			"speaker": "lyanna",
-			"text": "É... você sabe, amiga. Mas não vamos falar disso agora, é seu aniversário!",
-			"eng": "Yeah... you know, friend. But let's not talk about that now, it's your birthday!",
-			"es": "Sí... ya sabes, amiga. Pero no hablemos de eso ahora, ¡es tu cumpleaños!",
+			"text": "[slow]É... você sabe, amiga.[/slow][pause=300] [fast]Mas não vamos falar disso agora, é seu aniversário![/fast]",
+			"eng": "[slow]Yeah... you know, friend.[/slow][pause=300] [fast]But let's not talk about that now, it's your birthday![/fast]",
+			"es": "[slow]Sí... ya sabes, amiga.[/slow][pause=300] [fast]Pero no hablemos de eso ahora, ¡es tu cumpleaños![/fast]",
 			"next": "birthday_005"
 		},
 		"birthday_005": {
@@ -112,30 +112,30 @@
 		},
 		"forgetful_001": {
 			"speaker": "lyanna",
-			"text": "O quê? O café? O Bruno disse que eu prometi, mas eu juro que...",
-			"eng": "What? The coffee? Bruno said I promised, but I swear I...",
-			"es": "¿Qué? ¿El café? Bruno dijo que prometí, pero juro que...",
+			"text": "[fast]O quê? O café?[/fast] O Bruno disse que eu prometi, mas eu juro que...",
+			"eng": "[fast]What? The coffee?[/fast] Bruno said I promised, but I swear I...",
+			"es": "[fast]¿Qué? ¿El café?[/fast] Bruno dijo que prometí, pero juro que...",
 			"next": "forgetful_002"
 		},
 		"forgetful_002": {
 			"speaker": "cecilia",
-			"text": "Lyanna Costa Evaristo... olha a data no seu celular agora!",
-			"eng": "Lyanna Costa Evaristo... check the date on your phone now!",
-			"es": "Lyanna Costa Evaristo... mira la fecha en tu celular ahora mismo.",
+			"text": "[pop]Lyanna Costa Evaristo...[/pop] olha a *data* no seu celular [impact]agora![/impact]",
+			"eng": "[pop]Lyanna Costa Evaristo...[/pop] check the *date* on your phone [impact]now![/impact]",
+			"es": "[pop]Lyanna Costa Evaristo...[/pop] mira la *fecha* en tu celular [impact]ahora mismo.[/impact]",
 			"next": "forgetful_003"
 		},
 		"forgetful_003": {
 			"speaker": "lyanna",
-			"text": "Nossa, Cecília! Feliz aniversário, amiga! Desculpa, minha cabeça tá em outro lugar hoje... você sabe que dia é hoje pra mim também, né?",
-			"eng": "Wow, Cecília! Happy birthday, friend! Sorry, my head is somewhere else today... you know what today is for me too, right?",
-			"es": "¡Dios, Cecilia! ¡Feliz cumpleaños, amiga! Perdón, mi cabeza está en otro lado hoy... ya sabes qué día es para mí también, ¿verdad?",
+			"text": "[impact]Nossa, Cecília![/impact] [fast]Feliz aniversário, amiga![/fast] [slow]Desculpa, minha cabeça tá em outro lugar hoje... você sabe que dia é hoje pra mim também, né?[/slow]",
+			"eng": "[impact]Wow, Cecília![/impact] [fast]Happy birthday, friend![/fast] [slow]Sorry, my head is somewhere else today... you know what today is for me too, right?[/slow]",
+			"es": "[impact]¡Dios, Cecilia![/impact] [fast]¡Feliz cumpleaños, amiga![/fast] [slow]Perdón, mi cabeza está en otro lado hoy... ya sabes qué día es para mí también, ¿verdad?[/slow]",
 			"next": "forgetful_004"
 		},
 		"forgetful_004": {
 			"speaker": "cecilia",
-			"text": "Sim, eu sei. Te desculpo por ter esquecido. Podemos falar sobre isso depois, se você quiser.",
-			"eng": "Yes, I know. I forgive you for forgetting. We can talk about it later, if you want.",
-			"es": "Sí, lo sé. Te perdono por olvidarlo. Podemos hablar de eso después, si quieres.",
+			"text": "[slow]Sim, eu sei. Te desculpo por ter esquecido.[/slow] Podemos falar sobre isso depois, se você quiser.",
+			"eng": "[slow]Yes, I know. I forgive you for forgetting.[/slow] We can talk about it later, if you want.",
+			"es": "[slow]Sí, lo sé. Te perdono por olvidarlo.[/slow] Podemos hablar de eso después, si quieres.",
 			"next": "forgetful_005"
 		},
 		"forgetful_005": {

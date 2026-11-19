@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://beb7i6fvx0k3d" path="res://assets/art/environment/props/pixel_art_large (1).png" id="4_c6nj8"]
 [ext_resource type="Texture2D" uid="uid://djp60utwb6s0l" path="res://assets/art/environment/props/pixel_art_large (2).png" id="5_x404o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0xlo"]
-size = Vector2(548, 526)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6nj8"]
 atlas = ExtResource("2_gjbey")
 region = Rect2(0, 0, 1024, 1024)
@@ -32,37 +29,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DiscStack" type="Area2D" unique_id=877164899]
+[node name="DiscStack" type="Node2D" unique_id=877164899]
 script = ExtResource("1_l0xlo")
 metadata/_edit_vertical_guides_ = [-208.0]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1225768035]
-position = Vector2(-8, -6)
-shape = SubResource("RectangleShape2D_l0xlo")
-
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=1546463824]
+visible = false
 position = Vector2(48, -464)
 sprite_frames = SubResource("SpriteFrames_ft0ag")
 
 [node name="Disco1" type="Sprite2D" parent="." unique_id=1362681996]
-position = Vector2(-4.7683716e-06, 4.7683716e-06)
-scale = Vector2(1.024, 1.024)
+scale = Vector2(1, 1)
 texture = ExtResource("2_i43ii")
 
 [node name="Disco2" type="Sprite2D" parent="." unique_id=423054107]
-position = Vector2(6.67572e-06, -3.71933e-05)
-scale = Vector2(0.47407407, 0.474074)
+scale = Vector2(0.46296296, 0.46296296)
 texture = ExtResource("3_gjbey")
 
 [node name="Disco3" type="Sprite2D" parent="." unique_id=1696661702]
-position = Vector2(-1.9073486e-05, -5.722046e-06)
-scale = Vector2(0.79999995, 0.79999995)
+scale = Vector2(0.78125, 0.78125)
 texture = ExtResource("4_c6nj8")
 
 [node name="Disco4" type="Sprite2D" parent="." unique_id=560458849]
-position = Vector2(-7.1525574e-06, 7.1525574e-06)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.48828125, 0.48828125)
 texture = ExtResource("5_x404o")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

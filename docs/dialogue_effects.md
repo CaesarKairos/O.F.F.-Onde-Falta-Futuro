@@ -1,6 +1,6 @@
 # Efeitos expressivos de diálogo
 
-Este sistema experimental acrescenta ritmo e entonação ao texto sem alterar o roteiro. Ele está ativo por padrão na branch `experimental/dialogue-effects` e aceita normalmente falas sem marcação.
+Este sistema acrescenta ritmo e entonação ao texto sem alterar o roteiro. A implementação foi aprovada, está integrada à branch `refactor/project-structure` e aceita normalmente falas sem marcação. Os diálogos existentes do capítulo 01 receberam direção artística em português, inglês e espanhol.
 
 ## Sintaxe
 

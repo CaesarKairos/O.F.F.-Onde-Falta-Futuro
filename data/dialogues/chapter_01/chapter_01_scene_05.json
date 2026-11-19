@@ -5,37 +5,37 @@
 	"nodes": {
 		"phone_001": {
 			"speaker": "Paulo",
-			"text": "Lyanna? Finalmente. Foco aqui, esquece essa chuva, isso não rende nada.",
-			"eng": "Lyanna? Finally. Focus here, forget about the rain, that doesn't get anything done.",
-			"es": "¿Lyanna? Por fin. Concéntrate aquí, olvida la lluvia, eso no sirve para nada.",
+			"text": "Lyanna? Finalmente. [fast]Foco aqui, esquece essa chuva, isso não rende nada.[/fast]",
+			"eng": "Lyanna? Finally. [fast]Focus here, forget about the rain, that doesn't get anything done.[/fast]",
+			"es": "¿Lyanna? Por fin. [fast]Concéntrate aquí, olvida la lluvia, eso no sirve para nada.[/fast]",
 			"next": "phone_002"
 		},
 		"phone_002": {
 			"speaker": "Lyanna",
-			"text": "Paulo, mas...",
-			"eng": "Paulo, but...",
-			"es": "Paulo, pero...",
+			"text": "[slow]Paulo, mas...[/slow]",
+			"eng": "[slow]Paulo, but...[/slow]",
+			"es": "[slow]Paulo, pero...[/slow]",
 			"next": "phone_003"
 		},
 		"phone_003": {
 			"speaker": "Paulo",
-			"text": "Não, não, não. Presta atenção. Consegui uma exclusiva. O produtor daquele show do ano passado quer repetir a dose. Vai ser o maior festival de música que essa periferia já viu.",
-			"eng": "No, no, no. Listen up. I got an exclusive. The producer of that show last year wants to do it again. It's gonna be the biggest music festival this outskirts has ever seen.",
-			"es": "No, no, no. Escúchame. Conseguí una exclusiva. El productor de ese show del año pasado quiere repetir la historia. Será el mayor festival de música que ha visto este barrio.",
+			"text": "[pop]Não, não, não.[/pop] Presta atenção. Consegui uma *exclusiva*. O produtor daquele show do ano passado quer repetir a dose. [fast]Vai ser o maior festival de música que essa periferia já viu.[/fast]",
+			"eng": "[pop]No, no, no.[/pop] Listen up. I got an *exclusive*. The producer of that show last year wants to do it again. [fast]It's gonna be the biggest music festival this outskirts has ever seen.[/fast]",
+			"es": "[pop]No, no, no.[/pop] Escúchame. Conseguí una *exclusiva*. El productor de ese show del año pasado quiere repetir la historia. [fast]Será el mayor festival de música que ha visto este barrio.[/fast]",
 			"next": "phone_004"
 		},
 		"phone_004": {
 			"speaker": "Lyanna",
-			"text": "Mas Paulo... aquele terreno onde estão montando o palco era a única área que absorvia a água aqui. O bairro inteiro está inundado.",
-			"eng": "But Paulo... that land where they're setting up the stage was the only area that absorbed water around here. The whole neighborhood is flooded.",
-			"es": "Pero Paulo... ese terreno donde están montando el escenario era la única zona que absorbía el agua aquí. Todo el barrio está inundado.",
+			"text": "[slow]Mas Paulo... aquele terreno onde estão montando o palco era a *única área* que absorvia a água aqui.[/slow] O bairro inteiro está *inundado*.",
+			"eng": "[slow]But Paulo... that land where they're setting up the stage was the *only area* that absorbed water around here.[/slow] The whole neighborhood is *flooded*.",
+			"es": "[slow]Pero Paulo... ese terreno donde están montando el escenario era la *única zona* que absorbía el agua aquí.[/slow] Todo el barrio está *inundado*.",
 			"next": "phone_005"
 		},
 		"phone_005": {
 			"speaker": "Paulo",
-			"text": "Não importa, cara. Deixa de ser negativa. Quero uma matéria bonita, bem escrita, exaltando o evento.",
-			"eng": "Doesn't matter, man. Stop being negative. I want a beautiful article, well written, praising the event.",
-			"es": "No importa, amigo. Deja de ser negativo. Quiero un artículo bonito, bien escrito, ensalzando el evento.",
+			"text": "[pop]Não importa, cara.[/pop] [fast]Deixa de ser negativa. Quero uma matéria bonita, bem escrita, exaltando o evento.[/fast]",
+			"eng": "[pop]Doesn't matter, man.[/pop] [fast]Stop being negative. I want a beautiful article, well written, praising the event.[/fast]",
+			"es": "[pop]No importa, amigo.[/pop] [fast]Deja de ser negativo. Quiero un artículo bonito, bien escrito, ensalzando el evento.[/fast]",
 			"next": "choice_001"
 		},
 		"choice_001": {
@@ -69,51 +69,51 @@
 		},
 		"response_001": {
 			"speaker": "Lyanna",
-			"text": "Paulo, isso não tá certo. A gente vai fingir descaradamente que isso é bom?",
-			"eng": "Paulo, this isn't right. Are we just gonna blatantly pretend this is good?",
-			"es": "Paulo, esto no está bien. ¿Vamos a fingir descaradamente que esto está bien?",
+			"text": "Paulo, *isso não tá certo*. A gente vai fingir descaradamente que isso é bom?",
+			"eng": "Paulo, *this isn't right*. Are we just gonna blatantly pretend this is good?",
+			"es": "Paulo, *esto no está bien*. ¿Vamos a fingir descaradamente que esto está bien?",
 			"next": "phone_006"
 		},
 		"response_002": {
 			"speaker": "Lyanna",
-			"text": "Eu tô no meio de outra pauta. Isso não pode esperar?",
-			"eng": "I'm in the middle of another assignment. Can't this wait?",
-			"es": "Estoy en medio de otra nota. ¿Esto no puede esperar?",
+			"text": "[slow]Eu tô no meio de outra pauta. Isso não pode esperar?[/slow]",
+			"eng": "[slow]I'm in the middle of another assignment. Can't this wait?[/slow]",
+			"es": "[slow]Estoy en medio de otra nota. ¿Esto no puede esperar?[/slow]",
 			"next": "phone_006"
 		},
 		"response_003": {
 			"speaker": "Lyanna",
-			"text": "Você quer propaganda, não jornalismo.",
-			"eng": "You want propaganda, not journalism.",
-			"es": "Quieres propaganda, no periodismo.",
+			"text": "[pop]Você quer *propaganda*, não jornalismo.[/pop]",
+			"eng": "[pop]You want *propaganda*, not journalism.[/pop]",
+			"es": "[pop]Quieres *propaganda*, no periodismo.[/pop]",
 			"next": "phone_006"
 		},
 		"phone_006": {
 			"speaker": "Paulo",
-			"text": "Lyanna, eu não tô abrindo debate. Só faz. E faz direito, porque eu não vou passar pano se vier meia-boca. Não me decepciona.",
-			"eng": "Lyanna, I'm not opening a debate. Just do it. And do it right, because I won't cover up for half-baked work. Don't disappoint me.",
-			"es": "Lyanna, no estoy abriendo un debate. Hazlo. Y hazlo bien, porque no voy a tapar un trabajo mediocre. No me decepciones.",
+			"text": "Lyanna, eu não tô abrindo debate. [pop]Só faz. E faz direito,[/pop] porque eu não vou passar pano se vier meia-boca. [impact]Não me decepciona.[/impact]",
+			"eng": "Lyanna, I'm not opening a debate. [pop]Just do it. And do it right,[/pop] because I won't cover up for half-baked work. [impact]Don't disappoint me.[/impact]",
+			"es": "Lyanna, no estoy abriendo un debate. [pop]Hazlo. Y hazlo bien,[/pop] porque no voy a tapar un trabajo mediocre. [impact]No me decepciones.[/impact]",
 			"next": "phone_007"
 		},
 		"phone_007": {
 			"speaker": "Lyanna",
-			"text": "Paulo... não sei se quero fazer isso.",
-			"eng": "Paulo... I don't know if I want to do this.",
-			"es": "Paulo... no sé si quiero hacer esto.",
+			"text": "[slow]Paulo... não sei se quero fazer isso.[/slow]",
+			"eng": "[slow]Paulo... I don't know if I want to do this.[/slow]",
+			"es": "[slow]Paulo... no sé si quiero hacer esto.[/slow]",
 			"next": "phone_008"
 		},
 		"phone_008": {
 			"speaker": "Lyanna",
-			"text": "Ele nem deve ter ouvido o que eu disse...",
-			"eng": "He probably didn't even hear what I said...",
-			"es": "Ni siquiera debió escuchar lo que dije...",
+			"text": "[whisper]Ele nem deve ter ouvido o que eu disse...[/whisper]",
+			"eng": "[whisper]He probably didn't even hear what I said...[/whisper]",
+			"es": "[whisper]Ni siquiera debió escuchar lo que dije...[/whisper]",
 			"next": "phone_009"
 		},
 		"phone_009": {
 			"speaker": "Lyanna",
-			"text": "Pão e circo.",
-			"eng": "Bread and circuses.",
-			"es": "Pan y circo.",
+			"text": "[pop]*Pão e circo.*[/pop]",
+			"eng": "[pop]*Bread and circuses.*[/pop]",
+			"es": "[pop]*Pan y circo.*[/pop]",
 			"next": "scene_end",
 			"set_flag": "received_festival_assignment"
 		},

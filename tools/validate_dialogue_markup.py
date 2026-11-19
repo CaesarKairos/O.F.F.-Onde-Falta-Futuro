@@ -7,10 +7,16 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DIALOGUE_PATH = Path("data/dialogues/chapter_01/chapter_01_scene_01.json")
+BASELINE_REF = "ad46fd5"
+SCENE_01_BASELINE_REF = "c2c01c2"
+DIALOGUE_PATHS = sorted(Path("data/dialogues").rglob("*.json"))
 TEXT_FIELDS = {"text", "eng", "es", "esp", "message", "message_en", "message_es"}
 PAUSE = re.compile(r"\[pause=\d+\]")
 TAGS = re.compile(r"\[/?(?:slow|fast|pop|whisper|impact)\]")
+TOKENS = re.compile(
+    r"(?<!\\)(\*|~|\[(?:pause=\d+|/?(?:slow|fast|pop|whisper|impact))\])"
+)
+BRACKET_MARKUP = re.compile(r"(?<!\\)\[[^\]]+\]")
 
 
 def strip_markup(value: str) -> str:
@@ -31,6 +37,37 @@ def strip_markup(value: str) -> str:
     return "".join(output)
 
 
+def validate_markup(value: str, path: str) -> list[str]:
+    failures: list[str] = []
+    known_brackets = {match.group(0) for match in TOKENS.finditer(value) if match.group(0).startswith("[")}
+    for match in BRACKET_MARKUP.finditer(value):
+        if match.group(0) not in known_brackets:
+            failures.append(f"{path}: marcação desconhecida {match.group(0)!r}")
+
+    stack: list[str] = []
+    for match in TOKENS.finditer(value):
+        token = match.group(0)
+        if token.startswith("[pause="):
+            continue
+        if token in {"*", "~"}:
+            if stack and stack[-1] == token:
+                stack.pop()
+            else:
+                stack.append(token)
+            continue
+        if token.startswith("[/"):
+            effect = token[2:-1]
+            if not stack or stack[-1] != effect:
+                failures.append(f"{path}: fechamento incompatível {token!r}")
+            else:
+                stack.pop()
+        else:
+            stack.append(token[1:-1])
+    if stack:
+        failures.append(f"{path}: marcações não fechadas {stack!r}")
+    return failures
+
+
 def compare(before, after, path="root") -> list[str]:
     failures: list[str] = []
     if type(before) is not type(after):
@@ -43,6 +80,7 @@ def compare(before, after, path="root") -> list[str]:
             if key in TEXT_FIELDS and isinstance(before[key], str):
                 if strip_markup(after[key]) != before[key]:
                     failures.append(f"{child_path}: conteúdo original alterado")
+                failures.extend(validate_markup(after[key], child_path))
             else:
                 failures.extend(compare(before[key], after[key], child_path))
     elif isinstance(before, list):
@@ -56,17 +94,24 @@ def compare(before, after, path="root") -> list[str]:
 
 
 def main() -> int:
-    baseline = subprocess.run(
-        ["git", "show", f"refactor/project-structure:{DIALOGUE_PATH.as_posix()}"],
-        cwd=PROJECT_ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-    )
-    before = json.loads(baseline.stdout)
-    after = json.loads((PROJECT_ROOT / DIALOGUE_PATH).read_text(encoding="utf-8"))
-    failures = compare(before, after)
+    failures: list[str] = []
+    for dialogue_path in DIALOGUE_PATHS:
+        baseline_ref = (
+            SCENE_01_BASELINE_REF
+            if dialogue_path.name == "chapter_01_scene_01.json"
+            else BASELINE_REF
+        )
+        baseline = subprocess.run(
+            ["git", "show", f"{baseline_ref}:{dialogue_path.as_posix()}"],
+            cwd=PROJECT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+        before = json.loads(baseline.stdout)
+        after = json.loads((PROJECT_ROOT / dialogue_path).read_text(encoding="utf-8"))
+        failures.extend(compare(before, after, dialogue_path.as_posix()))
     if failures:
         print("VALIDATION FAILED")
         print("\n".join(failures))
