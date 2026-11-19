@@ -9,14 +9,34 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 BASELINE_REF = "ad46fd5"
 SCENE_01_BASELINE_REF = "c2c01c2"
+RESOURCE_BASELINE_REF = "8fe1766"
 DIALOGUE_PATHS = sorted(Path("data/dialogues").rglob("*.json"))
 TEXT_FIELDS = {"text", "eng", "es", "esp", "message", "message_en", "message_es"}
+RESOURCE_MESSAGE_FIELDS = (
+    "message",
+    "message_en",
+    "message_es",
+    "locked_message_pt",
+    "locked_message_en",
+    "locked_message_es",
+    "locked_message_item1_pt",
+    "locked_message_item1_en",
+    "locked_message_item1_es",
+    "locked_message_item2_pt",
+    "locked_message_item2_en",
+    "locked_message_item2_es",
+)
 PAUSE = re.compile(r"\[pause=\d+\]")
 TAGS = re.compile(r"\[/?(?:slow|fast|pop|whisper|impact)\]")
 TOKENS = re.compile(
     r"(?<!\\)(\*|~|\[(?:pause=\d+|/?(?:slow|fast|pop|whisper|impact))\])"
 )
 BRACKET_MARKUP = re.compile(r"(?<!\\)\[[^\]]+\]")
+RESOURCE_ASSIGNMENT = re.compile(
+    rf'^\s*(?:@export\s+var\s+)?(?P<field>{"|".join(RESOURCE_MESSAGE_FIELDS)})'
+    r'\s*(?::[^=]+)?(?::=|=)\s*"(?P<value>.*)"\s*$',
+    re.MULTILINE,
+)
 
 
 def strip_markup(value: str) -> str:
@@ -93,6 +113,54 @@ def compare(before, after, path="root") -> list[str]:
     return failures
 
 
+def resource_messages(source: str) -> dict[str, str]:
+    return {
+        match.group("field"): match.group("value")
+        for match in RESOURCE_ASSIGNMENT.finditer(source)
+    }
+
+
+def validate_resource_messages() -> list[str]:
+    failures: list[str] = []
+    listing = subprocess.run(
+        [
+            "git", "ls-tree", "-r", "--name-only", RESOURCE_BASELINE_REF, "--",
+            "scenes/objects", "scenes/components", "scenes/levels", "scripts/managers",
+        ],
+        cwd=PROJECT_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    for raw_path in listing.stdout.splitlines():
+        resource_path = Path(raw_path)
+        if resource_path.suffix not in {".gd", ".tscn"}:
+            continue
+        current_path = PROJECT_ROOT / resource_path
+        if not current_path.exists():
+            continue
+        baseline = subprocess.run(
+            ["git", "show", f"{RESOURCE_BASELINE_REF}:{resource_path.as_posix()}"],
+            cwd=PROJECT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        ).stdout
+        before = resource_messages(baseline)
+        after = resource_messages(current_path.read_text(encoding="utf-8"))
+        if before.keys() != after.keys():
+            failures.append(f"{resource_path.as_posix()}: campos de mensagem alterados")
+            continue
+        for field, original in before.items():
+            path = f"{resource_path.as_posix()}.{field}"
+            if strip_markup(after[field]) != original:
+                failures.append(f"{path}: conteúdo original alterado")
+            failures.extend(validate_markup(after[field], path))
+    return failures
+
+
 def main() -> int:
     failures: list[str] = []
     for dialogue_path in DIALOGUE_PATHS:
@@ -112,6 +180,7 @@ def main() -> int:
         before = json.loads(baseline.stdout)
         after = json.loads((PROJECT_ROOT / dialogue_path).read_text(encoding="utf-8"))
         failures.extend(compare(before, after, dialogue_path.as_posix()))
+    failures.extend(validate_resource_messages())
     if failures:
         print("VALIDATION FAILED")
         print("\n".join(failures))

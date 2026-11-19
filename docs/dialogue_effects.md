@@ -40,4 +40,10 @@ Os parâmetros ficam em `scripts/managers/dialogue_effects_manager.gd`: velocida
 
 Comece pela intenção da fala. Use efeitos apenas onde ritmo ou entonação acrescentam significado. Marque cada idioma de acordo com sua própria estrutura, sem copiar posições mecanicamente. Nomes e informações importantes podem receber destaque; hesitação combina com `slow`; urgência com `fast`; uma interrupção forte com `impact`; ironia leve com onda; segredos com sussurro.
 
+## Mensagens de objetos interativos
+
+As mesmas marcações podem ser usadas em pensamentos, observações de objetos, itens coletáveis e avisos de passagens bloqueadas. Acrescente-as diretamente às propriedades exportadas `message`, `message_en`, `message_es` e às variantes `locked_message_*`, tanto nos valores padrão dos scripts quanto nas sobrescritas configuradas pelo Inspector nos arquivos `.tscn`.
+
+Mensagens de objetos pedem uma direção mais contida que confrontos entre personagens. Priorize introspecção, nostalgia, humor e clareza do próximo objetivo; mensagens cotidianas podem permanecer apenas com o Typewriter padrão. Preserve sempre as três traduções e confirme qual valor efetivo está configurado na instância da cena.
+
 Para adicionar um efeito visual novo, implemente um `RichTextEffect` em `scenes/ui/dialogue/effects`, registre-o no `MessageUI` e acrescente a tag ao parser estruturado. Mantenha valores ajustáveis no manager e estado de reprodução na interface.

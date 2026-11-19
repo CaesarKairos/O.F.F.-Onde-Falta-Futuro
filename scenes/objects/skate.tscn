@@ -6,9 +6,9 @@
 size = Vector2(64, 82.25)
 
 [node name="Skate" unique_id=15208082 instance=ExtResource("1_5bekt")]
-message = "O skate do Bruno. Ele vive dizendo que esse é o jeito mais rápido de fugir dos problemas."
-message_en = "Bruno's skateboard. He always says it's the fastest way to run away from problems."
-message_es = "La patineta de Bruno. Siempre dice que es la forma más rápida de huir de los problemas."
+message = "O skate do Bruno. Ele vive dizendo que esse é o jeito mais rápido de ~fugir dos problemas~."
+message_en = "Bruno's skateboard. He always says it's the fastest way to ~run away from problems~."
+message_es = "La patineta de Bruno. Siempre dice que es la forma más rápida de ~huir de los problemas~."
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
 position = Vector2(343, 256)

@@ -13,3 +13,7 @@ export.cfg
 
 # Local diagnostics and validation output
 /.logs/
+
+# Python validation cache
+__pycache__/
+*.py[cod]

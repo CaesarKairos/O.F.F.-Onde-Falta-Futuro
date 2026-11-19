@@ -88,9 +88,9 @@ required_item = "chave_bagunca"
 open_flag = "bagunca_door_open"
 consume_item = "chave_bagunca"
 set_flag_on_use = "bagunca_door_open"
-locked_message_pt = "Talvez tenha um cartão de memória aqui, mas estou sem a chave."
-locked_message_en = "There might be a memory card in there, but I don't have the key."
-locked_message_es = "Quizás haya una tarjeta de memoria ahí, pero no tengo la llave."
+locked_message_pt = "Talvez tenha um *cartão de memória* aqui, mas estou sem a *chave*."
+locked_message_en = "There might be a *memory card* in there, but I don't have the *key*."
+locked_message_es = "Quizás haya una *tarjeta de memoria* ahí, pero no tengo la *llave*."
 
 [node name="InventoryUI" parent="." unique_id=798084268 instance=ExtResource("6_xuydn")]
 

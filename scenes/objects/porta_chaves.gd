@@ -7,9 +7,9 @@ extends Area2D
 var player_near := false
 var collected := false
 
-@export var message := "A chave do quartinho de bagunça. Sabia que estava aqui. Preciso dar uma geral lá depois para achar meu cartão de memória reserva."
-@export var message_en := "The key to the junk room. I knew it was here. I need to tidy up in there later to find my spare memory card."
-@export var message_es := "La llave del cuartito del desorden. Sabía que estaba aquí. Necesito ordenar un poco allí después para encontrar mi tarjeta de memoria de repuesto."
+@export var message := "A *chave do quartinho de bagunça*. Sabia que estava aqui.[pause=250] Preciso dar uma geral lá depois para achar meu *cartão de memória reserva*."
+@export var message_en := "The *key to the junk room*. I knew it was here.[pause=250] I need to tidy up in there later to find my *spare memory card*."
+@export var message_es := "La *llave del cuartito del desorden*. Sabía que estaba aquí.[pause=250] Necesito ordenar un poco allí después para encontrar mi *tarjeta de memoria de repuesto*."
 
 
 func _ready() -> void:

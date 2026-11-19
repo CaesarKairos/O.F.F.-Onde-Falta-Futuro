@@ -5,9 +5,9 @@ extends Area2D
 
 var player_near = false
 
-@export var message := "Um cartão de memória reserva, jogado entre as coisas antigas. Agora sim eu posso sair pra rua."
-@export var message_en := "A spare memory card, tossed among the old stuff. Now I can finally head out to the street."
-@export var message_es := "Una tarjeta de memoria de repuesto, tirada entre las cosas viejas. Ahora sí puedo salir a la calle."
+@export var message := "Um *cartão de memória reserva*, jogado entre as coisas antigas. [pop]Agora sim[/pop] eu posso sair pra rua."
+@export var message_en := "A *spare memory card*, tossed among the old stuff. [pop]Now[/pop] I can finally head out to the street."
+@export var message_es := "Una *tarjeta de memoria de repuesto*, tirada entre las cosas viejas. [pop]Ahora sí[/pop] puedo salir a la calle."
 
 func _ready():
 

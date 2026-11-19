@@ -8,9 +8,9 @@
 size = Vector2(35.875, 82.25)
 
 [node name="Quadro do pai" unique_id=15208082 instance=ExtResource("1_fpp3b")]
-message = "“A casa ainda parece vazia demais hoje, mesmo depois de anos sem o senhor…”"
-message_en = "“The house still feels too empty today, even after all these years without you…”"
-message_es = "“La casa todavía parece demasiado vacía hoy, incluso después de años sin usted…”"
+message = "“[slow]A casa ainda parece *vazia demais* hoje,[/slow][pause=500] [whisper]mesmo depois de anos sem o senhor…[/whisper]”"
+message_en = "“[slow]The house still feels *too empty* today,[/slow][pause=500] [whisper]even after all these years without you…[/whisper]”"
+message_es = "“[slow]La casa todavía parece *demasiado vacía* hoy,[/slow][pause=500] [whisper]incluso después de años sin usted…[/whisper]”"
 
 [node name="Sprite2D" parent="." index="1" unique_id=389972176]
 visible = false

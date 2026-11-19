@@ -6,9 +6,9 @@
 size = Vector2(64, 82.25)
 
 [node name="FiltroBarro" unique_id=15208082 instance=ExtResource("1_5bekt")]
-message = "Água fresquinha."
-message_en = "Fresh water."
-message_es = "Agua fresquita."
+message = "Água ~fresquinha~."
+message_en = "~Fresh~ water."
+message_es = "Agua ~fresquita~."
 
 [node name="InteractionIcon" parent="." index="0" unique_id=832703344]
 position = Vector2(343, 256)

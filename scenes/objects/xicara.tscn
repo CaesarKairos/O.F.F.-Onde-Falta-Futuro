@@ -61,9 +61,9 @@ animations = [{
 
 [node name="Xicara" type="Area2D" unique_id=15208082]
 script = ExtResource("1_171rm")
-message = "“Fiquei acordada até tarde ontem... Pensar tira o meu sono”"
-message_en = "“I stayed up late last night... Thinking keeps me from sleeping”"
-message_es = "“Me quedé despierta hasta tarde anoche... Pensar me quita el sueño.”"
+message = "“[slow]Fiquei acordada até tarde ontem...[/slow][pause=450] [whisper]Pensar tira o meu sono[/whisper]”"
+message_en = "“[slow]I stayed up late last night...[/slow][pause=450] [whisper]Thinking keeps me from sleeping[/whisper]”"
+message_es = "“[slow]Me quedé despierta hasta tarde anoche...[/slow][pause=450] [whisper]Pensar me quita el sueño.[/whisper]”"
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="." unique_id=832703344]
 position = Vector2(404, 276.00003)

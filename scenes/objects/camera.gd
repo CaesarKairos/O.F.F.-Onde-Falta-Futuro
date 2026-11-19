@@ -5,9 +5,9 @@ extends Area2D
 
 var player_near = false
 
-@export var message := "Não posso sair sem ela; é como se fosse o meu terceiro olho. Mas... onde está o cartão de memória?"
-@export var message_en := "I can't leave without it; it's like my third eye. But... where's the memory card?"
-@export var message_es := "No puedo salir sin ella; es como si fuera mi tercer ojo. Pero... ¿dónde está la tarjeta de memoria?"
+@export var message := "Não posso sair sem ela; é como se fosse o meu [slow]terceiro olho.[/slow] Mas...[pause=400] onde está o *cartão de memória*?"
+@export var message_en := "I can't leave without it; it's like my [slow]third eye.[/slow] But...[pause=400] where's the *memory card*?"
+@export var message_es := "No puedo salir sin ella; es como si fuera mi [slow]tercer ojo.[/slow] Pero...[pause=400] ¿dónde está la *tarjeta de memoria*?"
 
 # Trava opcional: se preenchida, o item só pode ser interagido quando essa
 # flag estiver setada no GameState. Vazio = comportamento original (sempre ativo).
