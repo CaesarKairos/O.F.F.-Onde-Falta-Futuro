@@ -48,7 +48,7 @@ animations = [{
 [node name="cena 03 - cozinha" type="Node2D" unique_id=816225611]
 
 [node name="Cenário4Cozinha" type="Sprite2D" parent="." unique_id=1711734731]
-position = Vector2(641, 362)
+position = Vector2(640, 360)
 texture = ExtResource("1_84w6f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1575263455]

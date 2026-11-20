@@ -438,7 +438,7 @@ offset_right = 1280.0
 offset_bottom = 718.0
 
 [node name="LoadingScreen" type="Sprite2D" parent="Control/background" unique_id=1042897815]
-position = Vector2(640, 358)
+position = Vector2(640, 360)
 texture = ExtResource("1_xcji7")
 
 [node name="setinha_direita" type="AnimatedSprite2D" parent="Control/background" unique_id=797813540]

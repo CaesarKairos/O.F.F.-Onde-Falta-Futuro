@@ -34,7 +34,7 @@ position = Vector2(50, 466)
 position = Vector2(1120, 466)
 
 [node name="Cenário2Corredor(1)" type="Sprite2D" parent="." unique_id=737547993]
-position = Vector2(638, 365)
+position = Vector2(640, 360)
 texture = ExtResource("1_hcpcc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2115579230]

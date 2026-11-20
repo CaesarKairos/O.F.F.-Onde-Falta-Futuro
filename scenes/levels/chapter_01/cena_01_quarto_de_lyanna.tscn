@@ -76,7 +76,7 @@ color = Color(0.81064117, 0.8568788, 0.92090845, 1)
 environment = SubResource("Environment_3vf36")
 
 [node name="Cenário1Quarto(02)(3)" type="Sprite2D" parent="." unique_id=900326719]
-position = Vector2(644, 362)
+position = Vector2(640, 360)
 texture = ExtResource("2_7ninf")
 
 [node name="Interagiveis" type="Node2D" parent="." unique_id=1509178232]

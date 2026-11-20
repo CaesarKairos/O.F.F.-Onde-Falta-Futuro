@@ -12,7 +12,7 @@
 script = ExtResource("1_neopn")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=958188418]
-position = Vector2(639, 361)
+position = Vector2(640, 360)
 texture = ExtResource("2_am23o")
 
 [node name="O_f_f" type="Sprite2D" parent="." unique_id=1550634082]

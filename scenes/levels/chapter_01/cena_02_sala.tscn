@@ -246,7 +246,7 @@ mouse_filter = 2
 [node name="MessageUI" parent="." unique_id=177896999 instance=ExtResource("1_fmme6")]
 
 [node name="Cenário3Sala(2)" type="Sprite2D" parent="." unique_id=685257340]
-position = Vector2(642, 363)
+position = Vector2(640, 360)
 texture = ExtResource("2_irhqx")
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1078932629]
