@@ -13,6 +13,7 @@
 		},
 		"cecilia_002": {
 			"speaker": "lyanna",
+			"image": "feliz",
 			"text": "~Dramática, como sempre!~",
 			"eng": "~Dramatic, as always!~",
 			"es": "~¡Dramática, como siempre!~",
@@ -27,6 +28,7 @@
 		},
 		"cecilia_004": {
 			"speaker": "lyanna",
+			"image": "triste",
 			"text": "[slow]Antes fosse...[/slow][pause=350] Só demorei pra pegar no sono. Mas e aí, como foi a viagem?",
 			"eng": "[slow]I wish it was...[/slow][pause=350] I just took a while to fall asleep. But anyway, how was the trip?",
 			"es": "[slow]Ojalá...[/slow][pause=350] Solo me tomó un rato dormirme. Pero bueno, ¿cómo fue el viaje?",
@@ -41,6 +43,7 @@
 		},
 		"cecilia_006": {
 			"speaker": "lyanna",
+			"image": "normal",
 			"text": "Acontece toda vez que chove.",
 			"eng": "Happens every time it rains.",
 			"es": "Pasa cada vez que llueve.",
@@ -55,6 +58,7 @@
 		},
 		"choice_birthday": {
 			"speaker": "lyanna",
+			"image": "normal",
 			"text": "Como responder?",
 			"eng": "How do you respond?",
 			"es": "¿Cómo respondes?",
@@ -77,6 +81,7 @@
 		},
 		"birthday_001": {
 			"speaker": "lyanna",
+			"image": "feliz",
 			"text": "Claro que não, deixa de ser boba. Só tava esperando o ~momento certo~.",
 			"eng": "Of course not, stop being silly. I was just waiting for the ~right moment~.",
 			"es": "Claro que no, deja de ser boba. Solo estaba esperando el ~momento correcto~.",
@@ -84,6 +89,7 @@
 		},
 		"birthday_002": {
 			"speaker": "lyanna",
+			"image": "feliz",
 			"text": "*Feliz aniversário*, de verdade. Fico feliz que você veio pra cá, mesmo com a correria da redação.",
 			"eng": "*Happy birthday*, really. I'm glad you came here, even with all the rush from the newsroom.",
 			"es": "*Feliz cumpleaños*, de verdad. Me alegra que hayas venido aquí, incluso con toda la prisa de la redacción.",
@@ -98,6 +104,7 @@
 		},
 		"birthday_004": {
 			"speaker": "lyanna",
+			"image": "triste",
 			"text": "[slow]É... você sabe, amiga.[/slow][pause=300] [fast]Mas não vamos falar disso agora, é seu aniversário![/fast]",
 			"eng": "[slow]Yeah... you know, friend.[/slow][pause=300] [fast]But let's not talk about that now, it's your birthday![/fast]",
 			"es": "[slow]Sí... ya sabes, amiga.[/slow][pause=300] [fast]Pero no hablemos de eso ahora, ¡es tu cumpleaños![/fast]",
@@ -105,6 +112,7 @@
 		},
 		"birthday_005": {
 			"speaker": "lyanna",
+			"image": "feliz",
 			"text": "Vem comigo pra cozinha, minha mãe fez uma torta deliciosa ontem.",
 			"eng": "Come with me to the kitchen, my mom made a delicious pie yesterday.",
 			"es": "Ven conmigo a la cocina, mi mamá hizo una tarta deliciosa ayer.",
@@ -112,6 +120,7 @@
 		},
 		"forgetful_001": {
 			"speaker": "lyanna",
+			"image": "confusa",
 			"text": "[fast]O quê? O café?[/fast] O Bruno disse que eu prometi, mas eu juro que...",
 			"eng": "[fast]What? The coffee?[/fast] Bruno said I promised, but I swear I...",
 			"es": "[fast]¿Qué? ¿El café?[/fast] Bruno dijo que prometí, pero juro que...",
@@ -126,6 +135,7 @@
 		},
 		"forgetful_003": {
 			"speaker": "lyanna",
+			"image": "triste",
 			"text": "[impact]Nossa, Cecília![/impact] [fast]Feliz aniversário, amiga![/fast] [slow]Desculpa, minha cabeça tá em outro lugar hoje... você sabe que dia é hoje pra mim também, né?[/slow]",
 			"eng": "[impact]Wow, Cecília![/impact] [fast]Happy birthday, friend![/fast] [slow]Sorry, my head is somewhere else today... you know what today is for me too, right?[/slow]",
 			"es": "[impact]¡Dios, Cecilia![/impact] [fast]¡Feliz cumpleaños, amiga![/fast] [slow]Perdón, mi cabeza está en otro lado hoy... ya sabes qué día es para mí también, ¿verdad?[/slow]",
@@ -140,6 +150,7 @@
 		},
 		"forgetful_005": {
 			"speaker": "lyanna",
+			"image": "normal",
 			"text": "Vai ser bom desabafar um pouco. Vamos pra cozinha pra eu te fazer um café.",
 			"eng": "It'll be good to let it out a bit. Let's go to the kitchen so I can make you a coffee.",
 			"es": "Será bueno desahogarse un poco. Vamos a la cocina para hacerte un café.",

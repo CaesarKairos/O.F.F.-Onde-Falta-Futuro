@@ -12,6 +12,7 @@ SCENE_01_BASELINE_REF = "c2c01c2"
 RESOURCE_BASELINE_REF = "8fe1766"
 DIALOGUE_PATHS = sorted(Path("data/dialogues").rglob("*.json"))
 TEXT_FIELDS = {"text", "eng", "es", "esp", "message", "message_en", "message_es"}
+PORTRAIT_EXPRESSIONS = {"normal", "feliz", "triste", "brava", "confusa"}
 RESOURCE_MESSAGE_FIELDS = (
     "message",
     "message_en",
@@ -93,8 +94,12 @@ def compare(before, after, path="root") -> list[str]:
     if type(before) is not type(after):
         return [f"{path}: tipo alterado"]
     if isinstance(before, dict):
-        if before.keys() != after.keys():
+        added_keys = after.keys() - before.keys()
+        removed_keys = before.keys() - after.keys()
+        if removed_keys or added_keys - {"image"}:
             failures.append(f"{path}: chaves alteradas")
+        if "image" in added_keys and after["image"] not in PORTRAIT_EXPRESSIONS:
+            failures.append(f"{path}.image: expressão desconhecida {after['image']!r}")
         for key in before.keys() & after.keys():
             child_path = f"{path}.{key}"
             if key in TEXT_FIELDS and isinstance(before[key], str):
@@ -185,7 +190,7 @@ def main() -> int:
         print("VALIDATION FAILED")
         print("\n".join(failures))
         return 1
-    print("VALIDATION OK: roteiro e estrutura preservados; somente marcações foram adicionadas.")
+    print("VALIDATION OK: roteiro preservado; somente marcações e retratos foram adicionados.")
     return 0
 
 

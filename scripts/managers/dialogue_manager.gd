@@ -165,13 +165,14 @@ func _render_current_node() -> void:
 		"dialogue":
 
 			var speaker := str(current_node.get("speaker", ""))
+			var expression := str(current_node.get("image", "normal"))
 			var text := _localized_text(current_node)
 
 			print("Speaker:", speaker)
 			print("Texto:", text)
 
 			if speaker != "":
-				ui.set_portrait(speaker)
+				ui.set_portrait(speaker, expression)
 				ui.show_dialogue("%s: %s" % [speaker.capitalize(), text])
 			else:
 				ui.set_portrait("")

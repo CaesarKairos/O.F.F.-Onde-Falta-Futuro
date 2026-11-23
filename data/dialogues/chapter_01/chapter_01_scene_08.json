@@ -12,6 +12,7 @@
 		},
 		"dialogue_002": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]Eu escrevi o que aconteceu.[/pop] O palco foi construído em cima da *única área* que absorvia a água. O bairro alagou e *um homem morreu* naquele bueiro.",
 			"eng": "[pop]I wrote what happened.[/pop] The stage was built on top of the *only area* that absorbed water. The neighborhood flooded and *a man died* in that gutter.",
 			"es": "[pop]Escribí lo que ocurrió.[/pop] El escenario se construyó sobre la *única zona* que absorbía el agua. El barrio se inundó y *un hombre murió* en esa alcantarilla.",
@@ -26,6 +27,7 @@
 		},
 		"dialogue_004": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]Então você quer que eu *minta*?[/pop]",
 			"eng": "[pop]So you want me to *lie*?[/pop]",
 			"es": "[pop]Entonces quieres que *mienta*.[/pop]",
@@ -60,6 +62,7 @@
 		},
 		"truth_path_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Eu não sou assessora de imprensa da Arena, Paulo. [pop]*Sou jornalista.*[/pop] A matéria está pronta e os fatos não vão mudar só porque o seu patrocínio está em jogo.",
 			"eng": "I'm not the Arena's press officer, Paulo. [pop]*I'm a journalist.*[/pop] The article is ready and the facts won't change just because your sponsorship is at stake.",
 			"es": "No soy la asesora de prensa de la Arena, Paulo. [pop]*Soy periodista.*[/pop] El artículo está listo y los hechos no cambiarán solo porque tu patrocinio esté en juego.",
@@ -67,6 +70,7 @@
 		},
 		"carlos_path_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "O *Carlos* tinha nome, tinha família. Se eu escrever o que você quer, eu viro cúmplice dessa negligência. [pop]Eu não vou manchar a memória de um trabalhador para proteger a imagem de político.[/pop]",
 			"eng": "*Carlos* had a name, had a family. If I write what you want, I become an accomplice to this negligence. [pop]I'm not gonna tarnish the memory of a worker to protect a politician's image.[/pop]",
 			"es": "*Carlos* tenía nombre, tenía familia. Si escribo lo que quieres, me vuelvo cómplice de esta negligencia. [pop]No voy a manchar la memoria de un trabajador para proteger la imagen de un político.[/pop]",
@@ -81,6 +85,7 @@
 		},
 		"dialogue_007": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]*Então me demite.*[/pop]",
 			"eng": "[pop]*Then fire me.*[/pop]",
 			"es": "[pop]*Entonces despídeme.*[/pop]",
@@ -95,6 +100,7 @@
 		},
 		"dialogue_009": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]Informação não fica presa em redação mais, Paulo.[/pop] Se vocês esconderem isso, alguém vai mostrar.",
 			"eng": "[pop]Information doesn't stay trapped in the newsroom anymore, Paulo.[/pop] If you hide this, someone's gonna show it.",
 			"es": "[pop]La información ya no queda atrapada en la redacción, Paulo.[/pop] Si ustedes lo ocultan, alguien lo mostrará.",
@@ -109,6 +115,7 @@
 		},
 		"dialogue_011": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]É o que vamos ver.[/pop]",
 			"eng": "[pop]We'll see about that.[/pop]",
 			"es": "[pop]Ya veremos.[/pop]",
@@ -143,6 +150,7 @@
 		},
 		"upload_path_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Você não entendeu, Paulo. [pop]Eu não tô mais pedindo autorização.[/pop] O arquivo já tá em uma *nuvem pública*. Se você deletar o rascunho, só prova que eu tô certa. [pop]O jornal é seu, mas a apuração é minha.[/pop]",
 			"eng": "You didn't understand, Paulo. [pop]I'm not asking for permission anymore.[/pop] The file is already on a *public cloud*. If you delete the draft, you only prove I'm right. [pop]The newspaper is yours, but the investigation is mine.[/pop]",
 			"es": "No entendiste, Paulo. [pop]Ya no estoy pidiendo permiso.[/pop] El archivo ya está en una *nube pública*. Si borras el borrador, solo demuestras que tengo razón. [pop]El periódico es tuyo, pero la investigación es mía.[/pop]",
@@ -150,6 +158,7 @@
 		},
 		"server_path_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]Apaga o que você quiser.[/pop] Eu não preciso do sistema da redação pra contar o que eu vi. [pop]Eu tenho as fotos, tenho o depoimento do pai dele e tenho a minha própria voz.[/pop] Pode ficar com o seu texto ~'bonito'~.",
 			"eng": "[pop]Delete whatever you want.[/pop] I don't need the newsroom system to tell what I saw. [pop]I have the photos, I have his father's testimony, and I have my own voice.[/pop] You can keep your ~'beautiful'~ text.",
 			"es": "[pop]Borra lo que quieras.[/pop] No necesito el sistema de la redacción para contar lo que vi. [pop]Tengo las fotos, tengo el testimonio de su padre y tengo mi propia voz.[/pop] Puedes quedarte con tu texto ~'bonito'~.",
@@ -164,6 +173,7 @@
 		},
 		"dialogue_014": {
 			"speaker": "Lyanna",
+			"image": "normal",
 			"text": "[slow]Relaxa. Eu não pretendo voltar.[/slow] ~Boa sorte tentando controlar isso também, Paulo.~",
 			"eng": "[slow]Relax. I don't plan on coming back.[/slow] ~Good luck trying to control this too, Paulo.~",
 			"es": "[slow]Tranquila. No pienso volver.[/slow] ~Buena suerte intentando controlar esto también, Paulo.~",

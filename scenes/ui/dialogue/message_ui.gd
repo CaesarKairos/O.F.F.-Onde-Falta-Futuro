@@ -60,10 +60,22 @@ var pop_effect := DialoguePopEffect.new()
 # RETRATOS
 # ============================================================
 
+const DEFAULT_PORTRAIT_EXPRESSION := "normal"
+
 var portraits = {
-	"bruno": preload("res://assets/art/characters/portraits/bruno icon.png"),
-	"lyanna": preload("res://assets/art/characters/portraits/lyanna icon.png"),
-	"cecilia": preload("res://assets/art/characters/portraits/ana paula renault icon.png")
+	"bruno": {
+		"normal": preload("res://assets/art/characters/portraits/bruno icon.png")
+	},
+	"lyanna": {
+		"normal": preload("res://assets/art/characters/portraits/lyanna/normal.png"),
+		"feliz": preload("res://assets/art/characters/portraits/lyanna/feliz.png"),
+		"triste": preload("res://assets/art/characters/portraits/lyanna/triste.png"),
+		"brava": preload("res://assets/art/characters/portraits/lyanna/brava.png"),
+		"confusa": preload("res://assets/art/characters/portraits/lyanna/confusa.png")
+	},
+	"cecilia": {
+		"normal": preload("res://assets/art/characters/portraits/ana paula renault icon.png")
+	}
 }
 
 
@@ -215,12 +227,12 @@ func _resize_dialogue_box() -> void:
 	# --------------------------------------------------------
 
 	dialogue_text.position = Vector2(
-		100.0,
+		96.0,
 		TEXT_TOP_MARGIN
 	)
 
 	dialogue_text.size = Vector2(
-		dialogue_box.size.x - 164.0,
+		dialogue_box.size.x - 160.0,
 		text_height
 	)
 
@@ -232,7 +244,7 @@ func _resize_dialogue_box() -> void:
 	if _has_visible_choices():
 
 		choices_container.position = Vector2(
-			64.0,
+			36.0,
 			TEXT_TOP_MARGIN +
 			text_height +
 			CHOICES_MARGIN
@@ -305,19 +317,31 @@ func _get_choices_height() -> float:
 # RETRATO
 # ============================================================
 
-func set_portrait(character_name: String) -> void:
+func set_portrait(character_name: String, expression: String = DEFAULT_PORTRAIT_EXPRESSION) -> void:
 
-	character_name = character_name.to_lower()
+	var character_key := character_name.strip_edges().to_lower()
+	character_key = character_key.replace("á", "a").replace("é", "e").replace("í", "i")
+	character_key = character_key.replace("ó", "o").replace("ú", "u").replace("ç", "c")
+	var expression_key := expression.strip_edges().to_lower()
 
-	if portraits.has(character_name):
-
-		portrait.texture = portraits[character_name]
-		portrait.visible = true
-
-	else:
-
+	if not portraits.has(character_key):
 		portrait.texture = null
 		portrait.visible = false
+		return
+
+	var character_portraits: Dictionary = portraits[character_key]
+	if not character_portraits.has(expression_key):
+		expression_key = DEFAULT_PORTRAIT_EXPRESSION
+
+	portrait.texture = character_portraits.get(expression_key)
+	portrait.visible = portrait.texture != null
+
+	# As novas expressões da Lyanna são pixel art; os retratos legados não são.
+	portrait.texture_filter = (
+		CanvasItem.TEXTURE_FILTER_NEAREST
+		if character_key == "lyanna"
+		else CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+	)
 
 # ============================================================
 # SHOW MESSAGE

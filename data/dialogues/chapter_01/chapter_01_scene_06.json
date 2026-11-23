@@ -12,6 +12,7 @@
 		},
 		"intro_002": {
 			"speaker": "Lyanna",
+			"image": "triste",
 			"text": "[slow]É... impressionante, de verdade.[/slow][pause=300] Mas eu vim da parte de baixo, perto do córrego. O pessoal ainda está bem assustado com o *alagamento*.",
 			"eng": "[slow]It is... impressive, really.[/slow][pause=300] But I came from the lower part, near the creek. People are still really scared about the *flooding*.",
 			"es": "[slow]Es... impresionante, de verdad.[/slow][pause=300] Pero vengo desde la parte baja, cerca del arroyo. La gente sigue muy asustada por la *inundación*.",
@@ -48,6 +49,7 @@
 		},
 		"indignation_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "O senhor Amaral perdeu um *filho*, Joana. Dinheiro nenhum traz o *Carlos* de volta. [pop]O problema não é a compensação, é o que causou isso.[/pop]",
 			"eng": "Mr. Amaral lost a *son*, Joana. No amount of money brings *Carlos* back. [pop]The problem isn't the compensation, it's what caused this.[/pop]",
 			"es": "El señor Amaral perdió a un *hijo*, Joana. Ningún dinero devuelve a *Carlos*. [pop]El problema no es la compensación, es lo que causó esto.[/pop]",
@@ -63,6 +65,7 @@
 		},
 		"diplomacy_001": {
 			"speaker": "Lyanna",
+			"image": "normal",
 			"text": "Entendo que a empresa se prontificou, mas a comunidade sente que as obras mudaram o curso da água. Como foi planejado o *escoamento* aqui?",
 			"eng": "I understand the company stepped up, but the community feels the construction changed the water's course. How was the *drainage* planned here?",
 			"es": "Entiendo que la empresa se ofreció, pero la comunidad siente que las obras cambiaron el curso del agua. ¿Cómo se planeó el *drenaje* aquí?",
@@ -111,6 +114,7 @@
 		},
 		"victim_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Os moradores dizem que o bairro virou um inferno antes mesmo do show. Como o *Carlos* deveria saber que o trajeto mudou se vocês ignoraram até *ordens judiciais*?",
 			"eng": "Residents say the neighborhood turned into hell even before the show. How was *Carlos* supposed to know the route changed if you ignored even *court orders*?",
 			"es": "Los vecinos dicen que el barrio se convirtió en un infierno incluso antes del show. ¿Cómo iba a saber *Carlos* que la ruta cambió si ustedes ignoraron incluso *órdenes judiciales*?",
@@ -126,6 +130,7 @@
 		},
 		"soil_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Testemunhas viram tratores despejando *resíduos* onde antes havia vegetação. Vocês não acham que transformaram esse terreno em um tobogã de água?",
 			"eng": "Witnesses saw tractors dumping *waste* where there used to be vegetation. Don't you think you turned this land into a water slide?",
 			"es": "Testigos vieron tractores tirando *residuos* donde antes había vegetación. ¿No creen que convirtieron este terreno en un tobogán de agua?",
@@ -141,6 +146,7 @@
 		},
 		"responsibility_001": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Valeu a pena ignorar os avisos e o meio ambiente por [pop]*apenas três dias de festa?*[/pop]",
 			"eng": "Was it worth ignoring the warnings and the environment for [pop]*just three days of partying?*[/pop]",
 			"es": "¿Valió la pena ignorar las advertencias y el medio ambiente por [pop]*solo tres días de fiesta?*[/pop]",
@@ -162,6 +168,7 @@
 		},
 		"ending_002": {
 			"speaker": "Lyanna",
+			"image": "normal",
 			"text": "[pop]*A verdade* costuma dar boas histórias.[/pop]",
 			"eng": "[pop]*The truth* usually makes good stories.[/pop]",
 			"es": "[pop]*La verdad* suele dar buenas historias.[/pop]",
@@ -176,6 +183,7 @@
 		},
 		"ending_004": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "[pop]Eu escrevo para quem lê, não para quem assina.[/pop]",
 			"eng": "[pop]I write for those who read, not for those who sign.[/pop]",
 			"es": "[pop]Escribo para quienes leen, no para quienes firman.[/pop]",

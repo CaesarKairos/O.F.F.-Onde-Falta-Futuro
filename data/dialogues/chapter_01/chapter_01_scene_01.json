@@ -19,6 +19,7 @@
 		},
 		"dialogue_001": {
 			"speaker": "Lyanna",
+			"image": "confusa",
 			"text": "[slow]Hm...[/slow][pause=300] *pai?*",
 			"eng": "[slow]Hm...[/slow][pause=300] *dad?*",
 			"es": "[slow]Hm...[/slow][pause=300] *¿papá?*",
@@ -33,6 +34,7 @@
 		},
 		"dialogue_003": {
 			"speaker": "Lyanna",
+			"image": "brava",
 			"text": "Oque você quer? [fast]Fala logo que eu quero dormir.[/fast]",
 			"eng": "What do you want? [fast]Hurry up, I want to sleep.[/fast]",
 			"es": "¿Qué quieres? [fast]Habla de una vez que quiero dormir.[/fast]",
@@ -67,6 +69,7 @@
 		},
 		"birthday_path_001": {
 			"speaker": "Lyanna",
+			"image": "confusa",
 			"text": "A *Cecília*? O que ela tá fazendo aqui tão cedo?",
 			"eng": "*Cecília*? What is she doing here so early?",
 			"es": "¿*Cecilia*? ¿Qué hace aquí tan temprano?",
@@ -82,6 +85,7 @@
 		},
 		"birthday_path_003": {
 			"speaker": "Lyanna",
+			"image": "triste",
 			"text": "[slow]Nossa, é verdade…[/slow][pause=350] eu perdi o sono com...",
 			"eng": "[slow]Wow, it's true...[/slow][pause=350] I lost sleep with...",
 			"es": "[slow]Vaya, es verdad...[/slow][pause=350] perdí el sueño con...",
@@ -96,6 +100,7 @@
 		},
 		"birthday_path_005": {
 			"speaker": "Lyanna",
+			"image": "confusa",
 			"text": "[slow]Hããã…[/slow][pause=350] [fast]Fala pra ela que já vou ir.[/fast]",
 			"eng": "[slow]Uhhh...[/slow][pause=350] [fast]Tell her I'm coming.[/fast]",
 			"es": "[slow]Eh...[/slow][pause=350] [fast]dile que ya voy.[/fast]",
@@ -103,6 +108,7 @@
 		},
 		"already_going_001": {
 			"speaker": "Lyanna",
+			"image": "normal",
 			"text": "[pop]Tá, tá...[/pop] fala pra ela que eu já levantei.",
 			"eng": "[pop]Yeah, yeah...[/pop] tell her I'm up.",
 			"es": "[pop]Está bien, está bien...[/pop] dile que ya me levanté.",
@@ -117,6 +123,7 @@
 		},
 		"already_going_003": {
 			"speaker": "Lyanna",
+			"image": "triste",
 			"text": "Não é isso, [slow]eu só perdi o sono com...[/slow]",
 			"eng": "That's not it, [slow]I just lost sleep with...[/slow]",
 			"es": "No es eso, [slow]solo perdí el sueño con...[/slow]",
@@ -131,6 +138,7 @@
 		},
 		"already_going_005": {
 			"speaker": "Lyanna",
+			"image": "confusa",
 			"text": "[slow]Hããã…[/slow][pause=350] [whisper]Não é nada,[/whisper] vai lá avisar pra ela.",
 			"eng": "[slow]Uhhh...[/slow][pause=350] [whisper]It's nothing,[/whisper] go tell her.",
 			"es": "[slow]Eh...[/slow][pause=350] [whisper]no es nada,[/whisper] ve a avisarle.",
